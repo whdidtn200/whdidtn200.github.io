@@ -106,7 +106,7 @@
         <p class="sub">루트에서 바로 글로 진입하도록 구성한 메인 허브입니다. (AdSense/크롤링 친화)</p>
         <div class="status">
           <span class="tag ok">ROOT INDEX READY</span>
-          <span class="tag">POST LINKS: 20+</span>
+          <span class="tag">POST LINKS: 5</span>
           <span class="tag">CATEGORY NAV ENABLED</span>
         </div>
       </header>
@@ -175,7 +175,7 @@
           if (seen.has(abs)) continue;
           seen.add(abs);
           picked.push({href: abs, title});
-          if (picked.length >= 24) break;
+          if (picked.length >= 5) break;
         }
 
         if (!picked.length) throw new Error('no-post-links');
