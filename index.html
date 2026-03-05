@@ -114,17 +114,8 @@
       <div class="grid">
         <article class="card">
           <h2>📡 최신 글 바로가기</h2>
-          <div class="links">
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-05-phm-agentic-ai-trends-2026.html">2026 PHM × Agentic AI 최신동향</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-05-agentic-validation-failure-patterns-phm.html">PHM Agentic 검증 실패 패턴 7가지</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-04-github-hot-trends-agentic-ai-industrial-iot.html">GitHub Hot Trends · Agentic AI × Industrial IoT</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-03-trending-ai-repos.html">에이전틱 AI 오픈소스 TOP 4</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-02-1dcnn-bearing-fault-diagnosis-cwru-paderborn.html">Raw 신호 1D-CNN 베어링 고장진단</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-01-wayside-condition-monitoring-review.html">Wayside Condition Monitoring 2025 리뷰</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4.html">ShaftFormer와 철도 차축 진동 예측</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-28-bayesian-metro-disruption-travel-time-prediction.html">Bayesian Metro Disruption Travel Time</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html">Scrapling Adaptive Web Scraping</a>
-            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-26-github-agentic-workflows-analysis.html">GitHub Agentic Workflows Analysis</a>
+          <div id="latest-links" class="links">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts.html">최신 글 목록 로딩 중...</a>
           </div>
         </article>
 
@@ -160,5 +151,43 @@
       </div>
     </section>
   </main>
+  <script>
+    (async function hydrateLatestLinks(){
+      const container = document.getElementById('latest-links');
+      if (!container) return;
+
+      const makeItem = (href, text) => `<a href="${href}">${text}</a>`;
+
+      try {
+        const resp = await fetch('https://whdidtn200.github.io/MALT-tech-blog/posts.html', {cache: 'no-store'});
+        const html = await resp.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const anchors = Array.from(doc.querySelectorAll('a[href*="/posts/"]'));
+        const seen = new Set();
+        const picked = [];
+
+        for (const a of anchors) {
+          const href = a.getAttribute('href');
+          const title = (a.textContent || '').trim();
+          if (!href || !title) continue;
+          const abs = new URL(href, 'https://whdidtn200.github.io/MALT-tech-blog/').toString();
+          if (seen.has(abs)) continue;
+          seen.add(abs);
+          picked.push({href: abs, title});
+          if (picked.length >= 24) break;
+        }
+
+        if (!picked.length) throw new Error('no-post-links');
+
+        container.innerHTML = picked.map(p => makeItem(p.href, p.title)).join('');
+      } catch (e) {
+        container.innerHTML = [
+          makeItem('https://whdidtn200.github.io/MALT-tech-blog/posts.html', '전체 글 아카이브'),
+          makeItem('https://whdidtn200.github.io/MALT-tech-blog/', '블로그 메인')
+        ].join('');
+      }
+    })();
+  </script>
 </body>
 </html>
