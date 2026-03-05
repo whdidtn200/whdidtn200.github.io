@@ -3,60 +3,162 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MALT Tech Blog | AI·Railway PHM</title>
-  <meta name="description" content="MALT 기술 블로그: 철도 PHM, AI 에이전트, 운영 자동화 실전 아티클" />
+  <title>MALT Tech Blog | HUD Archive Gateway</title>
+  <meta name="description" content="MALT 기술 블로그 루트 허브: 최신 글/인기 글/카테고리로 바로 이동하는 HUD 스타일 메인 페이지" />
   <meta name="robots" content="index,follow" />
   <style>
-    :root{--text:#111;--muted:#666;--border:#e5e7eb;--bg:#fff;--accent:#0b5fff}
-    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;max-width:920px;margin:40px auto;padding:0 16px;line-height:1.7;color:var(--text);background:var(--bg)}
-    h1{margin:0 0 6px}
-    .muted{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0}
-    .card{border:1px solid var(--border);border-radius:12px;padding:16px}
-    .btn{display:inline-block;padding:10px 14px;border:1px solid var(--border);border-radius:10px;text-decoration:none;color:#fff;background:var(--accent);font-weight:600}
-    .btn.ghost{background:#fff;color:var(--text)}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-    ul{margin:8px 0 0 18px}
-    footer{margin:24px 0 8px;color:var(--muted);font-size:.95rem}
-    @media (min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+    :root{
+      --bg:#070b14;
+      --panel:#0d1424;
+      --panel2:#101b31;
+      --line:#2b3e67;
+      --text:#e7efff;
+      --muted:#98acd4;
+      --accent:#58d0ff;
+      --accent2:#7b9dff;
+      --ok:#5cffbf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Pretendard", "SF Pro Display", "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 8% -10%, #1b2f59 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #11395e 0%, transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px}
+    .hud{
+      background:linear-gradient(160deg, rgba(15,24,43,.92), rgba(10,17,31,.92));
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 0 0 1px rgba(88,208,255,.08), 0 22px 80px rgba(0,0,0,.45);
+      overflow:hidden;
+    }
+    .top{
+      padding:18px 18px 14px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(88,208,255,.09), transparent);
+    }
+    .kicker{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+    h1{margin:6px 0 6px;font-size:30px;line-height:1.15}
+    .sub{color:var(--muted);margin:0}
+    .status{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--muted)}
+    .tag.ok{color:var(--ok);border-color:#285447;background:rgba(92,255,191,.08)}
+
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px}
+    .card{
+      background:linear-gradient(180deg, rgba(19,31,54,.72), rgba(13,20,36,.72));
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+    }
+    .card h2{margin:0 0 10px;font-size:16px;color:#d9e7ff}
+    .links{display:grid;gap:7px}
+    .links a{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid rgba(66,93,150,.65);
+      background:rgba(16,27,49,.72);
+      padding:9px 10px;
+      border-radius:10px;
+      font-size:14px;
+      transition:.18s ease;
+    }
+    .links a:hover{
+      border-color:var(--accent);
+      transform:translateY(-1px);
+      box-shadow:0 0 0 1px rgba(88,208,255,.18) inset;
+    }
+
+    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .quick a{
+      text-decoration:none;
+      text-align:center;
+      padding:10px 8px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--panel2);
+      color:#d7e6ff;
+      font-weight:600;
+      font-size:13px;
+    }
+
+    .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
+
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:25px}
+      .quick{grid-template-columns:repeat(2,1fr)}
+    }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
-    <h1>MALT Tech Blog</h1>
-    <p class="muted">AI-Driven Railway Intelligence · PHM · Agentic AI</p>
-    <p>
-      철도 상태진단(PHM), 산업 AI, 에이전트 자동화 실전 내용을 정리하는 기술 블로그입니다.
-    </p>
-    <p>
-      <a class="btn" href="https://whdidtn200.github.io/MALT-tech-blog/">블로그 바로가기</a>
-      <a class="btn ghost" href="https://whdidtn200.github.io/MALT-tech-blog/posts.html">전체 글 보기</a>
-    </p>
-  </header>
+  <main class="wrap">
+    <section class="hud">
+      <header class="top">
+        <div class="kicker">MALT HUD ARCHIVE GATEWAY</div>
+        <h1>MALT Tech Blog</h1>
+        <p class="sub">루트에서 바로 글로 진입하도록 구성한 메인 허브입니다. (AdSense/크롤링 친화)</p>
+        <div class="status">
+          <span class="tag ok">ROOT INDEX READY</span>
+          <span class="tag">POST LINKS: 20+</span>
+          <span class="tag">CATEGORY NAV ENABLED</span>
+        </div>
+      </header>
 
-  <section class="grid">
-    <article class="card">
-      <h3>주요 주제</h3>
-      <ul>
-        <li>철도/회전체 이상탐지 및 예지보전(PHM)</li>
-        <li>시계열·진동 데이터 기반 ML/DL</li>
-        <li>실무형 AI 에이전트/자동화 워크플로우</li>
-      </ul>
-    </article>
+      <div class="grid">
+        <article class="card">
+          <h2>📡 최신 글 바로가기</h2>
+          <div class="links">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-05-phm-agentic-ai-trends-2026.html">2026 PHM × Agentic AI 최신동향</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-05-agentic-validation-failure-patterns-phm.html">PHM Agentic 검증 실패 패턴 7가지</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-04-github-hot-trends-agentic-ai-industrial-iot.html">GitHub Hot Trends · Agentic AI × Industrial IoT</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-03-trending-ai-repos.html">에이전틱 AI 오픈소스 TOP 4</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-02-1dcnn-bearing-fault-diagnosis-cwru-paderborn.html">Raw 신호 1D-CNN 베어링 고장진단</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-01-wayside-condition-monitoring-review.html">Wayside Condition Monitoring 2025 리뷰</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4.html">ShaftFormer와 철도 차축 진동 예측</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-28-bayesian-metro-disruption-travel-time-prediction.html">Bayesian Metro Disruption Travel Time</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html">Scrapling Adaptive Web Scraping</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-26-github-agentic-workflows-analysis.html">GitHub Agentic Workflows Analysis</a>
+          </div>
+        </article>
 
-    <article class="card">
-      <h3>기본 페이지</h3>
-      <ul>
-        <li><a href="https://whdidtn200.github.io/MALT-tech-blog/ABOUT.html">About</a></li>
-        <li><a href="https://whdidtn200.github.io/MALT-tech-blog/CONTACT.html">Contact</a></li>
-        <li><a href="https://whdidtn200.github.io/MALT-tech-blog/PRIVACY.html">Privacy Policy</a></li>
-      </ul>
-    </article>
-  </section>
+        <article class="card">
+          <h2>🧭 탐색 허브</h2>
+          <div class="quick">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts.html">전체 글 아카이브</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/ABOUT.html">About</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/CONTACT.html">Contact</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/PRIVACY.html">Privacy Policy</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/">블로그 메인</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-railway-phm-systematic-review.html">PHM Review</a>
+          </div>
 
-  <footer>
-    © MALT Tech Blog · All rights reserved.
-  </footer>
+          <h2 style="margin-top:14px;">🔬 PHM / Railway 추천</h2>
+          <div class="links">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">Trustworthy Equipment Monitoring</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-railvision-ai.html">RailVision AI 현대화 사례</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-cfd-lm-railway-running-gear.html">철도 주행장치 CFD-LM 분석</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-bolt-rm-railway-phm-continual-learning.html">BOLT-RM 지속학습 PHM</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-24-rail-crossing-behavior-tensor-analysis.html">Rail Crossing Tensor Analysis</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-24-continual-learning-railway-wheel-fault.html">Wheel Fault Continual Learning</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-23-railway-safety-deeplearning-detection.html">Railway Safety Deep Learning</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-22-xai-industrial-iot-anomaly-detection-bearing.html">XAI Industrial IoT Anomaly</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-21-railway-phm-fft-1dcnn.html">Railway PHM FFT + 1DCNN</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-20-axle-sensor-fusion-railway.html">Axle Sensor Fusion Railway</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer">
+        © MALT Tech Blog · Root hub now exposes direct article links for better crawlability.
+      </div>
+    </section>
+  </main>
 </body>
 </html>
