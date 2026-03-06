@@ -106,7 +106,7 @@
         <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 인사이트를 빠르게 확인해보세요.</p>
         <div class="status">
           <span class="tag ok">ROOT INDEX READY</span>
-          <span class="tag">POST LINKS: 10</span>
+          <span class="tag">POST LINKS: 20</span>
           <span class="tag">CATEGORY NAV ENABLED</span>
         </div>
       </header>
@@ -175,7 +175,7 @@
           if (seen.has(abs)) continue;
           seen.add(abs);
           picked.push({href: abs, title});
-          if (picked.length >= 10) break;
+          if (picked.length >= 20) break;
         }
 
         if (!picked.length) throw new Error('no-post-links');
