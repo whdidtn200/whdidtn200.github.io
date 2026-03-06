@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://whdidtn200.github.io/sitemap.xml
