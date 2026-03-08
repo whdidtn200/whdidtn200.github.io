@@ -28,25 +28,25 @@
 <p>특히 주목할 점은 Code Interpreter 패턴입니다. Python, JavaScript 등 다양한 언어를 샌드박스 내에서 실행하고, 표준 출력과 실행 결과를 구조화된 형태로 반환합니다:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 샌드박스 생성 및 코드 실행 예시
-</span><span class="n">sandbox</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Sandbox</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span>
-    <span class="sh">"</span><span class="s">opensandbox/code-interpreter:v1.0.1</span><span class="sh">"</span><span class="p">,</span>
-    <span class="n">entrypoint</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">/opt/opensandbox/code-interpreter.sh</span><span class="sh">"</span><span class="p">],</span>
-    <span class="n">env</span><span class="o">=</span><span class="p">{</span><span class="sh">"</span><span class="s">PYTHON_VERSION</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">3.11</span><span class="sh">"</span><span class="p">},</span>
-    <span class="n">timeout</span><span class="o">=</span><span class="nf">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
+</span><span class="n">sandbox</span> <span class="o">=</span> <span class="k">await</span> <span class="n">Sandbox</span><span class="p">.</span><span class="n">create</span><span class="p">(</span>
+    <span class="s">"opensandbox/code-interpreter:v1.0.1"</span><span class="p">,</span>
+    <span class="n">entrypoint</span><span class="o">=</span><span class="p">[</span><span class="s">"/opt/opensandbox/code-interpreter.sh"</span><span class="p">],</span>
+    <span class="n">env</span><span class="o">=</span><span class="p">{</span><span class="s">"PYTHON_VERSION"</span><span class="p">:</span> <span class="s">"3.11"</span><span class="p">},</span>
+    <span class="n">timeout</span><span class="o">=</span><span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">10</span><span class="p">),</span>
 <span class="p">)</span>
 
 <span class="k">async</span> <span class="k">with</span> <span class="n">sandbox</span><span class="p">:</span>
     <span class="c1"># Python 코드 실행
-</span>    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">interpreter</span><span class="p">.</span><span class="n">codes</span><span class="p">.</span><span class="nf">run</span><span class="p">(</span>
-        <span class="sh">"""</span><span class="s">
+</span>    <span class="n">result</span> <span class="o">=</span> <span class="k">await</span> <span class="n">interpreter</span><span class="p">.</span><span class="n">codes</span><span class="p">.</span><span class="n">run</span><span class="p">(</span>
+        <span class="s">"""
         import sys
         print(sys.version)
         result = 2 + 2
         result
-        </span><span class="sh">"""</span><span class="p">,</span>
+        """</span><span class="p">,</span>
         <span class="n">language</span><span class="o">=</span><span class="n">SupportedLanguage</span><span class="p">.</span><span class="n">PYTHON</span><span class="p">,</span>
     <span class="p">)</span>
-    <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># 4
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">text</span><span class="p">)</span>  <span class="c1"># 4
 </span></code></pre></div></div>
 
 <h3 id="실전-활용-시나리오">실전 활용 시나리오</h3>
@@ -102,13 +102,13 @@ pip <span class="nb">install</span> <span class="s1">'markitdown[pdf, docx, pptx
 
 <p>MarkItDown은 LLM을 직접 활용하여 이미지 설명을 생성할 수 있습니다:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">markitdown</span> <span class="kn">import</span> <span class="n">MarkItDown</span>
-<span class="kn">from</span> <span class="n">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">markitdown</span> <span class="kn">import</span> <span class="n">MarkItDown</span>
+<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
 
-<span class="n">client</span> <span class="o">=</span> <span class="nc">OpenAI</span><span class="p">()</span>
-<span class="n">md</span> <span class="o">=</span> <span class="nc">MarkItDown</span><span class="p">(</span><span class="n">llm_client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span> <span class="n">llm_model</span><span class="o">=</span><span class="sh">"</span><span class="s">gpt-4o</span><span class="sh">"</span><span class="p">)</span>
-<span class="n">result</span> <span class="o">=</span> <span class="n">md</span><span class="p">.</span><span class="nf">convert</span><span class="p">(</span><span class="sh">"</span><span class="s">example.jpg</span><span class="sh">"</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">text_content</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
+<span class="n">md</span> <span class="o">=</span> <span class="n">MarkItDown</span><span class="p">(</span><span class="n">llm_client</span><span class="o">=</span><span class="n">client</span><span class="p">,</span> <span class="n">llm_model</span><span class="o">=</span><span class="s">"gpt-4o"</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">md</span><span class="p">.</span><span class="n">convert</span><span class="p">(</span><span class="s">"example.jpg"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">text_content</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>이는 단순한 OCR을 넘어, <strong>이미지의 의미적 해석</strong>을 Markdown으로 통합할 수 있음을 의미합니다.</p>
@@ -228,14 +228,14 @@ pip <span class="nb">install</span> <span class="s1">'markitdown[pdf, docx, pptx
 
 <p>간단한 <code class="language-plaintext highlighter-rouge">@opik.track</code> 데코레이터로 트레이싱을 시작할 수 있습니다:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">opik</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">opik</span>
 
-<span class="n">opik</span><span class="p">.</span><span class="nf">configure</span><span class="p">(</span><span class="n">use_local</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># 로컬 자체 호스팅
+<span class="n">opik</span><span class="p">.</span><span class="n">configure</span><span class="p">(</span><span class="n">use_local</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># 로컬 자체 호스팅
 </span>
-<span class="nd">@opik.track</span>
+<span class="o">@</span><span class="n">opik</span><span class="p">.</span><span class="n">track</span>
 <span class="k">def</span> <span class="nf">my_llm_function</span><span class="p">(</span><span class="n">user_question</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
     <span class="c1"># LLM 코드
-</span>    <span class="k">return</span> <span class="sh">"</span><span class="s">Hello</span><span class="sh">"</span>
+</span>    <span class="k">return</span> <span class="s">"Hello"</span>
 </code></pre></div></div>
 
 <p>모든 호출이 자동으로 Opik 대시보드에 로깅되며, 입력/출력/지연시간/토큰 사용량 등이 기록됩니다.</p>
@@ -244,13 +244,13 @@ pip <span class="nb">install</span> <span class="s1">'markitdown[pdf, docx, pptx
 
 <p>Opik은 즉시 사용 가능한 평가 메트릭을 제공합니다:</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">opik.evaluation.metrics</span> <span class="kn">import</span> <span class="n">Hallucination</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">opik.evaluation.metrics</span> <span class="kn">import</span> <span class="n">Hallucination</span>
 
-<span class="n">metric</span> <span class="o">=</span> <span class="nc">Hallucination</span><span class="p">()</span>
-<span class="n">score</span> <span class="o">=</span> <span class="n">metric</span><span class="p">.</span><span class="nf">score</span><span class="p">(</span>
-    <span class="nb">input</span><span class="o">=</span><span class="sh">"</span><span class="s">What is the capital of France?</span><span class="sh">"</span><span class="p">,</span>
-    <span class="n">output</span><span class="o">=</span><span class="sh">"</span><span class="s">Paris</span><span class="sh">"</span><span class="p">,</span>
-    <span class="n">context</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">France is a country in Europe.</span><span class="sh">"</span><span class="p">]</span>
+<span class="n">metric</span> <span class="o">=</span> <span class="n">Hallucination</span><span class="p">()</span>
+<span class="n">score</span> <span class="o">=</span> <span class="n">metric</span><span class="p">.</span><span class="n">score</span><span class="p">(</span>
+    <span class="nb">input</span><span class="o">=</span><span class="s">"What is the capital of France?"</span><span class="p">,</span>
+    <span class="n">output</span><span class="o">=</span><span class="s">"Paris"</span><span class="p">,</span>
+    <span class="n">context</span><span class="o">=</span><span class="p">[</span><span class="s">"France is a country in Europe."</span><span class="p">]</span>
 <span class="p">)</span>
 </code></pre></div></div>
 
