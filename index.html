@@ -1,4 +1,120 @@
-Special Report: Repo Bootcamp<div id="latest-links" class="links">
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MALT Tech Blog | Railway PHM · Agentic AI</title>
+  <meta name="description" content="MALT 기술 블로그 루트 허브: 최신 글/인기 글/카테고리로 바로 이동하는 HUD 스타일 메인 페이지" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg:#070b14;
+      --panel:#0d1424;
+      --panel2:#101b31;
+      --line:#2b3e67;
+      --text:#e7efff;
+      --muted:#98acd4;
+      --accent:#58d0ff;
+      --accent2:#7b9dff;
+      --ok:#5cffbf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Pretendard", "SF Pro Display", "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 8% -10%, #1b2f59 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #11395e 0%, transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px}
+    .hud{
+      background:linear-gradient(160deg, rgba(15,24,43,.92), rgba(10,17,31,.92));
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 0 0 1px rgba(88,208,255,.08), 0 22px 80px rgba(0,0,0,.45);
+      overflow:hidden;
+    }
+    .top{
+      padding:18px 18px 14px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(88,208,255,.09), transparent);
+    }
+    .kicker{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+    h1{margin:6px 0 6px;font-size:30px;line-height:1.15}
+    .sub{color:var(--muted);margin:0}
+    .status{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--muted)}
+    .tag.ok{color:var(--ok);border-color:#285447;background:rgba(92,255,191,.08)}
+
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px}
+    .card{
+      background:linear-gradient(180deg, rgba(19,31,54,.72), rgba(13,20,36,.72));
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+    }
+    .card h2{margin:0 0 10px;font-size:16px;color:#d9e7ff}
+    .links{display:grid;gap:7px}
+    .links a{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid rgba(66,93,150,.65);
+      background:rgba(16,27,49,.72);
+      padding:9px 10px;
+      border-radius:10px;
+      font-size:14px;
+      transition:.18s ease;
+    }
+    .links a:hover{
+      border-color:var(--accent);
+      transform:translateY(-1px);
+      box-shadow:0 0 0 1px rgba(88,208,255,.18) inset;
+    }
+
+    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .quick a{
+      text-decoration:none;
+      text-align:center;
+      padding:10px 8px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--panel2);
+      color:#d7e6ff;
+      font-weight:600;
+      font-size:13px;
+    }
+
+    .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
+
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:25px}
+      .quick{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hud">
+      <header class="top">
+        <div class="kicker">MALT TECH BLOG</div>
+        <h1>MALT Tech Blog</h1>
+        <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 인사이트를 빠르게 확인해보세요.</p>
+        <div class="status">
+          <span class="tag ok">ROOT INDEX READY</span>
+          <span class="tag">POST LINKS: 13</span>
+          <span class="tag">CATEGORY NAV ENABLED</span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <article class="card">
+          <h2>📡 최신 글 바로가기</h2>
+          <div id="latest-links" class="links">
   <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-09-external-paper-validation-lstm-ae.html">[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증</a>
   <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-09-phm-validation-report.html">[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증</a>
   <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-03-08-rmgpt-autonomous-phm-agents.html">RmGPT & Autonomous PHM Agents</a>
@@ -16,3 +132,77 @@ Special Report: Repo Bootcamp<div id="latest-links" class="links">
   <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">2026-02-25-trustworthy-equipment-monitoring-cascaded-detection</a>
   <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-special-report-repo-bootcamp.html">2026-02-25-special-report-repo-bootcamp</a>
 </div>
+        </article>
+
+        <article class="card">
+          <h2>🧭 탐색 허브</h2>
+          <div class="quick">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts.html">전체 글 아카이브</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/ABOUT.html">About</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/CONTACT.html">Contact</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/PRIVACY.html">Privacy Policy</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/">블로그 메인</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-railway-phm-systematic-review.html">PHM Review</a>
+          </div>
+
+          <h2 style="margin-top:14px;">🔬 PHM / Railway 추천</h2>
+          <div class="links">
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">Trustworthy Equipment Monitoring</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-railvision-ai.html">RailVision AI 현대화 사례</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-cfd-lm-railway-running-gear.html">철도 주행장치 CFD-LM 분석</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-25-bolt-rm-railway-phm-continual-learning.html">BOLT-RM 지속학습 PHM</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-24-rail-crossing-behavior-tensor-analysis.html">Rail Crossing Tensor Analysis</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-24-continual-learning-railway-wheel-fault.html">Wheel Fault Continual Learning</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-23-railway-safety-deeplearning-detection.html">Railway Safety Deep Learning</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-22-xai-industrial-iot-anomaly-detection-bearing.html">XAI Industrial IoT Anomaly</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-21-railway-phm-fft-1dcnn.html">Railway PHM FFT + 1DCNN</a>
+            <a href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-20-axle-sensor-fusion-railway.html">Axle Sensor Fusion Railway</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="footer">
+        © MALT Tech Blog · Railway PHM과 Agentic AI를 연결하는 실전 기술 아카이브.
+      </div>
+    </section>
+  </main>
+  <script>
+    (async function hydrateLatestLinks(){
+      const container = document.getElementById('latest-links');
+      if (!container) return;
+
+      const makeItem = (href, text) => `<a href="${href}">${text}</a>`;
+
+      try {
+        const resp = await fetch('https://whdidtn200.github.io/MALT-tech-blog/posts.html', {cache: 'no-store'});
+        const html = await resp.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const anchors = Array.from(doc.querySelectorAll('a[href*="/posts/"]'));
+        const seen = new Set();
+        const picked = [];
+
+        for (const a of anchors) {
+          const href = a.getAttribute('href');
+          const title = (a.textContent || '').trim();
+          if (!href || !title) continue;
+          const abs = new URL(href, 'https://whdidtn200.github.io/MALT-tech-blog/').toString();
+          if (seen.has(abs)) continue;
+          seen.add(abs);
+          picked.push({href: abs, title});
+          if (picked.length >= 13) break;
+        }
+
+        if (!picked.length) throw new Error('no-post-links');
+
+        container.innerHTML = picked.map(p => makeItem(p.href, p.title)).join('');
+      } catch (e) {
+        container.innerHTML = [
+          makeItem('https://whdidtn200.github.io/MALT-tech-blog/posts.html', '전체 글 아카이브'),
+          makeItem('https://whdidtn200.github.io/MALT-tech-blog/', '블로그 메인')
+        ].join('');
+      }
+    })();
+  </script>
+</body>
+</html>
