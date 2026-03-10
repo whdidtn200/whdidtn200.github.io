@@ -1,13 +1,23 @@
 {
-  "name": "MALT Development Environment",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "extensions": [
-    "ms-python.python",
-    "GitHub.vscode-pull-request-github",
-    "yzhang.markdown-all-in-one",
-    "dbaeumer.vscode-eslint"
-  ],
-  "settings": {
-    "terminal.integrated.defaultProfile.linux": "bash"
-  }
+	"name": "MALT Development Environment",
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"GitHub.vscode-pull-request-github",
+				"yzhang.markdown-all-in-one",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"christian-kohler.path-intellisense"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"editor.formatOnSave": true,
+				"python.defaultInterpreterPath": "/usr/local/bin/python3"
+			}
+		}
+	},
+	"postCreateCommand": "pip3 install --user requests && npm install -g tree-cli",
+	"remoteUser": "codespace"
 }
