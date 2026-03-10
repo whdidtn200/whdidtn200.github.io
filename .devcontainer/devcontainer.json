@@ -1,0 +1,13 @@
+{
+  "name": "MALT Development Environment",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "extensions": [
+    "ms-python.python",
+    "GitHub.vscode-pull-request-github",
+    "yzhang.markdown-all-in-one",
+    "dbaeumer.vscode-eslint"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  }
+}
