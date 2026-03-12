@@ -171,7 +171,7 @@
       const makeItem = (href, text) => `<a href="${href}">${text}</a>`;
 
       try {
-        const resp = await fetch('/MALT-tech-blog/posts.html', {cache: 'no-store'});
+        const resp = await fetch('/posts.html', {cache: 'no-store'});
         const html = await resp.text();
         const doc = new DOMParser().parseFromString(html, 'text/html');
 
@@ -183,7 +183,7 @@
           const href = a.getAttribute('href');
           const title = (a.textContent || '').trim();
           if (!href || !title) continue;
-          const abs = new URL(href, '/MALT-tech-blog/').toString();
+          const abs = new URL(href, '/').toString();
           if (seen.has(abs)) continue;
           seen.add(abs);
           picked.push({href: abs, title});
@@ -195,8 +195,8 @@
         container.innerHTML = picked.map(p => makeItem(p.href, p.title)).join('');
       } catch (e) {
         container.innerHTML = [
-          makeItem('/MALT-tech-blog/posts.html', '전체 글 아카이브'),
-          makeItem('/MALT-tech-blog/', '블로그 메인')
+          makeItem('/posts.html', '전체 글 아카이브'),
+          makeItem('/', '블로그 메인')
         ].join('');
       }
     })();
