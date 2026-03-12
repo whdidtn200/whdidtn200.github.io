@@ -1,0 +1,39 @@
+/* Unified post styling for Jekyll-rendered markdown posts */
+:root {
+  --bg: #05070a;
+  --panel: #0b0f15;
+  --line: #1b2432;
+  --text: #e5edf7;
+  --muted: #9aa9bf;
+  --accent: #22c55e;
+  --link: #7dd3fc;
+}
+html, body { background: var(--bg) !important; color: var(--text) !important; }
+.site-header, .site-footer { background: var(--panel); border-color: var(--line); }
+.page-content { padding-top: 24px; }
+.wrapper { max-width: 980px; }
+.post, .page-content .wrapper > * {
+  background: transparent;
+}
+.post-header {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.post-title, h1, h2, h3 { color: var(--text); }
+.post-meta { color: var(--muted); }
+.post-content {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  line-height: 1.8;
+}
+a { color: var(--link) !important; }
+code, pre { background: #0a1320 !important; border: 1px solid #223146; border-radius: 8px; }
+blockquote { border-left: 4px solid var(--accent); color: var(--muted); }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #233044; padding: 8px; }
+th { background: #101a28; }
