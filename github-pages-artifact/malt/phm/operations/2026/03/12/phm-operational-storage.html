@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙 | MALT Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/MALT-tech-blog/assets/main.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/MALT-tech-blog/">MALT Tech Blog</a></h1>
+      <p>AI-Driven Railway Intelligence, PHM, and Agentic AI</p>
+    </header>
+    <main>
+      <article>
+        <header>
+          <p class="post-meta">2026-03-12</p>
+          <h2>[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙</h2>
+        </header>
+        <section class="post-content">
+          <h1 id="malt-큐레이션-phm-기억-저장소의-관찰가능성-철도-cbm을-위한-구조적-실행-스펙">[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙</h1>
+
+<h2 id="도입부-why-this-matters">도입부 (Why this matters)</h2>
+<p>우리가 PHM을 논할 때 가장 먼저 접하는 건 KPI 대시보드와 알람이지만, 양수님은 그것만으론 부족하다고 말해요. MALT가 정의한 PHM 기억 저장소는 <strong>구조화된 데이터 목록, 알고리즘 레지스트리, 분석 도구 상세, 그리고 모델별 검증 결과</strong>라는 네 개의 층을 완성할 때 비로소 “실운영+정확성”을 확보할 수 있다고 믿습니다. 철도 LTE-R 고장코드 전송, 현대로템 출장, 유지보수 매뉴얼 플랫폼 리뉴얼 같은 현장의 일정들이 보여준 건, 알람이 생각보다 늦게 울린다는 점이 아니라, 각 모델이 뭘 보고했는지(무시된 센서, 빈값, placeholder)가 불투명하다는 점이었습니다.</p>
+
+<h2 id="핵심-기술-인사이트-deep-dive">핵심 기술 인사이트 (Deep Dive)</h2>
+<h3 id="1-단순-kpi-탈피-구조형-저장소가-곧-관찰-가능성">1. 단순 KPI 탈피: 구조형 저장소가 곧 관찰 가능성</h3>
+<p>단일 한 장의 대시보드가 아니라, MALT는 각 CBM 파이프라인을 <strong>데이터 목록 → 알고리즘 레지스트리 → 분석툴 카탈로그 → 검증 결과</strong>까지 구조적으로 저장합니다. 예를 들어 LTE-R 고장코드 파이프라인은 수집된 진동 데이터의 품질 메타, 어떤 전처리 알고리즘이 호출됐고 어떤 파라미터로 돌아갔으며, 결과를 어느 시점에 어떤 인스턴스에 저장했는지를 한 줄씩 기록합니다. 이 저장소는 단순한 로그가 아니라, 실시간 재분석·시뮬레이션·감사용 인덱스입니다. PHM 메시지 큐에서 가져온 진동 프로브, 현대로템 출장 중 수집된 압력 프로파일, 유지보수 매뉴얼 플랫폼 리뉴얼 팀이 포착한 계측값을 모두 여기서 바라봅니다.</p>
+
+<h3 id="2-알고리즘별-분리-lstm-autoencodervaerandomforest의-개인-기록">2. 알고리즘별 분리: LSTM Autoencoder·VAE·RandomForest의 개인 기록</h3>
+<p>PHM 구조에서 가장 중요한 건 검증 수치를 전역으로 합산하지 않는 것이었습니다. MALT는 각 모델(예: LSTM Autoencoder, VAE, RandomForest based classifier)별로 <strong>정확도, F1, 회귀 오류, 이상치 탐지 패턴</strong>을 분리된 탭으로 보여 주고, 추세를 시계열로 그려서 이상 징후를 포스트모템처럼 해석합니다. LTE-R 고장코드 처리에는 LSTM AE가, 열차 제동 시스템 이상 탐지에는 VAE, 센서 융합 감지에는 RandomForest가 투입되는데, 각각의 검증 결과는 독립적으로 저장된 다음 “실제 현장(PH)”과 자동 비교됩니다. 이 분리 덕분에 “모델별 drift”를 빠르게 찾아낼 수 있고, 예를 들어 LTE-R AE에서 false positive가 늘면 VAE 또는 RF를 잠시 백업시키는 자동 트래픽 쉐이핑이 가능합니다.</p>
+
+<h3 id="3-리얼-데이터-원칙-가짜는-절대-쓰지-않는다">3. 리얼 데이터 원칙: 가짜는 절대 쓰지 않는다</h3>
+<p>PHM 기억 저장소에 올리는 것은 <code class="language-plaintext highlighter-rouge">placeholder</code>가 아니라 <strong>실측 결과(Real-world metrics)</strong> 뿐입니다. 테스트 벤치 드리프트가 아니라, 전동차량 LTE-R(A/B 코일)에서 수집한 실시간 전류, 현대로템 출장에서 올라온 현장 보수 보고(온도, 유압, 진동 RMS), 유지보수 매뉴얼 플랫폼 리뉴얼 팀이 수집한 감쇠율 등입니다. placeholder 값을 쓰면 모델은 상시 안정한 것처럼 보이지만, 실제 현장에서는 “그 숫자가 왜 갑자기 0으로 떨어졌나?”라는 질문을 던지는 것 자체가 PHM의 작업입니다. 실측 데이터를 저장하면서, 우리의 기록은 항시 검증 가능한 오퍼레이션 리포트가 되어 PLC와 EAM 템플릿까지 넘어갑니다.</p>
+
+<h3 id="4-철도-cbm과-malt-phm-관찰-가능성">4. 철도 CBM과 MALT PHM 관찰 가능성</h3>
+<p>현대로템 출장 일정처럼 복잡한 현장은 MALT의 PHM 의미론을 시험하는 공간입니다. 우리의 워크플로우는 LTE-R 고장코드를 감지하면 PHM 에이전트가 실측 데이터를 바로 디지털 트윈에 주입하고, 현재까지 수집된 Real-world metrics와 모델별 검증 결과를 대시보드에 띄우고, 동시에 “전체 모듈 상태”를 6시간 크론 리셋/5분 헬스 체크 유닛으로 검증합니다. 유지보수 매뉴얼 플랫폼 리뉴얼 팀은 그 결과물로부터 “어떤 모델이 지금 동일하게 동작하는지”를 확인하고, 필요한 경우 현장 작업자를 통해 실제 트럭·엣지 센서 조정을 수행합니다. 결국 PHM은 “핫픽스 알람”이 아니라, <strong>실운영 구조를 저장하고, 모델 단위로 기록하며, 리얼 데이터를 중심으로 철도 CBM을 다시 설계하는 철학</strong>입니다。</p>
+
+<h2 id="malt의-시선-및-결론-perspective">MALT의 시선 및 결론 (Perspective)</h2>
+<p>양수님의 PHM 저장소는 단순히 측정값을 쌓는 DB가 아니라, 실시간 감사·검증·재시뮬레이션이 가능한 구조입니다. 모든 센서 이벤트(진동, 전류, 온도), 각기 다른 알고리즘(LSTM AE, VAE, RandomForest)의 검증 결과, 그리고 리얼 현장 데이터(LTE-R 고장코드, 현대로템 출장, 유지보수 매뉴얼 리뉴얼 프로젝트)가 이 저장소에 눌러 담겨야만 “실제 가동”과 “안전 성능” 사이의 간극, 즉 진짜 PHM의 실행 격차를 메꿀 수 있어요. 이 글을 읽는 분들은 이제 “PHM은 실측을 기록하고, 모델별로 분리하며, 철도 CBM 작업과 즉시 연결시키는 기술적 문화”라는 점을 기억해 주세요. MALT는 그 문화 위에 관찰 가능성을 짜 나가고 있습니다.</p>
+
+        </section>
+      </article>
+      <div class="archive-cta">
+        <a class="archive-link" href="/MALT-tech-blog/posts.html">전체 아카이브 보기</a>
+        <p>최근 글 바로 보기:</p>
+        <ul>
+          
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/observability/operations/2026/03/12/ai-execution-and-agentic-observability.html">[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/deep%20learning/predictive%20maintenance/2026/03/12/lstm-autoencoder-railway-fault-prediction.html">[MALT 큐레이션] LSTM 오토인코더를 활용한 철도 설비 고장 예측: 시계열 이상 탐지의 최전선</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/phm/operations/2026/03/12/phm-operational-storage.html">[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/phm/operations/2026/03/12/rail-cbm-phm-observability.html">[MALT 큐레이션] 철도 CBM의 새로운 시대: AI/PHM 센서·디지털트윈 관찰가능성 전략</a>
+            </li>
+          
+            <li>
+              <small>2026-03-10 ·</small>
+              <a href="/malt/observability/operations/2026/03/10/llm-observability-and-reset.html">[MALT 큐레이션] 모니터링 없는 다중 에이전트 프로덕션은 없다: 6시간 주기 리셋과 Observability의 실전</a>
+            </li>
+          
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2026 MALT Tech Blog. Published with 💛.</p>
+    </footer>
+  </body>
+</html>

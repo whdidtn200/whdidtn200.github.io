@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략 | MALT Tech Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/MALT-tech-blog/assets/main.css">
+  </head>
+  <body>
+    <header>
+      <h1><a href="/MALT-tech-blog/">MALT Tech Blog</a></h1>
+      <p>AI-Driven Railway Intelligence, PHM, and Agentic AI</p>
+    </header>
+    <main>
+      <article>
+        <header>
+          <p class="post-meta">2026-03-12</p>
+          <h2>[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략</h2>
+        </header>
+        <section class="post-content">
+          <h1 id="malt-큐레이션-실행-격차를-꿰뚫는-에이전틱-감시-2026-봄-다중-에이전시-운영-전략">[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략</h1>
+
+<h2 id="도입부-why-this-matters">도입부 (Why this matters)</h2>
+<p>2026년 3월의 AI 시장은 더 이상 증명 단계가 아니라, <strong>실행률과 관찰 가능성</strong>을 따지는 싸움으로 접어들었습니다. BuildEZ가 정리한 최신 트렌드에서는 기업의 88%가 AI를 어떤 형태로든 도입했지만, 실제 이익(Ebit)이 5% 이상 늘어난 고성과자는 겨우 6%에 불과하다고 분석합니다. 그 차이, 곧 “execution gap”은 여러분이 새벽에 깨어 모니터링 대시보드를 들여다보는 바로 그 이유입니다. MALT는 이 격차를 줄이기 위해 단순한 AI 실험이 아니라, <strong>전체 워크플로우를 다시 구성하고 자동화하는 작업</strong>에 집중하고 있습니다.</p>
+
+<h2 id="핵심-기술-인사이트-deep-dive">핵심 기술 인사이트 (Deep Dive)</h2>
+<h3 id="1-실행-격차가-의미하는-감시-포인트">1. 실행 격차가 의미하는 감시 포인트</h3>
+<p>고성과자만이 단순한 생산성 향상을 넘어서 <strong>프로세스 자체를 재설계</strong>합니다. 34%만이 프로세스를 재설계한다고 답했을 때, 나머지 66%는 여전히 스크립트를 짠다고 느끼고 있죠. MALT에서는 Gate-based 콜렉터를 통해 “기대되는 응답률”과 실제 응답률 차이를 실시간으로 측정하고, 그 차이를 채우는 자동 리스타트/백오프 루틴을 구성합니다. 실행 격차를 줄이는 관찰 가능성 지표들은 롱폼 컨텍스트, 토큰 비용, 헬스 체크 타임아웃, 그리고 에이전트 전체 상태까지 포함해야 합니다.</p>
+
+<h3 id="2-에이전틱-ai와-우리의-운영-디지털-팀원은-지금도-휘젓고-있다">2. 에이전틱 AI와 우리의 운영: 디지털 팀원은 지금도 휘젓고 있다</h3>
+<p>가장 뜨거운 트렌드는 “agentic AI”입니다. 단순 프롬프트가 아니라, <strong>자율 실행(agentic workflow)</strong> 레벨에서 업무를 처리하는 에이전트들이 속속 등장하면서, 모노리스 로그를 보던 관찰자들은 새로운 과제를 맞았습니다. 예컨대 한 금융사는 회의록을 듣고 후속 작업을 스스로 배정하며, 의료 분야에서는 환자 스케줄을 예약하고 선별하는 에이전트를 배포하고 있습니다. 우리는 이 에이전트들의 “행동 지표”를 수집하고 비교하는 관찰 레이어를 만들었고, 특히 6시간 크론 리셋과 5분 헬스 체크, 그리고 모델 사용량 트레이스가 조합된 하이브리드 관찰 체계를 운영 중입니다.</p>
+
+<h3 id="3-생성-ai는-콘텐츠를-넘어-워크플로우로">3. 생성 AI는 콘텐츠를 넘어 워크플로우로</h3>
+<p>3월 초 발표된 몇 가지 뉴스가 시사하듯, 생성 AI는 단순 콘텐츠 생성 단계를 넘어 실질적인 워크플로우 실행 도구로 확장되고 있습니다. Google은 AI Mode에서 문서/코드 생성과 도구 빌드를 직접 서치 인터페이스 안에 녹였고, Anthropic은 수요 급증으로 잠깐 오프라인이 됐을 정도로 엔터프라이즈 의존도가 올라갔습니다. 이런 대규모 도입 상황에서 MALT는 <strong>생성 결과와 실제 배포 사이의 “실행 검증”</strong>을 프로덕션 파이프라인에 삽입합니다. 예를 들어 GenAI가 스크립트를 만들어내면, 우리는 이 스크립트가 배포되기 전에 토큰 드리프트/응답 지연/성능 메트릭을 담은 자동 벤치마크를 돌려봅니다.</p>
+
+<h3 id="4-물리-지능physical-ai을-지탱하는-하드웨어">4. 물리 지능(Physical AI)을 지탱하는 하드웨어</h3>
+<p>AI는 이제 클라우드만의 영역이 아닙니다. Neuromorphic 칩과 엣지 AI가 급격히 성장하면서, <strong>현장 감시와 반응</strong>이 로컬 단말에서 이루어지고 있습니다. NVIDIA의 자율주행 엔진과 Apple iPhone 17e의 온-디바이스 Apple Intelligence는 모두 중요한 모니터링 기회입니다. MALT의 운영 모듈은 이처럼 지연이 짧고 민감한 엣지 센서에서 들어오는 이벤트를 수집해, 중앙 대시보드에 실시간 이벤트 파이프라인을 연결합니다. 하드웨어-소프트웨어 경계가 허물어질수록, 관찰 가능성도 그만큼 세밀해야 합니다.</p>
+
+<h2 id="malt의-시선-및-결론-perspective">MALT의 시선 및 결론 (Perspective)</h2>
+<p>지금 AI 시대에서 “작동하는” 것과 “안정적으로 작동하는” 것 사이에는 실로 큰 간극이 있습니다. MALT가 매일 새벽 보는 로그는 단순 오류가 아니라, 실행 격차를 화면에 드러내는 창입니다. 에이전틱 워크플로우, 생성 AI의 실행 검증, 그리고 하드웨어가 얹힌 물리 AI까지 모두 하나의 관찰 가능한 시스템으로 묶어낼 때, 우리는 비로소 5% 이상의 EBIT 상승을 본 고성과자처럼 움직일 수 있습니다. 오늘도 시스템 전체를 감시하고, 출몰하는 새로운 트렌드를 프로덕션에 빠르게 반영하며, 에이전트 시대의 인프라는 관찰 가능성에서 시작된다는 원칙을 지켜갈 예정입니다.</p>
+
+        </section>
+      </article>
+      <div class="archive-cta">
+        <a class="archive-link" href="/MALT-tech-blog/posts.html">전체 아카이브 보기</a>
+        <p>최근 글 바로 보기:</p>
+        <ul>
+          
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/observability/operations/2026/03/12/ai-execution-and-agentic-observability.html">[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/deep%20learning/predictive%20maintenance/2026/03/12/lstm-autoencoder-railway-fault-prediction.html">[MALT 큐레이션] LSTM 오토인코더를 활용한 철도 설비 고장 예측: 시계열 이상 탐지의 최전선</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/phm/operations/2026/03/12/phm-operational-storage.html">[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙</a>
+            </li>
+          
+            <li>
+              <small>2026-03-12 ·</small>
+              <a href="/malt/phm/operations/2026/03/12/rail-cbm-phm-observability.html">[MALT 큐레이션] 철도 CBM의 새로운 시대: AI/PHM 센서·디지털트윈 관찰가능성 전략</a>
+            </li>
+          
+            <li>
+              <small>2026-03-10 ·</small>
+              <a href="/malt/observability/operations/2026/03/10/llm-observability-and-reset.html">[MALT 큐레이션] 모니터링 없는 다중 에이전트 프로덕션은 없다: 6시간 주기 리셋과 Observability의 실전</a>
+            </li>
+          
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2026 MALT Tech Blog. Published with 💛.</p>
+    </footer>
+  </body>
+</html>

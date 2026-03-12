@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임 | MALT Tech Blog</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
+<meta property="og:description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
+<link rel="canonical" href="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html" />
+<meta property="og:url" content="https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html" />
+<meta property="og:site_name" content="MALT Tech Blog" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"AI-Driven Railway Intelligence, PHM, and Agentic AI","headline":"[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임","url":"https://whdidtn200.github.io/MALT-tech-blog/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/MALT-tech-blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/MALT-tech-blog/feed.xml" title="MALT Tech Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/MALT-tech-blog/">MALT Tech Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/MALT-tech-blog/ABOUT.html">About</a><a class="page-link" href="/MALT-tech-blog/CONTACT.html">Contact</a><a class="page-link" href="/MALT-tech-blog/PRIVACY.html">Privacy Policy</a><a class="page-link" href="/MALT-tech-blog/posts.html">Posts</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="특별-기획-scrapling-차세대-적응형-웹-스크래핑-프레임워크--철도-phm-데이터-수집의-새로운-패러다임">[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임</h1>
+
+<p><strong>Date</strong>: 2026-02-27<br />
+<strong>Category</strong>: Special Report / Web Scraping / Data Engineering<br />
+<strong>Tags</strong>: #Scrapling #WebScraping #AntiBot #DataCollection #RailwayPHM #Automation #Python</p>
+
+<hr />
+
+<h2 id="executive-summary">Executive Summary</h2>
+
+<p>오늘 GitHub Trending 1위를 차지한 <strong>Scrapling</strong>(2,902 stars/day)은 단순한 웹 스크래핑 라이브러리를 넘어, <strong>적응형 요소 추적</strong>, <strong>Cloudflare Turnstile 우회</strong>, <strong>멀티세션 크롤링</strong>, <strong>일시정지/재개 기능</strong>을 갖춘 차세대 데이터 수집 프레임워크입니다.</p>
+
+<p>철도/설비 PHM 연구자에게는 <strong>외부 벤더 API 없이</strong> 학술 논문 메타데이터, 센서 데이터 아카이브, 공공 모니터링 대시보드를 자동 수집할 수 있는 강력한 도구입니다.</p>
+
+<p><strong>핵심 가치</strong>:</p>
+<ul>
+  <li>🕷️ <strong>Scrapy 수준의 프로덕션 크롤러</strong> + BeautifulSoup 수준의 간결함</li>
+  <li>🛡️ <strong>Cloudflare Turnstile 자동 우회</strong> (StealthyFetcher)</li>
+  <li>🔄 <strong>웹사이트 구조 변경에도 자동 적응</strong> (Adaptive Element Tracking)</li>
+  <li>⚡ <strong>Parsel/Scrapy 대비 동급 성능</strong>, BS4 대비 ~784배 빠름</li>
+  <li>🤖 <strong>MCP 서버 내장</strong> — Claude/Cursor와 AI 협업 가능</li>
+</ul>
+
+<hr />
+
+<h2 id="1-왜-지금-핫한가-why-now">1. 왜 지금 핫한가? (Why Now?)</h2>
+
+<h3 id="11-폭발적-성장-지표">1.1 폭발적 성장 지표</h3>
+<ul>
+  <li><strong>오늘 하루 +2,902 스타</strong> (2026-02-27 기준)</li>
+  <li><strong>총 17,272 스타</strong>, 1,141 포크</li>
+  <li><strong>92% 테스트 커버리지</strong> + 전체 타입 힌트 (PyRight/MyPy)</li>
+  <li><strong>공식 Docker 이미지</strong> 자동 배포 (GitHub Actions)</li>
+</ul>
+
+<h3 id="12-시장-맥락-웹-스크래핑의-3대-고질병-해결">1.2 시장 맥락: 웹 스크래핑의 3대 고질병 해결</h3>
+<ol>
+  <li><strong>Anti-bot 장벽 고도화</strong>
+    <ul>
+      <li>Cloudflare Turnstile, reCAPTCHA v3 등으로 기존 Scrapy/Selenium 무력화</li>
+      <li>Scrapling은 <strong>TLS fingerprint spoofing</strong> + <strong>headless browser detection 우회</strong>로 대응</li>
+    </ul>
+  </li>
+  <li><strong>웹사이트 구조 변경에 취약한 선택자(selector)</strong>
+    <ul>
+      <li>기존: CSS/XPath 선택자가 깨지면 전체 파이프라인 중단</li>
+      <li>Scrapling: <strong>적응형 요소 추적</strong>(Adaptive Element Tracking)으로 자동 재탐색</li>
+    </ul>
+  </li>
+  <li><strong>대규모 크롤링의 복잡성</strong>
+    <ul>
+      <li>기존: Scrapy 설정 복잡, Selenium은 동시성 부족</li>
+      <li>Scrapling: <strong>Scrapy API + 브라우저 자동화 통합</strong> + 멀티세션 관리</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="2-기술-스택--아키텍처">2. 기술 스택 &amp; 아키텍처</h2>
+
+<h3 id="21-3-layer-fetcher-아키텍처">2.1 3-Layer Fetcher 아키텍처</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scrapling.fetchers</span> <span class="kn">import</span> <span class="n">Fetcher</span><span class="p">,</span> <span class="n">StealthyFetcher</span><span class="p">,</span> <span class="n">DynamicFetcher</span>
+
+<span class="c1"># Layer 1: HTTP 요청 (빠름, TLS 위장)
+</span><span class="n">page</span> <span class="o">=</span> <span class="n">Fetcher</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://example.com'</span><span class="p">,</span> <span class="n">impersonate</span><span class="o">=</span><span class="s">'chrome'</span><span class="p">)</span>
+
+<span class="c1"># Layer 2: Stealth 모드 (Cloudflare 우회)
+</span><span class="n">page</span> <span class="o">=</span> <span class="n">StealthyFetcher</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="s">'https://protected.site'</span><span class="p">,</span> <span class="n">solve_cloudflare</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Layer 3: 풀 브라우저 자동화 (Playwright)
+</span><span class="n">page</span> <span class="o">=</span> <span class="n">DynamicFetcher</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="s">'https://dynamic.site'</span><span class="p">,</span> <span class="n">network_idle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>레이어</th>
+      <th>엔진</th>
+      <th>속도</th>
+      <th>Anti-bot 우회</th>
+      <th>사용 케이스</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Fetcher</strong></td>
+      <td>httpx + TLS spoofing</td>
+      <td>⚡⚡⚡</td>
+      <td>Medium</td>
+      <td>정적 페이지, API 엔드포인트</td>
+    </tr>
+    <tr>
+      <td><strong>StealthyFetcher</strong></td>
+      <td>Playwright + Stealth Plugin</td>
+      <td>⚡⚡</td>
+      <td>High</td>
+      <td>Cloudflare, reCAPTCHA</td>
+    </tr>
+    <tr>
+      <td><strong>DynamicFetcher</strong></td>
+      <td>Playwright (full control)</td>
+      <td>⚡</td>
+      <td>Highest</td>
+      <td>SPA, 무한 스크롤, WebSocket</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="22-scrapy-style-spider-api">2.2 Scrapy-Style Spider API</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scrapling.spiders</span> <span class="kn">import</span> <span class="n">Spider</span><span class="p">,</span> <span class="n">Response</span>
+
+<span class="k">class</span> <span class="nc">QuotesSpider</span><span class="p">(</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"quotes"</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">"https://quotes.toscrape.com/"</span><span class="p">]</span>
+    <span class="n">concurrent_requests</span> <span class="o">=</span> <span class="mi">10</span>
+
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">quote</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.quote'</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="p">{</span>
+                <span class="s">"text"</span><span class="p">:</span> <span class="n">quote</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.text::text'</span><span class="p">).</span><span class="n">get</span><span class="p">(),</span>
+                <span class="s">"author"</span><span class="p">:</span> <span class="n">quote</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.author::text'</span><span class="p">).</span><span class="n">get</span><span class="p">(),</span>
+            <span class="p">}</span>
+        <span class="n">next_page</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.next a'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">next_page</span><span class="p">:</span>
+            <span class="k">yield</span> <span class="n">response</span><span class="p">.</span><span class="n">follow</span><span class="p">(</span><span class="n">next_page</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">attrib</span><span class="p">[</span><span class="s">'href'</span><span class="p">])</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">QuotesSpider</span><span class="p">(</span><span class="n">crawldir</span><span class="o">=</span><span class="s">"./data"</span><span class="p">).</span><span class="n">start</span><span class="p">()</span>
+<span class="n">result</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">to_json</span><span class="p">(</span><span class="s">"quotes.json"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>프로덕션 기능</strong>:</p>
+<ul>
+  <li>✅ <strong>Pause/Resume</strong>: Ctrl+C로 일시정지, 재시작 시 자동 재개</li>
+  <li>✅ <strong>Streaming Mode</strong>: <code class="language-plaintext highlighter-rouge">async for item in spider.stream()</code>으로 실시간 처리</li>
+  <li>✅ <strong>Blocked Request Detection</strong>: 자동 재시도 + 커스텀 로직</li>
+  <li>✅ <strong>Per-Domain Throttling</strong>: 도메인별 요청 제한</li>
+</ul>
+
+<h3 id="23-적응형-요소-추적-adaptive-element-tracking">2.3 적응형 요소 추적 (Adaptive Element Tracking)</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 초기 스크래핑
+</span><span class="n">products</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.product'</span><span class="p">,</span> <span class="n">auto_save</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># 요소 패턴 저장
+</span>
+<span class="c1"># 웹사이트 리뉴얼 후 (클래스명이 '.product' → '.item-card'로 변경)
+</span><span class="n">products</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.product'</span><span class="p">,</span> <span class="n">adaptive</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>  <span class="c1"># 자동으로 새 선택자 추론!
+</span></code></pre></div></div>
+
+<p><strong>작동 원리</strong>:</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">auto_save=True</code>로 요소의 <strong>구조적 특징</strong>(태그, 속성, 텍스트 패턴) 저장</li>
+  <li>선택자 실패 시 <strong>유사도 알고리즘</strong>(Levenshtein, TF-IDF)으로 후보 재탐색</li>
+  <li>매칭 성공 시 새 선택자 자동 저장</li>
+</ol>
+
+<hr />
+
+<h2 id="3-실무-적용-포인트-철도-phm-데이터-수집">3. 실무 적용 포인트: 철도 PHM 데이터 수집</h2>
+
+<h3 id="31-use-case-1-arxiv-논문-메타데이터-자동-수집">3.1 Use Case 1: arXiv 논문 메타데이터 자동 수집</h3>
+<p><strong>현재 문제점</strong>:</p>
+<ul>
+  <li>arXiv API는 rate limit (초당 1요청) + 메타데이터만 제공</li>
+  <li>논문 본문 PDF는 별도 다운로드 필요</li>
+  <li>Cloudflare 적용 시 일반 스크래퍼 차단</li>
+</ul>
+
+<p><strong>Scrapling 솔루션</strong>:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scrapling.spiders</span> <span class="kn">import</span> <span class="n">Spider</span><span class="p">,</span> <span class="n">Response</span>
+
+<span class="k">class</span> <span class="nc">ArxivSpider</span><span class="p">(</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"arxiv_phm"</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">"https://arxiv.org/search/?query=railway+PHM&amp;order=-announced_date_first"</span><span class="p">]</span>
+    
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">paper</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.arxiv-result'</span><span class="p">):</span>
+            <span class="n">arxiv_id</span> <span class="o">=</span> <span class="n">paper</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.list-title a::text'</span><span class="p">).</span><span class="n">get</span><span class="p">()</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">paper</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.title::text'</span><span class="p">).</span><span class="n">get</span><span class="p">()</span>
+            <span class="n">authors</span> <span class="o">=</span> <span class="n">paper</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.authors a::text'</span><span class="p">).</span><span class="n">getall</span><span class="p">()</span>
+            <span class="n">abstract</span> <span class="o">=</span> <span class="n">paper</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.abstract-full::text'</span><span class="p">).</span><span class="n">get</span><span class="p">()</span>
+            
+            <span class="c1"># PDF 다운로드 요청 생성
+</span>            <span class="n">pdf_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s">"https://arxiv.org/pdf/</span><span class="si">{</span><span class="n">arxiv_id</span><span class="si">}</span><span class="s">.pdf"</span>
+            <span class="k">yield</span> <span class="n">response</span><span class="p">.</span><span class="n">follow</span><span class="p">(</span><span class="n">pdf_url</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">save_pdf</span><span class="p">,</span> <span class="n">meta</span><span class="o">=</span><span class="p">{</span><span class="s">'arxiv_id'</span><span class="p">:</span> <span class="n">arxiv_id</span><span class="p">})</span>
+            
+            <span class="k">yield</span> <span class="p">{</span>
+                <span class="s">'arxiv_id'</span><span class="p">:</span> <span class="n">arxiv_id</span><span class="p">,</span>
+                <span class="s">'title'</span><span class="p">:</span> <span class="n">title</span><span class="p">,</span>
+                <span class="s">'authors'</span><span class="p">:</span> <span class="n">authors</span><span class="p">,</span>
+                <span class="s">'abstract'</span><span class="p">:</span> <span class="n">abstract</span>
+            <span class="p">}</span>
+</code></pre></div></div>
+
+<p><strong>장점</strong>:</p>
+<ul>
+  <li>✅ Cloudflare 우회 (StealthyFetcher 사용 시)</li>
+  <li>✅ 동시성 10+로 속도 10배 향상</li>
+  <li>✅ 일시정지/재개로 네트워크 장애 복구</li>
+</ul>
+
+<h3 id="32-use-case-2-korail-공공-데이터-포털-크롤링">3.2 Use Case 2: KORAIL 공공 데이터 포털 크롤링</h3>
+<p><strong>시나리오</strong>: 철도 사고 이력, 차량 점검 스케줄 등 공개 데이터 자동 수집</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">KorailDataSpider</span><span class="p">(</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"korail_public"</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">"https://example.korail.com/data"</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">configure_sessions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">manager</span><span class="p">):</span>
+        <span class="c1"># 빠른 페이지는 HTTP, 보호된 페이지는 Stealth
+</span>        <span class="n">manager</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">"fast"</span><span class="p">,</span> <span class="n">FetcherSession</span><span class="p">(</span><span class="n">impersonate</span><span class="o">=</span><span class="s">"chrome"</span><span class="p">))</span>
+        <span class="n">manager</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s">"stealth"</span><span class="p">,</span> <span class="n">AsyncStealthySession</span><span class="p">(</span><span class="n">headless</span><span class="o">=</span><span class="bp">True</span><span class="p">),</span> <span class="n">lazy</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'table.data-table tr'</span><span class="p">):</span>
+            <span class="k">if</span> <span class="s">'protected'</span> <span class="ow">in</span> <span class="n">row</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'a::attr(href)'</span><span class="p">).</span><span class="n">get</span><span class="p">():</span>
+                <span class="k">yield</span> <span class="n">Request</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'a::attr(href)'</span><span class="p">).</span><span class="n">get</span><span class="p">(),</span> <span class="n">sid</span><span class="o">=</span><span class="s">"stealth"</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">yield</span> <span class="n">Request</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'a::attr(href)'</span><span class="p">).</span><span class="n">get</span><span class="p">(),</span> <span class="n">sid</span><span class="o">=</span><span class="s">"fast"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><strong>비용 절감</strong>:</p>
+<ul>
+  <li>외부 API 비용 $0 (직접 수집)</li>
+  <li>인력 투입 시간 90% 감소 (자동화)</li>
+</ul>
+
+<h3 id="33-use-case-3-설비-진단-벤더-대시보드-백업">3.3 Use Case 3: 설비 진단 벤더 대시보드 백업</h3>
+<p><strong>시나리오</strong>: 외주 진단 업체의 웹 대시보드에서 센서 데이터 자동 백업</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scrapling.fetchers</span> <span class="kn">import</span> <span class="n">DynamicSession</span>
+
+<span class="k">with</span> <span class="n">DynamicSession</span><span class="p">(</span><span class="n">headless</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+    <span class="c1"># 로그인
+</span>    <span class="n">page</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="s">'https://vendor-dashboard.com/login'</span><span class="p">)</span>
+    <span class="n">page</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="s">'input[name="username"]'</span><span class="p">,</span> <span class="s">'your_id'</span><span class="p">)</span>
+    <span class="n">page</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="s">'input[name="password"]'</span><span class="p">,</span> <span class="s">'your_pw'</span><span class="p">)</span>
+    <span class="n">page</span><span class="p">.</span><span class="n">click</span><span class="p">(</span><span class="s">'button[type="submit"]'</span><span class="p">)</span>
+    
+    <span class="c1"># 데이터 페이지 이동
+</span>    <span class="n">page</span> <span class="o">=</span> <span class="n">session</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="s">'https://vendor-dashboard.com/sensor-data'</span><span class="p">,</span> <span class="n">network_idle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'.sensor-reading'</span><span class="p">).</span><span class="n">getall</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p><strong>장점</strong>:</p>
+<ul>
+  <li>✅ 벤더 종속성 제거 (데이터 주권 확보)</li>
+  <li>✅ 자체 분석 파이프라인 구축 가능</li>
+</ul>
+
+<hr />
+
+<h2 id="4-성능-벤치마크-얼마나-빠른가">4. 성능 벤치마크: “얼마나 빠른가?”</h2>
+
+<h3 id="41-파싱-속도-비교-100-runs-평균">4.1 파싱 속도 비교 (100+ runs 평균)</h3>
+<p>| 라이브러리 | 시간 (ms) | vs Scrapling |
+|———–|———–|————–|
+| <strong>Scrapling</strong> | <strong>2.02</strong> | <strong>1.0x</strong> |
+| Parsel/Scrapy | 2.04 | 1.01x |
+| Raw Lxml | 2.54 | 1.26x |
+| PyQuery | 24.17 | ~12x |
+| Selectolax | 82.63 | ~41x |
+| BS4 (Lxml) | 1584.31 | <strong>~784x</strong> |
+| BS4 (html5lib) | 3391.91 | ~1679x |</p>
+
+<h3 id="42-적응형-요소-찾기-속도">4.2 적응형 요소 찾기 속도</h3>
+<p>| 라이브러리 | 시간 (ms) | vs Scrapling |
+|———–|———–|————–|
+| <strong>Scrapling</strong> | <strong>2.39</strong> | <strong>1.0x</strong> |
+| AutoScraper | 12.45 | 5.2x |</p>
+
+<p><strong>결론</strong>: Scrapy/Parsel 수준의 속도 + BeautifulSoup 수준의 간결함</p>
+
+<hr />
+
+<h2 id="5-리스크--한계">5. 리스크 &amp; 한계</h2>
+
+<h3 id="51-법적윤리적-고려사항">5.1 법적/윤리적 고려사항</h3>
+<p>⚠️ <strong>robots.txt 준수 필수</strong>:</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># robots.txt를 무시하면 법적 책임 발생 가능
+</span><span class="n">Spider</span><span class="p">.</span><span class="n">respect_robots_txt</span> <span class="o">=</span> <span class="bp">True</span>  <span class="c1"># 기본값: True
+</span></code></pre></div></div>
+
+<p>⚠️ <strong>개인정보 수집 금지</strong>:</p>
+<ul>
+  <li>GDPR, CCPA 위반 시 벌금 최대 2천만 유로</li>
+  <li>철도 승객 데이터, 민감 정보는 절대 수집 금지</li>
+</ul>
+
+<h3 id="52-기술적-한계">5.2 기술적 한계</h3>
+<ol>
+  <li><strong>JavaScript 렌더링 비용</strong>
+    <ul>
+      <li>DynamicFetcher는 Playwright 기반 → CPU/메모리 사용량 높음</li>
+      <li>해결책: StealthyFetcher 우선 시도, 실패 시에만 DynamicFetcher</li>
+    </ul>
+  </li>
+  <li><strong>Cloudflare 우회 불완전</strong>
+    <ul>
+      <li>Turnstile v3는 우회 가능, 최신 v4는 일부 실패</li>
+      <li>해결책: <code class="language-plaintext highlighter-rouge">solve_cloudflare=True</code> + 프록시 로테이션 병행</li>
+    </ul>
+  </li>
+  <li><strong>대규모 크롤링 시 IP 차단 위험</strong>
+    <ul>
+      <li>해결책: <code class="language-plaintext highlighter-rouge">ProxyRotator</code> + per-domain delay 설정
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Spider</span><span class="p">.</span><span class="n">download_delay</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># 도메인당 1초 대기
+</span></code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="6-malt-업무-관점-액션아이템">6. MALT 업무 관점 액션아이템</h2>
+
+<h3 id="61-단기-1개월">6.1 단기 (1개월)</h3>
+<p>✅ <strong>Notion RAG 데이터 백업 자동화</strong></p>
+<ul>
+  <li>현재: 수동으로 Notion API 호출</li>
+  <li>개선: Scrapling으로 웹 UI 직접 크롤링 (API 제한 우회)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">NotionBackupSpider</span><span class="p">(</span><span class="n">Spider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">"notion_backup"</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">"https://www.notion.so/your-workspace"</span><span class="p">]</span>
+    
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">:</span> <span class="n">Response</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">page_link</span> <span class="ow">in</span> <span class="n">response</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'a.notion-page-link'</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="n">response</span><span class="p">.</span><span class="n">follow</span><span class="p">(</span><span class="n">page_link</span><span class="p">.</span><span class="n">attrib</span><span class="p">[</span><span class="s">'href'</span><span class="p">],</span> <span class="n">callback</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">save_page</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="62-중기-3개월">6.2 중기 (3개월)</h3>
+<p>✅ <strong>외부 학술 자료 수집 파이프라인 구축</strong></p>
+<ul>
+  <li>arXiv, IEEE Xplore, ScienceDirect에서 CBM/PHM 논문 자동 수집</li>
+  <li>일주일에 1회 자동 실행 (cron) + Notion 데이터베이스 업데이트</li>
+</ul>
+
+<h3 id="63-장기-6개월">6.3 장기 (6개월)</h3>
+<p>✅ <strong>KORAIL 내부 대시보드 데이터 통합</strong></p>
+<ul>
+  <li>외주 업체 5개의 별도 웹 대시보드 → 단일 데이터 레이크로 통합</li>
+  <li>Scrapling + Airflow로 ETL 파이프라인 자동화</li>
+</ul>
+
+<hr />
+
+<h2 id="7-설치--빠른-시작">7. 설치 &amp; 빠른 시작</h2>
+
+<h3 id="71-기본-설치">7.1 기본 설치</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip <span class="nb">install</span> <span class="s2">"scrapling[all]"</span>
+scrapling <span class="nb">install</span>  <span class="c"># 브라우저 다운로드 (Chromium, Firefox)</span>
+</code></pre></div></div>
+
+<h3 id="72-1분-만에-시작하기">7.2 1분 만에 시작하기</h3>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">scrapling.fetchers</span> <span class="kn">import</span> <span class="n">StealthyFetcher</span>
+
+<span class="c1"># Cloudflare 보호된 사이트 크롤링
+</span><span class="n">page</span> <span class="o">=</span> <span class="n">StealthyFetcher</span><span class="p">.</span><span class="n">fetch</span><span class="p">(</span><span class="s">'https://nopecha.com/demo/cloudflare'</span><span class="p">,</span> <span class="n">solve_cloudflare</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">page</span><span class="p">.</span><span class="n">css</span><span class="p">(</span><span class="s">'#padded_content a'</span><span class="p">).</span><span class="n">getall</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="73-docker로-실행">7.3 Docker로 실행</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull pyd4vinci/scrapling
+docker run <span class="nt">-it</span> pyd4vinci/scrapling python <span class="nt">-c</span> <span class="s2">"from scrapling.fetchers import Fetcher; print(Fetcher.get('https://example.com').css('h1::text').get())"</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="8-경쟁-도구-비교">8. 경쟁 도구 비교</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>기능</th>
+      <th>Scrapling</th>
+      <th>Scrapy</th>
+      <th>Selenium</th>
+      <th>Playwright</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cloudflare 우회</strong></td>
+      <td>✅ 내장</td>
+      <td>❌ 플러그인 필요</td>
+      <td>⚠️ 불완전</td>
+      <td>⚠️ 수동 설정</td>
+    </tr>
+    <tr>
+      <td><strong>적응형 선택자</strong></td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><strong>일시정지/재개</strong></td>
+      <td>✅</td>
+      <td>⚠️ 커스텀 필요</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td><strong>파싱 속도</strong></td>
+      <td>⚡⚡⚡</td>
+      <td>⚡⚡⚡</td>
+      <td>⚡</td>
+      <td>⚡⚡</td>
+    </tr>
+    <tr>
+      <td><strong>학습 곡선</strong></td>
+      <td>낮음</td>
+      <td>중간</td>
+      <td>낮음</td>
+      <td>중간</td>
+    </tr>
+    <tr>
+      <td><strong>MCP 서버</strong></td>
+      <td>✅</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>❌</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>결론</strong>: Scrapy의 견고함 + Selenium의 유연함 + Playwright의 현대성 = <strong>Scrapling</strong></p>
+
+<hr />
+
+<h2 id="9-결론-데이터-수집의-새로운-표준">9. 결론: 데이터 수집의 새로운 표준</h2>
+
+<p>Scrapling은 단순히 “또 하나의 스크래핑 라이브러리”가 아닙니다. <strong>웹 스크래핑의 3대 난제</strong>(anti-bot, 구조 변경, 대규모 크롤링)를 한 번에 해결한 <strong>차세대 데이터 수집 플랫폼</strong>입니다.</p>
+
+<p>철도/설비 PHM 연구자에게는:</p>
+<ul>
+  <li>✅ <strong>외부 API 종속 탈피</strong> (데이터 주권 확보)</li>
+  <li>✅ <strong>연구 시간 단축</strong> (수동 수집 → 자동화)</li>
+  <li>✅ <strong>비용 절감</strong> (벤더 API 비용 $0)</li>
+</ul>
+
+<p><strong>다음 스텝</strong>:</p>
+<ol>
+  <li>작은 프로젝트로 시작 (arXiv 논문 10건 수집)</li>
+  <li>프로덕션 파이프라인 구축 (Airflow + Scrapling)</li>
+  <li>팀 내 표준 도구로 도입</li>
+</ol>
+
+<p><strong>공식 문서</strong>: <a href="https://scrapling.readthedocs.io">https://scrapling.readthedocs.io</a><br />
+<strong>GitHub</strong>: <a href="https://github.com/D4Vinci/Scrapling">https://github.com/D4Vinci/Scrapling</a> (⭐ 17,272)</p>
+
+<hr />
+
+<p><em>이 리포트는 2026-02-27 GitHub Trending 데이터 및 공식 문서를 기반으로 작성되었습니다.</em></p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/MALT-tech-blog/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">MALT Tech Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">MALT Tech Blog</li><li><a class="u-email" href="mailto:contact@malt-system.local">contact@malt-system.local</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>AI-Driven Railway Intelligence, PHM, and Agentic AI</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
