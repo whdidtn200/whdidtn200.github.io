@@ -1,95 +1,210 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>MALT Tech Blog | AI-Driven Railway Intelligence, PHM, and Agentic AI</title>
-<meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="MALT Tech Blog" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
-<meta property="og:description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
-<link rel="canonical" href="https://whdidtn200.github.io/MALT-tech-blog/" />
-<meta property="og:url" content="https://whdidtn200.github.io/MALT-tech-blog/" />
-<meta property="og:site_name" content="MALT Tech Blog" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="MALT Tech Blog" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"AI-Driven Railway Intelligence, PHM, and Agentic AI","headline":"MALT Tech Blog","name":"MALT Tech Blog","url":"https://whdidtn200.github.io/MALT-tech-blog/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/MALT-tech-blog/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/MALT-tech-blog/feed.xml" title="MALT Tech Blog" /></head>
-<body><header class="site-header" role="banner">
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MALT Tech Blog | Railway PHM · Agentic AI</title>
+  <meta name="description" content="MALT 기술 블로그 루트 허브: 최신 글/인기 글/카테고리로 바로 이동하는 HUD 스타일 메인 페이지" />
+  <meta name="robots" content="index,follow" />
+  <style>
+    :root{
+      --bg:#070b14;
+      --panel:#0d1424;
+      --panel2:#101b31;
+      --line:#2b3e67;
+      --text:#e7efff;
+      --muted:#98acd4;
+      --accent:#58d0ff;
+      --accent2:#7b9dff;
+      --ok:#5cffbf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Pretendard", "SF Pro Display", "Segoe UI", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1000px 500px at 8% -10%, #1b2f59 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #11395e 0%, transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:24px 16px 40px}
+    .hud{
+      background:linear-gradient(160deg, rgba(15,24,43,.92), rgba(10,17,31,.92));
+      border:1px solid var(--line);
+      border-radius:18px;
+      box-shadow:0 0 0 1px rgba(88,208,255,.08), 0 22px 80px rgba(0,0,0,.45);
+      overflow:hidden;
+    }
+    .top{
+      padding:18px 18px 14px;
+      border-bottom:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(88,208,255,.09), transparent);
+    }
+    .kicker{font-size:12px;letter-spacing:.12em;color:var(--accent);font-weight:700}
+    h1{margin:6px 0 6px;font-size:30px;line-height:1.15}
+    .sub{color:var(--muted);margin:0}
+    .status{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .tag{font-size:12px;border:1px solid var(--line);padding:5px 9px;border-radius:999px;color:var(--muted)}
+    .tag.ok{color:var(--ok);border-color:#285447;background:rgba(92,255,191,.08)}
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/MALT-tech-blog/">MALT Tech Blog</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px}
+    .card{
+      background:linear-gradient(180deg, rgba(19,31,54,.72), rgba(13,20,36,.72));
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:14px;
+    }
+    .card h2{margin:0 0 10px;font-size:16px;color:#d9e7ff}
+    .links{display:grid;gap:7px}
+    .links a{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid rgba(66,93,150,.65);
+      background:rgba(16,27,49,.72);
+      padding:9px 10px;
+      border-radius:10px;
+      font-size:14px;
+      transition:.18s ease;
+    }
+    .links a:hover{
+      border-color:var(--accent);
+      transform:translateY(-1px);
+      box-shadow:0 0 0 1px rgba(88,208,255,.18) inset;
+    }
 
-        <div class="trigger"><a class="page-link" href="/MALT-tech-blog/posts.html">Posts</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <div class="home"><h1 class="page-heading">MALT Tech Blog</h1><h1 id="malt-tech-blog">MALT Tech Blog</h1>
+    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .quick a{
+      text-decoration:none;
+      text-align:center;
+      padding:10px 8px;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:var(--panel2);
+      color:#d7e6ff;
+      font-weight:600;
+      font-size:13px;
+    }
 
-<p>PHM / Agentic AI / Railway Intelligence 중심 기술 블로그입니다.</p>
+    .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
 
-<ul>
-  <li><a href="./ABOUT.html">About</a></li>
-  <li><a href="./CONTACT.html">Contact</a></li>
-  <li><a href="./PRIVACY.html">Privacy Policy</a></li>
-  <li><a href="./posts.html">All Posts</a></li>
-</ul>
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:25px}
+      .quick{grid-template-columns:repeat(2,1fr)}
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script> -->
+</head>
+<body>
+  <main class="wrap">
+    <section class="hud">
+      <header class="top">
+        <div class="kicker">MALT TECH BLOG</div>
+        <h1>MALT Tech Blog</h1>
+        <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 인사이트를 빠르게 확인해보세요.</p>
+        <div class="status">
+          <span class="tag ok">ROOT INDEX READY</span>
+          <span class="tag">POST LINKS: 13</span>
+          <span class="tag">CATEGORY NAV ENABLED</span>
+        </div>
+      </header>
 
-<blockquote>
-  <p>본 사이트는 GitHub Pages 기준으로 외부 공개 URL에서 접근 가능하도록 구성되었습니다.</p>
-</blockquote>
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">Mar 8, 2026</span>
-        <h3>
-
-            2026-03-08 MALT 운영 일지
-          </a>
-        </h3></li><li><span class="post-meta">Mar 8, 2026</span>
-        <h3>
-          <a class="post-link" href="/MALT-tech-blog/ai/technology/architecture/2026/03/08/agentic-ai-industrial-application.html">
-            최신 Agentic AI의 산업 현장 적용 전략
-          </a>
-        </h3></li></ul>
-
-    <p class="rss-subscribe">subscribe <a href="/MALT-tech-blog/feed.xml">via RSS</a></p></div>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/MALT-tech-blog/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">MALT Tech Blog</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">MALT Tech Blog</li><li><a class="u-email" href="mailto:contact@malt-system.local">contact@malt-system.local</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+      <div class="grid">
+        <article class="card">
+          <h2>📡 최신 글 바로가기</h2>
+                    <div id="latest-links" class="links">
+<a href="/MALT-tech-blog/malt/deep-learning/predictive-maintenance/2026/03/12/lstm-autoencoder-railway-fault-prediction.html">[MALT 큐레이션] LSTM 오토인코더를 활용한 철도 설비 고장 예측: 시계열 이상 탐지의 최전선</a>
+  <a href="/MALT-tech-blog/malt/phm/operations/2026/03/12/phm-operational-storage.html">[MALT 큐레이션] PHM 기억 저장소의 관찰가능성: 철도 CBM을 위한 구조적 실행 스펙</a>
+  <a href="/MALT-tech-blog/malt/observability/operations/2026/03/12/ai-execution-and-agentic-observability.html">[MALT 큐레이션] 실행 격차를 꿰뚫는 에이전틱 감시: 2026 봄 다중 에이전시 운영 전략</a>
+  <a href="/MALT-tech-blog/malt/phm/operations/2026/03/12/rail-cbm-phm-observability.html">[MALT 큐레이션] 철도 CBM의 새로운 시대: AI/PHM 센서·디지털트윈 관찰가능성 전략</a>
+  <a href="/MALT-tech-blog/posts/2026/03/10/llm-observability-and-reset-draft.html">2026-03-10-llm-observability-and-reset-draft</a>
+  <a href="/MALT-tech-blog/malt/observability/operations/2026/03/10/llm-observability-and-reset.html">[MALT 큐레이션] 모니터링 없는 다중 에이전트 프로덕션은 없다: 6시간 주기 리셋과 Observability의 실전</a>
+  <a href="/MALT-tech-blog/phm/condition-monitoring/2026/03/09/phm-validation-report.html">[Technical Report] VAE 및 LSTM-Autoencoder 기반 철도 베어링 결함 탐지 성능 정밀 검증</a>
+  <a href="/MALT-tech-blog/phm/deep-learning/2026/03/09/external-paper-validation-lstm-ae.html">[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델의 베어링 결함 탐지 성능 검증</a>
+  <a href="/MALT-tech-blog/phm/agentic/2026/03/08/rmgpt-autonomous-phm-agents.html">RmGPT: 회전기기 고장 진단 및 예측을 위한 생성형 파운데이션 모델과 자율 에이전트</a>
+  <a href="/MALT-tech-blog/ai/technology/architecture/2026/03/08/agentic-ai-industrial-application.html">최신 Agentic AI의 산업 현장 적용 전략</a>
+  <a href="/MALT-tech-blog/phm/ai/railway/2026/03/06/vae-bearing-anomaly-detection-ap-metrics.html">VAE 기반 베어링 이상 탐지: Average Precision 평가 지표 도입과 실무 적용</a>
+  <a href="/MALT-tech-blog/posts/2026/03/05/phm-agentic-ai-trends-2026.html">2026 PHM × Agentic AI 최신동향: 현장 적용을 위한 7가지 기술 변화</a>
+  <a href="/MALT-tech-blog/posts/2026/03/05/agentic-validation-failure-patterns-phm.html">PHM Agentic 검증 파이프라인 실패 패턴 7가지: 원인 분석부터 복구 자동화까지</a>
 </div>
+        </article>
 
-      <div class="footer-col footer-col-3">
-        <p>AI-Driven Railway Intelligence, PHM, and Agentic AI</p>
+        <article class="card">
+          <h2>🧭 탐색 허브</h2>
+          <div class="quick">
+            <a href="/MALT-tech-blog/posts.html">전체 글 아카이브</a>
+            <a href="/MALT-tech-blog/ABOUT.html">About</a>
+            <a href="/MALT-tech-blog/CONTACT.html">Contact</a>
+            <a href="/MALT-tech-blog/PRIVACY.html">Privacy Policy</a>
+            <a href="/MALT-tech-blog/">블로그 메인</a>
+            <a href="/MALT-tech-blog/posts/2026-02-25-railway-phm-systematic-review.html">PHM Review</a>
+          </div>
+
+          <h2 style="margin-top:14px;">🔬 PHM / Railway 추천</h2>
+          <div class="links">
+            <a href="/MALT-tech-blog/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">Trustworthy Equipment Monitoring</a>
+            <a href="/MALT-tech-blog/posts/2026-02-25-railvision-ai.html">RailVision AI 현대화 사례</a>
+            <a href="/MALT-tech-blog/posts/2026-02-25-cfd-lm-railway-running-gear.html">철도 주행장치 CFD-LM 분석</a>
+            <a href="/MALT-tech-blog/posts/2026-02-25-bolt-rm-railway-phm-continual-learning.html">BOLT-RM 지속학습 PHM</a>
+            <a href="/MALT-tech-blog/posts/2026-02-24-rail-crossing-behavior-tensor-analysis.html">Rail Crossing Tensor Analysis</a>
+            <a href="/MALT-tech-blog/posts/2026-02-24-continual-learning-railway-wheel-fault.html">Wheel Fault Continual Learning</a>
+            <a href="/MALT-tech-blog/posts/2026-02-23-railway-safety-deeplearning-detection.html">Railway Safety Deep Learning</a>
+            <a href="/MALT-tech-blog/posts/2026-02-22-xai-industrial-iot-anomaly-detection-bearing.html">XAI Industrial IoT Anomaly</a>
+            <a href="/MALT-tech-blog/posts/2026-02-21-railway-phm-fft-1dcnn.html">Railway PHM FFT + 1DCNN</a>
+            <a href="/MALT-tech-blog/posts/2026-02-20-axle-sensor-fusion-railway.html">Axle Sensor Fusion Railway</a>
+          </div>
+        </article>
       </div>
-    </div>
 
-  </div>
+      <div class="footer">
+        © MALT Tech Blog · Railway PHM과 Agentic AI를 연결하는 실전 기술 아카이브.
+      </div>
+    </section>
+  </main>
+  <!-- <script>
+    (async function hydrateLatestLinks(){
+      const container = document.getElementById('latest-links');
+      if (!container) return;
 
-</footer>
+      const makeItem = (href, text) => `<a href="${href}">${text}</a>`;
+
+      try {
+        const resp = await fetch('/MALT-tech-blog/posts.html', {cache: 'no-store'});
+        const html = await resp.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+
+        const anchors = Array.from(doc.querySelectorAll('a[href*="/posts/"]'));
+        const seen = new Set();
+        const picked = [];
+
+        for (const a of anchors) {
+          const href = a.getAttribute('href');
+          const title = (a.textContent || '').trim();
+          if (!href || !title) continue;
+          const abs = new URL(href, '/MALT-tech-blog/').toString();
+          if (seen.has(abs)) continue;
+          seen.add(abs);
+          picked.push({href: abs, title});
+          if (picked.length >= 13) break;
+        }
+
+        if (!picked.length) throw new Error('no-post-links');
+
+        container.innerHTML = picked.map(p => makeItem(p.href, p.title)).join('');
+      } catch (e) {
+        container.innerHTML = [
+          makeItem('/MALT-tech-blog/posts.html', '전체 글 아카이브'),
+          makeItem('/MALT-tech-blog/', '블로그 메인')
+        ].join('');
+      }
+    })();
+  </script> -->
 </body>
-
 </html>
+<!-- deployed: latest links verified 2026-03-10 07:18 -->
+<!-- deployed: force update 2026-03-10 07:20 -->
+
+<!-- sync fix 2026-03-10 07:22 -->
+<!-- sync fix 2026-03-10 07:25 -->
