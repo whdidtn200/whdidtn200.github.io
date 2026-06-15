@@ -57,21 +57,59 @@
       padding:14px;
     }
     .card h2{margin:0 0 10px;font-size:16px;color:#d9e7ff}
-    .links{display:grid;gap:7px}
+    .eyebrow{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+    .links{display:grid;gap:10px}
     .links a{
       color:var(--text);
       text-decoration:none;
       border:1px solid rgba(66,93,150,.65);
       background:rgba(16,27,49,.72);
-      padding:9px 10px;
-      border-radius:10px;
+      padding:12px 12px;
+      border-radius:12px;
       font-size:14px;
       transition:.18s ease;
+      line-height:1.45;
     }
     .links a:hover{
       border-color:var(--accent);
       transform:translateY(-1px);
       box-shadow:0 0 0 1px rgba(88,208,255,.18) inset;
+    }
+    #latest-links{
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      align-items:stretch;
+    }
+    #latest-links a{
+      min-height:88px;
+      display:flex;
+      align-items:flex-start;
+      font-weight:600;
+    }
+    #latest-links a:first-child{
+      grid-column:1 / -1;
+      min-height:108px;
+      background:
+        linear-gradient(135deg, rgba(88,208,255,.16), rgba(123,157,255,.08)),
+        rgba(16,27,49,.9);
+      border-color:rgba(88,208,255,.42);
+      font-size:16px;
+      padding:14px 14px 16px;
+    }
+    #latest-links a:nth-child(2),
+    #latest-links a:nth-child(3){
+      background:rgba(14,24,44,.88);
+    }
+    .meta-note{
+      margin-top:12px;
+      padding-top:12px;
+      border-top:1px solid rgba(66,93,150,.45);
+      color:var(--muted);
+      font-size:12px;
     }
 
     .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
@@ -93,6 +131,8 @@
       .grid{grid-template-columns:1fr}
       h1{font-size:25px}
       .quick{grid-template-columns:repeat(2,1fr)}
+      #latest-links{grid-template-columns:1fr}
+      #latest-links a:first-child{grid-column:auto}
     }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
@@ -106,30 +146,25 @@
         <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 자료를 MALT의 AI 관리형 발행 워크플로로 큐레이션합니다.</p>
         <div class="status">
           <span class="tag ok">AI PUBLICATION ACTIVE</span>
-          <span class="tag">POST LINKS: 13</span>
+          <span class="tag">FEATURED LINKS: 6</span>
           <span class="tag">CATEGORY NAV ENABLED</span>
-          <span class="tag">WORKFLOW DISCLOSED</span>
+          <span class="tag">ARCHIVE CARDS READY</span>
         </div>
       </header>
 
       <div class="grid">
         <article class="card">
           <h2>📡 최신 글 바로가기</h2>
-                    <div id="latest-links" class="links">
+          <p class="eyebrow">첫 줄에는 지금 가장 먼저 읽을 만한 글을 두고, 그 아래에는 최근 분석 글을 짧게 이어 붙였습니다. 제목이 길어도 한 번에 고르기 쉽게 밀도를 낮췄습니다.</p>
+          <div id="latest-links" class="links">
 <a href="/posts/2026-06-15-241011923v1-spatial-temporal-bearing-fault-detection-using-graph-attention-netw.html">[arXiv Daily] Spatial-Temporal Bearing Fault Detection Using Graph Attention Networks and LSTM</a>
 <a href="/posts/2026-06-15-240611917v3-modulated-differentiable-stft-and-balanced-spectrum-metric-for-frei.html">[arXiv Daily] Modulated differentiable STFT and balanced spectrum metric for freight train wheelset bearing cross-machine transfer monitoring under speed fluctuations</a>
 <a href="/posts/2026-03-13-260312624v1-prompt-driven-lightweight-foundation-model-for-instance-segmentatio.html">[arXiv Daily] Prompt-Driven Lightweight Foundation Model for Instance Segmentation-Based Fault Detection in Freight Trains</a>
 <a href="/posts/2026-03-15-260314384v1-low-data-predictive-maintenance-of-railway-station-doors-and-elevat.html">[arXiv Daily] Low-Data Predictive Maintenance of Railway Station Doors and Elevators Using Bayesian Proxy Flow Modeling</a>
 <a href="/posts/2025-08-12-250809054v1-cvcm-track-circuits-pre-emptive-failure-diagnostics-for-predictive.html">[arXiv Daily] CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks</a>
 <a href="/posts/2026-02-18-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa.html">[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring</a>
-<a href="/ai/open-source/2026/03/24/opensource-llm-agent-ecosystem-2026.html">2026년 3월: 오픈소스 LLM과 에이전트 개발 생태계의 대격변</a>
-<a href="/phm/agentic-ai/2026/03/24/agentic-ai-railway-cbm-phm.html">철도 CBM/PHM을 위한 자율 에이전트와 고성능 로컬 모델의 결합</a>
-<a href="/posts/2026-03-08-agentic-ai-industrial-application.html">최신 Agentic AI의 산업 현장 적용 전략</a>
-<a href="/posts/2026-03-06-vae-bearing-anomaly-detection-ap-metrics.html">VAE 기반 베어링 이상 탐지: Average Precision 평가 지표 도입과 실무 적용</a>
-<a href="/posts/2026-03-05-phm-agentic-ai-trends-2026.html">2026-03-05-phm-agentic-ai-trends-2026</a>
-<a href="/posts/2026-03-04-github-hot-trends-agentic-ai-industrial-iot.html">2026-03-04-github-hot-trends-agentic-ai-industrial-iot</a>
-<a href="/posts/2026-03-03-trending-ai-repos.html">2026-03-03-trending-ai-repos</a>
 </div>
+          <div class="meta-note">하루 1회 자동 발행 구조지만, 홈에서는 최근 글 전체를 다 나열하지 않고 읽을 가치가 높은 흐름만 먼저 보여줍니다.</div>
         </article>
 
         <article class="card">

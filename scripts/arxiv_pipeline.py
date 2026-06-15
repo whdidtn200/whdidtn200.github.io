@@ -992,7 +992,7 @@ def update_posts_listing(title: str, html_filename: str) -> None:
 def update_home_latest_links() -> None:
     content = POSTS_INDEX.read_text(encoding="utf-8")
     items = re.findall(r'<li><a href="([^"]+)">([^<]+)</a></li>', content)
-    latest = items[:13]
+    latest = items[:6]
     links_html = "\n".join(f'<a href="{href}">{text}</a>' for href, text in latest)
 
     home = HOME_INDEX.read_text(encoding="utf-8")
