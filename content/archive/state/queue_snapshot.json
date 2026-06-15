@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T06:15:48.624099+00:00",
-  "queued_count": 13,
+  "generated_at": "2026-06-15T06:23:53.747625+00:00",
+  "queued_count": 12,
   "queued_titles": [
     {
       "title": "When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime",
@@ -70,13 +70,6 @@
       "topic": "bearing-diagnosis",
       "date": "2024-11-05",
       "slug": "2024-11-05-241102718v1-llm-based-framework-for-bearing-fault-diagnosis",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Spatial-Temporal Bearing Fault Detection Using Graph Attention Networks and LSTM",
-      "topic": "bearing-diagnosis",
-      "date": "2024-10-15",
-      "slug": "2024-10-15-241011923v1-spatial-temporal-bearing-fault-detection-using-graph-attention-netw",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     },
     {
