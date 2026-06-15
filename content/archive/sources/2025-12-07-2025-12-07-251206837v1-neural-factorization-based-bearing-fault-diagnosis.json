@@ -1,0 +1,56 @@
+{
+  "date": "2025-12-07",
+  "slug": "2025-12-07-251206837v1-neural-factorization-based-bearing-fault-diagnosis",
+  "title": "Neural Factorization-based Bearing Fault Diagnosis",
+  "source_type": "arxiv-api",
+  "topic": "bearing-diagnosis",
+  "categories": [
+    "phm",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "bearing-diagnosis"
+  ],
+  "summary": [
+    "This paper studies the key problems of bearing fault diagnosis of high-speed train.",
+    "As the core component of the train operation system, the health of bearings is directly related to the safety of train operation.",
+    "The traditional diagnostic methods are facing the challenge of insufficient diagnostic accuracy under complex conditions."
+  ],
+  "key_points": [
+    "As the core component of the train operation system, the health of bearings is directly related to the safety of train operation.",
+    "The traditional diagnostic methods are facing the challenge of insufficient diagnostic accuracy under complex conditions."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2512.06837v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2512.06837v1"
+    }
+  ],
+  "authors": [
+    "Zhenhao Li",
+    "Xu Cheng",
+    "Yi Zhou"
+  ],
+  "abstract": "This paper studies the key problems of bearing fault diagnosis of high-speed train. As the core component of the train operation system, the health of bearings is directly related to the safety of train operation. The traditional diagnostic methods are facing the challenge of insufficient diagnostic accuracy under complex conditions. To solve these problems, we propose a novel Neural Factorization-based Classification (NFC) framework for bearing fault diagnosis. It is built on two core idea: 1) Embedding vibration time series into multiple mode-wise latent feature vectors to capture diverse fault-related patterns; 2) Leveraging neural factorization principles to fuse these vectors into a unified vibration representation. This design enables effective mining of complex latent fault characteristics from raw time-series data. We further instantiate the framework with two models CP-NFC and Tucker-NFC based on CP and Tucker fusion schemes, respectively. Experimental results show that both models achieve superior diagnostic performance compared with traditional machine learning methods. The comparative analysis provides valuable empirical evidence and practical guidance for selecting effective diagnostic strategies in high-speed train bearing monitoring.",
+  "entry_id": "http://arxiv.org/abs/2512.06837v1",
+  "arxiv_id": "2512.06837v1",
+  "published_at": "2025-12-07T13:19:39Z"
+}

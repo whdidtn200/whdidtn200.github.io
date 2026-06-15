@@ -1,0 +1,61 @@
+{
+  "date": "2025-08-12",
+  "slug": "2025-08-12-250809054v1-cvcm-track-circuits-pre-emptive-failure-diagnostics-for-predictive",
+  "title": "CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks",
+  "source_type": "arxiv-api",
+  "topic": "railway-phm",
+  "categories": [
+    "phm",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "railway-phm"
+  ],
+  "summary": [
+    "Track circuits are critical for railway operations, acting as the main signalling sub-system to locate trains.",
+    "Continuous Variable Current Modulation (CVCM) is one such technology.",
+    "Like any field-deployed, safety-critical asset, it can fail, triggering cascading disruptions."
+  ],
+  "key_points": [
+    "Continuous Variable Current Modulation (CVCM) is one such technology.",
+    "Like any field-deployed, safety-critical asset, it can fail, triggering cascading disruptions."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2508.09054v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2508.09054v1"
+    }
+  ],
+  "authors": [
+    "Debdeep Mukherjee",
+    "Eduardo Di Santi",
+    "Clément Lefebvre",
+    "Nenad Mijatovic",
+    "Victor Martin",
+    "Thierry Josse",
+    "Jonathan Brown",
+    "Kenza Saiah"
+  ],
+  "abstract": "Track circuits are critical for railway operations, acting as the main signalling sub-system to locate trains. Continuous Variable Current Modulation (CVCM) is one such technology. Like any field-deployed, safety-critical asset, it can fail, triggering cascading disruptions. Many failures originate as subtle anomalies that evolve over time, often not visually apparent in monitored signals. Conventional approaches, which rely on clear signal changes, struggle to detect them early. Early identification of failure types is essential to improve maintenance planning, minimising downtime and revenue loss. Leveraging deep neural networks, we propose a predictive maintenance framework that classifies anomalies well before they escalate into failures. Validated on 10 CVCM failure cases across different installations, the method is ISO-17359 compliant and outperforms conventional techniques, achieving 99.31% overall accuracy with detection within 1% of anomaly onset. Through conformal prediction, we provide uncertainty estimates, reaching 99% confidence with consistent coverage across classes. Given CVCMs global deployment, the approach is scalable and adaptable to other track circuits and railway systems, enhancing operational reliability.",
+  "entry_id": "http://arxiv.org/abs/2508.09054v1",
+  "arxiv_id": "2508.09054v1",
+  "published_at": "2025-08-12T16:13:51Z"
+}

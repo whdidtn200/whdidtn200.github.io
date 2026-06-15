@@ -1,0 +1,55 @@
+{
+  "date": "2026-03-15",
+  "slug": "2026-03-15-260314384v1-low-data-predictive-maintenance-of-railway-station-doors-and-elevat",
+  "title": "Low-Data Predictive Maintenance of Railway Station Doors and Elevators Using Bayesian Proxy Flow Modeling",
+  "source_type": "arxiv-api",
+  "topic": "railway-phm",
+  "categories": [
+    "phm",
+    "eess.SY"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "railway-phm"
+  ],
+  "summary": [
+    "This paper proposes a low-data predictive maintenance framework for automatic doors and elevators in a railway station building.",
+    "The method is intended for assets without direct condition monitoring, where only aggregate passenger traffic information and expert knowledge about movement patterns are available.",
+    "Passenger flows are modeled on a reduced station graph using a Bayesian formulation with uncertain totals and routing shares."
+  ],
+  "key_points": [
+    "The method is intended for assets without direct condition monitoring, where only aggregate passenger traffic information and expert knowledge about movement patterns are available.",
+    "Passenger flows are modeled on a reduced station graph using a Bayesian formulation with uncertain totals and routing shares."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2603.14384v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2603.14384v1"
+    }
+  ],
+  "authors": [
+    "Waldemar Bauer",
+    "Jerzy Baranowski"
+  ],
+  "abstract": "This paper proposes a low-data predictive maintenance framework for automatic doors and elevators in a railway station building. The method is intended for assets without direct condition monitoring, where only aggregate passenger traffic information and expert knowledge about movement patterns are available. Passenger flows are modeled on a reduced station graph using a Bayesian formulation with uncertain totals and routing shares. The inferred flows are converted into approximate operating-cycle loads for doors and elevators through simple stochastic proxy relations. These loads are combined with uncertain age- and cycle-based maintenance thresholds to estimate the probability that predefined maintenance conditions have been reached. A cost-aware scheduling model is then used to align maintenance activities while accounting for service costs, disruption, delay penalties, and grouping opportunities within each asset class. The framework is illustrated on a simulated case study reflecting a real station layout. The results show that proxy operational data can support maintenance scheduling with low incremental implementation cost and can improve alignment relative to a calendar-based policy.",
+  "entry_id": "http://arxiv.org/abs/2603.14384v1",
+  "arxiv_id": "2603.14384v1",
+  "published_at": "2026-03-15T13:48:06Z"
+}

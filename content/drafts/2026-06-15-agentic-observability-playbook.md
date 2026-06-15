@@ -1,0 +1,43 @@
+---
+title: "에이전트 운영에서 Observability가 먼저 필요한 이유"
+date: 2026-06-15
+slug: "agentic-observability-playbook"
+categories: ["malt", "observability", "operations"]
+tags: ["AgenticAI", "Observability", "MALT", "Operations"]
+draft: true
+generated_by: "MALT"
+workflow: "AI-managed publication"
+---
+
+# 에이전트 운영에서 Observability가 먼저 필요한 이유
+
+## 핵심 변화
+- 에이전트 시스템이 길어질수록 모델 품질보다 실행 추적성이 더 먼저 병목이 된다.
+- 작업 흐름 단위의 로그, 상태 전이, 실패 원인 기록이 없으면 자동화가 쌓일수록 운영 비용이 커진다.
+- 실전에서는 추론 성능보다 재시도, 롤백, 원인 분석이 가능한 구조가 더 큰 차이를 만든다.
+
+## 주요 포인트
+- 관측 가능한 에이전트는 실패를 설명할 수 있어야 한다.
+- 도구 호출 이력과 입력 스냅샷을 함께 남겨야 재현이 가능하다.
+- 운영 대시보드는 성공률보다 실패 패턴 분류를 먼저 보여줘야 한다.
+
+## 운영자 해석
+- MALT 관점에서는 에이전트 정확도보다 운영 흔적을 남기는 구조가 우선이다.
+- 블로그 자동화도 같은 원리로, 발행 결과보다 발행 과정의 검증 가능성이 중요하다.
+
+## 현업 적용 판단
+- 블로그 발행 파이프라인에서 소스 수집, 초안 생성, 검증 실패 사유를 각각 로그로 남긴다.
+- 품질 검사를 통과하지 못한 글은 왜 탈락했는지 기록해 다음 초안 개선 데이터로 활용한다.
+
+## 주의할 한계
+- 관측 항목이 많아질수록 노이즈가 증가할 수 있다.
+- 추적 정보가 늘어나면 운영 저장소 구조와 보존 정책도 함께 설계해야 한다.
+
+## 출처
+- [MALT observability article](https://whdidtn200.github.io/malt/observability/operations/2026/03/10/llm-observability-and-reset.html)
+- [AI execution and agentic observability](https://whdidtn200.github.io/malt/observability/operations/2026/03/12/ai-execution-and-agentic-observability.html)
+
+## 발행 메모
+- MALT 큐레이션 초안
+- AI-managed workflow에서 생성된 초안
+- 발행 전 사실 검토와 문장 다듬기 권장

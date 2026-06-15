@@ -1,0 +1,58 @@
+{
+  "date": "2024-10-15",
+  "slug": "2024-10-15-241011923v1-spatial-temporal-bearing-fault-detection-using-graph-attention-netw",
+  "title": "Spatial-Temporal Bearing Fault Detection Using Graph Attention Networks and LSTM",
+  "source_type": "arxiv-api",
+  "topic": "bearing-diagnosis",
+  "categories": [
+    "phm",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "bearing-diagnosis"
+  ],
+  "summary": [
+    "Purpose: This paper aims to enhance bearing fault diagnosis in industrial machinery by introducing a novel method that combines Graph Attention Network (GAT) and Long Short-Term Memory (LSTM) networks.",
+    "This approach captures both spatial and temporal dependencies within sensor data, improving the accuracy of bearing fault detection under various conditions.",
+    "Methodology: The proposed method converts time series sensor data into graph representations."
+  ],
+  "key_points": [
+    "This approach captures both spatial and temporal dependencies within sensor data, improving the accuracy of bearing fault detection under various conditions.",
+    "Methodology: The proposed method converts time series sensor data into graph representations."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2410.11923v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2410.11923v1"
+    }
+  ],
+  "authors": [
+    "Moirangthem Tiken Singh",
+    "Rabinder Kumar Prasad",
+    "Gurumayum Robert Michael",
+    "N. Hemarjit Singh",
+    "N. K. Kaphungkui"
+  ],
+  "abstract": "Purpose: This paper aims to enhance bearing fault diagnosis in industrial machinery by introducing a novel method that combines Graph Attention Network (GAT) and Long Short-Term Memory (LSTM) networks. This approach captures both spatial and temporal dependencies within sensor data, improving the accuracy of bearing fault detection under various conditions. Methodology: The proposed method converts time series sensor data into graph representations. GAT captures spatial relationships between components, while LSTM models temporal patterns. The model is validated using the Case Western Reserve University (CWRU) Bearing Dataset, which includes data under different horsepower levels and both normal and faulty conditions. Its performance is compared with methods such as K-Nearest Neighbors (KNN), Local Outlier Factor (LOF), Isolation Forest (IForest) and GNN-based method for bearing fault detection (GNNBFD). Findings: The model achieved outstanding results, with precision, recall, and F1-scores reaching 100\\% across various testing conditions. It not only identifies faults accurately but also generalizes effectively across different operational scenarios, outperforming traditional methods. Originality: This research presents a unique combination of GAT and LSTM for fault detection, overcoming the limitations of traditional time series methods by capturing complex spatial-temporal dependencies. Its superior performance demonstrates significant potential for predictive maintenance in industrial applications.",
+  "entry_id": "http://arxiv.org/abs/2410.11923v1",
+  "arxiv_id": "2410.11923v1",
+  "published_at": "2024-10-15T12:55:57Z"
+}

@@ -1,0 +1,58 @@
+{
+  "date": "2026-04-21",
+  "slug": "2026-04-21-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs",
+  "title": "Towards Energy Impact on AI-Powered 6G IoT Networks: Centralized vs. Decentralized",
+  "source_type": "arxiv-api",
+  "topic": "railway-phm",
+  "categories": [
+    "phm",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "railway-phm"
+  ],
+  "summary": [
+    "The emergence of sixth-generation (6G) technologies has introduced new challenges and opportunities for machine learning (ML) applications in Internet of Things (IoT) networks, particularly concerning energy efficiency.",
+    "As model training and data transmission contribute significantly to energy consumption, optimizing these processes has become critical for sustainable system design.",
+    "This study first conduct analysis on the energy consumption model for both centralized and decentralized architecture and then presents a testbed deployed within the German railway infrastructure, leveraging sensor data for ML-based predictive maintenance."
+  ],
+  "key_points": [
+    "As model training and data transmission contribute significantly to energy consumption, optimizing these processes has become critical for sustainable system design.",
+    "This study first conduct analysis on the energy consumption model for both centralized and decentralized architecture and then presents a testbed deployed within the German railway infrastructure, leveraging sensor data for ML-based predictive maintenance."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2604.19377v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2604.19377v1"
+    }
+  ],
+  "authors": [
+    "Anjie Qiu",
+    "Donglin Wang",
+    "Sanket Partani",
+    "Andreas Weinand",
+    "Hans D. Schotten"
+  ],
+  "abstract": "The emergence of sixth-generation (6G) technologies has introduced new challenges and opportunities for machine learning (ML) applications in Internet of Things (IoT) networks, particularly concerning energy efficiency. As model training and data transmission contribute significantly to energy consumption, optimizing these processes has become critical for sustainable system design. This study first conduct analysis on the energy consumption model for both centralized and decentralized architecture and then presents a testbed deployed within the German railway infrastructure, leveraging sensor data for ML-based predictive maintenance. A comparative analysis of distributed versus Centralized Learning (CL) architectures reveals that distributed models maintain competitive predictive accuracy (~90%) while reducing overall electricity consumption by up to 70%. These findings underscore the potential of distributed ML to improve energy efficiency in real-world IoT deployments, particularly by mitigating transmission-related energy costs.",
+  "entry_id": "http://arxiv.org/abs/2604.19377v1",
+  "arxiv_id": "2604.19377v1",
+  "published_at": "2026-04-21T11:59:08Z"
+}

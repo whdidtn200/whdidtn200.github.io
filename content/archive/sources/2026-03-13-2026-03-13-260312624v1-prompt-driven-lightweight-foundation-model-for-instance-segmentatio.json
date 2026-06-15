@@ -1,0 +1,58 @@
+{
+  "date": "2026-03-13",
+  "slug": "2026-03-13-260312624v1-prompt-driven-lightweight-foundation-model-for-instance-segmentatio",
+  "title": "Prompt-Driven Lightweight Foundation Model for Instance Segmentation-Based Fault Detection in Freight Trains",
+  "source_type": "arxiv-api",
+  "topic": "railway-phm",
+  "categories": [
+    "phm",
+    "cs.CV"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "railway-phm"
+  ],
+  "summary": [
+    "Accurate visual fault detection in freight trains remains a critical challenge for intelligent transportation system maintenance, due to complex operational environments, structurally repetitive components, and frequent occlusions or contaminations in safety-critical regions.",
+    "Conventional instance segmentation methods based on convolutional neural networks and Transformers often suffer from poor generalization and limited boundary accuracy under such conditions.",
+    "To address these challenges, we propose a lightweight self-prompted instance segmentation framework tailored for freight train fault detection."
+  ],
+  "key_points": [
+    "Conventional instance segmentation methods based on convolutional neural networks and Transformers often suffer from poor generalization and limited boundary accuracy under such conditions.",
+    "To address these challenges, we propose a lightweight self-prompted instance segmentation framework tailored for freight train fault detection."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2603.12624v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2603.12624v1"
+    }
+  ],
+  "authors": [
+    "Guodong Sun",
+    "Qihang Liang",
+    "Xingyu Pan",
+    "Moyun Liu",
+    "Yang Zhang"
+  ],
+  "abstract": "Accurate visual fault detection in freight trains remains a critical challenge for intelligent transportation system maintenance, due to complex operational environments, structurally repetitive components, and frequent occlusions or contaminations in safety-critical regions. Conventional instance segmentation methods based on convolutional neural networks and Transformers often suffer from poor generalization and limited boundary accuracy under such conditions. To address these challenges, we propose a lightweight self-prompted instance segmentation framework tailored for freight train fault detection. Our method leverages the Segment Anything Model by introducing a self-prompt generation module that automatically produces task-specific prompts, enabling effective knowledge transfer from foundation models to domain-specific inspection tasks. In addition, we adopt a Tiny Vision Transformer backbone to reduce computational cost, making the framework suitable for real-time deployment on edge devices in railway monitoring systems. We construct a domain-specific dataset collected from real-world freight inspection stations and conduct extensive evaluations. Experimental results show that our method achieves 74.6 $AP^{\\text{box}}$ and 74.2 $AP^{\\text{mask}}$ on the dataset, outperforming existing state-of-the-art methods in both accuracy and robustness while maintaining low computational overhead. This work offers a deployable and efficient vision solution for automated freight train inspection, demonstrating the potential of foundation model adaptation in industrial-scale fault diagnosis scenarios. Project page: https://github.com/MVME-HBUT/SAM_FTI-FDet.git",
+  "entry_id": "http://arxiv.org/abs/2603.12624v1",
+  "arxiv_id": "2603.12624v1",
+  "published_at": "2026-03-13T03:56:37Z"
+}
