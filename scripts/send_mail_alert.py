@@ -65,11 +65,21 @@ def main() -> int:
         print(wrapped_script)
         return 0
 
-    subprocess.run(
-        ["osascript", "-e", wrapped_script],
-        check=True,
-        timeout=args.timeout_seconds + 5,
-    )
+    try:
+        subprocess.run(
+            ["mail", "-s", args.subject, args.to],
+            input=args.body,
+            text=True,
+            check=True,
+            timeout=args.timeout_seconds,
+        )
+        return 0
+    except Exception:
+        subprocess.run(
+            ["osascript", "-e", wrapped_script],
+            check=True,
+            timeout=args.timeout_seconds + 5,
+        )
     return 0
 
 
