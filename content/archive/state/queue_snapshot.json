@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-16T22:29:50.017665+00:00",
-  "queued_count": 10,
+  "generated_at": "2026-06-16T22:45:02.032190+00:00",
+  "queued_count": 9,
   "queued_titles": [
     {
       "title": "Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems",
@@ -56,13 +56,6 @@
       "topic": "railway-phm",
       "date": "2026-04-21",
       "slug": "2026-04-21-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "LLM-based Framework for Bearing Fault Diagnosis",
-      "topic": "bearing-diagnosis",
-      "date": "2024-11-05",
-      "slug": "2024-11-05-241102718v1-llm-based-framework-for-bearing-fault-diagnosis",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     },
     {
