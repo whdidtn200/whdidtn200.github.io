@@ -7,7 +7,7 @@
 
   <key>ProgramArguments</key>
   <array>
-    <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io/scripts/run_daily_publish.sh</string>
+    <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io/scripts/run_backup_publish_with_email.sh</string>
   </array>
 
   <key>StartCalendarInterval</key>
