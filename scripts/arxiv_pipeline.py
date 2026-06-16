@@ -977,21 +977,28 @@ def write_post_files(source: dict) -> tuple[pathlib.Path, pathlib.Path]:
 
 def update_posts_listing(title: str, html_filename: str) -> None:
     content = POSTS_INDEX.read_text(encoding="utf-8")
-    list_start = content.find("<ul>")
+    marker = '<ul class="archive-grid">'
+    list_start = content.find(marker)
     list_end = content.find("</ul>", list_start)
     if list_start == -1 or list_end == -1:
         raise SystemExit("posts.html list block not found")
     new_item = f'  <li><a href="/posts/{html_filename}">{html.escape(title)}</a></li>\n'
-    block = content[list_start + 4:list_end]
+    block = content[list_start + len(marker):list_end]
     if new_item.strip() in block:
         return
     new_block = "\n" + new_item + block.lstrip("\n")
-    POSTS_INDEX.write_text(content[:list_start + 4] + new_block + content[list_end:], encoding="utf-8")
+    POSTS_INDEX.write_text(content[:list_start + len(marker)] + new_block + content[list_end:], encoding="utf-8")
 
 
 def update_home_latest_links() -> None:
     content = POSTS_INDEX.read_text(encoding="utf-8")
-    items = re.findall(r'<li><a href="([^"]+)">([^<]+)</a></li>', content)
+    marker = '<ul class="archive-grid">'
+    list_start = content.find(marker)
+    list_end = content.find("</ul>", list_start)
+    if list_start == -1 or list_end == -1:
+        raise SystemExit("posts.html list block not found")
+    block = content[list_start:list_end]
+    items = re.findall(r'<li><a href="([^"]+)">([^<]+)</a></li>', block)
     latest = items[:6]
     links_html = "\n".join(f'<a href="{href}">{text}</a>' for href, text in latest)
 

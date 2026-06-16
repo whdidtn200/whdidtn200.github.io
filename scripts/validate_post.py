@@ -16,18 +16,24 @@ AI_DISCLOSURE_MARKERS = [
 
 
 def changed_posts():
-    try:
-        output = subprocess.check_output(
-            ["git", "diff", "--name-only", "HEAD", "--", "posts/*.md"],
-            text=True,
-        )
-    except subprocess.CalledProcessError:
-        return []
+    commands = [
+        ["git", "diff", "--name-only", "HEAD", "--", "posts"],
+        ["git", "ls-files", "--others", "--exclude-standard", "--", "posts"],
+    ]
 
+    seen = set()
     paths = []
-    for line in output.splitlines():
-        path = pathlib.Path(line.strip())
-        if path.suffix == ".md" and path.exists():
+    for command in commands:
+        try:
+            output = subprocess.check_output(command, text=True)
+        except subprocess.CalledProcessError:
+            continue
+
+        for line in output.splitlines():
+            path = pathlib.Path(line.strip())
+            if path.suffix != ".md" or not path.exists() or path in seen:
+                continue
+            seen.add(path)
             paths.append(path)
     return paths
 

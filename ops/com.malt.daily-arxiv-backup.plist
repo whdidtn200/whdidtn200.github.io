@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.malt.daily-arxiv-backup</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io/scripts/run_daily_publish.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>5</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/yangsoo/Library/Logs/malt-daily-arxiv-backup.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/yangsoo/Library/Logs/malt-daily-arxiv-backup.err.log</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>
