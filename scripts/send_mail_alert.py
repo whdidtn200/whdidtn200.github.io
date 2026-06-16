@@ -17,6 +17,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--subject", required=True)
     parser.add_argument("--body", required=True)
     parser.add_argument("--account-address")
+    parser.add_argument("--timeout-seconds", type=int, default=30)
     parser.add_argument("--dry-run", action="store_true")
     return parser.parse_args()
 
@@ -53,11 +54,22 @@ def build_script(args: argparse.Namespace) -> str:
 def main() -> int:
     args = parse_args()
     script = build_script(args)
+    wrapped_script = "\n".join(
+        [
+            f"with timeout of {args.timeout_seconds} seconds",
+            script,
+            "end timeout",
+        ]
+    )
     if args.dry_run:
-        print(script)
+        print(wrapped_script)
         return 0
 
-    subprocess.run(["osascript", "-e", script], check=True)
+    subprocess.run(
+        ["osascript", "-e", wrapped_script],
+        check=True,
+        timeout=args.timeout_seconds + 5,
+    )
     return 0
 
 
