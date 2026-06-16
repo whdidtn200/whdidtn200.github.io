@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T06:23:53.747625+00:00",
-  "queued_count": 12,
+  "generated_at": "2026-06-16T06:20:41Z",
+  "queued_count": 11,
   "queued_titles": [
     {
       "title": "When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime",
@@ -49,13 +49,6 @@
       "topic": "railway-phm",
       "date": "2026-04-21",
       "slug": "2026-04-21-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Neural Factorization-based Bearing Fault Diagnosis",
-      "topic": "bearing-diagnosis",
-      "date": "2025-12-07",
-      "slug": "2025-12-07-251206837v1-neural-factorization-based-bearing-fault-diagnosis",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     },
     {

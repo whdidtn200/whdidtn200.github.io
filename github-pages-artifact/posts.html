@@ -1,51 +1,200 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="ko">
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Posts | MALT Tech Blog</title>
-<meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="Posts" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
-<meta property="og:description" content="AI-Driven Railway Intelligence, PHM, and Agentic AI" />
-<link rel="canonical" href="https://whdidtn200.github.io/posts.html" />
-<meta property="og:url" content="https://whdidtn200.github.io/posts.html" />
-<meta property="og:site_name" content="MALT Tech Blog" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Posts" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"AI-Driven Railway Intelligence, PHM, and Agentic AI","headline":"Posts","url":"https://whdidtn200.github.io/posts.html"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/feed.xml" title="MALT Tech Blog" /></head>
-<body><header class="site-header" role="banner">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts | MALT Tech Blog</title>
+  <meta name="description" content="AI-managed publication archive for Railway Intelligence, PHM, and Agentic AI">
+  <link rel="canonical" href="https://whdidtn200.github.io/posts.html">
+  <meta property="og:title" content="Posts">
+  <meta property="og:description" content="AI-managed publication archive for Railway Intelligence, PHM, and Agentic AI">
+  <meta property="og:url" content="https://whdidtn200.github.io/posts.html">
+  <meta property="og:site_name" content="MALT Tech Blog">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <style>
+    :root{
+      --bg:#eef4f8;
+      --panel:#ffffff;
+      --panel2:#f5f9fc;
+      --line:#c9d9e7;
+      --soft:#dfeaf2;
+      --text:#15283d;
+      --muted:#5f738a;
+      --accent:#0f8aa8;
+      --accent2:#167c5f;
+      --hero:#e8f5fb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      color:var(--text);
+      font-family:"Pretendard","SF Pro Display","Segoe UI",sans-serif;
+      background:
+        radial-gradient(900px 480px at 10% -10%, rgba(45,108,223,.12), transparent 60%),
+        radial-gradient(900px 520px at 100% 0%, rgba(15,138,168,.10), transparent 58%),
+        var(--bg);
+      line-height:1.6;
+    }
+    .wrap{max-width:1160px;margin:0 auto;padding:28px 16px 48px}
+    .shell{
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,254,.98));
+      box-shadow:0 18px 54px rgba(24,54,84,.10);
+      overflow:hidden;
+    }
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:18px 20px;
+      border-bottom:1px solid rgba(15,138,168,.12);
+      background:linear-gradient(180deg, rgba(15,138,168,.08), transparent);
+    }
+    .brand{font-size:13px;letter-spacing:.16em;font-weight:800;color:var(--accent)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .nav a{
+      color:var(--text);
+      text-decoration:none;
+      border:1px solid #d6e3ee;
+      border-radius:999px;
+      padding:8px 12px;
+      font-size:13px;
+      background:#ffffff;
+    }
+    .hero{
+      padding:24px 20px 16px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:16px;
+      border-bottom:1px solid #dde7ef;
+    }
+    .kicker{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:700}
+    h1{margin:8px 0 10px;font-size:38px;line-height:1.08}
+    .lead{margin:0;color:var(--muted);max-width:58ch}
+    .hero-card{
+      border:1px solid #dce8f1;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(246,250,253,.98));
+      border-radius:18px;
+      padding:16px;
+      box-shadow:0 10px 24px rgba(24,54,84,.05);
+    }
+    .hero-card h2{margin:0 0 10px;font-size:15px}
+    .hero-card p{margin:0;color:var(--muted);font-size:14px}
+    .hero-list{margin:12px 0 0;padding-left:18px}
+    .hero-list li{margin:8px 0;color:var(--text)}
+    .hero-list strong{color:var(--accent2)}
+    .section{
+      padding:18px 20px 0;
+    }
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:12px;
+      margin-bottom:12px;
+    }
+    .section-head h2{margin:0;font-size:18px}
+    .section-head p{margin:0;color:var(--muted);font-size:13px}
+    .archive-grid{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:12px;
+    }
+    .archive-grid li{margin:0}
+    .archive-grid a{
+      display:flex;
+      min-height:112px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid #d6e3ee;
+      background:
+        linear-gradient(180deg, #ffffff, #f8fbfe);
+      color:var(--text);
+      text-decoration:none;
+      font-weight:600;
+      line-height:1.45;
+      transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+      box-shadow:0 6px 18px rgba(24,54,84,.05);
+    }
+    .archive-grid a:hover{
+      transform:translateY(-2px);
+      border-color:var(--accent);
+      box-shadow:0 10px 24px rgba(15,138,168,.10);
+    }
+    .archive-grid li:first-child a{
+      min-height:148px;
+      grid-column:1 / -1;
+      font-size:18px;
+      background:
+        linear-gradient(135deg, rgba(15,138,168,.14), rgba(22,124,95,.08)),
+        linear-gradient(180deg, var(--hero), #f4fbfe);
+      border-color:rgba(15,138,168,.28);
+    }
+    .footer-note{
+      padding:18px 20px 22px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    @media (max-width:920px){
+      .hero{grid-template-columns:1fr}
+      .archive-grid{grid-template-columns:1fr}
+      .archive-grid li:first-child a{grid-column:auto}
+      h1{font-size:30px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="shell">
+      <header class="topbar">
+        <div class="brand">MALT ARCHIVE</div>
+        <nav class="nav">
+          <a href="/">Home</a>
+          <a href="/AI-OPS.html">AI Ops</a>
+          <a href="/ABOUT.html">About</a>
+        </nav>
+      </header>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">MALT Tech Blog</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
+      <section class="hero">
+        <div>
+          <div class="kicker">POST INDEX</div>
+          <h1>읽을 가치가 있는 글만 빠르게 고르는 아카이브</h1>
+          <p class="lead">이 페이지는 단순한 파일 목록이 아니라, MALT가 발행한 철도 PHM · 산업 AI · 에이전트 운영 글을 한곳에 모아 읽기 순서와 밀도를 정리한 아카이브다. 최신 글이 먼저 오고, 길게 읽을 글과 가볍게 훑을 글이 자연스럽게 섞이도록 구성한다.</p>
+        </div>
 
-        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
+        <aside class="hero-card">
+          <h2>이 아카이브를 보는 기준</h2>
+          <p>최신성보다도 실무 연결성과 설명 밀도를 우선한다. 자동 발행 글도 같은 디자인 레일 위에 올려서, 누적될수록 더 신뢰되는 기술 매거진처럼 보이게 만드는 것이 목표다.</p>
+          <ul class="hero-list">
+            <li><strong>Daily arXiv</strong>: 하루 1회 발행되는 논문 분석 글</li>
+            <li><strong>Railway / PHM</strong>: 철도 유지보수와 상태진단 중심 글</li>
+            <li><strong>Agentic AI</strong>: 운영 자동화와 에이전트 시스템 해석 글</li>
+          </ul>
+        </aside>
+      </section>
 
-  <header class="post-header">
-    <h1 class="post-title">Posts</h1>
-  </header>
-
-  <div class="post-content">
-    <h1 id="posts">Posts</h1>
-
-<ul>
+      <section class="section">
+        <div class="section-head">
+          <h2>최근 발행 글</h2>
+          <p>최신 글부터 카드 형태로 정리해 스캔 속도를 높였습니다.</p>
+        </div>
+        <ul class="archive-grid">
+  <li><a href="/posts/2026-06-16-251206837v1-neural-factorization-based-bearing-fault-diagnosis.html">[arXiv Daily] Neural Factorization-based Bearing Fault Diagnosis</a></li>
+  <li><a href="/posts/2026-06-15-241011923v1-spatial-temporal-bearing-fault-detection-using-graph-attention-netw.html">[arXiv Daily] Spatial-Temporal Bearing Fault Detection Using Graph Attention Networks and LSTM</a></li>
+  <li><a href="/posts/2026-06-15-240611917v3-modulated-differentiable-stft-and-balanced-spectrum-metric-for-frei.html">[arXiv Daily] Modulated differentiable STFT and balanced spectrum metric for freight train wheelset bearing cross-machine transfer monitoring under speed fluctuations</a></li>
+  <li><a href="/posts/2026-03-13-260312624v1-prompt-driven-lightweight-foundation-model-for-instance-segmentatio.html">[arXiv Daily] Prompt-Driven Lightweight Foundation Model for Instance Segmentation-Based Fault Detection in Freight Trains</a></li>
+  <li><a href="/posts/2026-03-15-260314384v1-low-data-predictive-maintenance-of-railway-station-doors-and-elevat.html">[arXiv Daily] Low-Data Predictive Maintenance of Railway Station Doors and Elevators Using Bayesian Proxy Flow Modeling</a></li>
+  <li><a href="/posts/2025-08-12-250809054v1-cvcm-track-circuits-pre-emptive-failure-diagnostics-for-predictive.html">[arXiv Daily] CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks</a></li>
+  <li><a href="/posts/2026-02-18-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa.html">[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring</a></li>
+  <li><a href="/ai/open-source/2026/03/24/opensource-llm-agent-ecosystem-2026.html">2026년 3월: 오픈소스 LLM과 에이전트 개발 생태계의 대격변</a></li>
+  <li><a href="/phm/agentic-ai/2026/03/24/agentic-ai-railway-cbm-phm.html">철도 CBM/PHM을 위한 자율 에이전트와 고성능 로컬 모델의 결합</a></li>
   <li><a href="/posts/2026-03-08-agentic-ai-industrial-application.html">최신 Agentic AI의 산업 현장 적용 전략</a></li>
   <li><a href="/posts/2026-03-06-vae-bearing-anomaly-detection-ap-metrics.html">VAE 기반 베어링 이상 탐지: Average Precision 평가 지표 도입과 실무 적용</a></li>
   <li><a href="/posts/2026-03-05-phm-agentic-ai-trends-2026.html">2026-03-05-phm-agentic-ai-trends-2026</a></li>
@@ -76,37 +225,13 @@
   <li><a href="/posts/2026-02-19-physics-guided-tiny-mamba.html">2026-02-19-physics-guided-tiny-mamba</a></li>
   <li><a href="/posts/2026-02-19-bearing-ae-sensor.html">2026-02-19-bearing-ae-sensor</a></li>
   <li><a href="/posts/2026-02-19-ae-localization-deepdive.html">2026-02-19-ae-localization-deepdive</a></li>
-</ul>
+        </ul>
+      </section>
 
-  </div>
-
-</article>
-
+      <div class="footer-note">
+        이 페이지는 자동 발행 글이 계속 쌓여도 `제목 스캔 -> 글 선택 -> 탐색` 흐름이 깨지지 않도록 설계된 카드형 아카이브다.
       </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">MALT Tech Blog</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">MALT Tech Blog</li><li><a class="u-email" href="mailto:contact@malt-system.local">contact@malt-system.local</a></li></ul>
-      </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
-        <p>AI-Driven Railway Intelligence, PHM, and Agentic AI</p>
-      </div>
-    </div>
-
-  </div>
-
-</footer>
+    </section>
+  </main>
 </body>
-
 </html>
