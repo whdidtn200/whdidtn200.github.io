@@ -235,6 +235,76 @@ def detect_focus_signals(text: str) -> list[str]:
     return found
 
 
+def build_reader_fit(domain: str, source: dict) -> list[str]:
+    title = source.get("title", "").lower()
+    abstract = source.get("abstract", "").lower()
+    merged = f"{title} {abstract}"
+    if domain == "bearing":
+        return [
+            "철도/회전체 설비의 상태 감시 체계를 설계하는 PHM 엔지니어",
+            "진동·주파수·시간-주파수 특징을 실제 고장 진단 파이프라인에 붙여야 하는 데이터 분석가",
+            "실험실 성능이 아니라 속도 변화, 부하 변화, 장비 차이까지 보고 싶은 운영 담당자",
+        ]
+    if domain == "vision":
+        return [
+            "카메라 기반 외관 점검이나 결함 세그멘테이션을 운영하려는 컴퓨터 비전 엔지니어",
+            "조명 변화, 가림, 오염 같은 현장 조건에서 모델이 얼마나 버티는지 확인해야 하는 품질 팀",
+            "정밀 경계 추출 결과를 교체 판단이나 유지보수 티켓으로 연결하려는 운영 담당자",
+        ]
+    if domain == "agent":
+        return [
+            "에이전트 런타임, 관찰 가능성, 자동화 실패 복구를 다루는 AI Ops 엔지니어",
+            "LLM 기반 워크플로를 실제 운영 환경에 올려놓고 안정성을 관리해야 하는 팀",
+            "정답률보다 실행 흐름과 도구 호출 품질을 중요하게 보는 운영 책임자",
+        ]
+    if "maintenance" in merged or "fault" in merged:
+        return [
+            "예지보전 로드맵을 만들고 있는 현장 기술 리더",
+            "센서 데이터와 운영 의사결정을 연결해야 하는 분석 담당자",
+            "연구 논문을 실제 점검 절차로 번역하려는 엔지니어",
+        ]
+    return [
+        "최신 연구를 현장 운영 문제로 번역해서 읽고 싶은 엔지니어",
+        "논문 요약보다 적용 조건과 한계를 먼저 확인하고 싶은 실무자",
+        "AI 자동화 시스템이 어떤 기준으로 기술 콘텐츠를 고르는지 궁금한 독자",
+    ]
+
+
+def build_operational_takeaways(domain: str, source: dict) -> list[str]:
+    focus_signals = detect_focus_signals(f"{source.get('title', '')} {source.get('abstract', '')}".lower())
+    focus_text = ", ".join(focus_signals[:2]) if focus_signals else "운영 제약"
+    common = [
+        "논문 수치만 보지 말고, 우리 데이터 조건과 입력 품질이 논문 조건과 얼마나 다른지 먼저 비교한다.",
+        "모델 도입 전에 경보 이후의 사람 작업 흐름까지 같이 설계해야 실제 운영 가치가 생긴다.",
+    ]
+    if domain == "bearing":
+        return [
+            "센서 배치, 샘플링 주기, 회전 속도 정보가 우리 설비에서 얼마나 안정적으로 확보되는지 먼저 확인한다.",
+            f"특히 {focus_text} 조건에서 성능이 유지되는지 별도 검증용 데이터셋을 따로 잡아두는 편이 좋다.",
+            "파일럿 단계에서는 조기 경보의 민감도보다 오탐 이후 작업 부담이 얼마나 생기는지도 같이 측정한다.",
+            *common,
+        ]
+    if domain == "vision":
+        return [
+            "카메라 위치, 조명, 오염 상태가 현장마다 얼마나 다른지부터 점검하고 테스트 이미지를 따로 모아둔다.",
+            f"특히 {focus_text}가 심한 장면에서 경계가 무너지는지 먼저 보는 편이 실무적이다.",
+            "결함 검출 결과를 바로 교체 판단으로 쓰지 말고, 작업자 검수 단계와 연결하는 것이 안전하다.",
+            *common,
+        ]
+    if domain == "agent":
+        return [
+            "도구 호출 실패, 단계 누락, 재시도 정책 같은 운영 로그를 먼저 남길 수 있어야 논문 아이디어를 살릴 수 있다.",
+            f"특히 {focus_text} 상황에서 에이전트가 어떤 방식으로 무너지는지 실패 분류 체계를 같이 둔다.",
+            "정답률보다도 실패를 얼마나 빨리 발견하고 롤백할 수 있는지가 운영 품질에 더 중요하다.",
+            *common,
+        ]
+    return [
+        f"이 논문은 {focus_text}를 다룰 때 어떤 데이터와 절차가 필요한지 역으로 정리해 보는 식으로 읽는 편이 좋다.",
+        "바로 도입하기보다 현재 운영 절차에서 어디에 붙일 수 있는지 체크리스트를 먼저 만든다.",
+        *common,
+    ]
+
+
 def fetch_paper_context(source: dict) -> dict:
     if source.get("paper_context"):
         return source["paper_context"]
@@ -384,6 +454,8 @@ def build_detailed_analysis(source: dict) -> dict:
         "쉽게 말해 이 논문은 `이론적으로 좋아 보이는 방법`을 넘어서, 현장에 붙일 때 무엇을 더 챙겨야 하는지 생각하게 만드는 타입이다. "
         "그래서 하루치 자동 발행 글이어도, 단순 초록 번역보다 운영 해석을 중심으로 읽는 편이 맞다."
     )
+    reader_fit = build_reader_fit(domain, source)
+    operational_takeaways = build_operational_takeaways(domain, source)
     analysis = {
         "one_line": one_line,
         "why_now": why_now,
@@ -395,6 +467,8 @@ def build_detailed_analysis(source: dict) -> dict:
         "interpretation": interpretation,
         "limitations": limitations,
         "closing": closing,
+        "reader_fit": reader_fit,
+        "operational_takeaways": operational_takeaways,
     }
     source["analysis"] = analysis
     return analysis
@@ -767,6 +841,8 @@ def render_markdown(source: dict) -> str:
     method_steps = "\n".join(f"- {item}" for item in analysis.get("method_steps", []))
     experiment_points = "\n".join(f"- {item}" for item in analysis.get("experiment_points", []))
     limitations = "\n".join(f"- {item}" for item in analysis.get("limitations", []))
+    reader_fit = "\n".join(f"- {item}" for item in analysis.get("reader_fit", []))
+    operational_takeaways = "\n".join(f"- {item}" for item in analysis.get("operational_takeaways", []))
 
     return f"""# {title}
 
@@ -799,6 +875,10 @@ def render_markdown(source: dict) -> str:
 
 {experiment_points}
 
+## 누가 읽으면 특히 좋은가
+
+{reader_fit}
+
 ## MALT 리뷰
 
 ### 왜 골랐는가
@@ -819,6 +899,9 @@ def render_markdown(source: dict) -> str:
 ## MALT 해석
 
 {analysis.get("interpretation", "")}
+
+## 현업 적용 체크리스트
+{operational_takeaways}
 
 ## 한계와 체크 포인트
 {limitations}
@@ -888,7 +971,7 @@ def render_html(source: dict) -> str:
             </svg>
           </span>
         </label>
-        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a></div>
+        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -922,6 +1005,11 @@ def render_html(source: dict) -> str:
 {paragraphize(analysis.get("experiment_points", []))}
         </ul>
 
+        <h2>누가 읽으면 특히 좋은가</h2>
+        <ul>
+{paragraphize(analysis.get("reader_fit", []))}
+        </ul>
+
         <h2>MALT 리뷰</h2>
         <p><strong>왜 골랐는가.</strong> {html.escape(review.get("why_selected", ""))}</p>
         <p><strong>어떻게 읽어야 하는가.</strong> {html.escape(review.get("interpretation", ""))}</p>
@@ -931,6 +1019,11 @@ def render_html(source: dict) -> str:
 
         <h2>MALT 해석</h2>
         <p>{html.escape(analysis.get("interpretation", ""))}</p>
+
+        <h2>현업 적용 체크리스트</h2>
+        <ul>
+{paragraphize(analysis.get("operational_takeaways", []))}
+        </ul>
 
         <h2>한계와 체크 포인트</h2>
         <ul>

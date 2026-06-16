@@ -5,6 +5,7 @@ MALT Tech Blog is an **AI-managed technical publication system** focused on Rail
 - [About](./ABOUT.md)
 - [AI Operations](./AI-OPS.md)
 - [Contact](./CONTACT.md)
+- [Editorial Standards](./EDITORIAL.md)
 - [Privacy Policy](./PRIVACY.md)
 
 ## 🤖 How MALT Operates
