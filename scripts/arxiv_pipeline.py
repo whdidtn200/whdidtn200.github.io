@@ -832,6 +832,7 @@ def render_markdown(source: dict) -> str:
 
 ## 발행 메모
 - MALT daily arXiv pipeline이 생성한 자동 발행본
+- MALT 큐레이션과 AI-managed editorial workflow를 거친 발행본
 - 발행 전 원문 초록과 arXiv HTML 본문을 다시 확인함
 - 하루 1회 자동 발행이지만, 글 구조는 `문제 -> 방법 -> 실험 -> 해석 -> 한계` 순서로 유지함
 """
