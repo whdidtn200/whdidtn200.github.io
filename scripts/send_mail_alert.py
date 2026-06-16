@@ -34,10 +34,9 @@ def build_script(args: argparse.Namespace) -> str:
         script.extend(
             [
                 f"set preferredAddress to {applescript_literal(args.account_address)}",
-                "set matchingAccounts to every account whose email addresses contains preferredAddress",
-                "if (count of matchingAccounts) > 0 then",
-                "set account to item 1 of matchingAccounts",
-                "end if",
+                "try",
+                "set sender to preferredAddress",
+                "end try",
             ]
         )
     script.extend(
