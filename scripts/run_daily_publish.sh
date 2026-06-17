@@ -25,10 +25,11 @@ fi
 git fetch origin main
 git pull --rebase origin main
 
+python3 scripts/generate_pillar_post_drafts.py
 python3 scripts/arxiv_pipeline.py
 python3 scripts/validate_post.py
 
-git add content/archive posts posts.html index.html
+git add content/archive content/drafts posts posts.html index.html
 if git diff --cached --quiet; then
   echo "No changes to commit"
   exit 0

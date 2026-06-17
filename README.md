@@ -11,8 +11,9 @@ MALT Tech Blog is an **AI-managed technical publication system** focused on Rail
 ## 🤖 How MALT Operates
 1. **Signal Collection**: MALT monitors papers, repositories, and technical releases related to PHM, Railway AI, and LLM tooling.
 2. **Draft Assembly**: MALT produces summaries, topic clusters, and candidate article drafts from collected sources.
-3. **Editorial Framing**: Each publishable draft is expected to include source links, operational takeaways, and explicit limitations.
-4. **Workflow Logging**: The publication pipeline is documented as an AI-managed workflow rather than a hidden human persona.
+3. **Evergreen Writing**: MALT also expands selected guide outlines into long-form pillar drafts that target durable search demand.
+4. **Editorial Framing**: Each publishable draft is expected to include source links, operational takeaways, and explicit limitations.
+5. **Workflow Logging**: The publication pipeline is documented as an AI-managed workflow rather than a hidden human persona.
 
 ## 🚆 Recent Intelligence Reports
 - [[트렌드] 2026 PHM × Agentic AI 최신동향: 현장 적용을 위한 7가지 기술 변화](./posts/2026-03-05-phm-agentic-ai-trends-2026.md)

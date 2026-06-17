@@ -14,6 +14,7 @@
 ```bash
 python3 scripts/extract_internal_source.py posts/2026-02-22-xai-industrial-iot-anomaly-detection-bearing.md
 python3 scripts/generate_draft.py content/archive/sources/2026-06-15-agentic-observability.json
+python3 scripts/generate_pillar_post_drafts.py --all
 python3 scripts/arxiv_pipeline.py
 ```
 
@@ -29,6 +30,12 @@ python3 scripts/arxiv_pipeline.py
 6. 필요한 해석 보강
 7. `posts/`로 이동 또는 복사
 8. `python3 scripts/validate_post.py`로 변경 포스트 검사
+
+## Pillar Draft Automation
+
+- `scripts/generate_pillar_post_drafts.py`는 `content/drafts/` 안의 outline 형태 가이드 초안을 장문 evergreen draft로 확장합니다.
+- 이미 frontmatter가 있는 완성형 초안은 건드리지 않고, outline 상태인 가이드만 대상으로 삼습니다.
+- `scripts/run_daily_publish.sh`는 매일 발행 전에 이 스크립트를 한 번 실행해서 미완성 가이드가 남아 있으면 하나씩 자동으로 채웁니다.
 
 ## Daily Publish
 
