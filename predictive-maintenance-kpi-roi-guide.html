@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Predictive Maintenance KPI and ROI Guide | MALT Tech Blog</title>
+  <meta name="description" content="예지보전 성과를 무엇으로 측정해야 하는지, KPI와 ROI를 운영 관점에서 정리한 MALT evergreen guide" />
+  <link rel="canonical" href="https://whdidtn200.github.io/predictive-maintenance-kpi-roi-guide.html" />
+  <meta property="og:title" content="Predictive Maintenance KPI and ROI Guide" />
+  <meta property="og:description" content="정확도보다 lead time, false alarm burden, downtime avoided가 중요한 이유를 정리한 가이드" />
+  <meta property="og:url" content="https://whdidtn200.github.io/predictive-maintenance-kpi-roi-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta name="twitter:card" content="summary" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/hud.css" />
+  <style>
+    .article{margin-top:14px}
+    .hero{padding:18px}
+    .hero h1{margin:6px 0 10px;font-size:34px;line-height:1.15}
+    .hero p{margin:0;color:var(--muted);line-height:1.7}
+    .section{margin-top:14px}
+    .section h2{margin:0 0 10px}
+    .section p{line-height:1.8}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">GUIDE · KPI / ROI</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <a class="badge" href="./index.html">HOME</a>
+        <a class="badge" href="./GUIDES.html">GUIDES</a>
+        <a class="badge" href="./posts.html">ARCHIVE</a>
+      </div>
+    </div>
+
+    <section class="card hero article">
+      <div class="h">Evergreen Guide</div>
+      <h1>Predictive Maintenance KPI and ROI Guide: 예지보전 성과를 무엇으로 측정해야 하는가</h1>
+      <p>예지보전 프로젝트는 기술보다 성과 측정 방식 때문에 실패하는 경우가 많습니다. 정확도와 F1 score만으로는 운영팀이 원하는 답을 주기 어렵기 때문입니다. 이 가이드는 predictive maintenance KPI와 ROI를 실제 유지보수 조직이 읽을 수 있는 언어로 정리합니다.</p>
+    </section>
+
+    <section class="card section">
+      <h2>왜 정확도가 핵심 사업 KPI가 아닌가</h2>
+      <p>모델 정확도는 기술 지표이지 사업 지표가 아닙니다. 유지보수 조직이 실제로 알고 싶은 것은 경보가 얼마나 일찍 왔는지, 불필요한 작업을 얼마나 줄였는지, 계획되지 않은 다운타임을 얼마나 회피했는지입니다. 드문 고장 환경에서는 accuracy가 높아도 현장 가치가 거의 없을 수 있습니다.</p>
+    </section>
+
+    <section class="card section">
+      <h2>Leading indicator와 lagging indicator를 나눠서 보라</h2>
+      <p>예지보전 KPI는 즉시 반응 지표와 결과 지표를 분리해야 합니다. lead time, alert quality, inspection conversion은 leading indicator이고, downtime avoided, availability improvement, maintenance cost avoidance는 lagging indicator입니다. 이 구분이 있어야 초기 파일럿과 장기 ROI를 혼동하지 않습니다.</p>
+      <ul>
+        <li>Leading: detection lead time, alert precision, inspection conversion</li>
+        <li>Lagging: downtime reduction, asset availability, maintenance cost avoidance</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>실제로 중요한 유지보수 KPI</h2>
+      <ul>
+        <li>Detection lead time</li>
+        <li>False alarm burden</li>
+        <li>Work order conversion rate</li>
+        <li>Unplanned downtime avoided</li>
+        <li>Repeat failure recurrence</li>
+        <li>Maintenance labor efficiency</li>
+      </ul>
+      <p>이 지표들을 함께 봐야 예지보전이 단순 탐지 실험이 아니라 실제 운영 개선 장치인지 판단할 수 있습니다.</p>
+    </section>
+
+    <section class="card section">
+      <h2>ROI는 어떻게 계산해야 하나</h2>
+      <p>예지보전 ROI는 막은 고장 1건의 비용만으로 계산하면 왜곡되기 쉽습니다. 센서 설치, 데이터 수집, 분석 운영, 작업자 교육, false positive 대응 비용을 함께 봐야 합니다. 초기 파일럿에서는 full ROI보다 `decision-quality improvement`와 `avoidable event reduction`을 먼저 추적하는 편이 현실적입니다.</p>
+    </section>
+
+    <section class="card section">
+      <h2>철도와 회전체 프로그램에 맞는 scorecard 예시</h2>
+      <p>철도와 회전체 설비에서는 안전과 운영 지연 비용이 함께 걸려 있습니다. 따라서 KPI scorecard도 기술팀, 정비팀, 운영팀이 같이 읽을 수 있어야 합니다. corridor별 lead time, depot별 false alarm burden, 자산군별 recurrence rate처럼 운영 구조에 맞는 차원을 쓰는 편이 좋습니다.</p>
+      <ul>
+        <li>주간 경보 건수와 inspection 전환율</li>
+        <li>월간 false alarm burden과 점검 소요 시간</li>
+        <li>분기별 다운타임 회피 시간과 비용 추정</li>
+        <li>자산군별 recurrence rate</li>
+      </ul>
+    </section>
+
+    <section class="card section">
+      <h2>파일럿에서 기대치를 어떻게 관리할까</h2>
+      <p>초기 90일 동안은 ROI를 과하게 약속하지 않는 편이 좋습니다. 먼저 baseline을 만들고, 어디에서 의미 있는 조기 경고가 나오는지 확인해야 합니다. 이후 6개월 단위에서 lead time, work order conversion, false alarm burden을 보고, 그 다음 단계에서 downtime avoided를 더 본격적으로 추정하는 편이 현실적입니다.</p>
+    </section>
+
+    <section class="card section">
+      <div class="h">Related Reading</div>
+      <ul>
+        <li><a href="./wayside-condition-monitoring-guide.html">Wayside Condition Monitoring Guide</a></li>
+        <li><a href="./railway-predictive-maintenance-guide.html">Railway Predictive Maintenance Guide</a></li>
+        <li><a href="./posts/2026-03-15-260314384v1-low-data-predictive-maintenance-of-railway-station-doors-and-elevat.html">Low-Data Predictive Maintenance of Railway Station Doors and Elevators</a></li>
+      </ul>
+      <p class="tiny">이 페이지는 MALT의 AI-managed workflow가 작성한 evergreen guide이며, 내부 아카이브와 공개 글을 바탕으로 재구성했습니다.</p>
+    </section>
+  </div>
+</body>
+</html>
