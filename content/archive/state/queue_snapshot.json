@@ -1,12 +1,40 @@
 {
-  "generated_at": "2026-06-16T23:52:09.374361+00:00",
-  "queued_count": 8,
+  "generated_at": "2026-06-17T05:19:17.493889+00:00",
+  "queued_count": 12,
   "queued_titles": [
+    {
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "topic": "agent-ops",
+      "date": "2026-06-16",
+      "slug": "260618112v1-qwen-robotnav-technical-report-a-scalable-navigation-model-d",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Agentic AI-based Framework for Mitigating Premature Diagnostic Handoff and Silent Hallucination in Healthcare Applications",
+      "topic": "agent-ops",
+      "date": "2026-06-16",
+      "slug": "260618068v1-agentic-ai-based-framework-for-mitigating-premature-diagnost",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "GeoDisaster: Benchmarking Orchestrated Agents for Operational Disaster Geo-Intelligence",
+      "topic": "agent-ops",
+      "date": "2026-06-15",
+      "slug": "260617246v1-geodisaster-benchmarking-orchestrated-agents-for-operational",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems",
       "topic": "agent-ops",
       "date": "2026-06-12",
       "slug": "260614923v1-trust-between-ai-agents-measuring-formation-breakage-and-rec",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "From Shield to Target: Denial-of-Service Attacks on LLM-Based Agent Guardrails",
+      "topic": "agent-ops",
+      "date": "2026-06-12",
+      "slug": "260614517v2-from-shield-to-target-denial-of-service-attacks-on-llm-based",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
