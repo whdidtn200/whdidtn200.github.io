@@ -30,6 +30,12 @@ python3 scripts/arxiv_pipeline.py
 python3 scripts/validate_post.py
 
 git add content/archive content/drafts posts posts.html index.html
+if [[ -f automation-status.json ]]; then
+  git add automation-status.json
+fi
+if [[ -f AUTOMATION.html ]]; then
+  git add AUTOMATION.html
+fi
 if git diff --cached --quiet; then
   echo "No changes to commit"
   exit 0

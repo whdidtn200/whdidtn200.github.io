@@ -1,0 +1,19 @@
+{
+  "updated_at_utc": "2026-06-17T01:17:04.922608+00:00",
+  "updated_at_local": "2026-06-17T10:17:04.922608+09:00",
+  "local_date": "2026-06-17",
+  "timezone": "Asia/Seoul",
+  "github": {
+    "ok": true,
+    "repo": "whdidtn200/whdidtn200.github.io",
+    "workflow": "daily-arxiv-publish.yml",
+    "event": "schedule",
+    "local_date": "2026-06-17",
+    "timezone": "Asia/Seoul",
+    "run_found": false
+  },
+  "backup": {
+    "result": "success",
+    "summary": "오늘 GitHub 메인 scheduled run 기록은 보이지 않았고, macmini backup 경로가 상태를 유지하고 있습니다."
+  }
+}
