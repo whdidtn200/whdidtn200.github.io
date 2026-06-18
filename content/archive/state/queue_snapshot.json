@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-18T05:06:20.623804+00:00",
-  "queued_count": 12,
+  "generated_at": "2026-06-18T06:28:00+00:00",
+  "queued_count": 11,
   "queued_titles": [
     {
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
@@ -79,12 +79,5 @@
       "slug": "2026-06-09-260610747v1-the-arbiter-agent-continually-monitoring-multi-agent-conversations",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
-    {
-      "title": "Towards Energy Impact on AI-Powered 6G IoT Networks: Centralized vs. Decentralized",
-      "topic": "railway-phm",
-      "date": "2026-04-21",
-      "slug": "2026-04-21-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    }
   ]
 }
