@@ -51,7 +51,7 @@ workflow: "weekly-lab-publication"
 ## 출처
 - [원문 논문](http://arxiv.org/abs/2508.16160v1)
 - [PDF](https://arxiv.org/pdf/2508.16160v1)
-- [기존 일간 해설](/posts/2025-08-22-250816160v1-innovative-distributed-maintenance-concept-from-the-design-to-cost.html)
+- [기존 일간 해설](/posts/2026-06-17-250816160v1-innovative-distributed-maintenance-concept-from-the-design-to-cost.html)
 - [실험실 허브](/LAB.html)
 
 ## 발행 메모
