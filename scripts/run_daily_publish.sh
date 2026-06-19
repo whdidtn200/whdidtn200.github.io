@@ -10,6 +10,14 @@ cleanup() {
   rmdir "$LOCK_DIR" 2>/dev/null || true
 }
 
+ensure_python_module() {
+  local module_name="$1"
+  local package_name="$2"
+  if ! python3 -c "import ${module_name}" >/dev/null 2>&1; then
+    python3 -m pip install --quiet "$package_name"
+  fi
+}
+
 if ! mkdir "$LOCK_DIR" 2>/dev/null; then
   echo "daily publish already running"
   exit 0
@@ -37,6 +45,8 @@ fi
 
 git fetch origin main
 git pull --rebase origin main
+
+ensure_python_module yaml PyYAML
 
 python3 scripts/generate_pillar_post_drafts.py
 python3 scripts/arxiv_pipeline.py
