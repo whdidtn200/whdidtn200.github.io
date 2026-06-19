@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-06-19T12:59+09:00",
+  "entry_count": 53,
+  "thin_or_weak_count": 0,
+  "queued_count": 0,
+  "lab_post_count": 1,
+  "guides": [
+    {
+      "path": "/railway-predictive-maintenance-guide.html",
+      "name": "railway-predictive-maintenance-guide",
+      "word_count": 708,
+      "status": "strong"
+    },
+    {
+      "path": "/bearing-fault-diagnosis-guide.html",
+      "name": "bearing-fault-diagnosis-guide",
+      "word_count": 577,
+      "status": "solid"
+    },
+    {
+      "path": "/wayside-condition-monitoring-guide.html",
+      "name": "wayside-condition-monitoring-guide",
+      "word_count": 517,
+      "status": "solid"
+    },
+    {
+      "path": "/predictive-maintenance-kpi-roi-guide.html",
+      "name": "predictive-maintenance-kpi-roi-guide",
+      "word_count": 552,
+      "status": "solid"
+    },
+    {
+      "path": "/railway-bearing-sensor-guide.html",
+      "name": "railway-bearing-sensor-guide",
+      "word_count": 517,
+      "status": "solid"
+    }
+  ],
+  "top_pages": [
+    {
+      "title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법",
+      "url": "/bearing-fault-diagnosis-guide.html",
+      "type": "Guide",
+      "quality_band": "strong",
+      "word_count": 1422
+    },
+    {
+      "title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법",
+      "url": "/railway-predictive-maintenance-guide.html",
+      "type": "Guide",
+      "quality_band": "strong",
+      "word_count": 1335
+    },
+    {
+      "title": "2026년 3월, 에이전틱 AI 생태계를 이끄는 핵심 오픈소스 TOP 4",
+      "url": "/posts/2026-03-03-trending-ai-repos.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1322
+    },
+    {
+      "title": "2026-03-01-wayside-condition-monitoring-review",
+      "url": "/posts/2026-03-01-wayside-condition-monitoring-review.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1937
+    },
+    {
+      "title": "2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4",
+      "url": "/posts/2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1928
+    },
+    {
+      "title": "[특별 기획] Scrapling: 차세대 적응형 웹 스크래핑 프레임워크 — 철도 PHM 데이터 수집의 새로운 패러다임",
+      "url": "/posts/2026-02-27-scrapling-adaptive-web-scraping-framework.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1438
+    },
+    {
+      "title": "신뢰할 수 있는 설비 모니터링: Cascade 이상 감지와 Saliency 기반 검사",
+      "url": "/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1251
+    },
+    {
+      "title": "텐서 분해로 건널목 위험 행동을 추출하다: 비디오 기반 철도 안전의 새로운 지평",
+      "url": "/posts/2026-02-24-rail-crossing-behavior-tensor-analysis.html",
+      "type": "Post",
+      "quality_band": "strong",
+      "word_count": 1214
+    }
+  ],
+  "priorities": [
+    {
+      "label": "대표 가이드 보강",
+      "reason": "wayside-condition-monitoring-guide 분량이 517단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
+      "target": "/wayside-condition-monitoring-guide.html"
+    },
+    {
+      "label": "실험실 연속성 확보",
+      "reason": "실험실 글이 아직 1편 수준이라, 한 편만 더 쌓여도 주간 검증 섹션의 신뢰도가 크게 올라갑니다.",
+      "target": "/LAB.html"
+    },
+    {
+      "label": "심층 포스트 추가 보강",
+      "reason": "산업용 이상 탐지의 강건성 확보를 위한 메타 학습 기반 반복적 정제 전략는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
+      "target": "/posts/2026-03-10-meta-learning-industrial-anomaly-detection.html"
+    }
+  ]
+}
