@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Lab Stress Map</title>
+  <desc id="desc">Original matrix showing common experimental stress dimensions and deployment risk.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6fbff"/>
+      <stop offset="100%" stop-color="#eef7f8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="720" rx="32" fill="url(#bg)"/>
+  <text x="90" y="92" font-size="38" font-weight="800" fill="#10253a">Generalization Stress Map</text>
+  <text x="90" y="130" font-size="21" fill="#54697f">Where good lab results usually break when moving into operations.</text>
+
+  <rect x="200" y="200" width="760" height="360" rx="24" fill="#ffffff" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="580" y1="200" x2="580" y2="560" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="200" y1="380" x2="960" y2="380" stroke="#d1e0eb" stroke-width="2"/>
+
+  <text x="390" y="184" font-size="18" font-weight="700" fill="#5f738a">Lower Deployment Risk</text>
+  <text x="690" y="184" font-size="18" font-weight="700" fill="#5f738a">Higher Deployment Risk</text>
+  <text x="58" y="312" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 312)">Lower Stress</text>
+  <text x="58" y="530" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 530)">Higher Stress</text>
+
+  <g font-size="22" font-weight="800">
+    <rect x="270" y="262" width="166" height="88" rx="22" fill="#c9efe8"/>
+    <text x="300" y="312" fill="#10253a">Clean Split</text>
+
+    <rect x="640" y="252" width="222" height="96" rx="22" fill="#ffe6b8"/>
+    <text x="670" y="306" fill="#10253a">Cross-Dataset</text>
+
+    <rect x="250" y="430" width="216" height="96" rx="22" fill="#d9e9ff"/>
+    <text x="280" y="484" fill="#10253a">Noise + Speed Drift</text>
+
+    <rect x="640" y="424" width="238" height="104" rx="22" fill="#ffd2c8"/>
+    <text x="668" y="480" fill="#10253a">Low Labels + Transfer</text>
+  </g>
+
+  <g font-size="18" fill="#42586d">
+    <text x="276" y="590">MALT original map · Use this matrix to explain why paper success and field success are not the same event.</text>
+  </g>
+</svg>

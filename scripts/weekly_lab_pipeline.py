@@ -245,6 +245,9 @@ def render_html(source: dict) -> str:
     p,li{{font-size:16px;color:#42586d}}
     .meta{{margin-top:10px;font-size:13px;color:#5f738a}}
     .card{{margin-top:16px;padding:22px;border:1px solid #d3e1eb;border-radius:18px;background:#fff}}
+    .figure{{margin-top:18px;padding:14px;border:1px solid #d8e5ee;border-radius:16px;background:linear-gradient(180deg,#fbfdff,#f3f8fb)}}
+    .figure img{{width:100%;display:block;border-radius:12px;border:1px solid #dfe9f1;background:#fff}}
+    .figure figcaption{{margin-top:10px;font-size:13px;line-height:1.65;color:#5f738a}}
     a{{color:#1f5fd6}}
     ul{{padding-left:20px}}
   </style>
@@ -265,6 +268,11 @@ def render_html(source: dict) -> str:
         <li>원문 공개일: {html.escape(source.get("published_at", "n/a"))}</li>
       </ul>
 
+      <figure class="figure">
+        <img src="/assets/lab-validation-loop.svg" alt="MALT 실험실 검증 루프" />
+        <figcaption>MALT original diagram. 이 글은 논문 주장 분리, 재현 확인, 스트레스 테스트, 현장 의사결정 순서로 다시 읽습니다.</figcaption>
+      </figure>
+
       <h2>논문이 주장하는 핵심</h2>
       <ul>
         <li>{html.escape(analysis.get("one_line", source.get("abstract", "")[:180]))}</li>
@@ -283,6 +291,11 @@ def render_html(source: dict) -> str:
         <li>{html.escape(analysis.get("experiment_read", "최고 수치보다도 다른 조건에서 결과가 유지되는지 먼저 보는 편이 맞습니다."))}</li>
       </ul>
       <p>{html.escape(experiment_excerpt)}</p>
+
+      <figure class="figure">
+        <img src="/assets/lab-stress-map.svg" alt="일반화 스트레스 맵" />
+        <figcaption>MALT original chart. 논문 수치가 좋아 보여도 속도 변화, 노이즈, 라벨 부족, 전이 조건에서 얼마나 흔들리는지 별도로 읽어야 합니다.</figcaption>
+      </figure>
 
       <h2>운영 적용 판단</h2>
       <ul>
