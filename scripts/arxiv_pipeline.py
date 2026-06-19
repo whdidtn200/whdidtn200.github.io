@@ -925,6 +925,27 @@ def paragraphize(items: list[str]) -> str:
     return "\n".join(f"<li>{html.escape(item)}</li>" for item in items)
 
 
+def render_tag_links(source: dict) -> str:
+    tags = []
+    for item in list(source.get("tags", [])) + list(source.get("categories", [])):
+        label = str(item).strip()
+        if not label:
+            continue
+        if re.search(r"[가-힣]", label):
+            display = label
+        elif label.isupper():
+            display = label
+        else:
+            display = " ".join(part.title() for part in re.split(r"[-_\s]+", label) if part)
+        if display not in tags:
+            tags.append(display)
+    links = []
+    for tag in tags[:8]:
+        slug = slugify(tag)
+        links.append(f'<a class="tag-chip" href="/tags/{slug}.html">{html.escape(tag)}</a>')
+    return "".join(links)
+
+
 def render_html(source: dict) -> str:
     title = build_post_title(source)
     description = html.escape(build_description(source))
@@ -960,6 +981,10 @@ def render_html(source: dict) -> str:
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="{SITE_BASE}/feed.xml" title="MALT Tech Blog" />
+  <style>
+    .malt-tag-rail{{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}}
+    .malt-tag-rail .tag-chip{{display:inline-flex;align-items:center;padding:6px 11px;border-radius:999px;border:1px solid #d6e3ee;background:#f7fbfd;text-decoration:none;color:#0f6f8d;font-size:12px;font-weight:700}}
+  </style>
 </head>
 <body><header class="site-header" role="banner">
   <div class="wrapper"><a class="site-title" rel="author" href="/">MALT Tech Blog</a><nav class="site-nav">
@@ -980,6 +1005,7 @@ def render_html(source: dict) -> str:
       <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{html.escape(title)}</h1>
         <p class="post-meta"><time class="dt-published" datetime="{published_iso}" itemprop="datePublished">{html.escape(publish_date)}</time></p>
+        <div class="malt-tag-rail">{render_tag_links(source)}</div>
       </header>
       <div class="post-content e-content" itemprop="articleBody">
         <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 하루 한 편씩 발행하는 자동 큐레이션입니다. 원문 제목은 <em>{html.escape(source['title'])}</em>이며, 저자는 {authors}입니다. 논문 공개일은 {html.escape(source.get("source_date") or source.get("date", ""))}입니다.</p>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>실험실 | MALT Tags</title>
+  <meta name="description" content="실험실 태그로 묶인 MALT 글 목록" />
+  <style>
+    :root {
+      --bg:#eef4f8; --panel:#ffffff; --line:#c9d9e7; --text:#15283d; --muted:#5f738a; --accent:#0f8aa8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:"Pretendard","SF Pro Display","Segoe UI",sans-serif;background:radial-gradient(900px 480px at 10% -10%, rgba(45,108,223,.12), transparent 60%), radial-gradient(900px 520px at 100% 0%, rgba(15,138,168,.10), transparent 58%), var(--bg);color:var(--text)}
+    .wrap{max-width:1120px;margin:0 auto;padding:28px 16px 48px}
+    .shell{border:1px solid var(--line);border-radius:22px;background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,251,254,.98));box-shadow:0 18px 54px rgba(24,54,84,.10);overflow:hidden}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid rgba(15,138,168,.12);background:linear-gradient(180deg, rgba(15,138,168,.08), transparent)}
+    .brand{font-size:13px;letter-spacing:.16em;font-weight:800;color:var(--accent)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap}
+    .nav a{color:var(--text);text-decoration:none;border:1px solid #d6e3ee;border-radius:999px;padding:8px 12px;font-size:13px;background:#fff}
+    .hero{padding:24px 20px 10px}
+    .hero h1{margin:8px 0 8px;font-size:36px;line-height:1.08}
+    .hero p{margin:0;color:var(--muted);max-width:64ch;line-height:1.7}
+    .mini-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .mini-chip{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid #d6e3ee;background:#fff;text-decoration:none;color:#0f8aa8;font-size:13px;font-weight:700}
+    .mini-empty{font-size:13px;color:var(--muted)}
+    .entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:18px 20px 22px}
+    .entry-card{display:flex;flex-direction:column;gap:10px;padding:18px;border:1px solid #d6e3ee;border-radius:18px;background:linear-gradient(180deg,#fff,#f8fbfe);text-decoration:none;color:var(--text);box-shadow:0 8px 22px rgba(24,54,84,.05)}
+    .entry-card .meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#0f8aa8;font-weight:700;letter-spacing:.04em}
+    .entry-card strong{font-size:18px;line-height:1.35;color:#10253a}
+    .entry-card p{margin:0;color:var(--muted);line-height:1.65;font-size:14px}
+    @media (max-width:900px){.entry-grid{grid-template-columns:1fr} .hero h1{font-size:30px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="shell">
+      <header class="topbar">
+        <div class="brand">TAG · 실험실</div>
+        <nav class="nav">
+          <a href="/tags/index.html">All Tags</a>
+          <a href="/posts.html">Posts</a>
+          <a href="/">Home</a>
+        </nav>
+      </header>
+      <section class="hero">
+        <div class="kicker">TAG VIEW</div>
+        <h1>실험실로 묶인 글</h1>
+        <p>이 태그와 연결된 글 2개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
+        <div class="mini-row"><a class="mini-chip" href="/tags/validation.html">Validation</a></div>
+      </section>
+      <section class="entry-grid">
+        <a class="entry-card" href="/posts/2026-03-09-external-paper-validation-lstm-ae.html">
+          <div class="meta"><span>Lab</span><span>2026-03-09</span></div>
+          <strong>[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증</strong>
+          <p>MDPI 2024 아키텍처를 기반으로 MALT 플랫폼에서 실제 베어링 데이터를 이용해 검증한 결과를 정리합니다.</p>
+        </a>
+        <a class="entry-card" href="/posts/2026-03-09-phm-validation-report.html">
+          <div class="meta"><span>Lab</span><span>2026-03-09</span></div>
+          <strong>[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증</strong>
+          <p>DATE: 2026-03-09 · Author: MALT Quality Lab</p>
+        </a>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

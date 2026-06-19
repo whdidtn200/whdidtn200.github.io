@@ -90,6 +90,34 @@
     .section{
       padding:18px 20px 0;
     }
+    .tag-cloud{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      padding-bottom:2px;
+    }
+    .tag-chip{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid #d6e3ee;
+      border-radius:999px;
+      padding:9px 13px;
+      background:#ffffff;
+      font-size:13px;
+      font-weight:700;
+      box-shadow:0 4px 14px rgba(24,54,84,.04);
+    }
+    .tag-chip span{
+      color:var(--accent);
+      font-size:12px;
+    }
+    .tag-empty{
+      color:var(--muted);
+      font-size:13px;
+    }
     .section-head{
       display:flex;
       justify-content:space-between;
@@ -157,6 +185,7 @@
         <div class="brand">MALT ARCHIVE</div>
         <nav class="nav">
           <a href="/">Home</a>
+          <a href="/tags/index.html">Tags</a>
           <a href="/GUIDES.html">Guides</a>
           <a href="/AI-OPS.html">AI Ops</a>
           <a href="/EDITORIAL.html">Editorial</a>
@@ -181,6 +210,35 @@
             <li><strong>Agentic AI</strong>: 운영 자동화와 에이전트 시스템 해석 글</li>
           </ul>
         </aside>
+      </section>
+
+      <section class="section">
+        <!-- TAG_OVERVIEW_AUTOGEN_START -->
+        <div class="section-head">
+          <h2>태그로 탐색</h2>
+          <p>52개 항목을 태그 축으로 다시 묶었습니다. 주제별로 이어 읽기 좋게 설계했습니다.</p>
+        </div>
+        <div class="tag-cloud">
+            <a class="tag-chip" href="/tags/condition-monitoring.html">Condition Monitoring <span>24</span></a>
+            <a class="tag-chip" href="/tags/phm.html">PHM <span>23</span></a>
+            <a class="tag-chip" href="/tags/railway.html">Railway <span>11</span></a>
+            <a class="tag-chip" href="/tags/bearing.html">Bearing <span>9</span></a>
+            <a class="tag-chip" href="/tags/maintenance.html">Maintenance <span>9</span></a>
+            <a class="tag-chip" href="/tags/sensors.html">Sensors <span>8</span></a>
+            <a class="tag-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis <span>7</span></a>
+            <a class="tag-chip" href="/tags/agentic-ai.html">Agentic AI <span>6</span></a>
+            <a class="tag-chip" href="/tags/guide.html">Guide <span>6</span></a>
+            <a class="tag-chip" href="/tags/observability.html">Observability <span>5</span></a>
+            <a class="tag-chip" href="/tags/wayside.html">Wayside <span>5</span></a>
+            <a class="tag-chip" href="/tags/predictive-maintenance.html">Predictive Maintenance <span>3</span></a>
+            <a class="tag-chip" href="/tags/ae.html">AE <span>2</span></a>
+            <a class="tag-chip" href="/tags/validation.html">Validation <span>2</span></a>
+            <a class="tag-chip" href="/tags/실험실.html">실험실 <span>2</span></a>
+            <a class="tag-chip" href="/tags/acoustic.html">Acoustic <span>1</span></a>
+            <a class="tag-chip" href="/tags/analytics.html">Analytics <span>1</span></a>
+            <a class="tag-chip" href="/tags/cbm.html">CBM <span>1</span></a>
+        </div>
+        <!-- TAG_OVERVIEW_AUTOGEN_END -->
       </section>
 
       <section class="section">

@@ -27,9 +27,10 @@ git pull --rebase origin main
 
 python3 scripts/generate_pillar_post_drafts.py
 python3 scripts/arxiv_pipeline.py
+python3 scripts/build_tag_index.py
 python3 scripts/validate_post.py
 
-git add content/archive content/drafts posts posts.html index.html
+git add content/archive content/drafts posts posts.html index.html tags
 if [[ -f automation-status.json ]]; then
   git add automation-status.json
 fi

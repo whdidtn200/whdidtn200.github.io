@@ -152,6 +152,25 @@ def render_sources(source: dict, basename: str) -> str:
     return "\\n".join(lines)
 
 
+def render_tag_links(source: dict) -> str:
+    labels = []
+    for item in ["실험실", *(source.get("tags") or []), *(source.get("categories") or [])]:
+        label = str(item).strip()
+        if not label:
+            continue
+        if re.search(r"[가-힣]", label):
+            display = label
+        elif label.isupper():
+            display = label
+        else:
+            display = " ".join(part.title() for part in re.split(r"[-_\s]+", label) if part)
+        if display not in labels:
+            labels.append(display)
+    return "".join(
+        f'<a class="tag-chip" href="/tags/{slugify(label)}.html">{html.escape(label)}</a>' for label in labels[:8]
+    )
+
+
 def safe_metric_value(metric: str) -> float:
     match = re.search(r"([0-9]+(?:\\.[0-9]+)?)", metric)
     if not match:
@@ -366,6 +385,8 @@ def render_html(source: dict) -> str:
     .figure{{margin-top:18px;padding:14px;border:1px solid #d8e5ee;border-radius:16px;background:linear-gradient(180deg,#fbfdff,#f3f8fb)}}
     .figure img{{width:100%;display:block;border-radius:12px;border:1px solid #dfe9f1;background:#fff}}
     .figure figcaption{{margin-top:10px;font-size:13px;line-height:1.65;color:#5f738a}}
+    .tag-row{{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}}
+    .tag-chip{{display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;border:1px solid #d6e3ee;background:#f7fbfd;text-decoration:none;color:#0f6f8d;font-size:12px;font-weight:700}}
     a{{color:#1f5fd6}}
     ul{{padding-left:20px}}
   </style>
@@ -376,6 +397,7 @@ def render_html(source: dict) -> str:
       <div class="eyebrow">MALT TESTING LAB</div>
       <h1>{html.escape(title)}</h1>
       <p>일간 요약이 아니라, 재현 가치가 있는 논문을 골라 실험 조건과 운영 적합성을 다시 읽는 주간 실험실 발행본입니다.</p>
+      <div class="tag-row">{render_tag_links(source)}</div>
       <div class="meta">발행일: {dt.date.today().isoformat()} · 허브: <a href="/LAB.html">LAB</a> · 전체 글: <a href="/posts.html">Posts</a></div>
     </section>
     <article class="card">
