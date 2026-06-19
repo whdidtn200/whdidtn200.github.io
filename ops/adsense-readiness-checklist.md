@@ -16,6 +16,7 @@ Last updated: 2026-06-17
 - [x] `sitemap.xml` exists
 - [x] Google site verification file exists
 - [x] `ads.txt` exists
+- [x] Google Search Console weekly checklist exists (`ops/search-console-weekly-checklist.md`)
 - [ ] Google Search Console performance should be checked weekly
 
 ## 3. Content quality before applying

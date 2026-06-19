@@ -149,7 +149,7 @@ def render_sources(source: dict, basename: str) -> str:
     pdf_url = next((item.get("url") for item in source.get("sources", []) if item.get("label") == "arXiv pdf"), "")
     if pdf_url:
         lines.insert(1, f"- [PDF]({pdf_url})")
-    return "\\n".join(lines)
+    return "\n".join(lines)
 
 
 def render_tag_links(source: dict) -> str:

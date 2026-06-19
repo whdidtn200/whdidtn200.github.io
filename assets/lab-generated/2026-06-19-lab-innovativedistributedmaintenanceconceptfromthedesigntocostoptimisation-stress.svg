@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Custom Stress Map</title>
+  <desc id="desc">Original MALT-generated stress map for experiment lab review.</desc>
+  <rect width="1200" height="720" rx="32" fill="#f6fbff"/>
+  <text x="90" y="92" font-size="38" font-weight="800" fill="#10253a">Custom Generalization Stress Map</text>
+  <text x="90" y="128" font-size="20" fill="#5f738a">Innovative Distributed Maintenance Concept: From the design to cost optimisation</text>
+  <rect x="200" y="200" width="760" height="360" rx="24" fill="#ffffff" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="580" y1="200" x2="580" y2="560" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="200" y1="380" x2="960" y2="380" stroke="#d1e0eb" stroke-width="2"/>
+  <text x="390" y="184" font-size="18" font-weight="700" fill="#5f738a">Lower Deployment Risk</text>
+  <text x="690" y="184" font-size="18" font-weight="700" fill="#5f738a">Higher Deployment Risk</text>
+  <text x="58" y="312" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 312)">Lower Stress</text>
+  <text x="58" y="530" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 530)">Higher Stress</text>
+  <rect x="260" y="280" width="240" height="96" rx="22" fill="#c9efe8"/><text x="284" y="336" font-size="24" font-weight="800" fill="#10253a">Baseline Recheck</text><rect x="650" y="260" width="240" height="96" rx="22" fill="#ffe6b8"/><text x="674" y="316" font-size="24" font-weight="800" fill="#10253a">Field Gap</text>
+  <text x="90" y="648" font-size="18" fill="#42586d">MALT original chart · Stress labels are selected from the paper topic and experiment context.</text>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "published_sources": [
+    "2025-08-22-2025-08-22-250816160v1-innovative-distributed-maintenance-concept-from-the-design-to-cost.json"
+  ],
+  "lab_posts": [
+    {
+      "title": "[실험실] Innovative Distributed Maintenance Concept: From the design to cost optimisation: 재현 관점에서 다시 읽기",
+      "html_filename": "2026-06-19-lab-innovativedistributedmaintenanceconceptfromthedesigntocostoptimisation.html",
+      "summary": "이번 글에서 볼 포인트는 `운영 비용` 같은 실전 조건을 논문이 어떻게 다뤘는가다. 즉, 연구 아이디어를 운영 문제로 번역할 수 있는지가 핵심이다.",
+      "source_title": "Innovative Distributed Maintenance Concept: From the design to cost optimisation",
+      "topic": "railway-phm",
+      "focus": "이 논문은 운영 비용을 다룰 때 어떤 데이터와 절차가 필요한지 역으로 정",
+      "scoreboard_asset": "/assets/lab-generated/2026-06-19-lab-innovativedistributedmaintenanceconceptfromthedesigntocostoptimisation-scoreboard.svg"
+    }
+  ]
+}
