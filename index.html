@@ -54,12 +54,19 @@
     .status{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
     .tag{font-size:12px;border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:var(--muted);background:rgba(255,255,255,.9)}
     .tag.ok{color:var(--ok);border-color:#a8d5c8;background:#eefaf5}
+    .hero-shell{
+      display:grid;
+      grid-template-columns:minmax(0, 1.3fr) 320px;
+      gap:18px;
+      align-items:start;
+      margin-top:18px;
+    }
+    .hero-copy{max-width:700px}
     .hero-actions{
       display:grid;
       grid-template-columns:repeat(3, minmax(0, 1fr));
       gap:10px;
       margin-top:18px;
-      max-width:760px;
     }
     .hero-actions a{
       text-decoration:none;
@@ -88,6 +95,48 @@
       color:var(--muted);
       line-height:1.5;
     }
+    .hero-aside{
+      border:1px solid #d6e3ec;
+      border-radius:18px;
+      padding:16px;
+      background:
+        linear-gradient(160deg, rgba(11,139,149,.10), rgba(31,95,214,.06)),
+        rgba(255,255,255,.92);
+      box-shadow:0 10px 26px rgba(24,54,84,.06);
+    }
+    .hero-note{
+      font-size:11px;
+      letter-spacing:.12em;
+      color:var(--accent);
+      font-weight:700;
+      margin-bottom:10px;
+    }
+    .hero-aside h2{
+      margin:0 0 10px;
+      font-size:19px;
+      line-height:1.2;
+      color:var(--ink);
+    }
+    .hero-aside p{
+      margin:0;
+      font-size:13px;
+      color:var(--muted);
+      line-height:1.65;
+    }
+    .mini-metrics{display:grid;gap:10px;margin-top:14px}
+    .metric{
+      display:flex;
+      justify-content:space-between;
+      align-items:baseline;
+      gap:12px;
+      padding:10px 12px;
+      border:1px solid rgba(196,215,229,.95);
+      border-radius:12px;
+      background:rgba(255,255,255,.76);
+    }
+    .metric-label{font-size:12px;color:var(--muted);letter-spacing:.04em}
+    .metric-value{font-size:19px;font-weight:800;color:var(--ink)}
+    .metric-value.small{font-size:15px}
 
     .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px}
     .card{
@@ -103,6 +152,14 @@
       color:var(--muted);
       font-size:13px;
       line-height:1.55;
+    }
+    .section-label{
+      display:inline-block;
+      margin-bottom:10px;
+      font-size:11px;
+      letter-spacing:.12em;
+      color:var(--accent2);
+      font-weight:700;
     }
     .links{display:grid;gap:10px}
     .links a{
@@ -128,8 +185,7 @@
     }
     #latest-links a{
       min-height:88px;
-      display:flex;
-      align-items:flex-start;
+      display:block;
       font-weight:600;
     }
     #latest-links a:first-child{
@@ -146,6 +202,28 @@
     #latest-links a:nth-child(3){
       background:#f8fbfe;
     }
+    .link-kicker{
+      display:inline-block;
+      margin-bottom:8px;
+      font-size:11px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--accent2);
+    }
+    .link-title{
+      display:block;
+      color:var(--ink);
+      line-height:1.45;
+    }
+    .link-summary{
+      display:block;
+      margin-top:8px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+      font-weight:500;
+    }
     .meta-note{
       margin-top:12px;
       padding-top:12px;
@@ -157,14 +235,15 @@
     .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
     .quick a{
       text-decoration:none;
-      text-align:center;
-      padding:12px 8px;
-      border-radius:10px;
+      text-align:left;
+      padding:13px 12px;
+      border-radius:12px;
       border:1px solid var(--line);
-      background:var(--panel2);
+      background:linear-gradient(180deg, #fbfdff, #f2f8fb);
       color:var(--text);
       font-weight:600;
       font-size:14px;
+      box-shadow:0 4px 14px rgba(24,54,84,.04);
     }
 
     .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
@@ -172,6 +251,7 @@
     @media (max-width:920px){
       .grid{grid-template-columns:1fr}
       h1{font-size:30px;max-width:none}
+      .hero-shell{grid-template-columns:1fr}
       .hero-actions{grid-template-columns:1fr}
       .quick{grid-template-columns:repeat(2,1fr)}
       #latest-links{grid-template-columns:1fr}
@@ -184,47 +264,72 @@
   <main class="wrap">
     <section class="hud">
       <header class="top">
-        <div class="kicker">MALT TECH BLOG</div>
-        <h1>MALT가 정리하는 Railway PHM Intelligence</h1>
-        <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 자료를 운영에 바로 쓰기 쉬운 가이드와 분석 글로 정리합니다.</p>
-        <div class="status">
-          <span class="tag ok">AI PUBLICATION ACTIVE</span>
-          <span class="tag">EVERGREEN GUIDES</span>
-          <span class="tag">DAILY RESEARCH NOTES</span>
-          <span class="tag">AUTOMATION VISIBLE</span>
-        </div>
-        <div class="hero-actions">
-          <a href="/GUIDES.html">
-            <strong>대표 가이드 보기</strong>
-            <span>처음 방문한 독자를 위한 핵심 해설 페이지부터 읽을 수 있습니다.</span>
-          </a>
-          <a href="/posts.html">
-            <strong>최신 분석 글 보기</strong>
-            <span>매일 발행되는 논문 기반 요약과 기술 분석 글을 바로 확인합니다.</span>
-          </a>
-          <a href="/AUTOMATION.html">
-            <strong>자동화 상태 보기</strong>
-            <span>실제 발행 파이프라인과 백업 상태를 공개 페이지에서 점검합니다.</span>
-          </a>
+        <div class="hero-shell">
+          <div class="hero-copy">
+            <div class="kicker">MALT TECH BLOG</div>
+            <h1>MALT가 정리하는 Railway PHM Intelligence</h1>
+            <p class="sub">철도 PHM · 산업 AI · 에이전트 자동화 자료를 운영에 바로 쓰기 쉬운 가이드와 분석 글로 정리합니다.</p>
+            <div class="status">
+              <span class="tag ok">AI PUBLICATION ACTIVE</span>
+              <span class="tag">EVERGREEN GUIDES</span>
+              <span class="tag">DAILY RESEARCH NOTES</span>
+              <span class="tag">AUTOMATION VISIBLE</span>
+            </div>
+            <div class="hero-actions">
+              <a href="/GUIDES.html">
+                <strong>대표 가이드 보기</strong>
+                <span>처음 방문한 독자를 위한 핵심 해설 페이지부터 읽을 수 있습니다.</span>
+              </a>
+              <a href="/posts.html">
+                <strong>최신 분석 글 보기</strong>
+                <span>매일 발행되는 논문 기반 요약과 기술 분석 글을 바로 확인합니다.</span>
+              </a>
+              <a href="/AUTOMATION.html">
+                <strong>자동화 상태 보기</strong>
+                <span>실제 발행 파이프라인과 백업 상태를 공개 페이지에서 점검합니다.</span>
+              </a>
+            </div>
+          </div>
+          <aside class="hero-aside">
+            <div class="hero-note">START HERE</div>
+            <h2>처음 보는 사람도 바로 이해되는 구조</h2>
+            <p>대표 가이드로 주제를 잡고, 최신 분석 글로 깊이를 더한 뒤, 자동화 상태까지 공개해 신뢰도를 보완하는 편집 구조를 유지합니다.</p>
+            <div class="mini-metrics">
+              <div class="metric">
+                <span class="metric-label">PUBLIC GUIDES</span>
+                <span class="metric-value">5+</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">RESEARCH FEED</span>
+                <span class="metric-value small">Daily</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">AUTOMATION</span>
+                <span class="metric-value small">Visible</span>
+              </div>
+            </div>
+          </aside>
         </div>
       </header>
 
       <div class="grid">
         <article class="card">
+          <div class="section-label">FEATURED READING</div>
           <h2>📡 최신 글 바로가기</h2>
           <p class="eyebrow">대표 가이드를 먼저 보여주고, 그 아래에 최신 분석 글을 배치했습니다. 처음 방문한 독자가 사이트의 전문성과 글 구조를 바로 이해할 수 있게 하는 것이 목표입니다.</p>
           <div id="latest-links" class="links">
-<a href="/posts/2026-06-18-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs.html">[arXiv Daily] Towards Energy Impact on AI-Powered 6G IoT Networks: Centralized vs. Decentralized</a>
-<a href="/railway-predictive-maintenance-guide.html">[Guide] Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법</a>
-<a href="/bearing-fault-diagnosis-guide.html">[Guide] Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지</a>
-<a href="/wayside-condition-monitoring-guide.html">[Guide] Wayside Condition Monitoring Guide: 선로변 상태 감시 운영 설계</a>
-<a href="/posts/2026-06-17-171001383v1-sigmoid-based-refined-composite-multiscale-fuzzy-entropy-and-t-dist.html">[arXiv Daily] Sigmoid-Based Refined Composite Multiscale Fuzzy Entropy and t-Distributed Stochastic Neighbor Embedding Based Fault Diagnosis of Rolling Bearing</a>
-<a href="/posts/2026-06-17-191201096v2-semi-supervised-learning-of-bearing-anomaly-detection-via-deep-vari.html">[arXiv Daily] Semi-Supervised Learning of Bearing Anomaly Detection via Deep Variational Autoencoders</a>
+<a href="/posts/2026-06-18-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs.html"><span class="link-kicker">ArXiv Daily</span><span class="link-title">Towards Energy Impact on AI-Powered 6G IoT Networks: Centralized vs. Decentralized</span><span class="link-summary">6G IoT 환경에서 AI 구조 선택이 에너지 효율과 운영 부담에 어떤 차이를 만드는지 빠르게 훑는 최신 분석입니다.</span></a>
+<a href="/railway-predictive-maintenance-guide.html"><span class="link-kicker">Guide</span><span class="link-title">Railway Predictive Maintenance Guide</span><span class="link-summary">철도 예지보전을 파일럿이 아니라 실제 운영 체계로 옮기기 위한 기준과 순서를 정리했습니다.</span></a>
+<a href="/bearing-fault-diagnosis-guide.html"><span class="link-kicker">Guide</span><span class="link-title">Bearing Fault Diagnosis Guide</span><span class="link-summary">진동 분석, 특징 추출, 딥러닝 적용까지 베어링 진단 흐름을 하나의 읽기 쉬운 가이드로 묶었습니다.</span></a>
+<a href="/wayside-condition-monitoring-guide.html"><span class="link-kicker">Guide</span><span class="link-title">Wayside Condition Monitoring Guide</span><span class="link-summary">선로변 상태 감시를 실제 현장 모니터링과 경보 운영 관점에서 어떻게 설계할지 다룹니다.</span></a>
+<a href="/posts/2026-06-17-171001383v1-sigmoid-based-refined-composite-multiscale-fuzzy-entropy-and-t-dist.html"><span class="link-kicker">ArXiv Daily</span><span class="link-title">Sigmoid-Based Refined Composite Multiscale Fuzzy Entropy for Bearing Diagnosis</span><span class="link-summary">베어링 고장 진단을 위한 특징 추출과 차원 축소 조합을 논문 중심으로 정리한 글입니다.</span></a>
+<a href="/posts/2026-06-17-191201096v2-semi-supervised-learning-of-bearing-anomaly-detection-via-deep-vari.html"><span class="link-kicker">ArXiv Daily</span><span class="link-title">Semi-Supervised Bearing Anomaly Detection via Deep Variational Autoencoders</span><span class="link-summary">라벨이 부족한 환경에서 반지도 학습을 어떻게 적용하는지 핵심 아이디어를 압축해 소개합니다.</span></a>
 </div>
           <div class="meta-note">애드센스 승인과 검색 유입을 고려해, 홈에서는 대표 가이드와 최신 분석 글을 섞어서 사이트의 원본성·탐색성·전문성을 먼저 보여줍니다.</div>
         </article>
 
         <article class="card">
+          <div class="section-label">NAVIGATION</div>
           <h2>🧭 탐색 허브</h2>
           <div class="quick">
             <a href="/posts.html">전체 글 아카이브</a>
