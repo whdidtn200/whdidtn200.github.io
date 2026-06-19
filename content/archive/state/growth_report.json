@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T16:54+09:00",
+  "generated_at": "2026-06-19T16:57+09:00",
   "entry_count": 54,
   "thin_or_weak_count": 0,
   "queued_count": 0,
@@ -97,8 +97,8 @@
   "priorities": [
     {
       "label": "심층 포스트 추가 보강",
-      "reason": "[심층 분석] 철도 인프라 모니터링의 패러다임 전환: 고전적 기법에서 AI 기반 예지보전(PdM)으로는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
-      "target": "/posts/2026-02-25-railway-phm-systematic-review.html"
+      "reason": "[특별 기획] 철도 주행장치 글로벌 복합 결함 진단을 위한 거대 모델(CFD-LM) 분석는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
+      "target": "/posts/2026-02-25-cfd-lm-railway-running-gear.html"
     }
   ]
 }
