@@ -2,33 +2,59 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <title>[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증</title>
-  <meta name="description" content="MALT 환경에서 검증한 LSTM-AE 기반 베어링 이상 탐지 성능을 정리한 보고서입니다." />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증 | MALT Tech Blog</title>
+  <meta name="description" content="MALT 환경에서 검증한 LSTM-AE 기반 베어링 이상 탐지 성능과 운영 관점 해석을 정리한 보고서입니다." />
+  <link rel="stylesheet" href="/assets/main.css">
 </head>
 <body>
-  <article>
-    <header>
-      <h1>[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증</h1>
-      <p>MDPI 2024 아키텍처를 기반으로 MALT 플랫폼에서 실제 베어링 데이터를 이용해 검증한 결과를 정리합니다.</p>
-    </header>
-    <section>
-      <h2>1. MALT 환경 실측 검증 결과 (MALT Verification)</h2>
-      <p>외부 논문에 공개된 아키텍처를 재구현하여 MALT PHM Control 플랫폼에서 시뮬레이션 및 교차 검증을 수행한 결과입니다.</p>
-      <table border="1" cellpadding="4" cellspacing="0">
-        <tr><th>Metric</th><th>Reference Paper</th><th>MALT Verified</th></tr>
-        <tr><td><strong>ROC AUC</strong></td><td>0.8950</td><td><strong>0.9124</strong></td></tr>
-        <tr><td><strong>Average Precision (AP)</strong></td><td>0.7820</td><td><strong>0.8055</strong></td></tr>
-        <tr><td><strong>Optimal Threshold</strong></td><td>-</td><td><strong>0.8783</strong></td></tr>
-      </table>
-    </section>
-    <section>
-      <h2>2. 현장 적용 시사점</h2>
-      <ul>
-        <li>F1 점수는 (threshold 0.8783)에서 0.82로, 오탐과 미탐을 모두 균형 있게 잡는 안정적인 운영 영역을 보여줍니다.</li>
-        <li>Hu는 2D latent 분포에서 H0/H1 클래스 분리가 명확하여, 예측 결과 해석이 용이합니다.</li>
-        <li>실시간 추론에서는 3msec 이하의 응답 지연으로 PLC 통합이 용이합니다.</li>
-      </ul>
-    </section>
-  </article>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <article class="post">
+        <header class="post-header">
+          <h1 class="post-title">[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증</h1>
+          <p>MDPI 2024 계열 아키텍처를 바탕으로 MALT PHM 환경에서 다시 돌려본 베어링 이상 탐지 검증 결과입니다.</p>
+        </header>
+
+        <div class="post-content">
+          <h2>왜 이 검증이 필요한가</h2>
+          <p>외부 논문에서 성능 수치가 좋게 나오는 모델도, 실제 운영 관점으로 다시 보면 다른 결론이 나올 수 있습니다. 베어링 이상 탐지에서는 ROC AUC나 AP 수치가 높더라도, 경보 임계치가 불안정하거나 특정 데이터 조건에서 분산이 크면 현장에서는 바로 쓰기 어렵습니다. 이 검증 리포트는 바로 그 간극을 확인하기 위해 작성했습니다.</p>
+
+          <h2>검증 세팅 요약</h2>
+          <p>이번 검증에서는 하이브리드 LSTM-Autoencoder 구조를 바탕으로 MALT 환경에서 베어링 시계열 입력을 다시 정리하고 교차 검증을 수행했습니다. 목표는 단순 재현이 아니라, 논문 수준의 기본 분리 성능이 유지되는지, 운영 임계치를 잡았을 때 오탐 부담이 감당 가능한지, 실시간 경보 체계에 붙일 수 있을 정도로 지연 시간이 짧은지를 함께 보는 것이었습니다.</p>
+
+          <h2>1차 검증 결과</h2>
+          <table border="1" cellpadding="6" cellspacing="0">
+            <tr><th>Metric</th><th>Reference Paper</th><th>MALT Verified</th></tr>
+            <tr><td><strong>ROC AUC</strong></td><td>0.8950</td><td><strong>0.9124</strong></td></tr>
+            <tr><td><strong>Average Precision (AP)</strong></td><td>0.7820</td><td><strong>0.8055</strong></td></tr>
+            <tr><td><strong>Optimal Threshold</strong></td><td>-</td><td><strong>0.8783</strong></td></tr>
+          </table>
+
+          <p>수치만 보면 MALT 검증 환경에서 오히려 더 안정적인 분리 성능이 관측됐습니다. 하지만 이 결과만으로 "외부 논문보다 더 좋다"라고 결론내리면 위험합니다. 데이터 정제 방식, 분할 기준, 이상 클래스 비율이 다르면 숫자는 쉽게 움직일 수 있기 때문입니다.</p>
+
+          <h2>이 결과를 어떻게 읽어야 하나</h2>
+          <p>핵심은 ROC AUC가 아니라 <strong>운영 임계치를 잡았을 때 경보 품질이 어떤가</strong>입니다. 이번 실험에서는 threshold 0.8783 부근에서 F1 0.82 수준이 나왔고, 이 구간이 오탐과 미탐의 균형이 비교적 안정적이었습니다. 즉 모델 자체보다도, 어느 지점을 운영 기준선으로 잡는지가 더 중요하다는 뜻입니다.</p>
+
+          <p>또한 2D latent 분포 상에서 정상(H0)과 이상(H1)이 비교적 분리된 형태를 보여, 결과 해석이 쉬운 편이었습니다. 이런 특성은 현장 적용 시 "왜 이 이벤트를 경보로 봤는가"를 설명하는 데 꽤 유리합니다.</p>
+
+          <h2>현장 적용 관점의 의미</h2>
+          <ul>
+            <li><strong>경보 임계치 후보가 명확하다</strong>: 단순 이상 점수만 던지는 구조보다 운영 연결성이 높습니다.</li>
+            <li><strong>추론 지연이 짧다</strong>: 3ms 이하 수준이면 PLC 또는 실시간 모니터링 루프에 붙이기 수월합니다.</li>
+            <li><strong>잠재 공간 분리가 읽기 쉽다</strong>: 운영자가 모델 행동을 이해하기 쉬워집니다.</li>
+          </ul>
+
+          <p>반대로 아직 남아 있는 리스크도 분명합니다. 데이터셋이 바뀌면 threshold 안정성이 흔들릴 수 있고, 속도 변화나 센서 노이즈가 큰 환경에서는 latent 분리가 무너질 수 있습니다. 오탐 1건이 실제 현장 작업으로 이어졌을 때 비용이 얼마나 발생하는지도 별도 측정이 필요합니다.</p>
+
+          <h2>MALT 판단</h2>
+          <p>이 모델은 "논문 수치 재현" 단계는 충분히 통과한 편이지만, 아직 바로 확대 배치할 단계는 아닙니다. 다음 실험에서는 속도 변화 구간에서 threshold 재안정화가 필요한지, 정상 패턴 드리프트가 커졌을 때 false positive가 급증하는지, 실시간 점수와 유지보수 티켓 생성 규칙을 어떻게 연결할 것인지를 더 보는 편이 맞습니다.</p>
+
+          <h2>한 줄 결론</h2>
+          <p>이 검증 리포트의 의미는 모델이 좋다는 선언이 아니라, <strong>운영에 붙일 수 있을 정도의 임계치와 반응 속도를 확인했다는 점</strong>에 있습니다. 실험실 성능에서 끝내지 않고 현장 경보 설계로 이어질 수 있다는 점이 더 중요합니다.</p>
+        </div>
+      </article>
+    </div>
+  </main>
 </body>
 </html>

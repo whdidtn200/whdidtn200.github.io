@@ -1,39 +1,8 @@
 {
-  "generated_at": "2026-06-19T11:15:43+09:00",
+  "generated_at": "2026-06-19T11:21:17+09:00",
   "entry_count": 50,
-  "thin_or_weak_count": 14,
+  "thin_or_weak_count": 11,
   "candidates": [
-    {
-      "title": "[arXiv Daily] CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks",
-      "url": "/posts/2025-08-12-250809054v1-cvcm-track-circuits-pre-emptive-failure-diagnostics-for-predictive.html",
-      "type": "Daily arXiv",
-      "date": "2025-08-12",
-      "word_count": 286,
-      "quality_score": 1,
-      "quality_band": "weak",
-      "quality_reasons": [
-        "최소 분량",
-        "일간 해설형",
-        "요약 밀도 양호",
-        "주제 연결성",
-        "얇은 일간 글"
-      ]
-    },
-    {
-      "title": "[PHM 리포트] 단일 AE 센서와 Matching Pursuit를 활용한 베어링 결함 진단 기술의 혁신",
-      "url": "/posts/2026-02-19-bearing-ae-sensor.html",
-      "type": "Post",
-      "date": "2026-02-19",
-      "word_count": 175,
-      "quality_score": 1,
-      "quality_band": "weak",
-      "quality_reasons": [
-        "짧은 본문",
-        "해설형",
-        "요약 밀도 양호",
-        "얇은 해설"
-      ]
-    },
     {
       "title": "🚂 [GitHub CBM/PHM/AI 큐레이션] RailVision AI: 차세대 자동화 철도 검사 플랫폼",
       "url": "/posts/2026-02-25-railvision-ai.html",
@@ -45,19 +14,6 @@
       "quality_reasons": [
         "최소 분량",
         "해설형"
-      ]
-    },
-    {
-      "title": "[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증",
-      "url": "/posts/2026-03-09-external-paper-validation-lstm-ae.html",
-      "type": "Lab",
-      "date": "2026-03-09",
-      "word_count": 108,
-      "quality_score": 3,
-      "quality_band": "thin",
-      "quality_reasons": [
-        "짧은 본문",
-        "실험실형"
       ]
     },
     {

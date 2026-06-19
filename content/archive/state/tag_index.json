@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T11:15:43+09:00",
+  "generated_at": "2026-06-19T11:21:17+09:00",
   "entry_count": 50,
   "tag_count": 28,
   "tags": [
@@ -85,13 +85,13 @@
       "tag": "Validation",
       "slug": "validation",
       "count": 2,
-      "latest_title": "[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증"
+      "latest_title": "[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증"
     },
     {
       "tag": "실험실",
       "slug": "실험실",
       "count": 2,
-      "latest_title": "[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증"
+      "latest_title": "[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증"
     },
     {
       "tag": "Acoustic",
