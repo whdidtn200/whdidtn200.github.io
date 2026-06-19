@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T14:38+09:00",
+  "generated_at": "2026-06-19T15:49+09:00",
   "entry_count": 54,
   "thin_or_weak_count": 0,
   "queued_count": 0,
@@ -97,8 +97,8 @@
   "priorities": [
     {
       "label": "심층 포스트 추가 보강",
-      "reason": "산업용 이상 탐지의 강건성 확보를 위한 메타 학습 기반 반복적 정제 전략는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
-      "target": "/posts/2026-03-10-meta-learning-industrial-anomaly-detection.html"
+      "reason": "[Insight] YAML의 종말과 Markdown 에이전트의 시대: GitHub Agentic Workflows 분석는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
+      "target": "/posts/2026-02-26-github-agentic-workflows-analysis.html"
     }
   ]
 }
