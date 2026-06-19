@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T12:59+09:00",
+  "generated_at": "2026-06-19T13:01+09:00",
   "entry_count": 53,
   "thin_or_weak_count": 0,
   "queued_count": 0,
@@ -20,8 +20,8 @@
     {
       "path": "/wayside-condition-monitoring-guide.html",
       "name": "wayside-condition-monitoring-guide",
-      "word_count": 517,
-      "status": "solid"
+      "word_count": 778,
+      "status": "strong"
     },
     {
       "path": "/predictive-maintenance-kpi-roi-guide.html",
@@ -97,8 +97,8 @@
   "priorities": [
     {
       "label": "대표 가이드 보강",
-      "reason": "wayside-condition-monitoring-guide 분량이 517단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
-      "target": "/wayside-condition-monitoring-guide.html"
+      "reason": "railway-bearing-sensor-guide 분량이 517단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
+      "target": "/railway-bearing-sensor-guide.html"
     },
     {
       "label": "실험실 연속성 확보",

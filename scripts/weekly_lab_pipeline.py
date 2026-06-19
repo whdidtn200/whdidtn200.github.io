@@ -55,6 +55,15 @@ def load_candidates() -> list[dict]:
 
 def has_lab_value(source: dict) -> bool:
     merged = f"{source.get('title', '')} {source.get('abstract', '')}".lower()
+    blocked = [
+        "6g",
+        "iot networks",
+        "centralized vs. decentralized",
+        "carbon",
+        "energy impact",
+    ]
+    if any(token in merged for token in blocked):
+        return False
     signals = [
         "experiment",
         "benchmark",
@@ -66,6 +75,8 @@ def has_lab_value(source: dict) -> bool:
         "railway",
         "fault diagnosis",
         "condition monitoring",
+        "predictive maintenance",
+        "maintenance",
         "real-time",
     ]
     return any(signal in merged for signal in signals)
