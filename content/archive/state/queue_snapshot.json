@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-06-18T06:28:00+00:00",
-  "queued_count": 11,
+  "generated_at": "2026-06-19T09:05:14.955971+00:00",
+  "queued_count": 15,
   "queued_titles": [
+    {
+      "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-18",
+      "slug": "260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Optimal Order of Multi-Agent and General Many-Body Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-18",
+      "slug": "260620485v1-optimal-order-of-multi-agent-and-general-many-body-systems",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "N-Version Programming with Coding Agents",
+      "topic": "agent-ops",
+      "date": "2026-06-18",
+      "slug": "260620158v1-n-version-programming-with-coding-agents",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
+      "topic": "agent-ops",
+      "date": "2026-06-16",
+      "slug": "260618112v2-qwen-robotnav-technical-report-a-scalable-navigation-model-d",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
     {
       "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
       "topic": "agent-ops",
@@ -78,6 +106,6 @@
       "date": "2026-06-09",
       "slug": "2026-06-09-260610747v1-the-arbiter-agent-continually-monitoring-multi-agent-conversations",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
+    }
   ]
 }
