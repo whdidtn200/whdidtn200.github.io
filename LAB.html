@@ -40,6 +40,10 @@
       padding:16px;
       background:rgba(255,255,255,.84);
       box-shadow:0 10px 22px rgba(24,54,84,.05);
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
     }
     .hero-aside .eyebrow{
       font-size:11px;
@@ -62,6 +66,7 @@
       margin-top:14px;
     }
     .metric{
+      height:100%;
       border:1px solid #d5e3ec;
       border-radius:14px;
       padding:12px;
@@ -121,11 +126,13 @@
     .lab-card{
       display:flex;
       flex-direction:column;
+      justify-content:flex-start;
       border:1px solid #cddde7;
       border-radius:16px;
       padding:16px;
       background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,251,254,.98));
       box-shadow:0 10px 24px rgba(24,54,84,.05);
+      min-height:100%;
     }
     .lab-card .eyebrow{
       font-size:12px;
@@ -148,10 +155,12 @@
     }
     .lab-card a{
       display:inline-block;
-      margin-top:14px;
+      margin-top:auto;
+      padding-top:14px;
       font-weight:700;
     }
     .lab-card.featured{
+      grid-column:1 / -1;
       padding:18px;
       background:
         linear-gradient(145deg, rgba(11,139,149,.12), rgba(31,95,214,.08)),
@@ -221,10 +230,13 @@
       line-height:1.65;
     }
     .process-step{
+      display:flex;
+      flex-direction:column;
       border:1px solid #d5e3ec;
       border-radius:14px;
       padding:14px;
       background:#fbfdff;
+      min-height:100%;
     }
     .process-step strong{
       display:block;
