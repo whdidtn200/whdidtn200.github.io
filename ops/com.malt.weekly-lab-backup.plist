@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.malt.weekly-lab-backup</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io/scripts/run_backup_weekly_lab_with_email.sh</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Weekday</key>
+    <integer>3</integer>
+    <key>Hour</key>
+    <integer>18</integer>
+    <key>Minute</key>
+    <integer>20</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/yangsoo/Library/Logs/malt-weekly-lab-backup.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/yangsoo/Library/Logs/malt-weekly-lab-backup.err.log</string>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/yangsoo/Documents/Codex/2026-06-15/new-chat/work/whdidtn200.github.io</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+</dict>
+</plist>
