@@ -4,6 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 LOCK_DIR="$REPO_ROOT/.daily-publish.lock"
+PUBLISH_DAYS="${MALT_PUBLISH_DAYS:-2,5}"
 
 cleanup() {
   rmdir "$LOCK_DIR" 2>/dev/null || true
@@ -16,6 +17,18 @@ fi
 trap cleanup EXIT
 
 cd "$REPO_ROOT"
+
+today_dow="$(date +%u)"
+if [[ "${MALT_FORCE_PUBLISH:-0}" != "1" ]]; then
+  case ",$PUBLISH_DAYS," in
+    *,"$today_dow",*)
+      ;;
+    *)
+      echo "scheduled publish skipped on weekday $today_dow; allowed weekdays: $PUBLISH_DAYS"
+      exit 0
+      ;;
+  esac
+fi
 
 if ! git diff --quiet || ! git diff --cached --quiet; then
   echo "working tree is dirty; refusing automated publish"

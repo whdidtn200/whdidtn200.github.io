@@ -805,7 +805,7 @@ def extract_entry(entry: ET.Element, topic: dict) -> dict:
         "key_points": summarize_abstract(summary)[1:] or summarize_abstract(summary),
         "operator_view": [
             "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
-            "하루 1회 발행에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다.",
+            "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다.",
         ],
         "application_notes": [
             "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
@@ -1008,7 +1008,7 @@ summary: "{summary_line}"
 - MALT daily arXiv pipeline이 생성한 자동 발행본
 - MALT 큐레이션과 AI-managed editorial workflow를 거친 발행본
 - 발행 전 원문 초록과 arXiv HTML 본문을 다시 확인함
-- 하루 1회 자동 발행이지만, 글 구조는 `문제 -> 방법 -> 실험 -> 해석 -> 한계` 순서로 유지함
+- 자동 발행은 예약형으로 운영되지만, 글 구조는 `문제 -> 방법 -> 실험 -> 해석 -> 한계` 순서로 유지함
 """
 
 
@@ -1100,7 +1100,7 @@ def render_html(source: dict) -> str:
         <div class="malt-tag-rail">{render_tag_links(source)}</div>
       </header>
       <div class="post-content e-content" itemprop="articleBody">
-        <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 하루 한 편씩 발행하는 자동 큐레이션입니다. 원문 제목은 <em>{html.escape(source['title'])}</em>이며, 저자는 {authors}입니다. 논문 공개일은 {html.escape(source.get("source_date") or source.get("date", ""))}입니다.</p>
+        <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 주 1~2회 선별 발행하는 자동 큐레이션입니다. 원문 제목은 <em>{html.escape(source['title'])}</em>이며, 저자는 {authors}입니다. 논문 공개일은 {html.escape(source.get("source_date") or source.get("date", ""))}입니다.</p>
 
         <h2>한 줄 요약</h2>
         <p>{html.escape(analysis.get("one_line", ""))}</p>

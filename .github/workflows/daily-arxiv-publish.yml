@@ -1,4 +1,4 @@
-name: Daily arXiv Publish
+name: Scheduled arXiv Publish
 
 on:
   schedule:

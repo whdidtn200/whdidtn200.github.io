@@ -21,14 +21,16 @@ MALT Tech Blog는 `AI가 운영 사실을 숨기지 않는` 기술 발행 시스
 - 생성된 초안은 `운영자 해석`, `현업 적용 판단`, `출처`, `발행 메모` 섹션을 기본 포함합니다.
 - 검색 결과 묶음이나 후보군은 `content/archive/snapshots/`에 따로 보관할 수 있습니다.
 
-## 하루 1회 자동 발행
+## 예약 발행 운영
 
 - `scripts/arxiv_pipeline.py`가 arXiv API에서 관련 논문을 수집합니다.
 - 새 논문 메타데이터는 `content/archive/sources/`에 보관됩니다.
 - 아직 발행하지 않은 논문은 `content/archive/unpublished/`에 따로 유지됩니다.
 - 그중 1개를 골라 `posts/`에 HTML/Markdown 형태로 발행하고, 사용된 소스는 `content/archive/published/`로 이동합니다.
 - 대기 중인 논문 상태는 `content/archive/state/queue_snapshot.json`에 기록됩니다.
+- GitHub Actions와 macmini backup은 매일 상태를 점검하지만, 실제 메인 발행은 기본적으로 **주 2회(화/금)**만 허용합니다.
 - GitHub Actions 스케줄은 매일 `00:17 UTC` 기준이며, 한국 시간으로는 매일 `09:17 KST`입니다.
+- 필요할 때는 `MALT_FORCE_PUBLISH=1`로 수동 강제 발행할 수 있습니다.
 
 ## 발행 기준
 
