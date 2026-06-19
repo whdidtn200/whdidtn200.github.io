@@ -1,36 +1,8 @@
 {
-  "generated_at": "2026-06-19T11:21:17+09:00",
+  "generated_at": "2026-06-19T11:27:06+09:00",
   "entry_count": 50,
-  "thin_or_weak_count": 11,
+  "thin_or_weak_count": 8,
   "candidates": [
-    {
-      "title": "🚂 [GitHub CBM/PHM/AI 큐레이션] RailVision AI: 차세대 자동화 철도 검사 플랫폼",
-      "url": "/posts/2026-02-25-railvision-ai.html",
-      "type": "Post",
-      "date": "2026-02-25",
-      "word_count": 225,
-      "quality_score": 3,
-      "quality_band": "thin",
-      "quality_reasons": [
-        "최소 분량",
-        "해설형"
-      ]
-    },
-    {
-      "title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring",
-      "url": "/posts/2026-02-18-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa.html",
-      "type": "Daily arXiv",
-      "date": "2026-02-18",
-      "word_count": 324,
-      "quality_score": 4,
-      "quality_band": "thin",
-      "quality_reasons": [
-        "최소 분량",
-        "일간 해설형",
-        "요약 밀도 양호",
-        "주제 연결성"
-      ]
-    },
     {
       "title": "[PHM 심층 분석] 단일 AE 센서 기반의 베어링 결함 위치 추정: Matching Pursuit의 실전적 적용",
       "url": "/posts/2026-02-19-ae-localization-deepdive.html",
@@ -50,19 +22,6 @@
       "type": "Post",
       "date": "2026-02-21",
       "word_count": 449,
-      "quality_score": 4,
-      "quality_band": "thin",
-      "quality_reasons": [
-        "기본 분량 충족",
-        "해설형"
-      ]
-    },
-    {
-      "title": "[특별 기획] GitHub Copilot SDK의 정수: Repo Bootcamp 심층 분석 🏕️",
-      "url": "/posts/2026-02-25-special-report-repo-bootcamp.html",
-      "type": "Post",
-      "date": "2026-02-25",
-      "word_count": 394,
       "quality_score": 4,
       "quality_band": "thin",
       "quality_reasons": [
