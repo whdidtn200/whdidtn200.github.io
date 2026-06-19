@@ -104,7 +104,7 @@ def lab_post_basename(source: dict) -> str:
 
 
 def build_lab_title(source: dict) -> str:
-    return f"[시험실] {source.get('title', 'Untitled Paper')}: 재현 관점에서 다시 읽기"
+    return f"[실험실] {source.get('title', 'Untitled Paper')}: 재현 관점에서 다시 읽기"
 
 
 def build_retest_points(source: dict) -> list[str]:
@@ -142,7 +142,7 @@ def render_sources(source: dict, basename: str) -> str:
     lines = [
         f"- [원문 논문]({next((item.get('url') for item in source.get('sources', []) if item.get('label') == 'arXiv abs'), source.get('entry_id', '#'))})",
         f"- [기존 일간 해설](/posts/{source.get('slug')}.html)",
-        f"- [시험실 허브](/LAB.html)",
+        f"- [실험실 허브](/LAB.html)",
     ]
     pdf_url = next((item.get("url") for item in source.get("sources", []) if item.get("label") == "arXiv pdf"), "")
     if pdf_url:
@@ -165,7 +165,7 @@ def render_markdown(source: dict) -> str:
         f"- {item}\n"
         for item in (analysis.get("operational_takeaways") or ["현장 데이터 조건과 경보 흐름을 함께 점검해야 합니다."])[:4]
     )
-    tags = ["시험실", "Validation", "Reproduction", *(source.get("tags") or [])[:4]]
+    tags = ["실험실", "Validation", "Reproduction", *(source.get("tags") or [])[:4]]
     categories = ["lab", "validation", *(source.get("categories") or [])[:2]]
     return f"""---
 title: "{title}"
@@ -179,9 +179,9 @@ workflow: "weekly-lab-publication"
 
 # {title}
 
-이 글은 <strong>MALT 주간 시험실 파이프라인</strong>이 발행하는 자동 검토본입니다. 일반 일간 요약과 달리, 논문의 주장과 실험 조건을 `재현 가능성`, `운영 적용성`, `검증 리스크` 관점으로 다시 읽습니다.
+이 글은 <strong>MALT 주간 실험실 파이프라인</strong>이 발행하는 자동 검토본입니다. 일반 일간 요약과 달리, 논문의 주장과 실험 조건을 `재현 가능성`, `운영 적용성`, `검증 리스크` 관점으로 다시 읽습니다.
 
-## 왜 이 논문을 시험실 후보로 골랐나
+## 왜 이 논문을 실험실 후보로 골랐나
 - {review.get("why_selected", "철도 PHM 및 운영 자동화 관점에서 다시 검토할 가치가 있는 주제입니다.")}
 - {analysis.get("why_now", "운영 현장에서 흔들릴 가능성이 큰 조건을 포함하고 있어 깊게 볼 가치가 있습니다.")}
 - 원문 공개일: {source.get("published_at", "n/a")}
@@ -191,7 +191,7 @@ workflow: "weekly-lab-publication"
 - {analysis.get("problem", "현장 적용 전에 실험 조건과 한계를 함께 봐야 합니다.")}
 - {analysis.get("method_overview", "방법론보다 운영에 연결되는 구조를 먼저 읽는 편이 좋습니다.")}
 
-## 시험실에서 다시 확인할 항목
+## 실험실에서 다시 확인할 항목
 {retest_block}
 
 ## 다시 봐야 할 지표와 실험 조건
@@ -212,7 +212,7 @@ workflow: "weekly-lab-publication"
 
 ## 발행 메모
 - MALT 큐레이션 자동 발행본
-- AI가 생성한 주간 시험실 리뷰
+- AI가 생성한 주간 실험실 리뷰
 - 주기: 매주 수요일 오전 10시(KST) 후보 1건 검토
 """
 
@@ -233,7 +233,7 @@ def render_html(source: dict) -> str:
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{html.escape(title)} | MALT Tech Blog</title>
-  <meta name="description" content="MALT 시험실이 논문을 재현 관점에서 다시 읽는 주간 검토 페이지" />
+  <meta name="description" content="MALT 실험실이 논문을 재현 관점에서 다시 읽는 주간 검토 페이지" />
   <meta property="article:published_time" content="{dt.datetime.now().astimezone().isoformat(timespec='minutes')}" />
   <style>
     body{{margin:0;font-family:"Pretendard","Avenir Next","Segoe UI",sans-serif;background:#edf4f7;color:#10253a;line-height:1.75}}
@@ -254,11 +254,11 @@ def render_html(source: dict) -> str:
     <section class="hero">
       <div class="eyebrow">MALT TESTING LAB</div>
       <h1>{html.escape(title)}</h1>
-      <p>일간 요약이 아니라, 재현 가치가 있는 논문을 골라 실험 조건과 운영 적합성을 다시 읽는 주간 시험실 발행본입니다.</p>
+      <p>일간 요약이 아니라, 재현 가치가 있는 논문을 골라 실험 조건과 운영 적합성을 다시 읽는 주간 실험실 발행본입니다.</p>
       <div class="meta">발행일: {dt.date.today().isoformat()} · 허브: <a href="/LAB.html">LAB</a> · 전체 글: <a href="/posts.html">Posts</a></div>
     </section>
     <article class="card">
-      <h2>왜 이 논문을 시험실 후보로 골랐나</h2>
+      <h2>왜 이 논문을 실험실 후보로 골랐나</h2>
       <ul>
         <li>{html.escape(review.get("why_selected", "철도 PHM 및 운영 자동화 관점에서 다시 검토할 가치가 있는 주제입니다."))}</li>
         <li>{html.escape(analysis.get("why_now", "운영 현장에서 흔들릴 가능성이 큰 조건을 포함하고 있어 깊게 볼 가치가 있습니다."))}</li>
@@ -272,7 +272,7 @@ def render_html(source: dict) -> str:
         <li>{html.escape(analysis.get("method_overview", "방법론보다 운영에 연결되는 구조를 먼저 읽는 편이 좋습니다."))}</li>
       </ul>
 
-      <h2>시험실에서 다시 확인할 항목</h2>
+      <h2>실험실에서 다시 확인할 항목</h2>
       <ul>
         {"".join(f"<li>{html.escape(item)}</li>" for item in retest)}
       </ul>
@@ -300,7 +300,7 @@ def render_html(source: dict) -> str:
       <ul>
         <li><a href="{html.escape(next((item.get('url') for item in source.get('sources', []) if item.get('label') == 'arXiv abs'), source.get('entry_id', '#')))}">원문 논문</a></li>
         <li><a href="/posts/{html.escape(source.get('slug', ''))}.html">기존 일간 해설</a></li>
-        <li><a href="/LAB.html">시험실 허브</a></li>
+        <li><a href="/LAB.html">실험실 허브</a></li>
       </ul>
     </article>
   </main>
@@ -348,8 +348,8 @@ def update_lab_hub(state: dict) -> None:
         entries = [
             '''      <article class="lab-card">
         <div class="eyebrow">Weekly Lab Automation</div>
-        <h2>주간 시험실 발행이 여기에 쌓입니다</h2>
-        <p>매주 한 편씩, 재현 가치가 높은 논문을 골라 실험 조건, 지표, 운영 한계를 다시 읽는 시험실 글이 이 영역에 추가됩니다.</p>
+        <h2>주간 실험실 발행이 여기에 쌓입니다</h2>
+        <p>매주 한 편씩, 재현 가치가 높은 논문을 골라 실험 조건, 지표, 운영 한계를 다시 읽는 실험실 글이 이 영역에 추가됩니다.</p>
         <a href="./posts.html">전체 글 보기</a>
       </article>'''
         ]
