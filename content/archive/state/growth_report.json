@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T13:04+09:00",
+  "generated_at": "2026-06-19T13:07+09:00",
   "entry_count": 54,
   "thin_or_weak_count": 0,
   "queued_count": 0,
@@ -32,8 +32,8 @@
     {
       "path": "/railway-bearing-sensor-guide.html",
       "name": "railway-bearing-sensor-guide",
-      "word_count": 517,
-      "status": "solid"
+      "word_count": 1037,
+      "status": "strong"
     }
   ],
   "top_pages": [
@@ -97,8 +97,8 @@
   "priorities": [
     {
       "label": "대표 가이드 보강",
-      "reason": "railway-bearing-sensor-guide 분량이 517단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
-      "target": "/railway-bearing-sensor-guide.html"
+      "reason": "predictive-maintenance-kpi-roi-guide 분량이 552단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
+      "target": "/predictive-maintenance-kpi-roi-guide.html"
     },
     {
       "label": "심층 포스트 추가 보강",
