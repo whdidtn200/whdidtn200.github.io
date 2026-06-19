@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Predictive maintenance KPI scorecard</title>
+  <desc id="desc">A MALT original scorecard diagram showing leading and lagging indicators for predictive maintenance programs.</desc>
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbfd"/>
+      <stop offset="100%" stop-color="#eef4f9"/>
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#163654" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#bg3)"/>
+  <text x="72" y="90" fill="#10253a" font-family="Arial, sans-serif" font-size="40" font-weight="700">Predictive Maintenance KPI Scorecard</text>
+  <text x="72" y="124" fill="#54697f" font-family="Arial, sans-serif" font-size="22">MALT original diagram: leading versus lagging indicators</text>
+
+  <rect x="72" y="170" width="500" height="460" rx="24" ry="24" fill="#ffffff" stroke="#cbd9e6" filter="url(#shadow3)"/>
+  <rect x="628" y="170" width="500" height="460" rx="24" ry="24" fill="#ffffff" stroke="#cbd9e6" filter="url(#shadow3)"/>
+
+  <text x="110" y="226" fill="#0b8b95" font-family="Arial, sans-serif" font-size="28" font-weight="700">Leading Indicators</text>
+  <text x="110" y="266" fill="#54697f" font-family="Arial, sans-serif" font-size="20">What tells you the program is becoming operationally useful?</text>
+
+  <text x="110" y="328" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Detection lead time</text>
+  <text x="110" y="358" fill="#54697f" font-family="Arial, sans-serif" font-size="19">How much earlier does the team see the problem?</text>
+  <text x="110" y="420" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">False alarm burden</text>
+  <text x="110" y="450" fill="#54697f" font-family="Arial, sans-serif" font-size="19">How much unnecessary inspection work is being created?</text>
+  <text x="110" y="512" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Work order conversion</text>
+  <text x="110" y="542" fill="#54697f" font-family="Arial, sans-serif" font-size="19">Do alerts actually turn into planned maintenance actions?</text>
+
+  <text x="666" y="226" fill="#1f5fd6" font-family="Arial, sans-serif" font-size="28" font-weight="700">Lagging Indicators</text>
+  <text x="666" y="266" fill="#54697f" font-family="Arial, sans-serif" font-size="20">What tells you the program changed business and reliability outcomes?</text>
+
+  <text x="666" y="328" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Downtime avoided</text>
+  <text x="666" y="358" fill="#54697f" font-family="Arial, sans-serif" font-size="19">How much unplanned service interruption was prevented?</text>
+  <text x="666" y="420" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Asset availability</text>
+  <text x="666" y="450" fill="#54697f" font-family="Arial, sans-serif" font-size="19">Did reliability move in a way operations can feel?</text>
+  <text x="666" y="512" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Maintenance cost avoidance</text>
+  <text x="666" y="542" fill="#54697f" font-family="Arial, sans-serif" font-size="19">Did labor, parts, or emergency intervention cost drop?</text>
+
+  <rect x="72" y="652" width="1056" height="44" rx="16" ry="16" fill="#f8fbfd" stroke="#d3e0e9"/>
+  <text x="104" y="681" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Practical rule: use leading indicators to manage the pilot, and lagging indicators to justify budget and scale-up.</text>
+</svg>

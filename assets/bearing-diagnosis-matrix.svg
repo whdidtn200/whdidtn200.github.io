@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Bearing diagnosis method matrix</title>
+  <desc id="desc">A MALT original matrix comparing classical machine learning and deep learning for bearing fault diagnosis.</desc>
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f7fbfd"/>
+      <stop offset="100%" stop-color="#eef4f9"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#163654" flood-opacity=".12"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg2)"/>
+  <text x="72" y="86" fill="#10253a" font-family="Arial, sans-serif" font-size="40" font-weight="700">Bearing Fault Diagnosis Decision Matrix</text>
+  <text x="72" y="120" fill="#54697f" font-family="Arial, sans-serif" font-size="22">MALT original diagram: sensor and model choices by operating context</text>
+
+  <rect x="80" y="170" width="1040" height="460" rx="24" ry="24" fill="#ffffff" stroke="#cbd9e6" filter="url(#shadow2)"/>
+
+  <text x="230" y="220" fill="#0d1a28" font-family="Arial, sans-serif" font-size="24" font-weight="700">Context</text>
+  <text x="560" y="220" fill="#0d1a28" font-family="Arial, sans-serif" font-size="24" font-weight="700">Recommended Sensor/Signal</text>
+  <text x="900" y="220" fill="#0d1a28" font-family="Arial, sans-serif" font-size="24" font-weight="700">Recommended Model</text>
+
+  <line x1="80" y1="246" x2="1120" y2="246" stroke="#d5e3ec" stroke-width="2"/>
+  <line x1="370" y1="170" x2="370" y2="630" stroke="#d5e3ec" stroke-width="2"/>
+  <line x1="810" y1="170" x2="810" y2="630" stroke="#d5e3ec" stroke-width="2"/>
+
+  <text x="120" y="300" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Small dataset</text>
+  <text x="120" y="332" fill="#54697f" font-family="Arial, sans-serif" font-size="18">Need explainability</text>
+  <text x="410" y="300" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Vibration + FFT + envelope features</text>
+  <text x="850" y="300" fill="#0b8b95" font-family="Arial, sans-serif" font-size="20" font-weight="700">Feature engineering + SVM / RF</text>
+
+  <line x1="80" y1="358" x2="1120" y2="358" stroke="#eef3f7" stroke-width="2"/>
+  <text x="120" y="412" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Stable operating speed</text>
+  <text x="120" y="444" fill="#54697f" font-family="Arial, sans-serif" font-size="18">Need fast pilot</text>
+  <text x="410" y="412" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Vibration baseline + anomaly scores</text>
+  <text x="850" y="412" fill="#0b8b95" font-family="Arial, sans-serif" font-size="20" font-weight="700">Rules + threshold + classical ML</text>
+
+  <line x1="80" y1="470" x2="1120" y2="470" stroke="#eef3f7" stroke-width="2"/>
+  <text x="120" y="524" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Larger dataset</text>
+  <text x="120" y="556" fill="#54697f" font-family="Arial, sans-serif" font-size="18">Need fault-mode accuracy</text>
+  <text x="410" y="524" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Spectrogram / scalogram / raw segments</text>
+  <text x="850" y="524" fill="#1f5fd6" font-family="Arial, sans-serif" font-size="20" font-weight="700">CNN / transfer learning</text>
+
+  <line x1="80" y1="582" x2="1120" y2="582" stroke="#eef3f7" stroke-width="2"/>
+  <text x="120" y="636" fill="#10253a" font-family="Arial, sans-serif" font-size="22" font-weight="700">Variable speed / multi-sensor</text>
+  <text x="120" y="668" fill="#54697f" font-family="Arial, sans-serif" font-size="18">Cross-machine transfer need</text>
+  <text x="410" y="636" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Speed reference + time-frequency + context</text>
+  <text x="850" y="636" fill="#1f5fd6" font-family="Arial, sans-serif" font-size="20" font-weight="700">Transformer / domain adaptation</text>
+
+  <rect x="80" y="658" width="1040" height="70" rx="18" ry="18" fill="#f8fbfd" stroke="#d3e0e9"/>
+  <text x="112" y="703" fill="#54697f" font-family="Arial, sans-serif" font-size="20">Rule of thumb: if explainability and limited labels matter most, start classical. If representation power across complex patterns matters, step into deep learning only after the signal pipeline is stable.</text>
+</svg>

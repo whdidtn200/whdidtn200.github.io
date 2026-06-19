@@ -37,6 +37,15 @@
       background:#f8fbfd;
     }
     .item strong{display:block;color:#0d1a28;margin-bottom:6px}
+    .figure{
+      margin-top:16px;
+      border:1px solid #d5e3ec;
+      border-radius:16px;
+      padding:14px;
+      background:#fbfdfe;
+    }
+    .figure img{width:100%;height:auto;display:block;border-radius:12px}
+    .figure figcaption{margin-top:10px;color:#54697f;font-size:14px;line-height:1.7}
     @media (max-width: 860px){
       .checklist{grid-template-columns:1fr}
     }
@@ -84,6 +93,10 @@
       <h2>Railway Predictive Maintenance는 고장 예측 모델이 아니다</h2>
       <p>현장에서는 예지보전을 흔히 남은 수명 예측이나 이상 탐지 모델로만 이해합니다. 하지만 실제 철도 운영에서는 감시, 진단, 예측, 작업 지시 연결이 함께 있어야 합니다. 경보를 띄우는 것만으로는 충분하지 않고, 그 경보가 어떤 inspection이나 component change로 연결될지까지 정의되어야 운영 시스템이 됩니다.</p>
       <p>그래서 철도 예지보전의 본질은 <strong>고장을 맞히는 것</strong>보다 <strong>정비 판단을 더 일찍, 더 안정적으로 만들 수 있는 체계</strong>를 만드는 일에 가깝습니다.</p>
+      <figure class="figure">
+        <img src="./assets/railway-pdm-workflow.svg" alt="철도 예지보전의 sensing, context, diagnosis, action 흐름을 정리한 다이어그램" />
+        <figcaption>Figure. <strong>MALT original diagram</strong>. 철도 예지보전은 센서 데이터만으로 끝나지 않고, 운영 맥락과 정비 행동까지 이어질 때 비로소 가치가 생긴다는 점을 도식화했습니다.</figcaption>
+      </figure>
     </section>
 
     <section id="assets" class="card section">

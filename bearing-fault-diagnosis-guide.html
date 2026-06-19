@@ -38,6 +38,15 @@
       color:#0d1a28;
       margin-bottom:6px;
     }
+    .figure{
+      margin-top:16px;
+      border:1px solid #d5e3ec;
+      border-radius:16px;
+      padding:14px;
+      background:#fbfdfe;
+    }
+    .figure img{width:100%;height:auto;display:block;border-radius:12px}
+    .figure figcaption{margin-top:10px;color:#54697f;font-size:14px;line-height:1.7}
     @media (max-width: 860px){
       .compare{grid-template-columns:1fr}
     }
@@ -104,6 +113,10 @@
           클래스별 샘플이 어느 정도 있고, 복합 고장 패턴이나 time-frequency 표현을 더 정교하게 다뤄야 하는 경우에 유리합니다.
         </div>
       </div>
+      <figure class="figure">
+        <img src="./assets/bearing-diagnosis-matrix.svg" alt="베어링 고장 진단에서 운영 맥락별 센서와 모델 선택을 비교한 매트릭스" />
+        <figcaption>Figure. <strong>MALT original diagram</strong>. 작은 데이터셋과 설명 가능성이 중요할 때는 classical ML이, variable speed와 멀티센서 문맥이 강할 때는 더 복잡한 모델이 유리하다는 점을 비교형으로 정리했습니다.</figcaption>
+      </figure>
     </section>
 
     <section class="card section">
