@@ -18,6 +18,10 @@ TAGS_DIR = ROOT / "tags"
 STATE_DIR = ROOT / "content" / "archive" / "state"
 STATE_FILE = STATE_DIR / "tag_index.json"
 POSTS_INDEX = ROOT / "posts.html"
+LOW_VALUE_SLUGS = {
+    "2026-02-25-FFT-1DCNN-Train-Fault-Diagnosis",
+    "2026-02-24-continual-learning-railway-wheel-fault",
+}
 
 TAG_HINTS = [
     (["railway", "metro", "track", "wheel", "bogie"], ["Railway"]),
@@ -193,6 +197,20 @@ def build_entry(url: str, title: str, date: str, summary: str, tags: list[str]) 
     }
 
 
+def entry_slug(entry: dict) -> str:
+    return pathlib.Path(entry["url"]).stem
+
+
+def is_low_value_entry(entry: dict) -> bool:
+    title = entry.get("title", "")
+    summary = entry.get("summary", "")
+    slug = entry_slug(entry)
+    merged = f"{title} {summary}"
+    if slug in LOW_VALUE_SLUGS:
+        return True
+    return any(token in merged for token in ["삭제됨", "중복 발행 정리", "보존 처리되었습니다", "대체 문서"])
+
+
 def collect_markdown_entries() -> list[dict]:
     entries: list[dict] = []
     for path in sorted(POSTS_DIR.glob("*.md")):
@@ -257,6 +275,8 @@ def dedupe_entries(entries: list[dict]) -> list[dict]:
 def group_by_tag(entries: list[dict]) -> dict[str, list[dict]]:
     grouped: dict[str, list[dict]] = defaultdict(list)
     for entry in entries:
+        if is_low_value_entry(entry):
+            continue
         for tag in entry.get("tags", []):
             grouped[tag].append(entry)
     for tag, items in grouped.items():
@@ -292,6 +312,35 @@ def update_posts_overview(grouped: dict[str, list[dict]], total_entries: int) ->
     block = render_tag_overview(grouped, total_entries)
     new_content = content[: start + len(start_marker)] + "\n" + block + "\n        " + content[end:]
     POSTS_INDEX.write_text(new_content, encoding="utf-8")
+
+
+def prune_low_value_archive_links(entries: list[dict]) -> None:
+    excluded = {entry["url"] for entry in entries if is_low_value_entry(entry)}
+    if not excluded:
+        return
+    content = POSTS_INDEX.read_text(encoding="utf-8")
+    filtered_lines = []
+    for line in content.splitlines():
+        if any(f'href="{url}"' in line for url in excluded):
+            continue
+        filtered_lines.append(line)
+    POSTS_INDEX.write_text("\n".join(filtered_lines) + "\n", encoding="utf-8")
+
+
+def apply_noindex_to_low_value_pages(entries: list[dict]) -> None:
+    for entry in entries:
+        if not is_low_value_entry(entry):
+            continue
+        path = ROOT / entry["url"].lstrip("/")
+        if not path.exists():
+            continue
+        content = path.read_text(encoding="utf-8")
+        if 'name="robots"' not in content.lower():
+            if "<head>" in content:
+                content = content.replace("<head>", '<head>\n<meta name="robots" content="noindex,follow" />', 1)
+            else:
+                content = '<meta name="robots" content="noindex,follow" />\n' + content
+        path.write_text(content, encoding="utf-8")
 
 
 def render_tag_index(grouped: dict[str, list[dict]], total_entries: int) -> str:
@@ -484,9 +533,12 @@ def main() -> None:
     entries.extend(collect_html_only_entries({entry["url"] for entry in entries}))
     deduped = dedupe_entries(entries)
     grouped = group_by_tag(deduped)
-    update_posts_overview(grouped, len(deduped))
-    write_outputs(deduped, grouped)
-    print(json.dumps({"entries": len(deduped), "tags": len(grouped)}, ensure_ascii=False))
+    curated_count = len([entry for entry in deduped if not is_low_value_entry(entry)])
+    update_posts_overview(grouped, curated_count)
+    prune_low_value_archive_links(deduped)
+    apply_noindex_to_low_value_pages(deduped)
+    write_outputs([entry for entry in deduped if not is_low_value_entry(entry)], grouped)
+    print(json.dumps({"entries": curated_count, "tags": len(grouped)}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
