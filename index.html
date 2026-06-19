@@ -58,17 +58,25 @@
       display:grid;
       grid-template-columns:minmax(0, 1.3fr) 320px;
       gap:18px;
-      align-items:start;
+      align-items:stretch;
       margin-top:18px;
     }
-    .hero-copy{max-width:700px}
+    .hero-copy{
+      max-width:700px;
+      display:flex;
+      flex-direction:column;
+    }
     .hero-actions{
       display:grid;
       grid-template-columns:repeat(3, minmax(0, 1fr));
       gap:10px;
       margin-top:18px;
+      align-items:stretch;
     }
     .hero-actions a{
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
       text-decoration:none;
       border:1px solid #d2e0ea;
       border-radius:14px;
@@ -103,6 +111,9 @@
         linear-gradient(160deg, rgba(11,139,149,.10), rgba(31,95,214,.06)),
         rgba(255,255,255,.92);
       box-shadow:0 10px 26px rgba(24,54,84,.06);
+      height:100%;
+      display:flex;
+      flex-direction:column;
     }
     .hero-note{
       font-size:11px;
@@ -138,8 +149,10 @@
     .metric-value{font-size:19px;font-weight:800;color:var(--ink)}
     .metric-value.small{font-size:15px}
 
-    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px}
+    .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;padding:14px;align-items:stretch}
     .card{
+      display:flex;
+      flex-direction:column;
       background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(249,252,254,.97));
       border:1px solid var(--line);
       border-radius:16px;
@@ -185,6 +198,7 @@
     }
     #latest-links a{
       min-height:88px;
+      height:100%;
       display:block;
       font-weight:600;
     }
@@ -232,8 +246,10 @@
       font-size:12px;
     }
 
-    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:stretch}
     .quick a{
+      display:flex;
+      align-items:center;
       text-decoration:none;
       text-align:left;
       padding:13px 12px;
@@ -245,6 +261,7 @@
       font-size:14px;
       box-shadow:0 4px 14px rgba(24,54,84,.04);
     }
+    .links.tight a{min-height:0}
 
     .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
 
@@ -331,7 +348,7 @@
         <article class="card">
           <div class="section-label">NAVIGATION</div>
           <h2>🧭 탐색 허브</h2>
-          <div class="quick">
+          <div class="quick links tight">
             <a href="/posts.html">전체 글 아카이브</a>
             <a href="/GUIDES.html">Evergreen Guides</a>
             <a href="/ABOUT.html">About</a>
