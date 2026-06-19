@@ -1,6 +1,7 @@
 {
   "published_sources": [
-    "2025-08-22-2025-08-22-250816160v1-innovative-distributed-maintenance-concept-from-the-design-to-cost.json"
+    "2025-08-22-2025-08-22-250816160v1-innovative-distributed-maintenance-concept-from-the-design-to-cost.json",
+    "2025-08-12-2025-08-12-250809054v1-cvcm-track-circuits-pre-emptive-failure-diagnostics-for-predictive.json"
   ],
   "lab_posts": [
     {
@@ -11,6 +12,15 @@
       "topic": "railway-phm",
       "focus": "이 논문은 운영 비용을 다룰 때 어떤 데이터와 절차가 필요한지 역으로 정",
       "scoreboard_asset": "/assets/lab-generated/2026-06-19-lab-innovativedistributedmaintenanceconceptfromthedesigntocostoptimisation-scoreboard.svg"
+    },
+    {
+      "title": "[실험실] CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks: 재현 관점에서 다시 읽기",
+      "html_filename": "2026-06-19-lab-cvcmtrackcircuitspre-emptivefailurediagnosticsforpredictivemaintenanceus.html",
+      "summary": "Track circuits are critical for railway operations, acting as the main signalling sub-system to locate trains. Continuous Variable Current Modulation (CVCM) is",
+      "source_title": "CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks",
+      "topic": "railway-phm",
+      "focus": "재현 관점 검토",
+      "scoreboard_asset": "/assets/lab-generated/2026-06-19-lab-cvcmtrackcircuitspre-emptivefailurediagnosticsforpredictivemaintenanceus-scoreboard.svg"
     }
   ]
 }

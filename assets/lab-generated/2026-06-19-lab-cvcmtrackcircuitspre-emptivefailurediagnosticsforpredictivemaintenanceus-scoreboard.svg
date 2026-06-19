@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maintenance Using Deep Neural Networks Scoreboard</title>
+  <desc id="desc">Original MALT-generated chart summarizing experiment lab evaluation categories.</desc>
+  <rect width="1200" height="720" rx="32" fill="#f4f9fc"/>
+  <text x="88" y="88" font-size="36" font-weight="800" fill="#10253a">Custom Lab Scoreboard</text>
+  <text x="88" y="124" font-size="20" fill="#5f738a">CVCM Track Circuits Pre-emptive Failure Diagnostics for Predictive Maint</text>
+  <g stroke="#caddea" stroke-width="2">
+    <line x1="170" y1="560" x2="1050" y2="560"/>
+    <line x1="170" y1="480" x2="1050" y2="480"/>
+    <line x1="170" y1="400" x2="1050" y2="400"/>
+    <line x1="170" y1="320" x2="1050" y2="320"/>
+    <line x1="170" y1="240" x2="1050" y2="240"/>
+  </g>
+  <rect x="220" y="160" width="110" height="400" rx="18" fill="#0b8b95"/><rect x="390" y="232" width="110" height="328" rx="18" fill="#15879f"/><rect x="560" y="328" width="110" height="232" rx="18" fill="#1b7daa"/><rect x="730" y="320" width="110" height="240" rx="18" fill="#246fc0"/><rect x="900" y="312" width="110" height="248" rx="18" fill="#4e7ed0"/>
+  <text x="275" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">Raw Accuracy</text><text x="445" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">Generalization</text><text x="615" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">Reproducibility</text><text x="785" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">Field Readiness</text><text x="955" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">Cost Burden</text>
+  <text x="275" y="188" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">100</text><text x="445" y="260" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">82</text><text x="615" y="356" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">58</text><text x="785" y="348" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">60</text><text x="955" y="340" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">62</text>
+  <rect x="88" y="644" width="1024" height="40" rx="14" fill="#ffffff" stroke="#d2e2ed"/>
+  <text x="112" y="670" font-size="18" fill="#42586d">MALT original chart · Category balance matters more than a single accuracy headline.</text>
+</svg>
