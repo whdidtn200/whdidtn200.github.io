@@ -23,6 +23,11 @@
     .mini-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
     .mini-chip{display:inline-flex;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid #d6e3ee;background:#fff;text-decoration:none;color:#0f8aa8;font-size:13px;font-weight:700}
     .mini-empty{font-size:13px;color:var(--muted)}
+    .featured{margin:0 20px 0;padding:18px;border:1px solid #cfe0eb;border-radius:18px;background:linear-gradient(135deg, rgba(15,138,168,.12), rgba(45,108,223,.06)), linear-gradient(180deg,#fff,#f8fbfe);box-shadow:0 10px 24px rgba(24,54,84,.06)}
+    .featured .eyebrow{font-size:11px;letter-spacing:.12em;color:#0f8aa8;font-weight:800}
+    .featured strong{display:block;margin-top:8px;font-size:24px;line-height:1.3;color:#10253a}
+    .featured p{margin:10px 0 0;color:var(--muted);line-height:1.7;font-size:14px}
+    .featured .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:#0f8aa8;font-weight:700}
     .entry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:18px 20px 22px}
     .entry-card{display:flex;flex-direction:column;gap:10px;padding:18px;border:1px solid #d6e3ee;border-radius:18px;background:linear-gradient(180deg,#fff,#f8fbfe);text-decoration:none;color:var(--text);box-shadow:0 8px 22px rgba(24,54,84,.05)}
     .entry-card .meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:#0f8aa8;font-weight:700;letter-spacing:.04em}
@@ -48,6 +53,12 @@
         <p>이 태그와 연결된 글 6개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
         <div class="mini-row"><a class="mini-chip" href="/tags/bearing.html">Bearing</a><a class="mini-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis</a></div>
       </section>
+      <a class="featured" href="/posts/2026-02-25-cfd-lm-railway-running-gear.html">
+        <div class="eyebrow">START HERE</div>
+        <strong>[특별 기획] 철도 주행장치 글로벌 복합 결함 진단을 위한 거대 모델(CFD-LM) 분석</strong>
+        <p>오늘의 논문 자동 탐색 결과, arXiv의 최신 철도 PHM 관련 논문들이 이미 블로그에 발행된 중복 건이거나 신규 데이터가 확보되지 않아, GitHub Trending 및 최신 연구 트렌드( CHAOZHAO-1/LLM-based-PHM ) 를 기반으로 한 특별 기획 포스팅을 진행합니다.</p>
+        <div class="meta"><span>Post</span><span>2026-02-25</span><span>대표 글</span></div>
+      </a>
       <section class="entry-grid">
         <a class="entry-card" href="/posts/2026-06-16-241102718v1-llm-based-framework-for-bearing-fault-diagnosis.html">
           <div class="meta"><span>Daily arXiv</span><span>2026-06-16</span></div>
@@ -73,11 +84,6 @@
           <div class="meta"><span>Post</span><span>2026-02-26</span></div>
           <strong>[Insight] YAML의 종말과 Markdown 에이전트의 시대: GitHub Agentic Workflows 분석</strong>
           <p>최근 소프트웨어 개발 생태계에서 가장 극적인 변화 중 하나는 &#x27;코드 작성&#x27;을 넘어 &#x27;워크플로우의 자동화&#x27; 자체가 인텔리전트해지고 있다는 점입니다. 2026년 2월 13일, GitHub이 발표한 **Agentic Workflows (Technical Preview)**는 이러한 흐름의 정점을 보여줍니다.</p>
-        </a>
-        <a class="entry-card" href="/posts/2026-02-25-cfd-lm-railway-running-gear.html">
-          <div class="meta"><span>Post</span><span>2026-02-25</span></div>
-          <strong>[특별 기획] 철도 주행장치 글로벌 복합 결함 진단을 위한 거대 모델(CFD-LM) 분석</strong>
-          <p>오늘의 논문 자동 탐색 결과, arXiv의 최신 철도 PHM 관련 논문들이 이미 블로그에 발행된 중복 건이거나 신규 데이터가 확보되지 않아, GitHub Trending 및 최신 연구 트렌드( CHAOZHAO-1/LLM-based-PHM ) 를 기반으로 한 특별 기획 포스팅을 진행합니다.</p>
         </a>
       </section>
     </section>
