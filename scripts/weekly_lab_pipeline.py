@@ -15,6 +15,8 @@ STATE_FILE = STATE_DIR / "lab_publish_state.json"
 POSTS_DIR = ROOT / "posts"
 POSTS_INDEX = ROOT / "posts.html"
 LAB_HUB = ROOT / "LAB.html"
+HOME_INDEX = ROOT / "index.html"
+ASSETS_LAB_DIR = ROOT / "assets" / "lab-generated"
 
 TOPIC_PRIORITY = {
     "railway-phm": 0,
@@ -150,6 +152,121 @@ def render_sources(source: dict, basename: str) -> str:
     return "\\n".join(lines)
 
 
+def safe_metric_value(metric: str) -> float:
+    match = re.search(r"([0-9]+(?:\\.[0-9]+)?)", metric)
+    if not match:
+        return 55.0
+    value = float(match.group(1))
+    if value <= 1.0:
+        value *= 100.0
+    return max(10.0, min(value, 100.0))
+
+
+def build_lab_profile(source: dict) -> dict:
+    metrics = build_metrics_to_watch(source)
+    analysis = source.get("analysis") or {}
+    merged = f"{source.get('title', '')} {source.get('abstract', '')}".lower()
+    raw_accuracy = safe_metric_value(metrics[0]) if metrics else 62.0
+    generalization = 82.0 if any(token in merged for token in ["cross", "transfer", "domain", "variable speed"]) else 64.0
+    reproducibility = 76.0 if source.get("paper_context", {}).get("experiment") else 58.0
+    field_readiness = 84.0 if analysis.get("operational_takeaways") else 60.0
+    cost_burden = 48.0 if any(token in merged for token in ["real-time", "edge", "efficient", "lightweight"]) else 62.0
+    stress_labels = []
+    if any(token in merged for token in ["speed", "variable speed", "drift"]):
+        stress_labels.append(("Speed Drift", "#d9e9ff"))
+    if any(token in merged for token in ["noise", "occlusion", "scarcity", "limited"]):
+        stress_labels.append(("Noise / Low Data", "#ffd2c8"))
+    if any(token in merged for token in ["cross", "domain", "transfer"]):
+        stress_labels.append(("Transfer Risk", "#ffe6b8"))
+    if not stress_labels:
+        stress_labels = [("Baseline Recheck", "#c9efe8"), ("Field Gap", "#ffe6b8")]
+    return {
+        "bars": [
+            ("Raw Accuracy", round(raw_accuracy)),
+            ("Generalization", round(generalization)),
+            ("Reproducibility", round(reproducibility)),
+            ("Field Readiness", round(field_readiness)),
+            ("Cost Burden", round(cost_burden)),
+        ],
+        "stress_labels": stress_labels[:4],
+    }
+
+
+def render_custom_scoreboard_svg(source: dict) -> str:
+    profile = build_lab_profile(source)
+    bar_colors = ["#0b8b95", "#15879f", "#1b7daa", "#246fc0", "#4e7ed0"]
+    x_positions = [220, 390, 560, 730, 900]
+    bars = []
+    labels = []
+    values = []
+    for idx, ((label, value), x) in enumerate(zip(profile["bars"], x_positions)):
+        height = value * 4
+        y = 560 - height
+        bars.append(f'<rect x="{x}" y="{y}" width="110" height="{height}" rx="18" fill="{bar_colors[idx]}"/>')
+        labels.append(f'<text x="{x+55}" y="602" font-size="20" font-weight="700" fill="#10253a" text-anchor="middle">{html.escape(label)}</text>')
+        values.append(f'<text x="{x+55}" y="{y+28}" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">{value}</text>')
+    title = html.escape(source.get("title", "Experiment Lab Scoreboard"))
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">{title} Scoreboard</title>
+  <desc id="desc">Original MALT-generated chart summarizing experiment lab evaluation categories.</desc>
+  <rect width="1200" height="720" rx="32" fill="#f4f9fc"/>
+  <text x="88" y="88" font-size="36" font-weight="800" fill="#10253a">Custom Lab Scoreboard</text>
+  <text x="88" y="124" font-size="20" fill="#5f738a">{title[:72]}</text>
+  <g stroke="#caddea" stroke-width="2">
+    <line x1="170" y1="560" x2="1050" y2="560"/>
+    <line x1="170" y1="480" x2="1050" y2="480"/>
+    <line x1="170" y1="400" x2="1050" y2="400"/>
+    <line x1="170" y1="320" x2="1050" y2="320"/>
+    <line x1="170" y1="240" x2="1050" y2="240"/>
+  </g>
+  {''.join(bars)}
+  {''.join(labels)}
+  {''.join(values)}
+  <rect x="88" y="644" width="1024" height="40" rx="14" fill="#ffffff" stroke="#d2e2ed"/>
+  <text x="112" y="670" font-size="18" fill="#42586d">MALT original chart · Category balance matters more than a single accuracy headline.</text>
+</svg>"""
+
+
+def render_custom_stress_svg(source: dict) -> str:
+    profile = build_lab_profile(source)
+    positions = [(260, 280), (650, 260), (260, 430), (650, 420)]
+    boxes = []
+    for (label, color), (x, y) in zip(profile["stress_labels"], positions):
+        boxes.append(
+            f'<rect x="{x}" y="{y}" width="240" height="96" rx="22" fill="{color}"/>'
+            f'<text x="{x+24}" y="{y+56}" font-size="24" font-weight="800" fill="#10253a">{html.escape(label)}</text>'
+        )
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Custom Stress Map</title>
+  <desc id="desc">Original MALT-generated stress map for experiment lab review.</desc>
+  <rect width="1200" height="720" rx="32" fill="#f6fbff"/>
+  <text x="90" y="92" font-size="38" font-weight="800" fill="#10253a">Custom Generalization Stress Map</text>
+  <text x="90" y="128" font-size="20" fill="#5f738a">{html.escape(source.get("title", ""))[:84]}</text>
+  <rect x="200" y="200" width="760" height="360" rx="24" fill="#ffffff" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="580" y1="200" x2="580" y2="560" stroke="#d1e0eb" stroke-width="2"/>
+  <line x1="200" y1="380" x2="960" y2="380" stroke="#d1e0eb" stroke-width="2"/>
+  <text x="390" y="184" font-size="18" font-weight="700" fill="#5f738a">Lower Deployment Risk</text>
+  <text x="690" y="184" font-size="18" font-weight="700" fill="#5f738a">Higher Deployment Risk</text>
+  <text x="58" y="312" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 312)">Lower Stress</text>
+  <text x="58" y="530" font-size="18" font-weight="700" fill="#5f738a" transform="rotate(-90 58 530)">Higher Stress</text>
+  {''.join(boxes)}
+  <text x="90" y="648" font-size="18" fill="#42586d">MALT original chart · Stress labels are selected from the paper topic and experiment context.</text>
+</svg>"""
+
+
+def generate_custom_assets(source: dict) -> dict[str, str]:
+    basename = lab_post_basename(source)
+    ASSETS_LAB_DIR.mkdir(parents=True, exist_ok=True)
+    score_name = f"{basename}-scoreboard.svg"
+    stress_name = f"{basename}-stress.svg"
+    (ASSETS_LAB_DIR / score_name).write_text(render_custom_scoreboard_svg(source), encoding="utf-8")
+    (ASSETS_LAB_DIR / stress_name).write_text(render_custom_stress_svg(source), encoding="utf-8")
+    return {
+        "scoreboard": f"/assets/lab-generated/{score_name}",
+        "stress": f"/assets/lab-generated/{stress_name}",
+    }
+
+
 def render_markdown(source: dict) -> str:
     basename = lab_post_basename(source)
     title = build_lab_title(source)
@@ -226,6 +343,7 @@ def render_html(source: dict) -> str:
     metrics = build_metrics_to_watch(source)
     operational = (analysis.get("operational_takeaways") or ["현장 데이터 조건과 경보 흐름을 함께 점검해야 합니다."])[:4]
     experiment_excerpt = ((context.get("experiment") or source.get("abstract", ""))[:280]).strip()
+    assets = source.get("lab_assets") or {}
 
     return f"""<!doctype html>
 <html lang="ko">
@@ -269,6 +387,11 @@ def render_html(source: dict) -> str:
       </ul>
 
       <figure class="figure">
+        <img src="{html.escape(assets.get('scoreboard', '/assets/lab-validation-loop.svg'))}" alt="논문별 맞춤 실험실 스코어보드" />
+        <figcaption>MALT original chart. 이 논문을 정확도 하나가 아니라 일반화, 재현성, 현장 적합성, 비용 부담까지 함께 읽기 위한 맞춤 스코어보드입니다.</figcaption>
+      </figure>
+
+      <figure class="figure">
         <img src="/assets/lab-validation-loop.svg" alt="MALT 실험실 검증 루프" />
         <figcaption>MALT original diagram. 이 글은 논문 주장 분리, 재현 확인, 스트레스 테스트, 현장 의사결정 순서로 다시 읽습니다.</figcaption>
       </figure>
@@ -293,8 +416,8 @@ def render_html(source: dict) -> str:
       <p>{html.escape(experiment_excerpt)}</p>
 
       <figure class="figure">
-        <img src="/assets/lab-stress-map.svg" alt="일반화 스트레스 맵" />
-        <figcaption>MALT original chart. 논문 수치가 좋아 보여도 속도 변화, 노이즈, 라벨 부족, 전이 조건에서 얼마나 흔들리는지 별도로 읽어야 합니다.</figcaption>
+        <img src="{html.escape(assets.get('stress', '/assets/lab-stress-map.svg'))}" alt="논문별 맞춤 일반화 스트레스 맵" />
+        <figcaption>MALT original chart. 논문 수치가 좋아 보여도 속도 변화, 노이즈, 라벨 부족, 전이 조건에서 얼마나 흔들리는지 논문별 스트레스 포인트로 다시 읽습니다.</figcaption>
       </figure>
 
       <h2>운영 적용 판단</h2>
@@ -326,6 +449,7 @@ def write_post_files(source: dict) -> tuple[pathlib.Path, pathlib.Path]:
     basename = lab_post_basename(source)
     md_path = POSTS_DIR / f"{basename}.md"
     html_path = POSTS_DIR / f"{basename}.html"
+    source["lab_assets"] = generate_custom_assets(source)
     md_path.write_text(render_markdown(source), encoding="utf-8")
     html_path.write_text(render_html(source), encoding="utf-8")
     return md_path, html_path
@@ -350,16 +474,21 @@ def update_lab_hub(state: dict) -> None:
     entries = []
     for item in reversed(state.get("lab_posts", [])[-4:]):
         entries.append(
-            f'''      <article class="lab-card">
+            f'''      <article class="lab-card featured">
         <div class="eyebrow">Weekly Lab Automation</div>
         <h2>{html.escape(item["title"])}</h2>
         <p>{html.escape(item["summary"])}</p>
+        <div class="meta-mini">
+          <div><strong>Topic</strong>{html.escape(item.get("topic", "Lab Review"))}</div>
+          <div><strong>Mode</strong>주간 자동 발행</div>
+          <div><strong>Focus</strong>{html.escape(item.get("focus", "재현 관점 검토"))}</div>
+        </div>
         <a href="/posts/{item["html_filename"]}">리포트 읽기</a>
       </article>'''
         )
     if not entries:
         entries = [
-            '''      <article class="lab-card">
+            '''      <article class="lab-card featured">
         <div class="eyebrow">Weekly Lab Automation</div>
         <h2>주간 실험실 발행이 여기에 쌓입니다</h2>
         <p>매주 한 편씩, 재현 가치가 높은 논문을 골라 실험 조건, 지표, 운영 한계를 다시 읽는 실험실 글이 이 영역에 추가됩니다.</p>
@@ -377,6 +506,36 @@ def update_lab_hub(state: dict) -> None:
     LAB_HUB.write_text(content[:start] + replacement + content[end:], encoding="utf-8")
 
 
+def update_home_lab_section(state: dict) -> None:
+    latest = state.get("lab_posts", [])[-1] if state.get("lab_posts") else None
+    if latest:
+        block = f'''<!-- HOME_LAB_AUTOGEN_START -->
+          <div class="links">
+            <a href="/posts/{latest["html_filename"]}"><span class="link-kicker">Latest Lab</span><span class="link-title">{html.escape(latest["title"])}</span><span class="link-summary">{html.escape(latest["summary"])}</span></a>
+          </div>
+          <div class="figure-thumb">
+            <img src="{html.escape(latest.get("scoreboard_asset", "/assets/lab-validation-loop.svg"))}" alt="최신 실험실 맞춤 그래프" />
+          </div>
+          <!-- HOME_LAB_AUTOGEN_END -->'''
+    else:
+        block = '''<!-- HOME_LAB_AUTOGEN_START -->
+          <div class="links">
+            <a href="/LAB.html"><span class="link-kicker">Lab</span><span class="link-title">실험실 최신 글이 여기에 노출됩니다</span><span class="link-summary">매주 1편씩 자동 갱신되며, 재현 가치가 높은 논문을 골라 검증 관점으로 다시 읽습니다.</span></a>
+          </div>
+          <div class="figure-thumb">
+            <img src="/assets/lab-validation-loop.svg" alt="실험실 검증 루프 썸네일" />
+          </div>
+          <!-- HOME_LAB_AUTOGEN_END -->'''
+    content = HOME_INDEX.read_text(encoding="utf-8")
+    start_marker = "<!-- HOME_LAB_AUTOGEN_START -->"
+    end_marker = "<!-- HOME_LAB_AUTOGEN_END -->"
+    start = content.find(start_marker)
+    end = content.find(end_marker, start)
+    if start == -1 or end == -1:
+        raise SystemExit("index.html home lab autogen markers not found")
+    HOME_INDEX.write_text(content[:start] + block + content[end + len(end_marker):], encoding="utf-8")
+
+
 def publish_once() -> dict | None:
     state = load_state()
     candidate = choose_candidate(state)
@@ -392,11 +551,15 @@ def publish_once() -> dict | None:
             "html_filename": html_path.name,
             "summary": (candidate.get("analysis", {}).get("why_now") or candidate.get("abstract", ""))[:160].strip(),
             "source_title": candidate.get("title", ""),
+            "topic": candidate.get("topic", "lab"),
+            "focus": (candidate.get("analysis", {}).get("operational_takeaways") or ["재현 관점 검토"])[0][:40],
+            "scoreboard_asset": candidate.get("lab_assets", {}).get("scoreboard", ""),
         }
     )
     state["lab_posts"] = state["lab_posts"][-12:]
     save_state(state)
     update_lab_hub(state)
+    update_home_lab_section(state)
     return {
         "source_title": candidate["title"],
         "post_title": title,

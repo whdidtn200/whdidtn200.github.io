@@ -31,6 +31,16 @@ def load_github_status(path_value: str | None) -> dict:
         return {"ok": False, "error": "invalid_status_json"}
 
 
+def load_lab_state(repo_root: Path) -> dict:
+    path = repo_root / "content" / "archive" / "state" / "lab_publish_state.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+
+
 def backup_label(result: str) -> str:
     return {
         "success": "정상 완료",
@@ -55,6 +65,9 @@ def github_label(status: dict) -> str:
 def render_html(payload: dict) -> str:
     github_status = payload.get("github") or {}
     run = github_status.get("run") or {}
+    lab_state = payload.get("lab") or {}
+    lab_posts = lab_state.get("lab_posts") or []
+    latest_lab = lab_posts[-1] if lab_posts else {}
     github_line = github_label(github_status)
     workflow_url = run.get("html_url", "")
     workflow_meta = ""
@@ -85,6 +98,16 @@ def render_html(payload: dict) -> str:
         github_result = conclusion
         github_class = "ok" if conclusion == "success" else "warn"
 
+    lab_count = len(lab_posts)
+    if latest_lab:
+        lab_result = f"{lab_count}편"
+        lab_summary = latest_lab.get("title", "최근 실험실 글 있음")
+        lab_class = "ok"
+    else:
+        lab_result = "대기 중"
+        lab_summary = "주간 실험실 자동 발행이 준비되어 있으며 첫 발행을 기다리고 있습니다."
+        lab_class = "warn"
+
     return f"""<!doctype html>
 <html lang="ko">
 <head>
@@ -111,7 +134,7 @@ def render_html(payload: dict) -> str:
     }}
     .status-grid {{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(4, minmax(0, 1fr));
       gap:14px;
       margin-top:14px;
     }}
@@ -187,6 +210,11 @@ def render_html(payload: dict) -> str:
         <div class="value">{backup_result}</div>
         <p>{payload["backup"].get("summary", "")}</p>
       </article>
+      <article class="status-card {lab_class}">
+        <div class="label">Weekly Lab</div>
+        <div class="value">{lab_result}</div>
+        <p>{lab_summary}</p>
+      </article>
       <article class="status-card">
         <div class="label">Last Update</div>
         <div class="value">{payload["local_date"]}</div>
@@ -201,6 +229,7 @@ def render_html(payload: dict) -> str:
         <li><strong>로컬 기준일</strong>: {payload["local_date"]} ({payload["timezone"]})</li>
         <li><strong>GitHub 메인 배치</strong>: {github_line}</li>
         <li><strong>맥미니 백업 배치</strong>: {backup_result}</li>
+        <li><strong>실험실 주간 발행</strong>: {lab_summary}</li>
       </ul>
       {workflow_meta}
       <p class="tiny">이 상태 페이지는 macmini backup workflow가 자동 갱신합니다.</p>
@@ -218,6 +247,7 @@ def main() -> int:
     now_utc = datetime.now(timezone.utc)
     now_local = now_utc.astimezone(tz)
     github_status = load_github_status(args.github_status_file)
+    lab_state = load_lab_state(repo_root)
 
     payload = {
         "updated_at_utc": now_utc.isoformat(),
@@ -225,6 +255,7 @@ def main() -> int:
         "local_date": args.local_date,
         "timezone": args.timezone,
         "github": github_status,
+        "lab": lab_state,
         "backup": {
             "result": args.backup_result,
             "summary": args.backup_summary,

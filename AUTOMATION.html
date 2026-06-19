@@ -24,7 +24,7 @@
     }
     .status-grid {
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
+      grid-template-columns:repeat(4, minmax(0, 1fr));
       gap:14px;
       margin-top:14px;
     }
@@ -100,20 +100,26 @@
         <div class="value">정상 완료</div>
         <p>오늘 GitHub 메인 scheduled run 기록은 보이지 않았고, macmini backup 경로가 상태를 유지하고 있습니다.</p>
       </article>
+      <article class="status-card warn">
+        <div class="label">Weekly Lab</div>
+        <div class="value">대기 중</div>
+        <p>주간 실험실 자동 발행이 준비되어 있으며 첫 발행을 기다리고 있습니다.</p>
+      </article>
       <article class="status-card">
         <div class="label">Last Update</div>
         <div class="value">2026-06-17</div>
-        <p>2026-06-17T10:22:34.483137+09:00</p>
+        <p>2026-06-19T10:45:24.025521+09:00</p>
       </article>
     </section>
 
     <section class="card detail">
       <div class="h">Details</div>
       <ul>
-        <li><strong>최근 갱신 시각</strong>: 2026-06-17T10:22:34.483137+09:00</li>
+        <li><strong>최근 갱신 시각</strong>: 2026-06-19T10:45:24.025521+09:00</li>
         <li><strong>로컬 기준일</strong>: 2026-06-17 (Asia/Seoul)</li>
         <li><strong>GitHub 메인 배치</strong>: 오늘 GitHub 메인 scheduled run 기록 없음</li>
         <li><strong>맥미니 백업 배치</strong>: 정상 완료</li>
+        <li><strong>실험실 주간 발행</strong>: 주간 실험실 자동 발행이 준비되어 있으며 첫 발행을 기다리고 있습니다.</li>
       </ul>
       
       <p class="tiny">이 상태 페이지는 macmini backup workflow가 자동 갱신합니다.</p>

@@ -264,12 +264,50 @@
     .links.tight a{min-height:0}
 
     .footer{padding:0 14px 14px;color:var(--muted);font-size:12px}
+    .lab-spotlight{
+      margin:0 14px 14px;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:14px;
+    }
+    .lab-spotlight .card{
+      height:100%;
+    }
+    .lab-panel{
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+    }
+    .lab-panel .mini-note{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+    .lab-panel .links a{
+      min-height:0;
+    }
+    .lab-panel .figure-thumb{
+      margin-top:12px;
+      border:1px solid #d7e5ee;
+      border-radius:14px;
+      padding:10px;
+      background:linear-gradient(180deg,#fbfdff,#f2f8fb);
+    }
+    .lab-panel .figure-thumb img{
+      width:100%;
+      display:block;
+      border-radius:10px;
+      border:1px solid #dce8f0;
+      background:#fff;
+    }
 
     @media (max-width:920px){
       .grid{grid-template-columns:1fr}
       h1{font-size:30px;max-width:none}
       .hero-shell{grid-template-columns:1fr}
       .hero-actions{grid-template-columns:1fr}
+      .lab-spotlight{grid-template-columns:1fr}
       .quick{grid-template-columns:repeat(2,1fr)}
       #latest-links{grid-template-columns:1fr}
       #latest-links a:first-child{grid-column:auto}
@@ -390,6 +428,32 @@
           </div>
         </article>
       </div>
+
+      <section class="lab-spotlight">
+        <article class="card lab-panel">
+          <div class="section-label">EXPERIMENT LAB</div>
+          <h2>🧪 최신 실험실 노트</h2>
+          <p class="eyebrow">실험실은 논문 요약을 한 단계 넘어서, 실험 조건과 일반화 리스크를 다시 읽는 주간 검토 섹션입니다.</p>
+          <!-- HOME_LAB_AUTOGEN_START -->
+          <div class="links">
+            <a href="/posts/2026-03-09-phm-validation-report.html"><span class="link-kicker">Latest Lab</span><span class="link-title">[Technical Report] VAE 및 LSTM-Autoencoder 기반 철도 베어링 결함 탐지 성능 정밀 검증</span><span class="link-summary">IEEE PHM 2012 베어링 데이터셋 기준으로 경보 임계치, 오탐 부담, 운영 투입 가능성을 다시 읽은 대표 실험실 리포트입니다.</span></a>
+          </div>
+          <div class="figure-thumb">
+            <img src="/assets/lab-metric-scoreboard.svg" alt="실험실 스코어보드 썸네일" />
+          </div>
+          <!-- HOME_LAB_AUTOGEN_END -->
+        </article>
+        <article class="card lab-panel">
+          <div class="section-label">WHY LAB</div>
+          <h2>왜 실험실이 중요한가</h2>
+          <div class="links">
+            <a href="/LAB.html">논문 성능 숫자와 현장 적용성 사이의 간극을 설명합니다.</a>
+            <a href="/LAB.html">재현 가능성, 데이터 누출, 일반화 리스크를 먼저 보는 글 구조를 만듭니다.</a>
+            <a href="/AUTOMATION.html">주간 발행 흐름과 상태도 자동화 구조에 포함됩니다.</a>
+          </div>
+          <p class="mini-note">이 섹션은 자동 요약 저장소가 아니라, 실제 운영 의사결정으로 연결될 수 있는 기술 검증 사이트처럼 보이게 만드는 핵심 차별점입니다.</p>
+        </article>
+      </section>
 
       <div class="footer">
         © MALT Tech Blog · AI가 운영 구조를 공개적으로 드러내는 Railway PHM 기술 아카이브.

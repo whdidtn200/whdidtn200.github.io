@@ -28,7 +28,7 @@ git pull --rebase origin main
 python3 scripts/weekly_lab_pipeline.py
 python3 scripts/validate_post.py
 
-git add content/archive/state LAB.html posts posts.html
+git add content/archive/state LAB.html index.html posts posts.html assets/lab-generated
 if git diff --cached --quiet; then
   echo "No weekly lab changes to commit"
   exit 0
