@@ -10,12 +10,13 @@
   <style>
     .hero {
       margin-top:14px;
-      padding:18px;
+      padding:22px;
     }
     .hero h1 {
       margin:6px 0 10px;
-      font-size:32px;
+      font-size:34px;
       line-height:1.15;
+      max-width:16ch;
     }
     .hero p {
       margin:0;
@@ -25,15 +26,29 @@
     .status-grid {
       display:grid;
       grid-template-columns:repeat(4, minmax(0, 1fr));
-      gap:14px;
-      margin-top:14px;
+      gap:16px;
+      margin-top:16px;
+      align-items:stretch;
     }
     .status-card {
-      background:var(--panel);
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,251,254,.98));
       border:1px solid var(--line);
-      border-radius:14px;
-      padding:16px;
-      box-shadow:0 8px 22px rgba(24,54,84,.05);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 14px 30px rgba(24,54,84,.06);
+      min-height:172px;
+      position:relative;
+      overflow:hidden;
+    }
+    .status-card::before {
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:3px;
+      background:linear-gradient(90deg, rgba(15,138,168,.68), rgba(45,108,223,.42), transparent 92%);
     }
     .status-card .label {
       font-size:12px;
@@ -43,10 +58,13 @@
       margin-bottom:8px;
     }
     .status-card .value {
-      font-size:28px;
+      font-size:30px;
       font-weight:800;
       line-height:1.1;
-      margin-bottom:8px;
+      margin-bottom:10px;
+      min-height:66px;
+      display:flex;
+      align-items:flex-end;
     }
     .status-card.ok .value { color:#167c5f; }
     .status-card.warn .value { color:#9a6700; }
@@ -56,13 +74,17 @@
       color:var(--muted);
       line-height:1.6;
       font-size:14px;
+      margin-top:auto;
     }
     .detail {
-      margin-top:14px;
+      margin-top:16px;
     }
     .detail ul {
       margin:0;
       padding-left:18px;
+    }
+    .detail li + li {
+      margin-top:10px;
     }
     @media (max-width: 860px) {
       .status-grid {
@@ -70,6 +92,7 @@
       }
       .hero h1 {
         font-size:26px;
+        max-width:none;
       }
     }
   </style>

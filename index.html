@@ -155,9 +155,19 @@
       flex-direction:column;
       background:linear-gradient(180deg, rgba(255,255,255,.97), rgba(249,252,254,.97));
       border:1px solid var(--line);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 10px 24px rgba(24,54,84,.06);
+      border-radius:18px;
+      padding:20px;
+      box-shadow:0 16px 34px rgba(24,54,84,.07);
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:3px;
+      background:linear-gradient(90deg, rgba(11,139,149,.65), rgba(31,95,214,.48), transparent 90%);
+      pointer-events:none;
     }
     .card h2{margin:0 0 12px;font-size:18px;color:var(--text)}
     .eyebrow{
@@ -174,7 +184,7 @@
       color:var(--accent2);
       font-weight:700;
     }
-    .links{display:grid;gap:10px}
+    .links{display:grid;gap:10px;align-content:start}
     .links a{
       color:var(--text);
       text-decoration:none;
@@ -246,12 +256,13 @@
       font-size:12px;
     }
 
-    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:stretch}
+    .quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:stretch}
     .quick a{
       display:flex;
       align-items:center;
       text-decoration:none;
       text-align:left;
+      min-height:56px;
       padding:13px 12px;
       border-radius:12px;
       border:1px solid var(--line);
@@ -277,6 +288,7 @@
       display:flex;
       flex-direction:column;
       justify-content:flex-start;
+      min-height:100%;
     }
     .lab-panel .mini-note{
       margin-top:10px;
@@ -293,13 +305,28 @@
       border-radius:14px;
       padding:10px;
       background:linear-gradient(180deg,#fbfdff,#f2f8fb);
+      aspect-ratio:16/9;
+      display:flex;
+      align-items:center;
     }
     .lab-panel .figure-thumb img{
       width:100%;
+      height:100%;
+      object-fit:cover;
       display:block;
       border-radius:10px;
       border:1px solid #dce8f0;
       background:#fff;
+    }
+    .panel-divider{
+      margin:16px 0 14px;
+      height:1px;
+      background:linear-gradient(90deg, rgba(196,215,229,.9), rgba(196,215,229,.25));
+    }
+    .stack-section + .stack-section{
+      margin-top:16px;
+      padding-top:16px;
+      border-top:1px solid #dce7ef;
     }
 
     @media (max-width:920px){
@@ -390,6 +417,7 @@
         <article class="card">
           <div class="section-label">NAVIGATION</div>
           <h2>🧭 탐색 허브</h2>
+          <div class="stack-section">
           <div class="quick links tight">
             <a href="/posts.html">전체 글 아카이브</a>
             <a href="/GUIDES.html">Evergreen Guides</a>
@@ -401,8 +429,10 @@
             <a href="/CONTACT.html">Contact</a>
             <a href="/PRIVACY.html">Privacy Policy</a>
           </div>
+          </div>
 
-          <h2 style="margin-top:14px;">⚙️ 운영 방식</h2>
+          <div class="stack-section">
+          <h2 style="margin-top:0;">⚙️ 운영 방식</h2>
           <div class="links">
             <a href="/AI-OPS.html">MALT AI 운영 원칙 보기</a>
             <a href="/LAB.html">실험실: 논문 검증 허브 보기</a>
@@ -412,8 +442,10 @@
             <a href="/ABOUT.html">블로그 정체성과 주제 범위 확인</a>
             <a href="/posts.html">발행된 전체 아카이브 확인</a>
           </div>
+          </div>
 
-          <h2 style="margin-top:14px;">🔬 PHM / Railway 추천</h2>
+          <div class="stack-section">
+          <h2 style="margin-top:0;">🔬 PHM / Railway 추천</h2>
           <div class="links">
             <a href="/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">Trustworthy Equipment Monitoring</a>
             <a href="/posts/2026-02-25-railvision-ai.html">RailVision AI 현대화 사례</a>
@@ -425,6 +457,7 @@
             <a href="/posts/2026-02-22-xai-industrial-iot-anomaly-detection-bearing.html">XAI Industrial IoT Anomaly</a>
             <a href="/posts/2026-02-21-railway-phm-fft-1dcnn.html">Railway PHM FFT + 1DCNN</a>
             <a href="/posts/2026-02-20-axle-sensor-fusion-railway.html">Axle Sensor Fusion Railway</a>
+          </div>
           </div>
         </article>
       </div>
@@ -451,6 +484,7 @@
             <a href="/LAB.html">재현 가능성, 데이터 누출, 일반화 리스크를 먼저 보는 글 구조를 만듭니다.</a>
             <a href="/AUTOMATION.html">주간 발행 흐름과 상태도 자동화 구조에 포함됩니다.</a>
           </div>
+          <div class="panel-divider"></div>
           <p class="mini-note">이 섹션은 자동 요약 저장소가 아니라, 실제 운영 의사결정으로 연결될 수 있는 기술 검증 사이트처럼 보이게 만드는 핵심 차별점입니다.</p>
         </article>
       </section>
