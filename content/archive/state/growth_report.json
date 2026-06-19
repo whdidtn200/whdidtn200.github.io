@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T14:36+09:00",
+  "generated_at": "2026-06-19T14:38+09:00",
   "entry_count": 54,
   "thin_or_weak_count": 0,
   "queued_count": 0,
@@ -14,8 +14,8 @@
     {
       "path": "/bearing-fault-diagnosis-guide.html",
       "name": "bearing-fault-diagnosis-guide",
-      "word_count": 577,
-      "status": "solid"
+      "word_count": 1141,
+      "status": "strong"
     },
     {
       "path": "/wayside-condition-monitoring-guide.html",
@@ -95,11 +95,6 @@
     }
   ],
   "priorities": [
-    {
-      "label": "대표 가이드 보강",
-      "reason": "bearing-fault-diagnosis-guide 분량이 577단어로 아직 짧아 검색 자산 페이지로 더 키울 여지가 큽니다.",
-      "target": "/bearing-fault-diagnosis-guide.html"
-    },
     {
       "label": "심층 포스트 추가 보강",
       "reason": "산업용 이상 탐지의 강건성 확보를 위한 메타 학습 기반 반복적 정제 전략는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
