@@ -4,6 +4,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import pathlib
+import subprocess
 
 import build_tag_index as tag_index
 
@@ -15,6 +16,7 @@ QUEUE_FILE = STATE_DIR / "queue_snapshot.json"
 LAB_STATE_FILE = STATE_DIR / "lab_publish_state.json"
 OUTPUT_JSON = STATE_DIR / "growth_report.json"
 OUTPUT_HTML = ROOT / "GROWTH.html"
+RECENTLY_IMPROVED_DAYS = 3
 
 GUIDE_PATHS = [
     "railway-predictive-maintenance-guide.html",
@@ -40,6 +42,50 @@ def count_words(path: pathlib.Path) -> int:
     text = path.read_text(encoding="utf-8")
     cleaned = tag_index.clean_text(text)
     return len(cleaned.split())
+
+
+def last_commit_date_for_url(url: str) -> dt.datetime | None:
+    relative = url.lstrip("/")
+    if not relative:
+        return None
+    target = ROOT / relative
+    if not target.exists():
+        return None
+    try:
+        result = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(ROOT),
+                "log",
+                "-1",
+                "--format=%cI",
+                "--",
+                str(target.relative_to(ROOT)),
+            ],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+    except (subprocess.CalledProcessError, ValueError):
+        return None
+
+    raw = result.stdout.strip()
+    if not raw:
+        return None
+    try:
+        return dt.datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+
+
+def was_recently_improved(entry: dict) -> bool:
+    committed_at = last_commit_date_for_url(entry.get("url", ""))
+    if committed_at is None:
+        return False
+    now = dt.datetime.now().astimezone(committed_at.tzinfo)
+    age = now - committed_at
+    return age <= dt.timedelta(days=RECENTLY_IMPROVED_DAYS)
 
 
 def summarize_guides() -> list[dict]:
@@ -123,8 +169,26 @@ def choose_revenue_priorities(entries: list[dict], guides: list[dict], queue: di
         and entry.get("quality_band") != "strong"
         and not tag_index.is_low_value_entry(entry)
     ]
-    if posts:
-        post = sorted(posts, key=lambda item: (item.get("word_count", 0), item["date"]))[0]
+    candidate_posts = [
+        entry
+        for entry in posts
+        if not (
+            was_recently_improved(entry)
+            and entry.get("word_count", 0) >= 320
+            and entry.get("quality_band") == "solid"
+        )
+    ]
+    if not candidate_posts:
+        candidate_posts = posts
+    if candidate_posts:
+        post = sorted(
+            candidate_posts,
+            key=lambda item: (
+                item.get("quality_score", 0),
+                item.get("word_count", 0),
+                item["date"],
+            ),
+        )[0]
         priorities.append(
             {
                 "label": "심층 포스트 추가 보강",
