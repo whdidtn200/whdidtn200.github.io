@@ -15,6 +15,10 @@
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/feed.xml" title="MALT Tech Blog" />
+  <style>
+    .malt-tag-rail{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .malt-tag-rail .tag-chip{display:inline-flex;align-items:center;padding:6px 11px;border-radius:999px;border:1px solid #d6e3ee;background:#f7fbfd;text-decoration:none;color:#0f6f8d;font-size:12px;font-weight:700}
+  </style>
 </head>
 <body><header class="site-header" role="banner">
   <div class="wrapper"><a class="site-title" rel="author" href="/">MALT Tech Blog</a><nav class="site-nav">
@@ -26,7 +30,7 @@
             </svg>
           </span>
         </label>
-        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a></div>
+        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -35,6 +39,7 @@
       <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">[arXiv Daily] Innovative Distributed Maintenance Concept: From the design to cost optimisation</h1>
         <p class="post-meta"><time class="dt-published" datetime="2026-06-17T09:17:00+09:00" itemprop="datePublished">2026-06-17</time></p>
+        <div class="malt-tag-rail"><a class="tag-chip" href="/tags/arxiv.html">Arxiv</a><a class="tag-chip" href="/tags/malt.html">MALT</a><a class="tag-chip" href="/tags/railway-phm.html">Railway Phm</a><a class="tag-chip" href="/tags/phm.html">Phm</a><a class="tag-chip" href="/tags/mathoc.html">Math.Oc</a></div>
       </header>
       <div class="post-content e-content" itemprop="articleBody">
         <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 하루 한 편씩 발행하는 자동 큐레이션입니다. 원문 제목은 <em>Innovative Distributed Maintenance Concept: From the design to cost optimisation</em>이며, 저자는 Maria Di Mascolo, Zineb Simeu-Abazi, Rony Arsène Djeunang Mezafack입니다. 논문 공개일은 2025-08-22입니다.</p>
@@ -64,6 +69,16 @@
 <li>실무적으로는 최고 점수보다도 데이터 조건이 달라져도 결과가 유지되는지, 그리고 경보 이후 작업 흐름에 연결되는지가 더 중요하다.</li>
         </ul>
 
+        <h2>현장에서는 왜 더 어려운가</h2>
+        <p>이런 유형의 논문은 성능 수치 자체보다, 입력 조건이 바뀌었을 때도 판단 품질이 유지되는지와 실제 운영 절차에 붙일 수 있는지가 더 중요합니다. 블로그 글로 읽을 때도 요약보다 적용 조건과 검증 질문을 먼저 붙여 보는 편이 더 실전적입니다.</p>
+
+        <h2>누가 읽으면 특히 좋은가</h2>
+        <ul>
+<li>예지보전 로드맵을 만들고 있는 현장 기술 리더</li>
+<li>센서 데이터와 운영 의사결정을 연결해야 하는 분석 담당자</li>
+<li>연구 논문을 실제 점검 절차로 번역하려는 엔지니어</li>
+        </ul>
+
         <h2>MALT 리뷰</h2>
         <p><strong>왜 골랐는가.</strong> 이 논문은 철도 설비, 센서, 고장 진단 같은 블로그 핵심 축과 직접 연결된다. 그래서 단순히 최신 논문이라서가 아니라, 지금 블로그 독자에게 바로 설명할 이유가 있는 후보로 봤다.</p>
         <p><strong>어떻게 읽어야 하는가.</strong> 이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.</p>
@@ -73,6 +88,21 @@
 
         <h2>MALT 해석</h2>
         <p>내가 이 논문을 발행 가치가 있다고 보는 이유는, `좋은 모델 하나`보다 `운영에 붙일 수 있는 구조`를 보여주기 때문이다. 블로그 관점에서는 이 논문을 읽고 나면 어떤 센서나 이미지가 들어오고, 어떤 판단 출력으로 이어져야 하는지 머릿속에 그릴 수 있어야 한다.</p>
+
+        <h2>도입 전에 확인할 질문</h2>
+        <ul>
+<li>논문 조건과 우리 운영 데이터 사이의 차이를 먼저 설명할 수 있는가</li>
+<li>결과를 실제 사람 작업 흐름이나 운영 의사결정과 연결할 수 있는가</li>
+<li>최고 정확도보다 재현성과 유지 가능성을 검증했는가</li>
+        </ul>
+
+        <h2>현업 적용 체크리스트</h2>
+        <ul>
+<li>이 논문은 운영 비용를 다룰 때 어떤 데이터와 절차가 필요한지 역으로 정리해 보는 식으로 읽는 편이 좋다.</li>
+<li>바로 도입하기보다 현재 운영 절차에서 어디에 붙일 수 있는지 체크리스트를 먼저 만든다.</li>
+<li>논문 수치만 보지 말고, 우리 데이터 조건과 입력 품질이 논문 조건과 얼마나 다른지 먼저 비교한다.</li>
+<li>모델 도입 전에 경보 이후의 사람 작업 흐름까지 같이 설계해야 실제 운영 가치가 생긴다.</li>
+        </ul>
 
         <h2>한계와 체크 포인트</h2>
         <ul>

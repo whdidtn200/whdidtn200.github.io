@@ -305,6 +305,32 @@ def build_operational_takeaways(domain: str, source: dict) -> list[str]:
     ]
 
 
+def build_taxonomy_tags(domain: str, source: dict) -> list[str]:
+    base = ["arXiv", "MALT", "PHM", "Fault Diagnosis"]
+    merged = f"{source.get('title', '')} {source.get('abstract', '')}".lower()
+    if domain == "bearing":
+        base.extend(["Bearing", "Sensors"])
+    elif domain == "vision":
+        base.extend(["Railway", "Computer Vision"])
+    elif domain == "agent":
+        base.extend(["Agentic AI", "Observability"])
+    else:
+        base.extend(["Railway", "Condition Monitoring"])
+
+    if contains_any(merged, ["railway", "train", "wheelset", "wayside", "freight"]):
+        base.append("Railway")
+    if contains_any(merged, ["condition monitoring", "predictive maintenance", "maintenance"]):
+        base.append("Condition Monitoring")
+    if contains_any(merged, ["sensor", "vibration", "signal", "acoustic", "ae"]):
+        base.append("Sensors")
+
+    tags: list[str] = []
+    for item in base:
+        if item not in tags:
+            tags.append(item)
+    return tags[:8]
+
+
 def fetch_paper_context(source: dict) -> dict:
     if source.get("paper_context"):
         return source["paper_context"]
@@ -445,6 +471,46 @@ def build_detailed_analysis(source: dict) -> dict:
         "내가 이 논문을 발행 가치가 있다고 보는 이유는, `좋은 모델 하나`보다 `운영에 붙일 수 있는 구조`를 보여주기 때문이다. "
         "블로그 관점에서는 이 논문을 읽고 나면 어떤 센서나 이미지가 들어오고, 어떤 판단 출력으로 이어져야 하는지 머릿속에 그릴 수 있어야 한다."
     )
+    if domain == "bearing":
+        field_reality = (
+            "베어링 진단 논문은 실험실에서는 좋아 보여도 실제 운영에 붙이면 신호 품질, 회전 속도 변동, 장비 차이, 라벨 부족 때문에 성능이 빠르게 흔들릴 수 있습니다. "
+            "그래서 이 글은 모델 이름보다도 어떤 조건에서 성능이 유지되는지, 그리고 경보가 정비 의사결정으로 자연스럽게 이어질 수 있는지를 중심으로 읽는 편이 좋습니다."
+        )
+        evaluation_questions = [
+            "실험 데이터의 속도·부하 조건이 실제 노선이나 설비 조건과 얼마나 비슷한가",
+            "학습한 특징이 다른 장비나 다른 계절 조건으로 넘어가도 유지되는가",
+            "경보 결과를 사람이 재검수하거나 정비 우선순위로 연결할 절차가 있는가",
+        ]
+    elif domain == "vision":
+        field_reality = (
+            "철도 비전 논문은 데모 화면만 보면 좋아 보이지만, 실제 현장에서는 조명 변화, 오염, 가림, 촬영 각도 차이 때문에 경계 품질이 크게 흔들릴 수 있습니다. "
+            "결국 중요한 것은 한 장의 예쁜 결과 이미지가 아니라, 다양한 현장 조건에서도 검출 결과를 유지하고 작업자 검수 흐름과 자연스럽게 연결할 수 있는가입니다."
+        )
+        evaluation_questions = [
+            "야간, 우천, 오염, 역광 조건에서도 같은 수준의 경계 품질을 유지하는가",
+            "오탐과 미탐이 실제 교체 판단이나 재점검 비용에 어떤 영향을 주는가",
+            "검출 결과를 작업자 검수 단계와 함께 설계했는가",
+        ]
+    elif domain == "agent":
+        field_reality = (
+            "에이전트 논문은 답변 품질만 보면 안정적으로 보여도, 운영 환경에서는 도구 호출 실패, 단계 누락, 장기 상태 관리 실패가 더 큰 문제로 드러나는 경우가 많습니다. "
+            "그래서 실제 가치는 모델 이름보다도 실패를 얼마나 빨리 관찰하고 통제 가능한 흐름으로 바꾸는지에서 갈립니다."
+        )
+        evaluation_questions = [
+            "실패 유형을 로그와 메트릭으로 분리해서 관찰할 수 있는가",
+            "재시도와 롤백 규칙이 결과 품질보다 먼저 설계되어 있는가",
+            "운영 중 변하는 입력 환경에서도 실행 흐름이 무너지지 않는가",
+        ]
+    else:
+        field_reality = (
+            "이런 유형의 논문은 성능 수치 자체보다, 입력 조건이 바뀌었을 때도 판단 품질이 유지되는지와 실제 운영 절차에 붙일 수 있는지가 더 중요합니다. "
+            "블로그 글로 읽을 때도 요약보다 적용 조건과 검증 질문을 먼저 붙여 보는 편이 더 실전적입니다."
+        )
+        evaluation_questions = [
+            "논문 조건과 우리 운영 데이터 사이의 차이를 먼저 설명할 수 있는가",
+            "결과를 실제 사람 작업 흐름이나 운영 의사결정과 연결할 수 있는가",
+            "최고 정확도보다 재현성과 유지 가능성을 검증했는가",
+        ]
     limitations = [
         "본문이 제시하는 실험 조건이 다른 노선, 다른 장비, 다른 계절에도 그대로 유지되는지는 추가 검증이 필요하다.",
         "실제 유지보수에서는 오탐 비용과 미탐 위험을 함께 봐야 하므로, 논문 성능 수치만으로 바로 운영 정책을 정하긴 어렵다.",
@@ -465,6 +531,8 @@ def build_detailed_analysis(source: dict) -> dict:
         "experiment_read": experiment_read,
         "experiment_points": experiment_points,
         "interpretation": interpretation,
+        "field_reality": field_reality,
+        "evaluation_questions": evaluation_questions,
         "limitations": limitations,
         "closing": closing,
         "reader_fit": reader_fit,
@@ -831,6 +899,7 @@ def render_markdown(source: dict) -> str:
     publish_date = get_publish_date(source)
     source_date = source.get("source_date") or source.get("date", "")
     analysis = build_detailed_analysis(source)
+    domain = infer_domain(source)
     context = fetch_paper_context(source)
     links = list(source.get("sources", []))
     if context.get("urls", {}).get("html"):
@@ -838,13 +907,28 @@ def render_markdown(source: dict) -> str:
     source_links = "\n".join(f"- [{item['label']}]({item['url']})" for item in links)
     authors = ", ".join(source.get("authors", [])) or "Unknown authors"
     review = source.get("review", {})
+    taxonomy_tags = build_taxonomy_tags(domain, source)
+    tag_yaml = "\n".join(f"  - {item}" for item in taxonomy_tags)
     method_steps = "\n".join(f"- {item}" for item in analysis.get("method_steps", []))
     experiment_points = "\n".join(f"- {item}" for item in analysis.get("experiment_points", []))
+    evaluation_questions = "\n".join(f"- {item}" for item in analysis.get("evaluation_questions", []))
     limitations = "\n".join(f"- {item}" for item in analysis.get("limitations", []))
     reader_fit = "\n".join(f"- {item}" for item in analysis.get("reader_fit", []))
     operational_takeaways = "\n".join(f"- {item}" for item in analysis.get("operational_takeaways", []))
+    summary_line = analysis.get("one_line", "").replace('"', "'")
 
-    return f"""# {title}
+    return f"""---
+title: "{title.replace('"', "'")}"
+date: {publish_date} 09:17:00 +0900
+tags:
+{tag_yaml}
+categories:
+  - Daily arXiv
+  - PHM
+summary: "{summary_line}"
+---
+
+# {title}
 
 **발행일**: {publish_date}  
 **논문 공개일**: {source_date}  
@@ -875,6 +959,10 @@ def render_markdown(source: dict) -> str:
 
 {experiment_points}
 
+## 현장에서는 왜 더 어려운가
+
+{analysis.get("field_reality", "")}
+
 ## 누가 읽으면 특히 좋은가
 
 {reader_fit}
@@ -899,6 +987,9 @@ def render_markdown(source: dict) -> str:
 ## MALT 해석
 
 {analysis.get("interpretation", "")}
+
+## 도입 전에 확인할 질문
+{evaluation_questions}
 
 ## 현업 적용 체크리스트
 {operational_takeaways}
@@ -956,6 +1047,7 @@ def render_html(source: dict) -> str:
     authors = html.escape(", ".join(source.get("authors", [])) or "Unknown authors")
     review = source.get("review", {})
     analysis = build_detailed_analysis(source)
+    domain = infer_domain(source)
     context = fetch_paper_context(source)
     links = list(source.get("sources", []))
     if context.get("urls", {}).get("html"):
@@ -1031,6 +1123,9 @@ def render_html(source: dict) -> str:
 {paragraphize(analysis.get("experiment_points", []))}
         </ul>
 
+        <h2>현장에서는 왜 더 어려운가</h2>
+        <p>{html.escape(analysis.get("field_reality", ""))}</p>
+
         <h2>누가 읽으면 특히 좋은가</h2>
         <ul>
 {paragraphize(analysis.get("reader_fit", []))}
@@ -1045,6 +1140,11 @@ def render_html(source: dict) -> str:
 
         <h2>MALT 해석</h2>
         <p>{html.escape(analysis.get("interpretation", ""))}</p>
+
+        <h2>도입 전에 확인할 질문</h2>
+        <ul>
+{paragraphize(analysis.get("evaluation_questions", []))}
+        </ul>
 
         <h2>현업 적용 체크리스트</h2>
         <ul>

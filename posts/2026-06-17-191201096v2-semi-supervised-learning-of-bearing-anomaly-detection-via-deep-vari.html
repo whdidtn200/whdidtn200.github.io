@@ -15,6 +15,10 @@
   <meta name="twitter:card" content="summary" />
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/feed.xml" title="MALT Tech Blog" />
+  <style>
+    .malt-tag-rail{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .malt-tag-rail .tag-chip{display:inline-flex;align-items:center;padding:6px 11px;border-radius:999px;border:1px solid #d6e3ee;background:#f7fbfd;text-decoration:none;color:#0f6f8d;font-size:12px;font-weight:700}
+  </style>
 </head>
 <body><header class="site-header" role="banner">
   <div class="wrapper"><a class="site-title" rel="author" href="/">MALT Tech Blog</a><nav class="site-nav">
@@ -26,7 +30,7 @@
             </svg>
           </span>
         </label>
-        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a></div>
+        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -35,6 +39,7 @@
       <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">[arXiv Daily] Semi-Supervised Learning of Bearing Anomaly Detection via Deep Variational Autoencoders</h1>
         <p class="post-meta"><time class="dt-published" datetime="2026-06-17T09:17:00+09:00" itemprop="datePublished">2026-06-17</time></p>
+        <div class="malt-tag-rail"><a class="tag-chip" href="/tags/arxiv.html">Arxiv</a><a class="tag-chip" href="/tags/malt.html">MALT</a><a class="tag-chip" href="/tags/bearing-diagnosis.html">Bearing Diagnosis</a><a class="tag-chip" href="/tags/phm.html">Phm</a><a class="tag-chip" href="/tags/cslg.html">Cs.Lg</a></div>
       </header>
       <div class="post-content e-content" itemprop="articleBody">
         <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 하루 한 편씩 발행하는 자동 큐레이션입니다. 원문 제목은 <em>Semi-Supervised Learning of Bearing Anomaly Detection via Deep Variational Autoencoders</em>이며, 저자는 Shen Zhang, Fei Ye, Bingnan Wang, Thomas G. Habetler입니다. 논문 공개일은 2019-12-02입니다.</p>
@@ -64,6 +69,16 @@
 <li>실무적으로는 최고 점수보다도 데이터 조건이 달라져도 결과가 유지되는지, 그리고 경보 이후 작업 흐름에 연결되는지가 더 중요하다.</li>
         </ul>
 
+        <h2>현장에서는 왜 더 어려운가</h2>
+        <p>베어링 진단 논문은 실험실에서는 좋아 보여도 실제 운영에 붙이면 신호 품질, 회전 속도 변동, 장비 차이, 라벨 부족 때문에 성능이 빠르게 흔들릴 수 있습니다. 그래서 이 글은 모델 이름보다도 어떤 조건에서 성능이 유지되는지, 그리고 경보가 정비 의사결정으로 자연스럽게 이어질 수 있는지를 중심으로 읽는 편이 좋습니다.</p>
+
+        <h2>누가 읽으면 특히 좋은가</h2>
+        <ul>
+<li>철도/회전체 설비의 상태 감시 체계를 설계하는 PHM 엔지니어</li>
+<li>진동·주파수·시간-주파수 특징을 실제 고장 진단 파이프라인에 붙여야 하는 데이터 분석가</li>
+<li>실험실 성능이 아니라 속도 변화, 부하 변화, 장비 차이까지 보고 싶은 운영 담당자</li>
+        </ul>
+
         <h2>MALT 리뷰</h2>
         <p><strong>왜 골랐는가.</strong> 이 논문은 철도 설비, 센서, 고장 진단 같은 블로그 핵심 축과 직접 연결된다. 그래서 단순히 최신 논문이라서가 아니라, 지금 블로그 독자에게 바로 설명할 이유가 있는 후보로 봤다.</p>
         <p><strong>어떻게 읽어야 하는가.</strong> 내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.</p>
@@ -73,6 +88,22 @@
 
         <h2>MALT 해석</h2>
         <p>내가 이 논문을 발행 가치가 있다고 보는 이유는, `좋은 모델 하나`보다 `운영에 붙일 수 있는 구조`를 보여주기 때문이다. 블로그 관점에서는 이 논문을 읽고 나면 어떤 센서나 이미지가 들어오고, 어떤 판단 출력으로 이어져야 하는지 머릿속에 그릴 수 있어야 한다.</p>
+
+        <h2>도입 전에 확인할 질문</h2>
+        <ul>
+<li>실험 데이터의 속도·부하 조건이 실제 노선이나 설비 조건과 얼마나 비슷한가</li>
+<li>학습한 특징이 다른 장비나 다른 계절 조건으로 넘어가도 유지되는가</li>
+<li>경보 결과를 사람이 재검수하거나 정비 우선순위로 연결할 절차가 있는가</li>
+        </ul>
+
+        <h2>현업 적용 체크리스트</h2>
+        <ul>
+<li>센서 배치, 샘플링 주기, 회전 속도 정보가 우리 설비에서 얼마나 안정적으로 확보되는지 먼저 확인한다.</li>
+<li>특히 온라인 감시 조건에서 성능이 유지되는지 별도 검증용 데이터셋을 따로 잡아두는 편이 좋다.</li>
+<li>파일럿 단계에서는 조기 경보의 민감도보다 오탐 이후 작업 부담이 얼마나 생기는지도 같이 측정한다.</li>
+<li>논문 수치만 보지 말고, 우리 데이터 조건과 입력 품질이 논문 조건과 얼마나 다른지 먼저 비교한다.</li>
+<li>모델 도입 전에 경보 이후의 사람 작업 흐름까지 같이 설계해야 실제 운영 가치가 생긴다.</li>
+        </ul>
 
         <h2>한계와 체크 포인트</h2>
         <ul>
