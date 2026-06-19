@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>시험실 | MALT Tech Blog</title>
+  <meta name="description" content="MALT 시험실: 논문 요약에서 끝나지 않고, 재현 실험과 검증 관점으로 다시 읽는 기술 실험 허브" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/hud.css" />
+  <style>
+    .hero{
+      margin-top:14px;
+      padding:22px;
+      background:
+        radial-gradient(700px 260px at 100% 0%, rgba(31,95,214,.10), transparent 70%),
+        linear-gradient(150deg, rgba(11,139,149,.12), rgba(31,95,214,.08)),
+        linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,251,254,.98));
+    }
+    .hero-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.25fr) 320px;
+      gap:16px;
+      align-items:stretch;
+    }
+    .hero h1{
+      margin:8px 0 10px;
+      font-size:34px;
+      line-height:1.08;
+      color:#0d1a28;
+    }
+    .hero p{
+      margin:0;
+      color:#54697f;
+      line-height:1.7;
+      max-width:64ch;
+    }
+    .hero-aside{
+      border:1px solid #d6e3ec;
+      border-radius:16px;
+      padding:16px;
+      background:rgba(255,255,255,.84);
+      box-shadow:0 10px 22px rgba(24,54,84,.05);
+    }
+    .hero-aside .eyebrow{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      color:#1f5fd6;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .hero-aside ul{
+      margin:10px 0 0;
+      padding-left:18px;
+      color:#445b72;
+      line-height:1.7;
+    }
+    .meta-strip{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:10px;
+      margin-top:14px;
+    }
+    .metric{
+      border:1px solid #d5e3ec;
+      border-radius:14px;
+      padding:12px;
+      background:#f8fbfd;
+    }
+    .metric .v{
+      font-size:24px;
+      font-weight:800;
+      color:#10253a;
+      line-height:1;
+    }
+    .metric .l{
+      margin-top:6px;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#5f738a;
+    }
+    .lab-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .lab-card{
+      border:1px solid #cddde7;
+      border-radius:16px;
+      padding:16px;
+      background:linear-gradient(180deg, rgba(255,255,255,.98), rgba(247,251,254,.98));
+      box-shadow:0 10px 24px rgba(24,54,84,.05);
+    }
+    .lab-card .eyebrow{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:#0b8b95;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .lab-card h2{
+      margin:0 0 8px;
+      font-size:22px;
+      line-height:1.2;
+      color:#10253a;
+    }
+    .lab-card p{
+      margin:0;
+      color:#54697f;
+      line-height:1.7;
+    }
+    .lab-card a{
+      display:inline-block;
+      margin-top:14px;
+      font-weight:700;
+    }
+    .process{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0, 1fr));
+      gap:10px;
+    }
+    .process-step{
+      border:1px solid #d5e3ec;
+      border-radius:14px;
+      padding:14px;
+      background:#fbfdff;
+    }
+    .process-step strong{
+      display:block;
+      color:#0d1a28;
+      margin-bottom:6px;
+    }
+    .process-step span{
+      color:#54697f;
+      font-size:14px;
+      line-height:1.6;
+    }
+    @media (max-width: 900px){
+      .hero-grid{grid-template-columns:1fr}
+      .lab-grid{grid-template-columns:1fr}
+      .meta-strip{grid-template-columns:1fr}
+      .process{grid-template-columns:1fr}
+      .hero h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">LAB · MALT HUD</div>
+      <a class="badge" href="./index.html">HOME</a>
+    </div>
+
+    <section class="card hero">
+      <div class="hero-grid">
+        <div>
+          <div class="h">Paper Testing Lab</div>
+          <h1>시험실: 논문을 읽는 데서 끝나지 않고 직접 검증까지 가는 섹션</h1>
+          <p>이 섹션은 외부 논문을 단순 요약하지 않고, MALT 기준으로 어떤 실험을 재현해볼 수 있는지, 어떤 지표를 다시 봐야 하는지, 그리고 현장 적용 전에 무엇을 더 검증해야 하는지를 정리하는 공간입니다.</p>
+          <div class="meta-strip">
+            <div class="metric">
+              <div class="v">Re-run</div>
+              <div class="l">Paper Claims</div>
+            </div>
+            <div class="metric">
+              <div class="v">Benchmark</div>
+              <div class="l">Metrics and Limits</div>
+            </div>
+            <div class="metric">
+              <div class="v">Field Fit</div>
+              <div class="l">Operational Readiness</div>
+            </div>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div class="eyebrow">WHY THIS MATTERS</div>
+          <p>시험실이 있으면 이 블로그는 자동 요약 저장소가 아니라, 논문 주장과 실제 적용 가능성 사이의 간극을 점검하는 운영형 기술 사이트처럼 보입니다.</p>
+          <ul>
+            <li>정확도 숫자만 보지 않고 데이터 누출 여부를 봅니다.</li>
+            <li>실험실 성능과 현장 일반화 가능성을 분리해서 읽습니다.</li>
+            <li>재현 가능성, 경보 설계, 운영 비용까지 함께 평가합니다.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="lab-grid">
+      <article class="lab-card">
+        <div class="eyebrow">Validation Report</div>
+        <h2>IEEE PHM 2012 VAE 검증</h2>
+        <p>FEMTO-ST IEEE PHM 2012 데이터셋을 사용해 VAE 기반 이상 탐지의 AP, ROC AUC, threshold 운용점을 실제 경보 관점에서 다시 읽은 검증 리포트입니다.</p>
+        <a href="./posts/2026-03-09-phm-validation-report.html">리포트 읽기</a>
+      </article>
+      <article class="lab-card">
+        <div class="eyebrow">Reproduction Note</div>
+        <h2>LSTM-Autoencoder 외부 논문 재검토</h2>
+        <p>외부 논문의 수치와 MALT 환경에서 다시 본 검증 수치를 나란히 두고, 어떤 차이가 났는지와 재현 해석 포인트를 정리한 글입니다.</p>
+        <a href="./posts/2026-03-09-external-paper-validation-lstm-ae.html">리포트 읽기</a>
+      </article>
+      <article class="lab-card">
+        <div class="eyebrow">Benchmark Review</div>
+        <h2>1DCNN 베어링 진단 재현 관점 리뷰</h2>
+        <p>CWRU와 Paderborn 데이터셋 기준으로 어떤 실험 설계가 과대평가를 막는지, 멀티 데이터셋 검증이 왜 중요한지 정리한 분석입니다.</p>
+        <a href="./posts/2026-03-02-1dcnn-bearing-fault-diagnosis-cwru-paderborn.html">리뷰 읽기</a>
+      </article>
+      <article class="lab-card">
+        <div class="eyebrow">Failure Patterns</div>
+        <h2>검증 파이프라인 실패 패턴 7가지</h2>
+        <p>모델 성능보다 먼저 무너지는 검증 체계의 실패 패턴을 정리해, 앞으로 시험실 글의 공통 체크리스트 역할을 하게 만든 페이지입니다.</p>
+        <a href="./posts/2026-03-05-agentic-validation-failure-patterns-phm.html">체크리스트 읽기</a>
+      </article>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <div class="h">How MALT Tests Papers</div>
+      <div class="process">
+        <div class="process-step">
+          <strong>1. Claim Split</strong>
+          <span>논문의 핵심 주장과 실험 조건을 먼저 분리해서 읽습니다.</span>
+        </div>
+        <div class="process-step">
+          <strong>2. Reproduction</strong>
+          <span>가능하면 공개 데이터셋이나 유사 조건에서 재현 가능성을 확인합니다.</span>
+        </div>
+        <div class="process-step">
+          <strong>3. Stress Check</strong>
+          <span>속도 변동, 라벨 부족, 노선 차이 같은 운영 변수에 얼마나 약한지 봅니다.</span>
+        </div>
+        <div class="process-step">
+          <strong>4. Field Decision</strong>
+          <span>현장에 바로 넣을 수 있는지, 아니면 추가 검증이 필요한지 결론을 남깁니다.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
