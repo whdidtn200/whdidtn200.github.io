@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T11:13:04+09:00",
+  "generated_at": "2026-06-19T11:15:43+09:00",
   "entry_count": 50,
   "tag_count": 28,
   "tags": [
@@ -7,91 +7,91 @@
       "tag": "Condition Monitoring",
       "slug": "condition-monitoring",
       "count": 23,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "PHM",
       "slug": "phm",
       "count": 22,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "Railway",
       "slug": "railway",
       "count": 10,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
     },
     {
       "tag": "Bearing",
       "slug": "bearing",
       "count": 9,
-      "latest_title": "[arXiv Daily] Sigmoid-Based Refined Composite Multiscale Fuzzy Entropy and t-Distributed Stochastic Neighbor Embedding Based Fault Diagnosis of Rolling Bearing"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "Maintenance",
       "slug": "maintenance",
       "count": 9,
-      "latest_title": "[arXiv Daily] Innovative Distributed Maintenance Concept: From the design to cost optimisation"
+      "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
     },
     {
       "tag": "Sensors",
       "slug": "sensors",
       "count": 8,
-      "latest_title": "Railway Bearing Sensor Guide: 철도 베어링 모니터링 센서를 어떻게 고르고 배치할 것인가"
+      "latest_title": "2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4"
     },
     {
       "tag": "Fault Diagnosis",
       "slug": "fault-diagnosis",
       "count": 7,
-      "latest_title": "[arXiv Daily] Sigmoid-Based Refined Composite Multiscale Fuzzy Entropy and t-Distributed Stochastic Neighbor Embedding Based Fault Diagnosis of Rolling Bearing"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "Agentic AI",
       "slug": "agentic-ai",
       "count": 6,
-      "latest_title": "[arXiv Daily] LLM-based Framework for Bearing Fault Diagnosis"
+      "latest_title": "최신 Agentic AI의 산업 현장 적용 전략"
     },
     {
       "tag": "Guide",
       "slug": "guide",
       "count": 6,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "Observability",
       "slug": "observability",
       "count": 5,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
       "tag": "Wayside",
       "slug": "wayside",
       "count": 4,
-      "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
+      "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
     },
     {
       "tag": "Predictive Maintenance",
       "slug": "predictive-maintenance",
       "count": 3,
-      "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "AE",
       "slug": "ae",
       "count": 2,
-      "latest_title": "Railway Bearing Sensor Guide: 철도 베어링 모니터링 센서를 어떻게 고르고 배치할 것인가"
+      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
       "tag": "Validation",
       "slug": "validation",
       "count": 2,
-      "latest_title": "[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증"
+      "latest_title": "[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증"
     },
     {
       "tag": "실험실",
       "slug": "실험실",
       "count": 2,
-      "latest_title": "[Validation Report] 최신 하이브리드 LSTM-Autoencoder 모델 검증"
+      "latest_title": "[Validation Report] IEEE PHM 2012 베어링 데이터셋 VAE 검증"
     },
     {
       "tag": "Acoustic",

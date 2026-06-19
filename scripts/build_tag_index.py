@@ -17,6 +17,7 @@ DRAFTS_DIR = ROOT / "content" / "drafts"
 TAGS_DIR = ROOT / "tags"
 STATE_DIR = ROOT / "content" / "archive" / "state"
 STATE_FILE = STATE_DIR / "tag_index.json"
+QUALITY_REPORT_FILE = STATE_DIR / "content_quality_report.json"
 POSTS_INDEX = ROOT / "posts.html"
 LOW_VALUE_SLUGS = {
     "2026-02-25-FFT-1DCNN-Train-Fault-Diagnosis",
@@ -171,7 +172,76 @@ def detect_entry_type(url: str, tags: list[str], title: str) -> str:
     return "Page"
 
 
-def entry_priority(entry: dict) -> tuple[int, str]:
+def compute_quality(entry: dict) -> tuple[int, str, list[str]]:
+    score = 0
+    reasons: list[str] = []
+    words = int(entry.get("word_count", 0))
+    kind = entry.get("type", "Post")
+    summary = entry.get("summary", "")
+    title = entry.get("title", "")
+    tags = entry.get("tags", [])
+
+    if words >= 1000:
+        score += 5
+        reasons.append("긴 본문")
+    elif words >= 700:
+        score += 4
+        reasons.append("충분한 본문")
+    elif words >= 500:
+        score += 3
+        reasons.append("중간 이상 본문")
+    elif words >= 350:
+        score += 2
+        reasons.append("기본 분량 충족")
+    elif words >= 220:
+        score += 1
+        reasons.append("최소 분량")
+    else:
+        reasons.append("짧은 본문")
+
+    if kind == "Guide":
+        score += 3
+        reasons.append("가이드형")
+    elif kind == "Lab":
+        score += 3
+        reasons.append("실험실형")
+    elif kind == "Post":
+        score += 2
+        reasons.append("해설형")
+    elif kind == "Daily arXiv":
+        score += 1
+        reasons.append("일간 해설형")
+
+    if len(summary) >= 140:
+        score += 1
+        reasons.append("요약 밀도 양호")
+    if len(tags) >= 4:
+        score += 1
+        reasons.append("주제 연결성")
+
+    merged = f"{title} {summary}"
+    if any(token in merged for token in ["삭제됨", "중복 발행 정리", "보존 처리"]):
+        score -= 5
+        reasons.append("중복/공지성")
+    if kind == "Daily arXiv" and words < 320:
+        score -= 3
+        reasons.append("얇은 일간 글")
+    elif kind in {"Post", "Page"} and words < 220:
+        score -= 2
+        reasons.append("얇은 해설")
+
+    if score >= 8:
+        band = "strong"
+    elif score >= 5:
+        band = "solid"
+    elif score >= 2:
+        band = "thin"
+    else:
+        band = "weak"
+    return score, band, reasons
+
+
+def entry_priority(entry: dict) -> tuple[int, int, int, int]:
     type_rank = {
         "Guide": 0,
         "Lab": 1,
@@ -179,7 +249,19 @@ def entry_priority(entry: dict) -> tuple[int, str]:
         "Daily arXiv": 3,
         "Page": 4,
     }
-    return (type_rank.get(entry.get("type", "Post"), 9), entry.get("date", ""))
+    band_rank = {
+        "strong": 0,
+        "solid": 1,
+        "thin": 2,
+        "weak": 3,
+    }
+    date_rank = int(str(entry.get("date", "1900-01-01")).replace("-", ""))
+    return (
+        band_rank.get(entry.get("quality_band", "solid"), 9),
+        type_rank.get(entry.get("type", "Post"), 9),
+        -date_rank,
+        -int(entry.get("quality_score", 0)),
+    )
 
 
 def build_entry(url: str, title: str, date: str, summary: str, tags: list[str]) -> dict:
@@ -187,7 +269,7 @@ def build_entry(url: str, title: str, date: str, summary: str, tags: list[str]) 
     for inferred in infer_tags(title, summary):
         if inferred not in all_tags:
             all_tags.append(inferred)
-    return {
+    entry = {
         "title": title.strip(),
         "url": url,
         "date": date,
@@ -195,6 +277,11 @@ def build_entry(url: str, title: str, date: str, summary: str, tags: list[str]) 
         "tags": all_tags,
         "type": detect_entry_type(url, all_tags, title),
     }
+    score, band, reasons = compute_quality(entry)
+    entry["quality_score"] = score
+    entry["quality_band"] = band
+    entry["quality_reasons"] = reasons
+    return entry
 
 
 def entry_slug(entry: dict) -> str:
@@ -225,7 +312,13 @@ def collect_markdown_entries() -> list[dict]:
         date = parse_date(meta.get("date"), path.stem)
         tags = normalize_tags(meta.get("tags") or [], meta.get("categories") or [])
         summary = first_paragraph(body)
-        entries.append(build_entry(f"/posts/{path.stem}.html", title, date, summary, tags))
+        entry = build_entry(f"/posts/{path.stem}.html", title, date, summary, tags)
+        entry["word_count"] = len(re.findall(r"\S+", body))
+        score, band, reasons = compute_quality(entry)
+        entry["quality_score"] = score
+        entry["quality_band"] = band
+        entry["quality_reasons"] = reasons
+        entries.append(entry)
 
     for path in sorted(DRAFTS_DIR.glob("*.md")):
         text = path.read_text(encoding="utf-8")
@@ -238,7 +331,13 @@ def collect_markdown_entries() -> list[dict]:
         date = parse_date(meta.get("date"), path.stem)
         tags = normalize_tags(meta.get("tags") or [], meta.get("categories") or [])
         summary = first_paragraph(body)
-        entries.append(build_entry(f"/{slug}.html", title, date, summary, tags))
+        entry = build_entry(f"/{slug}.html", title, date, summary, tags)
+        entry["word_count"] = len(re.findall(r"\S+", body))
+        score, band, reasons = compute_quality(entry)
+        entry["quality_score"] = score
+        entry["quality_band"] = band
+        entry["quality_reasons"] = reasons
+        entries.append(entry)
     return entries
 
 
@@ -256,7 +355,13 @@ def collect_html_only_entries(existing_urls: set[str]) -> list[dict]:
         title = re.sub(r"\s*\|\s*MALT Tech Blog\s*$", "", title)
         summary = clean_text(paragraph_match.group(1)) if paragraph_match else ""
         date = parse_date(None, path.stem)
-        entries.append(build_entry(url, title, date, summary, []))
+        entry = build_entry(url, title, date, summary, [])
+        entry["word_count"] = len(re.findall(r"\S+", clean_text(text)))
+        score, band, reasons = compute_quality(entry)
+        entry["quality_score"] = score
+        entry["quality_band"] = band
+        entry["quality_reasons"] = reasons
+        entries.append(entry)
     return entries
 
 
@@ -280,7 +385,16 @@ def group_by_tag(entries: list[dict]) -> dict[str, list[dict]]:
         for tag in entry.get("tags", []):
             grouped[tag].append(entry)
     for tag, items in grouped.items():
-        grouped[tag] = sorted(items, key=lambda item: (item["date"], item["title"]), reverse=True)
+        grouped[tag] = sorted(
+            items,
+            key=lambda item: (
+                {"strong": 3, "solid": 2, "thin": 1, "weak": 0}.get(item.get("quality_band", "solid"), 0),
+                item.get("quality_score", 0),
+                item["date"],
+                item["title"],
+            ),
+            reverse=True,
+        )
     return dict(sorted(grouped.items(), key=lambda pair: (-len(pair[1]), pair[0].lower())))
 
 
@@ -346,11 +460,12 @@ def apply_noindex_to_low_value_pages(entries: list[dict]) -> None:
 def render_tag_index(grouped: dict[str, list[dict]], total_entries: int) -> str:
     cards = []
     for tag, items in list(grouped.items())[:24]:
+        lead = sorted(items, key=entry_priority)[0]
         cards.append(
             f'''        <a class="tag-card" href="/tags/{slugify(tag)}.html">
           <strong>{html.escape(tag)}</strong>
           <span>{len(items)}개 항목</span>
-          <small>{html.escape(items[0]["title"])}</small>
+          <small>{html.escape(lead["title"])}</small>
         </a>'''
         )
     return f"""<!doctype html>
@@ -520,6 +635,33 @@ def write_outputs(entries: list[dict], grouped: dict[str, list[dict]]) -> None:
                     }
                     for tag, items in grouped.items()
                 ],
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    weak_candidates = [
+        {
+            "title": entry["title"],
+            "url": entry["url"],
+            "type": entry["type"],
+            "date": entry["date"],
+            "word_count": entry.get("word_count", 0),
+            "quality_score": entry.get("quality_score", 0),
+            "quality_band": entry.get("quality_band", ""),
+            "quality_reasons": entry.get("quality_reasons", []),
+        }
+        for entry in sorted(entries, key=lambda item: (item.get("quality_score", 0), item.get("date", "")))
+        if entry.get("quality_band") in {"thin", "weak"}
+    ]
+    QUALITY_REPORT_FILE.write_text(
+        json.dumps(
+            {
+                "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
+                "entry_count": len(entries),
+                "thin_or_weak_count": len(weak_candidates),
+                "candidates": weak_candidates[:20],
             },
             ensure_ascii=False,
             indent=2,
