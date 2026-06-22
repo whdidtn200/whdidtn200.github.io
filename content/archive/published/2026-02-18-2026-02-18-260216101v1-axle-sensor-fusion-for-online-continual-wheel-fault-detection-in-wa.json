@@ -60,5 +60,10 @@
     "applicability": "실무 적용 장면도 비교적 선명하다. 정비 시점 판단, 이상 징후 조기 탐지, 센서 이벤트 해석 같은 흐름으로 바로 이어 설명할 수 있다.",
     "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
     "verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-  }
+  },
+  "source_date": "2026-02-18",
+  "publish_date": "2026-06-22",
+  "post_slug": "2026-06-22-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa",
+  "post_path": "posts/2026-06-22-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa.html",
+  "publication_judgment": "published: strong railway PHM fit; wayside wheel-fault detection with sensor fusion and continual learning; full arXiv HTML checked before publication"
 }
