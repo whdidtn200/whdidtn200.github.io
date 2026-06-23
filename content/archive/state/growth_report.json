@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-19T16:57+09:00",
-  "entry_count": 54,
+  "generated_at": "2026-06-23T11:21+09:00",
+  "entry_count": 56,
   "thin_or_weak_count": 0,
-  "queued_count": 0,
+  "queued_count": 14,
   "lab_post_count": 2,
   "guides": [
     {
@@ -96,9 +96,14 @@
   ],
   "priorities": [
     {
+      "label": "대기 논문 선별 유지",
+      "reason": "발행 대기 논문이 14건 있어도 메인 발행은 주 1~2회만 유지하는 것이 품질과 승인 관점에서 안전합니다.",
+      "target": "/AUTOMATION.html"
+    },
+    {
       "label": "심층 포스트 추가 보강",
-      "reason": "[특별 기획] 철도 주행장치 글로벌 복합 결함 진단을 위한 거대 모델(CFD-LM) 분석는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
-      "target": "/posts/2026-02-25-cfd-lm-railway-running-gear.html"
+      "reason": "[Insight] YAML의 종말과 Markdown 에이전트의 시대: GitHub Agentic Workflows 분석는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
+      "target": "/posts/2026-02-26-github-agentic-workflows-analysis.html"
     }
   ]
 }

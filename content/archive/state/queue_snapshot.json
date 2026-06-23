@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T02:35:08.982852+00:00",
-  "queued_count": 15,
+  "generated_at": "2026-06-23T02:21:32.976235+00:00",
+  "queued_count": 14,
   "queued_titles": [
     {
       "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
@@ -63,13 +63,6 @@
       "topic": "agent-ops",
       "date": "2026-06-12",
       "slug": "260614517v2-from-shield-to-target-denial-of-service-attacks-on-llm-based",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime",
-      "topic": "agent-ops",
-      "date": "2026-06-12",
-      "slug": "2026-06-12-260614589v1-when-errors-become-narratives-a-longitudinal-taxonomy-of-silent-fai",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
