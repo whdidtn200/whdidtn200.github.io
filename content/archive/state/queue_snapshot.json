@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-06-23T04:32:01.349223+00:00",
-  "queued_count": 14,
+  "generated_at": "2026-06-25T02:21:13.336966+00:00",
+  "queued_count": 16,
   "queued_titles": [
+    {
+      "title": "Agentic System as Compressor: Quantifying System Intelligence in Bits",
+      "topic": "agent-ops",
+      "date": "2026-06-24",
+      "slug": "260625960v1-agentic-system-as-compressor-quantifying-system-intelligence",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Constraint Tax in Open-Weight LLMs: An Empirical Study of Tool Calling Suppression Under Structured Output Constraints",
+      "topic": "agent-ops",
+      "date": "2026-06-24",
+      "slug": "260625605v1-constraint-tax-in-open-weight-llms-an-empirical-study-of-too",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
       "topic": "agent-ops",
