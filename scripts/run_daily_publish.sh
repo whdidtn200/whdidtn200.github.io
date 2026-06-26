@@ -5,6 +5,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 LOCK_DIR="$REPO_ROOT/.daily-publish.lock"
 PUBLISH_DAYS="${MALT_PUBLISH_DAYS:-2,5}"
+PYTHON_BIN="${PYTHON_BIN:-python3}"
 
 cleanup() {
   rmdir "$LOCK_DIR" 2>/dev/null || true
@@ -13,8 +14,15 @@ cleanup() {
 ensure_python_module() {
   local module_name="$1"
   local package_name="$2"
-  if ! python3 -c "import ${module_name}" >/dev/null 2>&1; then
-    python3 -m pip install --quiet "$package_name"
+  if ! "$PYTHON_BIN" -c "import ${module_name}" >/dev/null 2>&1; then
+    local venv_dir="$REPO_ROOT/.automation-venv"
+    if [[ ! -x "$venv_dir/bin/python" ]]; then
+      python3 -m venv "$venv_dir"
+    fi
+    PYTHON_BIN="$venv_dir/bin/python"
+    if ! "$PYTHON_BIN" -c "import ${module_name}" >/dev/null 2>&1; then
+      "$PYTHON_BIN" -m pip install --quiet "$package_name"
+    fi
   fi
 }
 
@@ -48,10 +56,10 @@ git pull --rebase origin main
 
 ensure_python_module yaml PyYAML
 
-python3 scripts/generate_pillar_post_drafts.py
-python3 scripts/arxiv_pipeline.py
-python3 scripts/build_tag_index.py
-python3 scripts/validate_post.py
+"$PYTHON_BIN" scripts/generate_pillar_post_drafts.py
+"$PYTHON_BIN" scripts/arxiv_pipeline.py
+"$PYTHON_BIN" scripts/build_tag_index.py
+"$PYTHON_BIN" scripts/validate_post.py
 
 git add content/archive content/drafts posts posts.html index.html tags
 if [[ -f automation-status.json ]]; then

@@ -726,10 +726,18 @@ def thematic_score(item: dict) -> int:
         "wayside": 3,
         "freight": 2,
         "agent": 2,
+        "agentic system": 3,
+        "coding agent": 4,
+        "tool calling": 4,
+        "multi-agent": 3,
+        "evaluator": 2,
+        "trust": 2,
         "observability": 2,
         "anomaly": 3,
         "6g": -3,
         "office proficiency": -5,
+        "healthcare": -4,
+        "navigation": -3,
     }
     for keyword, weight in keyword_weights.items():
         if contains_any(haystack, [keyword]):
@@ -757,11 +765,29 @@ def is_publishable_candidate(item: dict) -> bool:
         "office proficiency",
         "guardrails",
         "carbon emissions",
+        "healthcare",
+        "medical",
+        "robotnav",
+        "navigation",
+        "geo-intelligence",
+        "disaster",
+    ]
+    agent_required = [
+        "agentic system",
+        "coding agent",
+        "coding agents",
+        "tool calling",
+        "multi-agent llm",
+        "multi-agent systems",
+        "evaluator bias",
+        "agent trust",
+        "emergent misalignment",
+        "agent observability",
     ]
     if contains_any(haystack, blocked):
         return False
     if item.get("topic") == "agent-ops":
-        return False
+        return contains_any(haystack, agent_required)
     return contains_any(haystack, required)
 
 
