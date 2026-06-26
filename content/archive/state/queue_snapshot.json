@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-06-26T00:20:27.273873+00:00",
-  "queued_count": 16,
+  "generated_at": "2026-06-26T02:20:37.225353+00:00",
+  "queued_count": 18,
   "queued_titles": [
+    {
+      "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills",
+      "topic": "agent-ops",
+      "date": "2026-06-25",
+      "slug": "260626524v1-vigil-runtime-enforcement-of-behavioral-specifications-in-ai",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-24",
+      "slug": "260626298v1-governing-actions-not-agents-institutional-attestation-as-a",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Agentic System as Compressor: Quantifying System Intelligence in Bits",
       "topic": "agent-ops",
