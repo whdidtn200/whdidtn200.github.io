@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-26T02:20:37.225353+00:00",
-  "queued_count": 18,
+  "generated_at": "2026-06-26T04:42:32.286516+00:00",
+  "queued_count": 17,
   "queued_titles": [
     {
       "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills",
@@ -28,13 +28,6 @@
       "topic": "agent-ops",
       "date": "2026-06-24",
       "slug": "260625605v1-constraint-tax-in-open-weight-llms-an-empirical-study-of-too",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-18",
-      "slug": "260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {

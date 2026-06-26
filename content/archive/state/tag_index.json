@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-23T04:32:01+00:00",
-  "entry_count": 54,
+  "generated_at": "2026-06-26T04:42:32+00:00",
+  "entry_count": 55,
   "tag_count": 38,
   "tags": [
     {
       "tag": "PHM",
       "slug": "phm",
-      "count": 30,
+      "count": 31,
       "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
@@ -30,8 +30,14 @@
     {
       "tag": "Fault Diagnosis",
       "slug": "fault-diagnosis",
-      "count": 11,
+      "count": 12,
       "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
+    },
+    {
+      "tag": "arXiv",
+      "slug": "arxiv",
+      "count": 11,
+      "latest_title": "[arXiv Daily] When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime"
     },
     {
       "tag": "Maintenance",
@@ -40,9 +46,9 @@
       "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
     },
     {
-      "tag": "arXiv",
-      "slug": "arxiv",
-      "count": 10,
+      "tag": "MALT",
+      "slug": "malt",
+      "count": 11,
       "latest_title": "[arXiv Daily] When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime"
     },
     {
@@ -52,34 +58,28 @@
       "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
     },
     {
-      "tag": "MALT",
-      "slug": "malt",
-      "count": 10,
-      "latest_title": "[arXiv Daily] When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime"
-    },
-    {
       "tag": "Daily arXiv",
       "slug": "daily-arxiv",
-      "count": 8,
+      "count": 9,
       "latest_title": "[arXiv Daily] When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime"
     },
     {
       "tag": "Agentic AI",
       "slug": "agentic-ai",
-      "count": 7,
+      "count": 8,
       "latest_title": "[arXiv Daily] When Errors Become Narratives: A Longitudinal Taxonomy of Silent Failures in a Production LLM Agent Runtime"
+    },
+    {
+      "tag": "Observability",
+      "slug": "observability",
+      "count": 7,
+      "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
       "tag": "Guide",
       "slug": "guide",
       "count": 6,
       "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
-    },
-    {
-      "tag": "Observability",
-      "slug": "observability",
-      "count": 6,
-      "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
       "tag": "Predictive Maintenance",

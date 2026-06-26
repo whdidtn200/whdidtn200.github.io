@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>[arXiv Daily] Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems | MALT Tech Blog</title>
+  <meta name="description" content="이 논문은 에이전트 시스템이 실제 운영 중 어떤 실패 징후를 보이는지 읽고, 관찰과 제어 루프를 더 안정적으로 만들려는 시도다." />
+  <link rel="canonical" href="https://whdidtn200.github.io/posts/2026-06-26-260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent.html" />
+  <meta property="og:title" content="[arXiv Daily] Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems" />
+  <meta property="og:description" content="이 논문은 에이전트 시스템이 실제 운영 중 어떤 실패 징후를 보이는지 읽고, 관찰과 제어 루프를 더 안정적으로 만들려는 시도다." />
+  <meta property="og:url" content="https://whdidtn200.github.io/posts/2026-06-26-260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent.html" />
+  <meta property="og:site_name" content="MALT Tech Blog" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-06-26T09:17:00+09:00" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="https://whdidtn200.github.io/feed.xml" title="MALT Tech Blog" />
+  <style>
+    .malt-tag-rail{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .malt-tag-rail .tag-chip{display:inline-flex;align-items:center;padding:6px 11px;border-radius:999px;border:1px solid #d6e3ee;background:#f7fbfd;text-decoration:none;color:#0f6f8d;font-size:12px;font-weight:700}
+  </style>
+</head>
+<body><header class="site-header" role="banner">
+  <div class="wrapper"><a class="site-title" rel="author" href="/">MALT Tech Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">[arXiv Daily] Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems</h1>
+        <p class="post-meta"><time class="dt-published" datetime="2026-06-26T09:17:00+09:00" itemprop="datePublished">2026-06-26</time></p>
+        <div class="malt-tag-rail"><a class="tag-chip" href="/tags/arxiv.html">Arxiv</a><a class="tag-chip" href="/tags/malt.html">MALT</a><a class="tag-chip" href="/tags/agent-ops.html">Agent Ops</a><a class="tag-chip" href="/tags/ai.html">Ai</a><a class="tag-chip" href="/tags/cslg.html">Cs.Lg</a></div>
+      </header>
+      <div class="post-content e-content" itemprop="articleBody">
+        <p>이 글은 <strong>MALT daily arXiv pipeline</strong>이 주 1~2회 선별 발행하는 자동 큐레이션입니다. 원문 제목은 <em>Contagion Networks: Evaluator Bias Propagation in Multi-Agent LLM Systems</em>이며, 저자는 Zewen Liu입니다. 논문 공개일은 2026-06-18입니다.</p>
+
+        <h2>한 줄 요약</h2>
+        <p>이 논문은 에이전트 시스템이 실제 운영 중 어떤 실패 징후를 보이는지 읽고, 관찰과 제어 루프를 더 안정적으로 만들려는 시도다.</p>
+
+        <h2>왜 지금 볼 만한가</h2>
+        <p>이번 글에서 볼 포인트는 `온라인 감시` 같은 운영 이슈를 얼마나 구조적으로 다루는가다. 에이전트 시스템은 답변 품질뿐 아니라, 실행 흐름이 언제 어떻게 무너지는지를 같이 봐야 실제 운영 가치가 생긴다.</p>
+
+        <h2>이 논문이 풀려는 문제를 쉽게 말하면</h2>
+        <p>LLM 에이전트는 데모에서는 잘 보여도 운영 환경에서는 단계 누락, 장기 의존성, 도구 호출 실패처럼 보이지 않는 문제가 많다. 이 논문은 그런 운영형 실패를 어떻게 관찰하고 분류할지에 초점을 둔다.</p>
+
+        <h2>논문이 제안한 방법</h2>
+        <p>본문에서 눈에 띄는 구성은 Contagion Networks, Evaluator Bias Propagation, Multi-Agent LLM Systems Consider, LLM 쪽이다. 쉽게 말하면 에이전트의 행동 로그를 더 잘 관찰하고, 실패 패턴을 운영 가능한 단위로 나눠 보려는 접근으로 읽힌다.</p>
+        <ul>
+<li>먼저 문제를 현장 단위로 다시 정의한다. 즉, 단순 분류가 아니라 실제 점검이나 유지보수 판단에 필요한 출력 형태를 만든다.</li>
+<li>그다음 모델 쪽에서는 Contagion Networks, Evaluator Bias Propagation, Multi-Agent LLM Systems Consider 같은 요소를 묶어 성능과 배치 가능성의 균형을 맞춘다.</li>
+<li>마지막으로 결과를 바로 숫자 자랑으로 끝내지 않고, 잡음·환경 변화·실시간 처리 같은 운영 조건에서 버티는지 확인하려 한다.</li>
+        </ul>
+
+        <h2>실험 결과를 어떻게 읽어야 하나</h2>
+        <p>실험은 정답률만 보는 것이 아니라, 실패 탐지 속도나 잘못된 행동을 얼마나 빨리 포착하는지까지 같이 보는 식으로 읽는 편이 맞다.</p>
+        <ul>
+<li>논문이 제시한 비교는 단일 정확도보다, 기존 방식 대비 어디서 덜 무너지는지를 보는 게 중요하다.</li>
+<li>본문과 초록에서 바로 읽히는 수치 신호는 정확도, 처리 속도, 모델 크기 쪽이다.</li>
+<li>실무적으로는 최고 점수보다도 데이터 조건이 달라져도 결과가 유지되는지, 그리고 경보 이후 작업 흐름에 연결되는지가 더 중요하다.</li>
+        </ul>
+
+        <h2>현장에서는 왜 더 어려운가</h2>
+        <p>에이전트 논문은 답변 품질만 보면 안정적으로 보여도, 운영 환경에서는 도구 호출 실패, 단계 누락, 장기 상태 관리 실패가 더 큰 문제로 드러나는 경우가 많습니다. 그래서 실제 가치는 모델 이름보다도 실패를 얼마나 빨리 관찰하고 통제 가능한 흐름으로 바꾸는지에서 갈립니다.</p>
+
+        <h2>누가 읽으면 특히 좋은가</h2>
+        <ul>
+<li>에이전트 런타임, 관찰 가능성, 자동화 실패 복구를 다루는 AI Ops 엔지니어</li>
+<li>LLM 기반 워크플로를 실제 운영 환경에 올려놓고 안정성을 관리해야 하는 팀</li>
+<li>정답률보다 실행 흐름과 도구 호출 품질을 중요하게 보는 운영 책임자</li>
+        </ul>
+
+        <h2>MALT 리뷰</h2>
+        <p><strong>왜 골랐는가.</strong> 이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.</p>
+        <p><strong>어떻게 읽어야 하는가.</strong> 이 논문은 성능 숫자보다 배치 위치를 봐야 한다. 어떤 센서를 받아 어떤 경보나 유지보수 판단으로 이어지는지 설명할 수 있을 때 비로소 블로그 글로서 의미가 생긴다.</p>
+        <p><strong>어디에 써먹을 수 있는가.</strong> 당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.</p>
+        <p><strong>어떤 점을 조심해야 하는가.</strong> 초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.</p>
+        <p><strong>발행 판단.</strong> 내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다.</p>
+
+        <h2>MALT 해석</h2>
+        <p>내가 이 논문을 발행 가치가 있다고 보는 이유는, `좋은 모델 하나`보다 `운영에 붙일 수 있는 구조`를 보여주기 때문이다. 블로그 관점에서는 이 논문을 읽고 나면 어떤 센서나 이미지가 들어오고, 어떤 판단 출력으로 이어져야 하는지 머릿속에 그릴 수 있어야 한다.</p>
+
+        <h2>도입 전에 확인할 질문</h2>
+        <ul>
+<li>실패 유형을 로그와 메트릭으로 분리해서 관찰할 수 있는가</li>
+<li>재시도와 롤백 규칙이 결과 품질보다 먼저 설계되어 있는가</li>
+<li>운영 중 변하는 입력 환경에서도 실행 흐름이 무너지지 않는가</li>
+        </ul>
+
+        <h2>현업 적용 체크리스트</h2>
+        <ul>
+<li>도구 호출 실패, 단계 누락, 재시도 정책 같은 운영 로그를 먼저 남길 수 있어야 논문 아이디어를 살릴 수 있다.</li>
+<li>특히 운영 제약 상황에서 에이전트가 어떤 방식으로 무너지는지 실패 분류 체계를 같이 둔다.</li>
+<li>정답률보다도 실패를 얼마나 빨리 발견하고 롤백할 수 있는지가 운영 품질에 더 중요하다.</li>
+<li>논문 수치만 보지 말고, 우리 데이터 조건과 입력 품질이 논문 조건과 얼마나 다른지 먼저 비교한다.</li>
+<li>모델 도입 전에 경보 이후의 사람 작업 흐름까지 같이 설계해야 실제 운영 가치가 생긴다.</li>
+        </ul>
+
+        <h2>한계와 체크 포인트</h2>
+        <ul>
+<li>본문이 제시하는 실험 조건이 다른 노선, 다른 장비, 다른 계절에도 그대로 유지되는지는 추가 검증이 필요하다.</li>
+<li>실제 유지보수에서는 오탐 비용과 미탐 위험을 함께 봐야 하므로, 논문 성능 수치만으로 바로 운영 정책을 정하긴 어렵다.</li>
+<li>현장 배포 단계에서는 모델 자체보다 데이터 수집, 라벨 품질, 검수 프로세스가 병목이 될 가능성이 크다.</li>
+        </ul>
+
+        <h2>쉽게 결론만 말하면</h2>
+        <p>쉽게 말해 이 논문은 `이론적으로 좋아 보이는 방법`을 넘어서, 현장에 붙일 때 무엇을 더 챙겨야 하는지 생각하게 만드는 타입이다. 그래서 하루치 자동 발행 글이어도, 단순 초록 번역보다 운영 해석을 중심으로 읽는 편이 맞다.</p>
+
+        <h2>출처</h2>
+        <ul>
+      <li><a href="http://arxiv.org/abs/2606.20493v1">arXiv abs</a></li>
+      <li><a href="https://arxiv.org/pdf/2606.20493v1">arXiv pdf</a></li>
+      <li><a href="https://arxiv.org/html/2606.20493v1">arXiv html</a></li>
+        </ul>
+      </div><a class="u-url" href="/posts/2026-06-26-260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent.html" hidden></a>
+    </article>
+  </div>
+</main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+  <div class="wrapper">
+    <h2 class="footer-heading">MALT Tech Blog</h2>
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">MALT Tech Blog</li><li><a href="https://github.com/whdidtn200/whdidtn200.github.io/issues">Repository Issues</a></li></ul>
+      </div>
+      <div class="footer-col footer-col-3">
+        <p>AI-managed publication archive for Railway Intelligence, PHM, and Agentic AI</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
