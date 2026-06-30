@@ -1,0 +1,65 @@
+{
+  "date": "2026-06-29",
+  "slug": "260630294v1-rehearsed-multi-agent-live-product-demonstrations-with-real",
+  "title": "Rehearsed Multi-Agent Live Product Demonstrations with Real-Time Voice Question Answering",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Live product demonstrations are a recurring, high-cost activity in software organizations: a human presenter must select features, dispatch the corresponding interactions on a running application, narrate them coherently, and answer questions in real time.",
+    "Existing automation addresses only fragments -- generalist browser agents target instruction-conditioned task completion, and demo-video tools produce fixed MP4 artifacts that cannot be questioned and silently break under interface drift.",
+    "We propose Rhetor, a multi-agent system that takes a running web application and its source-code repository as input and produces a rehearsed live demonstration with segment-synchronized narration and real-time voice question answering."
+  ],
+  "key_points": [
+    "Existing automation addresses only fragments -- generalist browser agents target instruction-conditioned task completion, and demo-video tools produce fixed MP4 artifacts that cannot be questioned and silently break under interface drift.",
+    "We propose Rhetor, a multi-agent system that takes a running web application and its source-code repository as input and produces a rehearsed live demonstration with segment-synchronized narration and real-time voice question answering."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2606.30294v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2606.30294v1"
+    }
+  ],
+  "authors": [
+    "Rahul Khedar",
+    "Mayank Malhotra",
+    "Avinash Karn",
+    "Mouli V",
+    "Prakhar Mehrotra"
+  ],
+  "abstract": "Live product demonstrations are a recurring, high-cost activity in software organizations: a human presenter must select features, dispatch the corresponding interactions on a running application, narrate them coherently, and answer questions in real time. Existing automation addresses only fragments -- generalist browser agents target instruction-conditioned task completion, and demo-video tools produce fixed MP4 artifacts that cannot be questioned and silently break under interface drift. We propose Rhetor, a multi-agent system that takes a running web application and its source-code repository as input and produces a rehearsed live demonstration with segment-synchronized narration and real-time voice question answering. The architectural contributions are a cross-modal feature representation that merges UI exploration with source-code analysis into features tagged with discrete focus tiers, a grounded scripter constrained to UI elements observed during exploration and dispatched through multi-strategy semantic locators, a pre-presentation rehearsal loop with explicit convergence and graceful degradation to narration-only segments, and a runtime synchronization invariant that ties each browser action to the audio-end event of its narration segment. Across six pipeline sessions on four deployed applications -- including the public-domain whiteboard application Excalidraw -- the rehearser's internal locator-firing rate (sigma-bar) spans 0.31-1.00 over 147 scripted actions; on the substantial workload (53 actions, full tier differentiation), sigma-bar is approximately 0.92, and on the public-domain reference point the locator-repair step drives convergence to sigma-bar = 1.00 at iteration 2. We additionally define a benchmark protocol of ten metrics across six application categories that would establish, beyond the case study, whether each design choice contributes positively.",
+  "entry_id": "http://arxiv.org/abs/2606.30294v1",
+  "arxiv_id": "2606.30294v1",
+  "published_at": "2026-06-29T13:36:51Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "이런 류의 논문은 정리와 분류의 가치가 크지만, 그대로 발행하면 요약문처럼 보이기 쉽다. 그래서 반드시 내가 왜 이 분류가 중요한지 해석을 덧붙여야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}
