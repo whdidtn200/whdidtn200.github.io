@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-06-30T02:19:59.822410+00:00",
-  "queued_count": 19,
+  "generated_at": "2026-06-30T04:36:40.345812+00:00",
+  "queued_count": 21,
   "queued_titles": [
+    {
+      "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-29",
+      "slug": "260630602v1-mesa-prioritizing-vulnerable-communication-channels-for-secu",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "The Illusion of Agentic Complexity in README.md Generation: Evaluating Single-Agent vs. Multi-Agent RAG Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-29",
+      "slug": "260630524v1-the-illusion-of-agentic-complexity-in-readmemd-generation-ev",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Rehearsed Multi-Agent Live Product Demonstrations with Real-Time Voice Question Answering",
       "topic": "agent-ops",
