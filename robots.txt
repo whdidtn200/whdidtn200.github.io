@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /github-pages-artifact/
+Disallow: /content/
+Disallow: /ops/
+Disallow: /.github/
 Sitemap: https://whdidtn200.github.io/sitemap.xml

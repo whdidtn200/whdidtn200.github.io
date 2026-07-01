@@ -3,6 +3,7 @@ from __future__ import annotations
 import datetime as dt
 import html
 import json
+import os
 import pathlib
 import random
 import re
@@ -786,6 +787,8 @@ def is_publishable_candidate(item: dict) -> bool:
     ]
     if contains_any(haystack, blocked):
         return False
+    if item.get("topic") == "agent-ops" and os.environ.get("MALT_ALLOW_AGENT_OPS") != "1":
+        return False
     if item.get("topic") == "agent-ops":
         return contains_any(haystack, agent_required)
     return contains_any(haystack, required)
@@ -1114,7 +1117,7 @@ def render_html(source: dict) -> str:
             </svg>
           </span>
         </label>
-        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
+        <div class="trigger"><a class="page-link" href="/posts.html">Posts</a><a class="page-link" href="/AI-OPS.html">AI Ops</a><a class="page-link" href="/EDITORIAL.html">Editorial</a><a class="page-link" href="/ABOUT.html">About</a><a class="page-link" href="/CONTACT.html">Contact</a><a class="page-link" href="/PRIVACY.html">Privacy</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -1199,7 +1202,7 @@ def render_html(source: dict) -> str:
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">MALT Tech Blog</li><li><a href="https://github.com/whdidtn200/whdidtn200.github.io/issues">Repository Issues</a></li></ul>
+          <li class="p-name">MALT Tech Blog</li><li><a href="/CONTACT.html">Contact &amp; Corrections</a></li><li><a href="https://github.com/whdidtn200/whdidtn200.github.io/issues">Repository Issues</a></li></ul>
       </div>
       <div class="footer-col footer-col-3">
         <p>AI-managed publication archive for Railway Intelligence, PHM, and Agentic AI</p>

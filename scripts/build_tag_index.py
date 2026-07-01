@@ -19,10 +19,41 @@ STATE_DIR = ROOT / "content" / "archive" / "state"
 STATE_FILE = STATE_DIR / "tag_index.json"
 QUALITY_REPORT_FILE = STATE_DIR / "content_quality_report.json"
 POSTS_INDEX = ROOT / "posts.html"
+LOW_VALUE_FILE = ROOT / "ops" / "adsense-low-value-posts.txt"
+MIN_REVIEW_WORDS = 600
 LOW_VALUE_SLUGS = {
     "2026-02-25-FFT-1DCNN-Train-Fault-Diagnosis",
     "2026-02-24-continual-learning-railway-wheel-fault",
 }
+OFF_TOPIC_TERMS = [
+    "github",
+    "repo bootcamp",
+    "leann",
+    "scrapling",
+    "multi-agent",
+    "agentic",
+    "agent runtime",
+    "llm agent",
+]
+CORE_TERMS = [
+    "railway",
+    "train",
+    "metro",
+    "track",
+    "wayside",
+    "wheel",
+    "wheelset",
+    "bearing",
+    "phm",
+    "predictive maintenance",
+    "condition monitoring",
+    "fault diagnosis",
+    "철도",
+    "차축",
+    "베어링",
+    "예지보전",
+    "상태",
+]
 
 TAG_HINTS = [
     (["railway", "metro", "track", "wheel", "bogie"], ["Railway"]),
@@ -56,6 +87,16 @@ def slugify(value: str) -> str:
     value = re.sub(r"\s+", "-", value)
     value = re.sub(r"-{2,}", "-", value)
     return value.strip("-") or "tag"
+
+
+def load_low_value_slugs() -> set[str]:
+    slugs = set(LOW_VALUE_SLUGS)
+    if LOW_VALUE_FILE.exists():
+        for line in LOW_VALUE_FILE.read_text(encoding="utf-8").splitlines():
+            value = line.strip()
+            if value and not value.startswith("#"):
+                slugs.add(value)
+    return slugs
 
 
 def parse_front_matter(text: str) -> tuple[dict, str]:
@@ -292,8 +333,14 @@ def is_low_value_entry(entry: dict) -> bool:
     title = entry.get("title", "")
     summary = entry.get("summary", "")
     slug = entry_slug(entry)
-    merged = f"{title} {summary}"
-    if slug in LOW_VALUE_SLUGS:
+    merged = f"{slug} {title} {summary}".lower()
+    kind = entry.get("type", "")
+    words = int(entry.get("word_count", 0))
+    if slug in load_low_value_slugs():
+        return True
+    if words and words < MIN_REVIEW_WORDS and kind in {"Post", "Daily arXiv", "Page"}:
+        return True
+    if any(term in merged for term in OFF_TOPIC_TERMS) and not any(term in merged for term in CORE_TERMS):
         return True
     return any(token in merged for token in ["삭제됨", "중복 발행 정리", "보존 처리되었습니다", "대체 문서"])
 

@@ -1,0 +1,16 @@
+# Posts temporarily hidden from the main AdSense review surface.
+# Keep the files live for historical continuity, but remove them from hubs and
+# add noindex until they are rewritten as stronger, topic-focused articles.
+2026-02-24-continual-learning-railway-wheel-fault
+2026-02-24-special-report-500-ai-agents
+2026-02-25-FFT-1DCNN-Train-Fault-Diagnosis
+2026-02-25-special-report-leann-vector-db
+2026-02-25-special-report-repo-bootcamp
+2026-02-26-github-agentic-workflows-analysis
+2026-02-27-scrapling-adaptive-web-scraping-framework
+2026-03-04-github-hot-trends-agentic-ai-industrial-iot
+2026-03-09-external-paper-validation-lstm-ae
+2026-06-18-260419377v1-towards-energy-impact-on-ai-powered-6g-iot-networks-centralized-vs
+2026-06-23-260614589v1-when-errors-become-narratives-a-longitudinal-taxonomy-of-silent-fai
+2026-06-26-260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent
+2026-06-30-260630546v1-mas-lab-a-specification-driven-validation-framework-for-reli
