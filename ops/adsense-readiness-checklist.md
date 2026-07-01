@@ -45,7 +45,7 @@ Last updated: 2026-07-01
 - [x] `content_quality_report.json` reports zero thin/weak candidates
 - [x] `sitemap.xml` points to curated canonical pages, not legacy `/MALT-tech-blog/` paths
 - [x] `robots.txt` blocks generated artifacts and internal ops/archive folders
-- [ ] Confirm the deployed GitHub Pages version contains this cleanup
+- [x] Confirm the deployed GitHub Pages version contains this cleanup
 - [ ] Wait for Search Console recrawl or at least 24 to 48 hours after deployment before requesting AdSense review
 
 ## 6. Recommended next build steps
