@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-01T02:19:19.424529+00:00",
-  "queued_count": 22,
+  "generated_at": "2026-07-02T02:18:57.492690+00:00",
+  "queued_count": 23,
   "queued_titles": [
     {
       "title": "Governance Gaps in Agent Interoperability Protocols: What MCP, A2A, and ACP Cannot Express",
@@ -14,6 +14,13 @@
       "topic": "agent-ops",
       "date": "2026-06-29",
       "slug": "260630602v1-mesa-prioritizing-vulnerable-communication-channels-for-secu",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "The Illusion of Agentic Complexity in README.md Generation: Evaluating Single-Agent vs. Multi-Agent RAG Systems",
+      "topic": "agent-ops",
+      "date": "2026-06-29",
+      "slug": "260630524v2-the-illusion-of-agentic-complexity-in-readmemd-generation-ev",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
