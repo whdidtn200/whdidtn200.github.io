@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-07-02T02:18:57.492690+00:00",
-  "queued_count": 23,
+  "generated_at": "2026-07-03T04:11:59.799261+00:00",
+  "queued_count": 27,
   "queued_titles": [
+    {
+      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
+      "topic": "agent-ops",
+      "date": "2026-07-02",
+      "slug": "260701831v1-lynx-progressive-speculative-quantization-for-accelerating-k",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Congestion-Based Slot Pricing in a Railway Auction Game",
+      "topic": "agent-ops",
+      "date": "2026-07-02",
+      "slug": "260701822v1-congestion-based-slot-pricing-in-a-railway-auction-game",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+      "topic": "agent-ops",
+      "date": "2026-07-02",
+      "slug": "260701793v1-safety-testing-llm-agents-at-scale-from-risk-discovery-to-ev",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Risk Architecture for AI-Native Engineering Teams: An Organizational Framework for Agentic System Governance",
+      "topic": "agent-ops",
+      "date": "2026-07-01",
+      "slug": "260701421v1-risk-architecture-for-ai-native-engineering-teams-an-organiz",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Governance Gaps in Agent Interoperability Protocols: What MCP, A2A, and ACP Cannot Express",
       "topic": "agent-ops",

@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-02",
+  "slug": "260701822v1-congestion-based-slot-pricing-in-a-railway-auction-game",
+  "title": "Congestion-Based Slot Pricing in a Railway Auction Game",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.MA"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "We present a multi-agent system for studying the allocation of discrete, congested resources among heterogeneous strategic agents, motivated by the problem of railway slot allocation under deregulation.",
+    "Multiple operator-agents, differing in size and capacity, interact through a shared auction mechanism over repeated rounds under time-constrained decision-making.",
+    "The mechanism combines a congestion-based base price that increases with aggregate demand with an asymmetric corrective adjustment that penalises the agent requesting the most slots and rewards the agent requesting the fewest, and is designed to mitigate strategic dominance by large agents while preserving transparency and congestion sensitivity."
+  ],
+  "key_points": [
+    "Multiple operator-agents, differing in size and capacity, interact through a shared auction mechanism over repeated rounds under time-constrained decision-making.",
+    "The mechanism combines a congestion-based base price that increases with aggregate demand with an asymmetric corrective adjustment that penalises the agent requesting the most slots and rewards the agent requesting the fewest, and is designed to mitigate strategic dominance by large agents while preserving transparency and congestion sensitivity."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.01822v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.01822v1"
+    }
+  ],
+  "authors": [
+    "Bill Roungas",
+    "Sebastiaan Meijer"
+  ],
+  "abstract": "We present a multi-agent system for studying the allocation of discrete, congested resources among heterogeneous strategic agents, motivated by the problem of railway slot allocation under deregulation. Multiple operator-agents, differing in size and capacity, interact through a shared auction mechanism over repeated rounds under time-constrained decision-making. The mechanism combines a congestion-based base price that increases with aggregate demand with an asymmetric corrective adjustment that penalises the agent requesting the most slots and rewards the agent requesting the fewest, and is designed to mitigate strategic dominance by large agents while preserving transparency and congestion sensitivity. We formulate the interaction as a repeated game with incomplete information and implement the system as a real-time, web-based multi-agent environment in which human participants control individual agents and observe live marginal-cost and competitor feedback.\n  We report exploratory observations from two structured sessions with domain experts acting as operator-agents. The congestion mechanism responds to aggregate demand as designed and the corrective incentives are actively triggered, but agents representing large operators persist with high-request strategies despite the penalty, suggesting that corrective pricing is necessary but not sufficient to neutralise strategic dominance in this multi-agent setting. A post-session debrief indicates that participants' decisions were driven by the assumed agent role rather than personal disposition, and provides qualitative support for strategic motives, such as preserving market presence and raising rivals' costs, operating alongside short-term profit maximisation. We discuss implications for multi-agent mechanism design under asymmetric budgets and outline directions for analytical validation and larger-scale multi-agent experiments.",
+  "entry_id": "http://arxiv.org/abs/2607.01822v1",
+  "arxiv_id": "2607.01822v1",
+  "published_at": "2026-07-02T07:39:19Z",
+  "review": {
+    "why_selected": "이 논문은 철도 설비, 센서, 고장 진단 같은 블로그 핵심 축과 직접 연결된다. 그래서 단순히 최신 논문이라서가 아니라, 지금 블로그 독자에게 바로 설명할 이유가 있는 후보로 봤다.",
+    "interpretation": "내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+  }
+}
