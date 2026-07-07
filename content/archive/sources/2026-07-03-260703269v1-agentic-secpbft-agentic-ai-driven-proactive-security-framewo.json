@@ -1,0 +1,68 @@
+{
+  "date": "2026-07-03",
+  "slug": "260703269v1-agentic-secpbft-agentic-ai-driven-proactive-security-framewo",
+  "title": "Agentic-SecPBFT: Agentic AI-Driven Proactive Security Framework for Wireless PBFT Consensus in Mobile Ad-Hoc Networks",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.NI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "The standard Practical Byzantine Fault Tolerance (PBFT) protocol, designed for stable, wired environments, exhibits critical vulnerabilities when deployed in settings like mobile ad-hoc networks, thus making it susceptible to sophisticated threats such as Sybil attacks, Byzantine collusion, and message manipulation.",
+    "Existing static defense mechanisms are ill-equipped to handle the intelligent and coordinated nature of these attacks.",
+    "To address this challenge, this paper leverages the Agentic AI paradigm to build a distributed multi-agent system in which each consensus node is equipped with an intelligent agent."
+  ],
+  "key_points": [
+    "Existing static defense mechanisms are ill-equipped to handle the intelligent and coordinated nature of these attacks.",
+    "To address this challenge, this paper leverages the Agentic AI paradigm to build a distributed multi-agent system in which each consensus node is equipped with an intelligent agent."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.03269v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.03269v1"
+    }
+  ],
+  "authors": [
+    "Haoxiang Luo",
+    "Yinqiu Liu",
+    "Ruichen Zhang",
+    "Guangyuan Liu",
+    "Gang Sun",
+    "Hongfang Yu",
+    "Zhu Han",
+    "Dong In Kim"
+  ],
+  "abstract": "The standard Practical Byzantine Fault Tolerance (PBFT) protocol, designed for stable, wired environments, exhibits critical vulnerabilities when deployed in settings like mobile ad-hoc networks, thus making it susceptible to sophisticated threats such as Sybil attacks, Byzantine collusion, and message manipulation. Existing static defense mechanisms are ill-equipped to handle the intelligent and coordinated nature of these attacks. To address this challenge, this paper leverages the Agentic AI paradigm to build a distributed multi-agent system in which each consensus node is equipped with an intelligent agent. These agents employ a hierarchical Multi-Agent Deep Q-Network (MADQN) algorithm to learn and execute proactive security policies in real-time. By observing local network behavior, message consistency, and dynamically maintained reputation scores, the agents collaboratively identify suspicious behavior and recommend defensive actions under standard PBFT quorum and membership rules, thereby improving the integrity of the consensus process. We refer to the resulting framework as Agentic-SecPBFT. Then, we formally model key attack vectors and conduct extensive simulations. The results demonstrate that Agentic-SecPBFT reaches a 95.0% attack detection rate with a 1.8% false positive rate. Compared with mainstream PBFT variants, it achieves 3.1* higher throughput with 56% lower latency on average under 33% malicious nodes, offering a robust and adaptive security solution for decentralized wireless systems.",
+  "entry_id": "http://arxiv.org/abs/2607.03269v1",
+  "arxiv_id": "2607.03269v1",
+  "published_at": "2026-07-03T12:37:54Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.",
+    "applicability": "실무 적용 장면도 비교적 선명하다. 정비 시점 판단, 이상 징후 조기 탐지, 센서 이벤트 해석 같은 흐름으로 바로 이어 설명할 수 있다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

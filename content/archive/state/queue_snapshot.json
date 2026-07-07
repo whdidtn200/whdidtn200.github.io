@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-07-03T04:11:59.799261+00:00",
-  "queued_count": 27,
+  "generated_at": "2026-07-07T04:18:36.900463+00:00",
+  "queued_count": 30,
   "queued_titles": [
+    {
+      "title": "Agentic IoT: Architectures, Applications, and Challenges Toward the Internet of Agents",
+      "topic": "agent-ops",
+      "date": "2026-07-05",
+      "slug": "260704219v1-agentic-iot-architectures-applications-and-challenges-toward",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agentic-SecPBFT: Agentic AI-Driven Proactive Security Framework for Wireless PBFT Consensus in Mobile Ad-Hoc Networks",
+      "topic": "agent-ops",
+      "date": "2026-07-03",
+      "slug": "260703269v1-agentic-secpbft-agentic-ai-driven-proactive-security-framewo",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
       "topic": "agent-ops",
@@ -15,6 +29,13 @@
       "date": "2026-07-02",
       "slug": "260701822v1-congestion-based-slot-pricing-in-a-railway-auction-game",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
+      "topic": "agent-ops",
+      "date": "2026-07-02",
+      "slug": "260701793v2-safety-testing-llm-agents-at-scale-from-risk-discovery-to-ev",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
       "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
