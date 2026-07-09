@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-07-07T04:18:36.900463+00:00",
-  "queued_count": 30,
+  "generated_at": "2026-07-09T02:21:09.045994+00:00",
+  "queued_count": 33,
   "queued_titles": [
+    {
+      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+      "topic": "agent-ops",
+      "date": "2026-07-08",
+      "slug": "260706906v1-the-harness-effect-how-orchestration-design-sets-the-token-e",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "LLM Agents for Deliberative Collaboration: A Study on Joint Decision Making Under Partial Observability",
+      "topic": "agent-ops",
+      "date": "2026-07-07",
+      "slug": "260706157v1-llm-agents-for-deliberative-collaboration-a-study-on-joint-d",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-07-07",
+      "slug": "260705844v1-statefuse-deterministic-conflict-preserving-memory-for-multi",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Agentic IoT: Architectures, Applications, and Challenges Toward the Internet of Agents",
       "topic": "agent-ops",

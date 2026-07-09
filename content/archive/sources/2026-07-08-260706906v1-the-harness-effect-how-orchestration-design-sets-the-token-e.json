@@ -1,0 +1,92 @@
+{
+  "date": "2026-07-08",
+  "slug": "260706906v1-the-harness-effect-how-orchestration-design-sets-the-token-e",
+  "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Agentic AI development today runs on token maxing: buying capability with tokens -- longer reasoning traces, more turns, wider tool payloads, bigger replayed contexts -- so tokens per task grow faster than task value.",
+    "Falling per-token prices mask the pattern; total spend rises anyway.",
+    "We argue the decisive lever against token maxing is the harness: the orchestration layer that assembles context, exposes tools, sequences turns, delegates work, and carries enterprise observability and governance."
+  ],
+  "key_points": [
+    "Falling per-token prices mask the pattern; total spend rises anyway.",
+    "We argue the decisive lever against token maxing is the harness: the orchestration layer that assembles context, exposes tools, sequences turns, delegates work, and carries enterprise observability and governance."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.06906v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.06906v1"
+    }
+  ],
+  "authors": [
+    "Muayad Sayed Ali",
+    "Aliaksandra Novik",
+    "Anji Boddupally",
+    "Artem Yavorskyi",
+    "Chris Nickerson",
+    "Daniel Rica",
+    "Emily DuGranrut",
+    "Felix Leung",
+    "Garrett Prince",
+    "Grace Barnett",
+    "Heath Robinson",
+    "Hosain Al Ahmad",
+    "Jesse Resnick",
+    "Juan Carlos Farah",
+    "Jyothi Swaroop Meruga",
+    "Leonid Kuznetsov",
+    "Luke Gorham",
+    "Marie Schmoll",
+    "Michael Paciullo",
+    "Saumya Das",
+    "Sharath Sheripally",
+    "Tommy Griscom",
+    "Mykyta Osadchyi",
+    "Neha Mantri",
+    "Nick Westrum",
+    "Olivia Benowitz",
+    "Parikshith Kulkarni",
+    "Radik Chernyshov",
+    "Rakshith Vasudev",
+    "Rohith Nadimpally",
+    "Vikas Gangadevi",
+    "Waseem AlShikh"
+  ],
+  "abstract": "Agentic AI development today runs on token maxing: buying capability with tokens -- longer reasoning traces, more turns, wider tool payloads, bigger replayed contexts -- so tokens per task grow faster than task value. Falling per-token prices mask the pattern; total spend rises anyway. We argue the decisive lever against token maxing is the harness: the orchestration layer that assembles context, exposes tools, sequences turns, delegates work, and carries enterprise observability and governance. We isolate it with a controlled swap: 22 locked evaluation tasks, six foundation models (Claude Sonnet 4.6, Gemini 3.1, Gemini Flash 3.5, Qwen 3.6, GLM 5.1, Palmyra X6), changing only the orchestration layer -- a frozen conventional production loop versus the Writer Agent Harness. Holding models constant, the harness cuts blended cost per task 41% ($0.21->$0.12), median wall-clock 44% (48s->27s), and tokens per task 38% (14.2k->8.8k), with task-completion quality at parity (0.78->0.81, directional at this sample size). Efficiency is model-invariant -- every model gets cheaper (33-61%) -- while quality gains are capability-dependent: a model's gain correlates almost perfectly with its baseline strength (r=0.99, n=6), a phenomenon we term harness leverage. Quality per dollar rises 82%; task-completions per million tokens rise from 54.9 to 92.0. On this workload the orchestration layer moved cost per task more than the full spread of the model menu did. We formalize token economics at the orchestration layer (including effective input price under prompt caching), detail the six mechanism families behind the effect -- cache-shape discipline to failure-spend governance -- compare six widely used agent systems on the same axes, and argue the harness is the one component whose efficiency multiplies across every model an organization runs -- present and future.",
+  "entry_id": "http://arxiv.org/abs/2607.06906v1",
+  "arxiv_id": "2607.06906v1",
+  "published_at": "2026-07-08T01:58:12Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "실무 적용 장면도 비교적 선명하다. 정비 시점 판단, 이상 징후 조기 탐지, 센서 이벤트 해석 같은 흐름으로 바로 이어 설명할 수 있다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}
