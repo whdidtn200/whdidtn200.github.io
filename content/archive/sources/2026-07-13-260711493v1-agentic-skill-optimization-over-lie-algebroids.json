@@ -1,0 +1,61 @@
+{
+  "date": "2026-07-13",
+  "slug": "260711493v1-agentic-skill-optimization-over-lie-algebroids",
+  "title": "Agentic Skill Optimization over Lie Algebroids",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces.",
+    "Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique.",
+    "Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability."
+  ],
+  "key_points": [
+    "Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique.",
+    "Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.11493v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.11493v1"
+    }
+  ],
+  "authors": [
+    "Sridhar Mahadevan"
+  ],
+  "abstract": "Agentic systems increasingly improve themselves by editing skills: prompts, rubrics, plans, tool contracts, examples, validators, and traces. Skill edits are not independent coordinates in a vector space: they are local repairs to structured artifacts whose effects are observed only after rollout, validation, and critique. Distinct edits can have the same immediate visible effect while differing in routing context, template state, guardrail scope, or future composability. The order of edits can matter as well: repairing a schema before a normalization rule need not be equivalent to applying the same edits in the reverse order. This paper introduces a new framework for skill optimization called LASKO, for Lie Algebroid SKill Optimization. LASKO models typed, anchored Markdown skills as the base category and available edit policies as sections of a controlled Lie algebroid with anchor $ρ$. The anchor maps an edit policy to its visible Markdown effect; the kernel $\\ker(ρ)$ represents latent template, routing, or implementation structure; and the algebroid bracket measures noncommuting edit composition. As shown in the paper, LASKO achieves order-of-magnitude speedups in skill optimization in our preliminary benchmark results, primarily because it substitutes inexpensive Lie-bracket screening tests that run in microseconds, before investing in expensive validations that require running large language models. On a causal extraction from natural language task, LASKO achieved a speedup of almost $15 \\times$ compared to a brute-force approach that validated all edits by running them through a DeepSeek V3.1 4-bit model with 671B parameters.",
+  "entry_id": "http://arxiv.org/abs/2607.11493v1",
+  "arxiv_id": "2607.11493v1",
+  "published_at": "2026-07-13T12:48:09Z",
+  "review": {
+    "why_selected": "주제는 블로그 범위 안에 있지만, 제목만으로 현장 가치가 즉시 드러나는 논문은 아니다. 그래서 발행 여부는 내가 실무 연결고리를 얼마나 분명하게 설명할 수 있는지에 달려 있다고 봤다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "이런 류의 논문은 정리와 분류의 가치가 크지만, 그대로 발행하면 요약문처럼 보이기 쉽다. 그래서 반드시 내가 왜 이 분류가 중요한지 해석을 덧붙여야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

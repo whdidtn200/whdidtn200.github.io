@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-07-10T04:18:17.236722+00:00",
-  "queued_count": 33,
+  "generated_at": "2026-07-14T03:38:37.627410+00:00",
+  "queued_count": 39,
   "queued_titles": [
+    {
+      "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-07-13",
+      "slug": "260711751v1-when-local-monitors-miss-compositional-harm-diagnosing-distr",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agentic Skill Optimization over Lie Algebroids",
+      "topic": "agent-ops",
+      "date": "2026-07-13",
+      "slug": "260711493v1-agentic-skill-optimization-over-lie-algebroids",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Omni-Decision: A Progressive Evidence-State Agent System for Omni-Modal QA",
+      "topic": "agent-ops",
+      "date": "2026-07-13",
+      "slug": "260711433v1-omni-decision-a-progressive-evidence-state-agent-system-for",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Multi-Agent LLMs Fail to Explore Each Other",
+      "topic": "agent-ops",
+      "date": "2026-07-13",
+      "slug": "260711250v1-multi-agent-llms-fail-to-explore-each-other",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "CoDiMAD: Diffusion-Based Privileged Distillation for Communication-Free Multi-Robot Coordination",
+      "topic": "agent-ops",
+      "date": "2026-07-10",
+      "slug": "260709587v1-codimad-diffusion-based-privileged-distillation-for-communic",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "SiFAR: Synchronization-Free All-Reduce for Low-Latency LLM Inference",
+      "topic": "agent-ops",
+      "date": "2026-07-09",
+      "slug": "260708973v1-sifar-synchronization-free-all-reduce-for-low-latency-llm-in",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
       "topic": "agent-ops",
