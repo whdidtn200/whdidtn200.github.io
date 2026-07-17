@@ -10,7 +10,7 @@ Last updated: 2026-07-17
 - [x] Published the first code-and-data-backed MALT experiment with 1,200 simulations
 - [x] Added reproducibility signals to the content quality gate
 - [x] Rebuilt the sitemap from indexable pages so noindex posts are excluded automatically
-- [ ] Publish at least two more code/data-backed experiments or field-oriented original guides
+- [x] Publish at least two more code/data-backed experiments or field-oriented original guides
 - [ ] Confirm the new experiment and refreshed hubs are crawled in Search Console
 - [ ] Do not request another AdSense review before 2026-07-31 unless crawling completes and the two original assets above are already live
 

@@ -24,6 +24,7 @@ GUIDE_PATHS = [
     "wayside-condition-monitoring-guide.html",
     "predictive-maintenance-kpi-roi-guide.html",
     "railway-bearing-sensor-guide.html",
+    "phm-alert-governance-guide.html",
 ]
 
 

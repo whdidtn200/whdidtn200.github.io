@@ -50,14 +50,14 @@
       <section class="hero">
         <div class="kicker">TAG VIEW</div>
         <h1>PHM로 묶인 글</h1>
-        <p>이 태그와 연결된 글 18개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
+        <p>이 태그와 연결된 글 20개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
         <div class="mini-row"><a class="mini-chip" href="/tags/실험실.html">실험실</a><a class="mini-chip" href="/tags/bearing.html">Bearing</a><a class="mini-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis</a><a class="mini-chip" href="/tags/condition-monitoring.html">Condition Monitoring</a><a class="mini-chip" href="/tags/reproduction.html">Reproduction</a><a class="mini-chip" href="/tags/data-quality.html">Data Quality</a></div>
       </section>
-      <a class="featured" href="/bearing-fault-diagnosis-guide.html">
+      <a class="featured" href="/phm-alert-governance-guide.html">
         <div class="eyebrow">START HERE</div>
-        <strong>Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법</strong>
-        <p>베어링 고장 진단은 회전체 설비 유지보전에서 가장 널리 다뤄지는 주제 중 하나입니다. 하지만 현장에서는 여전히 같은 질문이 반복됩니다. `진동 분석만으로 충분한가`, `FFT와 envelope analysis는 아직 유효한가`, `딥러닝 모델이 실제로 더 나은가`, `속도가 바뀌는 장비에서는 무엇이 달라...</p>
-        <div class="meta"><span>Guide</span><span>2026-06-17</span><span>대표 글</span></div>
+        <strong>PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계</strong>
+        <p>모델 점수와 정비 경보는 같은 것이 아니다. 점수는 계산 결과이고, 경보는 누가 언제 어떤 근거로 무엇을 확인해야 하는지 정의된 운영 객체다. 임계치를 넘었다는 이유만으로 작업 지시를 만들면 오경보가 정비팀의 시간을 소모하고 결국 시스템 신뢰가 무너진다.</p>
+        <div class="meta"><span>Guide</span><span>2026-07-17</span><span>대표 글</span></div>
       </a>
       <section class="entry-grid">
         <a class="entry-card" href="/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html">
@@ -70,10 +70,20 @@
           <strong>2026-03-01-wayside-condition-monitoring-review</strong>
           <p>The paradigm shift in railway maintenance from reactive to predictive strategies has reached a critical inflection point. The 2025 Springer Nature comprehensive review (DOI: 10.1007/s40534-025-00423-2) demonstrates that Wayside Condition Monitoring (WCM) technologies, when integrated with advanced AI architectures, can achieve real-time fault detection with unprecedented accuracy and operational efficiency.</p>
         </a>
+        <a class="entry-card" href="/posts/2026-07-17-alarm-persistence-rule-lab.html">
+          <div class="meta"><span>Lab</span><span>2026-07-17</span></div>
+          <strong>[실험실] 한 번 넘으면 경보? 2-of-3와 3-of-5 지속 규칙을 10,000개 이벤트로 비교</strong>
+          <p>한 window가 임계치를 넘는 즉시 경보를 내는 `1-of-1` 규칙은 복합 운전 조건의 정상 이벤트 96.8%에서 한 번 이상 경보를 냈다. `2-of-3`는 59.7%, `3-of-5`는 32.7%로 낮아졌다. 결함 이벤트에서 결함이 시작되기 전 잘못 울린 비율은 각각 68.6%, 20.6%, 6....</p>
+        </a>
         <a class="entry-card" href="/posts/2026-06-22-260216101v1-axle-sensor-fusion-for-online-continual-wheel-fault-detection-in-wa.html">
           <div class="meta"><span>Daily arXiv</span><span>2026-06-22</span></div>
           <strong>[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring</strong>
           <p>이 논문은 wayside 철도 감시에서 가속도계 신호와 FBG strain 센서의 axle semantics를 합쳐, 차륜 flat과 polygonization 같은 미세 결함을 온라인 환경에서도 계속 감지하려는 연구다.</p>
+        </a>
+        <a class="entry-card" href="/bearing-fault-diagnosis-guide.html">
+          <div class="meta"><span>Guide</span><span>2026-06-17</span></div>
+          <strong>Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법</strong>
+          <p>베어링 고장 진단은 회전체 설비 유지보전에서 가장 널리 다뤄지는 주제 중 하나입니다. 하지만 현장에서는 여전히 같은 질문이 반복됩니다. `진동 분석만으로 충분한가`, `FFT와 envelope analysis는 아직 유효한가`, `딥러닝 모델이 실제로 더 나은가`, `속도가 바뀌는 장비에서는 무엇이 달라...</p>
         </a>
         <a class="entry-card" href="/posts/2026-02-25-trustworthy-equipment-monitoring-cascaded-detection.html">
           <div class="meta"><span>Post</span><span>2026-02-25</span></div>

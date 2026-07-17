@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-07-17T17:33:20+09:00",
-  "entry_count": 31,
-  "tag_count": 33,
+  "generated_at": "2026-07-17T20:36:30+09:00",
+  "entry_count": 33,
+  "tag_count": 34,
   "tags": [
     {
       "tag": "PHM",
       "slug": "phm",
-      "count": 18,
+      "count": 20,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Condition Monitoring",
       "slug": "condition-monitoring",
-      "count": 15,
+      "count": 17,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Fault Diagnosis",
       "slug": "fault-diagnosis",
-      "count": 12,
+      "count": 13,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
@@ -40,6 +40,12 @@
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
+      "tag": "Maintenance",
+      "slug": "maintenance",
+      "count": 8,
+      "latest_title": "2026-03-01-wayside-condition-monitoring-review"
+    },
+    {
       "tag": "arXiv",
       "slug": "arxiv",
       "count": 7,
@@ -52,12 +58,6 @@
       "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
-      "tag": "Maintenance",
-      "slug": "maintenance",
-      "count": 7,
-      "latest_title": "2026-03-01-wayside-condition-monitoring-review"
-    },
-    {
       "tag": "MALT",
       "slug": "malt",
       "count": 7,
@@ -66,8 +66,8 @@
     {
       "tag": "Guide",
       "slug": "guide",
-      "count": 5,
-      "latest_title": "Bearing Fault Diagnosis Guide: 진동 분석부터 딥러닝까지, 베어링 고장 진단을 제대로 시작하는 방법"
+      "count": 6,
+      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
     },
     {
       "tag": "Observability",
@@ -88,6 +88,12 @@
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
+      "tag": "Data Quality",
+      "slug": "data-quality",
+      "count": 3,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
       "tag": "AE",
       "slug": "ae",
       "count": 2,
@@ -98,6 +104,36 @@
       "slug": "agentic-ai",
       "count": 2,
       "latest_title": "[arXiv Daily] LLM-based Framework for Bearing Fault Diagnosis"
+    },
+    {
+      "tag": "Alarm Design",
+      "slug": "alarm-design",
+      "count": 2,
+      "latest_title": "[실험실] 한 번 넘으면 경보? 2-of-3와 3-of-5 지속 규칙을 10,000개 이벤트로 비교"
+    },
+    {
+      "tag": "Lab",
+      "slug": "lab",
+      "count": 2,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
+      "tag": "Operations",
+      "slug": "operations",
+      "count": 2,
+      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
+    },
+    {
+      "tag": "Reproduction",
+      "slug": "reproduction",
+      "count": 2,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
+      "tag": "실험실",
+      "slug": "실험실",
+      "count": 2,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Acoustic",
@@ -118,12 +154,6 @@
       "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
     },
     {
-      "tag": "Data Quality",
-      "slug": "data-quality",
-      "count": 1,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
-    },
-    {
       "tag": "Deep Learning",
       "slug": "deep-learning",
       "count": 1,
@@ -142,20 +172,8 @@
       "latest_title": "Predictive Maintenance KPI and ROI Guide: 예지보전 성과를 무엇으로 측정해야 하는가"
     },
     {
-      "tag": "Lab",
-      "slug": "lab",
-      "count": 1,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
-    },
-    {
       "tag": "Lead Time",
       "slug": "lead-time",
-      "count": 1,
-      "latest_title": "Predictive Maintenance KPI and ROI Guide: 예지보전 성과를 무엇으로 측정해야 하는가"
-    },
-    {
-      "tag": "Operations",
-      "slug": "operations",
       "count": 1,
       "latest_title": "Predictive Maintenance KPI and ROI Guide: 예지보전 성과를 무엇으로 측정해야 하는가"
     },
@@ -164,12 +182,6 @@
       "slug": "pdm",
       "count": 1,
       "latest_title": "Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법"
-    },
-    {
-      "tag": "Reproduction",
-      "slug": "reproduction",
-      "count": 1,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "ROI",
@@ -194,12 +206,6 @@
       "slug": "wild",
       "count": 1,
       "latest_title": "Wayside Condition Monitoring Guide: 철도 선로변 상태 감시를 실제 운영 체계로 만드는 방법"
-    },
-    {
-      "tag": "실험실",
-      "slug": "실험실",
-      "count": 1,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     }
   ]
 }

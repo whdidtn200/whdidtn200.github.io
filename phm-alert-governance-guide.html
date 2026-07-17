@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PHM Alert Governance Guide | MALT Tech Blog</title>
+  <meta name="description" content="PHM 모델 점수를 관찰, 검증, 분류, 점검, 작업 지시, 종결로 연결하는 경보 상태·책임·필드·KPI·90일 도입 가이드입니다." />
+  <meta name="author" content="MALT Editorial" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://whdidtn200.github.io/phm-alert-governance-guide.html" />
+  <meta property="og:title" content="PHM Alert Governance Guide" />
+  <meta property="og:description" content="모델 점수를 정비 행동으로 바꾸는 경보 운영 설계" />
+  <meta property="og:url" content="https://whdidtn200.github.io/phm-alert-governance-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-17T19:30:00+09:00" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계","datePublished":"2026-07-17","dateModified":"2026-07-17","author":{"@type":"Organization","name":"MALT Editorial"},"publisher":{"@type":"Organization","name":"MALT Tech Blog"},"url":"https://whdidtn200.github.io/phm-alert-governance-guide.html"}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/hud.css" />
+  <style>
+    .guide-hero{margin-top:14px;padding:clamp(22px,4vw,40px);background:radial-gradient(600px 280px at 100% 0,rgba(212,122,59,.18),transparent 70%),linear-gradient(145deg,#f6fbfb,#f8f2e9)}
+    .guide-hero h1{margin:10px 0 14px;font-size:clamp(32px,5vw,50px);line-height:1.08;color:#102b39;max-width:900px}.guide-hero p{max-width:780px;color:#465f72;font-size:18px;line-height:1.75}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.chip{padding:7px 11px;border:1px solid #c9dce2;border-radius:999px;background:rgba(255,255,255,.75);color:#35556a;font-size:12px}
+    .article{margin-top:14px;padding:clamp(20px,4vw,40px)}.article h2{margin:36px 0 12px;font-size:26px;color:#102b39}.article p,.article li{line-height:1.85;color:#344f63}
+    .lead{font-size:18px;padding:18px;border-left:5px solid #087f8c;background:#eff9f9;border-radius:0 14px 14px 0}.figure{margin:24px 0;padding:14px;border:1px solid #d4e2e9;border-radius:18px;background:#f8fbfc}.figure img{width:100%;height:auto;display:block}.figure figcaption{margin-top:10px;color:#597084;font-size:14px}
+    .state-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.state{padding:16px;border:1px solid #d4e2e9;border-radius:15px;background:#f8fbfc}.state strong{display:block;color:#087f8c;margin-bottom:6px}
+    .table-wrap{overflow-x:auto}.matrix{width:100%;border-collapse:collapse;min-width:650px;margin:18px 0}.matrix th,.matrix td{padding:12px;border-bottom:1px solid #d7e3e9;text-align:left}.matrix th{background:#eef5f7;color:#27485a}
+    .callout{padding:18px;border:1px solid #e2c9a9;border-radius:16px;background:#fff8ee}.sources a{word-break:break-all}@media(max-width:760px){.state-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar"><div class="brand">GUIDE · PHM OPERATIONS</div><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="badge" href="/">HOME</a><a class="badge" href="/GUIDES.html">GUIDES</a><a class="badge" href="/LAB.html">LAB</a></div></div>
+    <header class="card guide-hero"><div class="h">FIELD-ORIENTED EVERGREEN GUIDE</div><h1>PHM Alert Governance Guide</h1><p>모델 점수를 정비 행동으로 바꾸려면 임계치보다 먼저 상태, 책임자, 증거, 작업 지시와 종결 기준이 필요합니다. 이 가이드는 경보 한 건이 생성돼 닫힐 때까지의 운영 구조를 정리합니다.</p><div class="chips"><span class="chip">Updated 2026-07-17</span><span class="chip">PHM Operations</span><span class="chip">Alert Lifecycle</span><span class="chip">90-day rollout</span></div></header>
+    <article class="card article">
+      <p class="lead"><strong>핵심:</strong> 모델 점수는 계산 결과이고 경보는 운영 객체입니다. 누가 언제 어떤 근거로 무엇을 확인해야 하는지, 어떤 결과로 닫혔는지까지 남지 않으면 경보가 많아도 예지보전 체계가 아닙니다.</p>
+      <figure class="figure"><img src="/assets/phm-alert-governance-loop.svg" alt="관찰, 검증, 분류, 점검, 조치, 종결로 이어지는 PHM 경보 운영 생명주기" /><figcaption>MALT original operational diagram. 점검·정비 결과가 baseline과 모델 검토로 돌아올 때 경보 학습 루프가 닫힙니다.</figcaption></figure>
+
+      <h2>여섯 단계 상태 모델</h2>
+      <div class="state-grid"><div class="state"><strong>1. Observe</strong>점수와 속도·하중·환경 조건을 함께 저장</div><div class="state"><strong>2. Qualify</strong>지속성, 중복, 센서 건강도, 정비 mode 확인</div><div class="state"><strong>3. Triage</strong>위험과 운행 영향으로 우선순위·owner 지정</div><div class="state"><strong>4. Inspect</strong>파형·추세·정비 이력·현장 증거 결합</div><div class="state"><strong>5. Act</strong>작업 지시, 제한, 추가 계측, 관찰 유지 결정</div><div class="state"><strong>6. Close</strong>결과 label과 근거를 baseline에 반환</div></div>
+
+      <h2>경보 레코드의 최소 필드</h2>
+      <ul><li><code>alert_id</code>, 자산·부품·센서, 발생·확인·종결 시각</li><li>모델·feature·threshold 버전과 입력 데이터 품질 상태</li><li>속도, 하중, 노선, 계절, 운전 mode 같은 context</li><li>baseline 대비 변화량, persistence 결과, confidence</li><li>severity, owner, due time, escalation rule</li><li>inspection, work order, 교체 부품, 실제 발견 결함</li><li>true positive, false positive, inconclusive, sensor issue 종결 label</li></ul>
+
+      <h2>Severity와 Confidence를 분리하라</h2>
+      <p>Severity는 틀렸을 때의 영향이고 confidence는 현재 증거의 강도입니다. 안전 영향이 큰 저신뢰 경보는 무시할 대상이 아니라 추가 센서 확인이나 짧은 재측정으로 보내야 합니다.</p>
+      <div class="table-wrap"><table class="matrix"><thead><tr><th>Severity</th><th>의미</th><th>기본 행동</th></tr></thead><tbody><tr><td>S1</td><td>추세 관찰</td><td>다음 주기까지 watch</td></tr><tr><td>S2</td><td>성능 저하 가능</td><td>원격 검토와 추가 데이터</td></tr><tr><td>S3</td><td>정비 필요 가능성</td><td>inspection ticket</td></tr><tr><td>S4</td><td>안전·운행 영향 가능</td><td>즉시 escalation</td></tr></tbody></table></div>
+
+      <h2>Persistence와 억제 규칙</h2>
+      <p>단일 초과 경보는 이벤트 단위 오경보를 키울 수 있습니다. `2-of-3`, `3-of-5`, hysteresis, cooldown을 자산별로 조합하되 탐지 지연을 함께 측정해야 합니다. 계획 정비, 시운전, 센서 장애, 동일 root cause의 중복 경보는 삭제하지 말고 `suppressed` 상태와 이유를 기록합니다.</p>
+      <div class="callout"><strong>실험 연결:</strong> MALT의 10,000개 이벤트 실험에서 복합 조건 정상 이벤트 오경보는 `1-of-1` 96.8%에서 `3-of-5` 32.7%로 줄었지만 중앙값 1 window의 탐지 지연이 생겼습니다. 규칙은 숫자만 복사하지 말고 window 길이와 고장 진행 시간을 함께 정해야 합니다.</div>
+
+      <h2>역할과 승인 경계</h2>
+      <ul><li>Data/PHM engineer: threshold, 모델·feature 버전, drift 관리</li><li>Maintenance planner: inspection 우선순위와 일정 결정</li><li>Field maintainer: 실제 상태, 조치, 부품 기록</li><li>Operations controller: 운행 영향과 즉시 대응 결정</li><li>Asset owner: 위험 수용, 정책 변경, KPI 승인</li></ul>
+      <p>AI는 후보 묶기, 관련 이력 찾기, 설명 초안, 반복 경보 요약을 보조할 수 있습니다. 안전 영향이 있는 작업 지시와 운행 제한은 책임자의 승인 경계를 유지합니다.</p>
+
+      <h2>경보 품질 KPI</h2>
+      <ul><li>Alert-to-inspection conversion과 confirmed finding rate</li><li>Detection lead time과 time to acknowledge/triage/close</li><li>자산·노선·근무조별 nuisance burden</li><li>종결 후 repeat alert rate</li><li>label 없이 닫힌 unknown outcome rate</li></ul>
+      <p>정확도와 F1만으로는 정비 부담, 지연, 미종결 사건을 설명할 수 없습니다.</p>
+
+      <h2>주간 경보 리뷰 회의 양식</h2>
+      <p>주간 리뷰는 모델 성능 발표가 아니라 경보 정책을 조정하는 운영 회의여야 합니다. 지난 7일의 신규 경보, 미종결 경보, 반복 경보, false positive 상위 자산을 먼저 보고 각 경보에 owner, 다음 행동, 기한을 붙입니다. 회의에서 threshold를 즉시 바꾸기보다 변경 후보와 근거를 별도 queue에 남깁니다.</p>
+      <ul><li>바로 점검할 경보와 관찰을 유지할 경보를 분리합니다.</li><li>센서 문제, 운전 조건 변화, 모델 drift 중 원인 가설을 기록합니다.</li><li>threshold 또는 persistence 변경의 예상 효과와 rollback 기준을 정합니다.</li><li>종결 label이 없는 과거 경보의 보완 담당자와 기한을 지정합니다.</li></ul>
+      <p>경보 payload에는 <code>model_version</code>, <code>threshold_version</code>, <code>context</code>, <code>persistence</code>, <code>severity</code>, <code>owner</code>, <code>linked_work_order</code>, <code>closure_label</code>을 포함합니다. 이 구조가 있어야 정책 변경 전후를 비교하고 문제가 생겼을 때 어느 버전으로 되돌아갈지 판단할 수 있습니다.</p>
+
+      <h2>30·60·90일 도입 순서</h2>
+      <p><strong>30일:</strong> 자산 한 종류, severity 두 단계, record schema, owner, 종결 label을 만듭니다. <strong>60일:</strong> persistence와 suppression reason을 적용하고 주간 false alarm review를 시작합니다. <strong>90일:</strong> CMMS 작업 지시와 연결하고 threshold 변경 전후의 workload와 lead time을 비교합니다.</p>
+      <p>모델 재학습은 마지막입니다. 점검 결과가 안정적으로 돌아오지 않는 상태에서 재학습부터 자동화하면 잘못된 label을 더 빠르게 증폭할 수 있습니다.</p>
+
+      <h2>한계와 적용 범위</h2>
+      <p>이 가이드는 특정 철도 운영사의 안전 규정이나 승인 절차를 대체하지 않습니다. 자산 위험 등급, 법규, 운행 규칙에 맞춰 severity와 승인 경계를 다시 정의해야 합니다.</p>
+
+      <h2>출처와 연결 자료</h2>
+      <ul class="sources"><li><a href="https://www.iso.org/standard/36645.html">ISO 13374-2: Condition monitoring data processing</a></li><li><a href="https://www.iso.org/standard/54933.html">ISO 13374-4: Presentation and decision support</a></li><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI Risk Management Framework 1.0</a></li><li><a href="/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html">베어링 임계치 강건성 실험</a></li><li><a href="/posts/2026-07-17-alarm-persistence-rule-lab.html">경보 persistence rule 실험</a></li></ul>
+      <p>Codex 기반 AI 자동화가 초안 구성을 보조했으며, MALT의 공개 실험 결과와 표준 기관의 공개 설명을 현장형 체크리스트로 재구성했습니다.</p>
+    </article>
+  </main>
+</body>
+</html>

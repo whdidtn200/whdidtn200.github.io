@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[실험실] 1-of-1, 2-of-3, 3-of-5 경보 지속 규칙 비교 | MALT Tech Blog</title>
+  <meta name="description" content="공개 베어링 특징을 bootstrap한 10,000개 이벤트로 단일 초과, 2-of-3, 3-of-5 경보 규칙의 오경보와 탐지 지연을 비교합니다." />
+  <meta name="author" content="MALT Lab" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://whdidtn200.github.io/posts/2026-07-17-alarm-persistence-rule-lab.html" />
+  <meta property="og:title" content="한 번 넘으면 경보? 지속 규칙 10,000개 이벤트 실험" />
+  <meta property="og:description" content="1-of-1, 2-of-3, 3-of-5의 오경보와 탐지 지연을 코드와 데이터로 비교" />
+  <meta property="og:url" content="https://whdidtn200.github.io/posts/2026-07-17-alarm-persistence-rule-lab.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-17T19:10:00+09:00" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"한 번 넘으면 경보? 2-of-3와 3-of-5 지속 규칙을 10,000개 이벤트로 비교","datePublished":"2026-07-17","dateModified":"2026-07-17","author":{"@type":"Organization","name":"MALT Lab"},"publisher":{"@type":"Organization","name":"MALT Tech Blog"},"url":"https://whdidtn200.github.io/posts/2026-07-17-alarm-persistence-rule-lab.html"}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/hud.css" />
+  <style>
+    .lab-hero{margin-top:14px;padding:26px;background:linear-gradient(145deg,#253041,#145c66);color:#f3fbfc}
+    .lab-hero h1{margin:10px 0 12px;font-size:clamp(30px,5vw,48px);line-height:1.12;color:#fff}
+    .lab-hero p{max-width:800px;color:#d7ebee;font-size:17px;line-height:1.75}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.chip{padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#e7f7f8;font-size:12px;text-decoration:none}
+    .article{margin-top:14px;padding:clamp(20px,4vw,38px)}.article h2{margin:34px 0 12px;color:#102b39;font-size:25px}.article p,.article li{line-height:1.85;color:#344f63}
+    .lead{font-size:18px;padding:18px;border-left:5px solid #d8a62e;background:#fffaf0;border-radius:0 14px 14px 0}
+    .figure{margin:24px 0;padding:14px;border:1px solid #d4e2e9;border-radius:18px;background:#f8fbfc}.figure img{display:block;width:100%;height:auto;border-radius:12px}.figure figcaption{margin-top:10px;color:#597084;font-size:14px;line-height:1.7}
+    .result-wrap{overflow-x:auto}.result-table{width:100%;border-collapse:collapse;margin:18px 0;min-width:700px;font-size:14px}.result-table th,.result-table td{padding:12px 10px;border-bottom:1px solid #d7e3e9;text-align:right}.result-table th:first-child,.result-table td:first-child{text-align:left}.result-table th{background:#eef5f7;color:#27485a}
+    .evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.evidence{padding:16px;border:1px solid #d4e2e9;border-radius:15px;background:#f8fbfc}.evidence strong{display:block;font-size:22px;color:#087f8c;margin-bottom:6px}
+    .method{padding:18px;border:1px solid #bad7dc;border-radius:16px;background:#eff9f9}.source-list a{word-break:break-all}@media(max-width:760px){.evidence-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar"><div class="brand">MALT · REPRODUCIBLE LAB 02</div><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="badge" href="/">HOME</a><a class="badge" href="/LAB.html">LAB</a><a class="badge" href="/posts.html">ARCHIVE</a></div></div>
+    <header class="card lab-hero">
+      <div class="h" style="color:#8bdde0">BOOTSTRAP BENCHMARK · CODE AND DATA INCLUDED</div>
+      <h1>한 번 넘으면 경보?<br />2-of-3와 3-of-5 지속 규칙 비교</h1>
+      <p>앞선 베어링 실험의 공개 특징 1,200개를 bootstrap해 10,000개 이벤트를 만들고, 경보 지속 규칙이 오경보와 탐지 지연을 어떻게 바꾸는지 비교했습니다.</p>
+      <div class="chips"><span class="chip">10,000 events</span><span class="chip">12 windows/event</span><span class="chip">Seed 2026071702</span><a class="chip" href="/tags/reproduction.html">Reproduction</a></div>
+    </header>
+    <article class="card article">
+      <p class="lead"><strong>결론:</strong> 복합 조건의 정상 이벤트 오경보율은 `1-of-1` 96.8%, `2-of-3` 59.7%, `3-of-5` 32.7%였습니다. `3-of-5`는 결함 시작 전 잘못 울리는 비율을 6.0%까지 낮추면서 결함 후 탐지율 94.0%를 유지했지만, 중앙값 1 window의 지연이 생겼습니다.</p>
+      <div class="evidence-grid"><div class="evidence"><strong>96.8% → 32.7%</strong>정상 이벤트 오경보 감소</div><div class="evidence"><strong>68.6% → 6.0%</strong>결함 전 조기 오경보 감소</div><div class="evidence"><strong>94.0%</strong>3-of-5 결함 후 탐지율</div></div>
+
+      <h2>왜 이벤트 단위로 다시 봤나</h2>
+      <p>단일 window 오경보율이 25%라면 작아 보일 수 있지만, 한 이벤트에 12개 window가 있으면 적어도 한 번 울릴 확률은 훨씬 커집니다. 현장에서는 모델 점수 한 줄보다 열차 통과, 설비 운전 cycle, 점검 기간 같은 이벤트 단위 경보가 작업량을 결정합니다.</p>
+
+      <h2>실험 방법</h2>
+      <div class="method"><strong>입력:</strong> 첫 실험의 공개 normalized_impulse 특징 1,200개<br /><strong>이벤트:</strong> 조건별 정상/결함 각 1,000개, 총 10,000개<br /><strong>길이:</strong> 이벤트당 12 window, 결함은 4번째 window부터 활성<br /><strong>규칙:</strong> 1-of-1, 2-of-3, 3-of-5<br /><strong>재현:</strong> Python 표준 라이브러리, bootstrap seed 2026071702</div>
+
+      <h2>정상 이벤트 오경보 결과</h2>
+      <figure class="figure"><img src="/assets/lab-generated/2026-07-17-alarm-persistence-false-alarm.svg" alt="조건별 경보 지속 규칙 이벤트 오경보율" /><figcaption>MALT Lab original result. 복합 조건에서는 단일 초과 경보가 거의 모든 정상 이벤트에서 한 번 이상 울렸습니다. 지속 규칙은 이를 낮췄지만 완전히 제거하지 못했습니다.</figcaption></figure>
+
+      <h2>복합 조건의 오경보와 탐지 지연</h2>
+      <div class="result-wrap"><table class="result-table"><thead><tr><th>규칙</th><th>정상 이벤트 오경보</th><th>결함 전 조기 오경보</th><th>결함 후 탐지율</th><th>지연 중앙값</th></tr></thead><tbody><tr><td>1-of-1</td><td>96.8%</td><td>68.6%</td><td>31.4%</td><td>0 window</td></tr><tr><td>2-of-3</td><td>59.7%</td><td>20.6%</td><td>79.4%</td><td>1 window</td></tr><tr><td>3-of-5</td><td>32.7%</td><td>6.0%</td><td>94.0%</td><td>1 window</td></tr></tbody></table></div>
+      <p>`1-of-1`의 결함 후 탐지율이 낮은 이유는 결함이 시작되기 전에 이미 잘못 울린 이벤트를 정상적인 결함 탐지로 세지 않았기 때문입니다. 민감한 경보가 아니라 시간 의미를 잃은 경보입니다.</p>
+
+      <h2>현장 적용 판단</h2>
+      <ul><li>먼저 속도·하중·소음별 baseline을 안정화하고, 그 다음 persistence rule을 적용합니다.</li><li>window가 10초인지 10분인지에 따라 1 window 지연의 운영 비용이 달라집니다.</li><li>결함 진행이 빠른 안전 핵심 자산에는 별도 즉시 경보 채널과 지속 경보 채널을 병행할 수 있습니다.</li><li>경보 수가 아니라 실제 점검 티켓으로 전환된 비율과 선행 시간을 함께 기록해야 합니다.</li></ul>
+
+      <h2>한계</h2>
+      <ul><li>실제 연속 파형이 아니라 공개 특징 행을 bootstrap했습니다.</li><li>인접 window의 물리적 자기상관을 직접 모델링하지 않았습니다.</li><li>결함 시작점을 고정했으며 여러 고장 진행 속도는 다음 실험 과제입니다.</li><li>수치는 현장 정확도 주장이 아니라 경보 규칙의 작동 원리를 분리한 결과입니다.</li></ul>
+
+      <h2>코드와 원자료</h2>
+      <ul class="source-list"><li><a href="/experiments/alarm_persistence_benchmark.py">실행 코드</a></li><li><a href="/data/lab-results/alarm-persistence-summary.csv">요약 CSV</a></li><li><a href="/data/lab-results/alarm-persistence-event-sample.csv">이벤트 표본 CSV</a></li><li><a href="/data/lab-results/bearing-threshold-samples.csv">원본 특징 CSV</a></li><li><a href="/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html">첫 번째 임계치 실험</a></li></ul>
+      <p><code>python3 experiments/alarm_persistence_benchmark.py</code>로 결과를 재생성할 수 있습니다. Codex 기반 AI 자동화가 실행과 초안 정리를 보조했으며 공개 코드와 데이터가 검증 근거입니다.</p>
+    </article>
+  </main>
+</body>
+</html>

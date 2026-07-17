@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 720" role="img" aria-labelledby="title desc">
+<title id="title">Event false alarm rate by persistence rule</title>
+<desc id="desc">Twelve-window healthy events bootstrapped from the published synthetic bearing feature set.</desc>
+<rect width="1180" height="720" rx="28" fill="#f4f8fa"/>
+<text x="70" y="70" font-family="Avenir Next, sans-serif" font-size="32" font-weight="700" fill="#10253a">Event false alarm rate by persistence rule</text>
+<text x="70" y="108" font-family="Avenir Next, sans-serif" font-size="17" fill="#526a7f">1,000 healthy 12-window events per condition; bootstrap seed 2026071702</text>
+<line x1="110" y1="570.0" x2="1090" y2="570.0" stroke="#d5e1e8"/>
+<text x="92" y="576.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">0%</text>
+<line x1="110" y1="486.0" x2="1090" y2="486.0" stroke="#d5e1e8"/>
+<text x="92" y="492.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">20%</text>
+<line x1="110" y1="402.0" x2="1090" y2="402.0" stroke="#d5e1e8"/>
+<text x="92" y="408.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">40%</text>
+<line x1="110" y1="318.0" x2="1090" y2="318.0" stroke="#d5e1e8"/>
+<text x="92" y="324.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">60%</text>
+<line x1="110" y1="234.0" x2="1090" y2="234.0" stroke="#d5e1e8"/>
+<text x="92" y="240.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">80%</text>
+<line x1="110" y1="150.0" x2="1090" y2="150.0" stroke="#d5e1e8"/>
+<text x="92" y="156.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">100%</text>
+<rect x="145.0" y="570.0" width="42" height="0.0" rx="7" fill="#e06c3b"/>
+<text x="166.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="187.0" y="570.0" width="42" height="0.0" rx="7" fill="#d8a62e"/>
+<text x="208.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="229.0" y="570.0" width="42" height="0.0" rx="7" fill="#087f8c"/>
+<text x="250.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<text x="208.0" y="604" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="14" fill="#42586d">clean</text>
+<rect x="341.0" y="570.0" width="42" height="0.0" rx="7" fill="#e06c3b"/>
+<text x="362.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="383.0" y="570.0" width="42" height="0.0" rx="7" fill="#d8a62e"/>
+<text x="404.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="425.0" y="570.0" width="42" height="0.0" rx="7" fill="#087f8c"/>
+<text x="446.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<text x="404.0" y="604" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="14" fill="#42586d">high noise</text>
+<rect x="537.0" y="570.0" width="42" height="0.0" rx="7" fill="#e06c3b"/>
+<text x="558.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="579.0" y="570.0" width="42" height="0.0" rx="7" fill="#d8a62e"/>
+<text x="600.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="621.0" y="570.0" width="42" height="0.0" rx="7" fill="#087f8c"/>
+<text x="642.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<text x="600.0" y="604" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="14" fill="#42586d">speed drift</text>
+<rect x="733.0" y="570.0" width="42" height="0.0" rx="7" fill="#e06c3b"/>
+<text x="754.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="775.0" y="570.0" width="42" height="0.0" rx="7" fill="#d8a62e"/>
+<text x="796.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<rect x="817.0" y="570.0" width="42" height="0.0" rx="7" fill="#087f8c"/>
+<text x="838.0" y="562.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">0.0</text>
+<text x="796.0" y="604" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="14" fill="#42586d">load change</text>
+<rect x="929.0" y="163.4" width="42" height="406.6" rx="7" fill="#e06c3b"/>
+<text x="950.0" y="155.4" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">96.8</text>
+<rect x="971.0" y="319.3" width="42" height="250.7" rx="7" fill="#d8a62e"/>
+<text x="992.0" y="311.3" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">59.7</text>
+<rect x="1013.0" y="432.7" width="42" height="137.3" rx="7" fill="#087f8c"/>
+<text x="1034.0" y="424.7" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="12" font-weight="700" fill="#20384c">32.7</text>
+<text x="992.0" y="604" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="14" fill="#42586d">combined</text>
+<rect x="230" y="640" width="22" height="22" rx="5" fill="#e06c3b"/>
+<text x="264" y="657" font-family="Avenir Next, sans-serif" font-size="16" fill="#314a60">1-of-1</text>
+<rect x="490" y="640" width="22" height="22" rx="5" fill="#d8a62e"/>
+<text x="524" y="657" font-family="Avenir Next, sans-serif" font-size="16" fill="#314a60">2-of-3</text>
+<rect x="750" y="640" width="22" height="22" rx="5" fill="#087f8c"/>
+<text x="784" y="657" font-family="Avenir Next, sans-serif" font-size="16" fill="#314a60">3-of-5</text>
+</svg>
