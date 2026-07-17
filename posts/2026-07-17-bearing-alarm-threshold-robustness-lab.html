@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[실험실] 베어링 이상 경보 임계치 강건성 실험 | MALT Tech Blog</title>
+  <meta name="description" content="1,200개 합성 베어링 신호로 고정 임계치와 운전 조건 정규화 점수를 비교하고 오경보가 증가하는 이유를 코드, CSV, 그래프로 검증합니다." />
+  <meta name="author" content="MALT Lab" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://whdidtn200.github.io/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html" />
+  <meta property="og:title" content="베어링 이상 경보 임계치는 운전 조건 변화에 얼마나 흔들리는가" />
+  <meta property="og:description" content="재실행 가능한 1,200개 합성 신호 실험과 원자료 공개" />
+  <meta property="og:url" content="https://whdidtn200.github.io/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-17T17:30:00+09:00" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가","datePublished":"2026-07-17","dateModified":"2026-07-17","author":{"@type":"Organization","name":"MALT Lab"},"publisher":{"@type":"Organization","name":"MALT Tech Blog"},"url":"https://whdidtn200.github.io/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html"}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/hud.css" />
+  <style>
+    .lab-hero{margin-top:14px;padding:26px;background:linear-gradient(145deg,#102b39,#164a55);color:#f3fbfc}
+    .lab-hero h1{margin:10px 0 12px;font-size:clamp(30px,5vw,48px);line-height:1.12;color:#fff}
+    .lab-hero p{max-width:780px;color:#d5e9ec;font-size:17px;line-height:1.75}
+    .meta-row,.tag-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .meta-chip,.tag-chip{padding:7px 11px;border:1px solid rgba(255,255,255,.25);border-radius:999px;color:#e7f7f8;font-size:12px;text-decoration:none}
+    .article{margin-top:14px;padding:clamp(20px,4vw,38px)}
+    .article h2{margin:34px 0 12px;color:#102b39;font-size:25px}
+    .article p,.article li{line-height:1.85;color:#344f63}
+    .lead{font-size:18px;padding:18px;border-left:5px solid #e06c3b;background:#fff7f1;border-radius:0 14px 14px 0}
+    .figure{margin:24px 0;padding:14px;border:1px solid #d4e2e9;border-radius:18px;background:#f8fbfc}
+    .figure img{display:block;width:100%;height:auto;border-radius:12px}
+    .figure figcaption{margin-top:10px;color:#597084;font-size:14px;line-height:1.7}
+    .result-table{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px}
+    .result-table th,.result-table td{padding:12px 10px;border-bottom:1px solid #d7e3e9;text-align:right}
+    .result-table th:first-child,.result-table td:first-child{text-align:left}
+    .result-table th{background:#eef5f7;color:#27485a}
+    .evidence-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+    .evidence{padding:16px;border:1px solid #d4e2e9;border-radius:15px;background:#f8fbfc}
+    .evidence strong{display:block;font-size:22px;color:#087f8c;margin-bottom:6px}
+    .method-note{padding:18px;border:1px solid #bad7dc;border-radius:16px;background:#eff9f9}
+    .source-list a{word-break:break-all}
+    @media(max-width:760px){.evidence-grid{grid-template-columns:1fr}.result-wrap{overflow-x:auto}.result-table{min-width:650px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar">
+      <div class="brand">MALT · REPRODUCIBLE LAB</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><a class="badge" href="/">HOME</a><a class="badge" href="/LAB.html">LAB</a><a class="badge" href="/posts.html">ARCHIVE</a></div>
+    </div>
+
+    <header class="card lab-hero">
+      <div class="h" style="color:#83d7da">ORIGINAL SYNTHETIC BENCHMARK · NO FIELD-ACCURACY CLAIM</div>
+      <h1>베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가</h1>
+      <p>고정 임계치와 운전 조건 정규화 점수를 1,200개 합성 신호에서 비교했습니다. 결과 숫자만 보여주지 않고 실행 코드, 요약 CSV, 신호 특징 원자료까지 공개합니다.</p>
+      <div class="meta-row"><span class="meta-chip">발행 2026-07-17</span><span class="meta-chip">Python 표준 라이브러리</span><span class="meta-chip">Seed 20260717</span><span class="meta-chip">1,200 simulations</span></div>
+      <div class="tag-row"><a class="tag-chip" href="/tags/실험실.html">실험실</a><a class="tag-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis</a><a class="tag-chip" href="/tags/condition-monitoring.html">Condition Monitoring</a><a class="tag-chip" href="/tags/reproduction.html">Reproduction</a></div>
+    </header>
+
+    <article class="card article">
+      <p class="lead"><strong>결론부터:</strong> 깨끗한 조건에서 정상 오경보율 5%로 맞춘 고정 절대 임계치는 고소음과 복합 조건에서 정상 신호를 100% 경보로 분류했습니다. 정규화 점수는 이를 0%와 25%로 낮췄습니다. 이 실험의 차이는 탐지율보다 <strong>정상 운전 변화에 대한 경보 안정성</strong>에서 나타났습니다.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence"><strong>1,200</strong>5개 조건 × 정상/결함 × 각 120회</div>
+        <div class="evidence"><strong>100% → 0%</strong>고소음 조건 오경보율 변화</div>
+        <div class="evidence"><strong>100% → 25%</strong>복합 조건 오경보율 변화</div>
+      </div>
+
+      <h2>왜 이 실험을 했나</h2>
+      <p>현장의 상태 감시 경보는 깨끗한 기준 데이터에서 한 번 정한 진동 임계치를 오래 사용하는 경우가 많습니다. 하지만 속도, 하중, 배경 소음이 바뀌면 신호의 절대 크기도 달라집니다. 결함이 없어도 경보가 늘어나는 이유입니다.</p>
+      <p>이번 실험은 두 가설을 확인합니다. 첫째, clean 조건에서 정한 절대 임계치는 소음과 하중 변화에서 오경보가 급증할 것입니다. 둘째, 신호 RMS와 kurtosis를 함께 반영한 정규화 점수는 조건 변화에 더 안정적일 것입니다. 정규화 방식이 결함 탐지율을 크게 잃는다면 오경보 감소만으로 더 낫다고 판단하지 않는다는 반증 조건도 함께 뒀습니다.</p>
+
+      <h2>실험 설계와 재현 조건</h2>
+      <div class="method-note">
+        <strong>신호:</strong> 2,048 Hz, 1초, 회전 1배·2배 성분과 Gaussian noise<br />
+        <strong>결함:</strong> 회전 속도의 약 4.05배 주기로 주입한 620 Hz 감쇠 충격<br />
+        <strong>조건:</strong> clean, high noise, speed drift, load change, combined<br />
+        <strong>반복:</strong> 조건별 정상 120개, 결함 120개<br />
+        <strong>재현:</strong> Python 외부 패키지 없음, 난수 시드 20260717
+      </div>
+      <p>Fixed absolute threshold는 clean 정상 데이터의 first-difference RMS 95백분위수를 사용했습니다. Context-normalized 방식은 <code>diff RMS / signal RMS × sqrt(kurtosis)</code>를 계산하고 다섯 정상 조건 전체의 95백분위수를 임계치로 사용했습니다.</p>
+
+      <h2>결과 1: 탐지율보다 오경보가 먼저 무너졌다</h2>
+      <figure class="figure">
+        <img src="/assets/lab-generated/2026-07-17-bearing-threshold-false-alarm.svg" alt="운전 조건별 고정 임계치와 정규화 방식의 오경보율 비교" />
+        <figcaption>MALT Lab original result. 소음이 커지거나 조건이 겹치면 절대 임계치가 정상 신호를 모두 경보로 판단했습니다. 그래프는 공개 CSV에서 동일하게 재생성됩니다.</figcaption>
+      </figure>
+      <div class="result-wrap"><table class="result-table">
+        <thead><tr><th>조건</th><th>고정 오경보</th><th>정규화 오경보</th><th>고정 탐지율</th><th>정규화 탐지율</th></tr></thead>
+        <tbody>
+          <tr><td>Clean</td><td>5.0%</td><td>0.0%</td><td>100%</td><td>100%</td></tr>
+          <tr><td>High noise</td><td>100%</td><td>0.0%</td><td>100%</td><td>100%</td></tr>
+          <tr><td>Speed drift</td><td>13.3%</td><td>0.0%</td><td>100%</td><td>100%</td></tr>
+          <tr><td>Load change</td><td>27.5%</td><td>0.0%</td><td>100%</td><td>100%</td></tr>
+          <tr><td>Combined</td><td>100%</td><td>25.0%</td><td>100%</td><td>100%</td></tr>
+        </tbody>
+      </table></div>
+      <p>고정 임계치는 이 통제된 실험에서 결함을 놓치지는 않았지만, 소음이 커지는 순간 정상과 결함을 구분하는 경보로서 기능을 잃었습니다. 정규화 방식도 combined 조건에서는 정상 4개 중 1개를 오경보로 분류했습니다. 정규화는 완성된 해결책이 아니라 조건 변화를 흡수하는 첫 방어선이라는 뜻입니다.</p>
+
+      <h2>결과 2: 100% 탐지율을 현장 성능으로 읽으면 안 된다</h2>
+      <figure class="figure">
+        <img src="/assets/lab-generated/2026-07-17-bearing-threshold-detection.svg" alt="운전 조건별 결함 탐지율 비교" />
+        <figcaption>두 방식 모두 결함 신호를 100% 탐지했습니다. 결함 충격을 비교적 명확하게 주입한 합성 실험의 결과이며 실제 베어링 정확도 주장이 아닙니다.</figcaption>
+      </figure>
+      <p>이 수치를 성능 홍보에 쓰면 실험의 목적을 벗어납니다. 합성 결함이 분명했기 때문에 sensitivity가 포화된 것입니다. 이번 결과가 말해주는 것은 “정규화 방식의 정확도가 100%”가 아니라, <strong>탐지 가능한 결함에서도 잘못 설계된 임계치는 정상 데이터를 대량 경보로 바꿀 수 있다</strong>는 점입니다.</p>
+
+      <h2>현장 운영으로 옮길 때의 체크리스트</h2>
+      <ul>
+        <li>전체 정확도 대신 speed band, load proxy, noise floor별 false alarm rate를 따로 기록합니다.</li>
+        <li>임계치를 센서별 상수 하나로 두지 않고 운전 조건별 baseline과 함께 버전 관리합니다.</li>
+        <li>단일 순간 초과가 아니라 여러 window에서 지속되는지 보는 persistence rule을 둡니다.</li>
+        <li>경보 뒤 점검 결과를 정상/결함 기준선으로 되돌려 보내되 자동 재학습은 승인 절차와 분리합니다.</li>
+        <li>combined 조건처럼 정규화도 흔들리는 구간은 다중 특징 합의와 센서 상태 진단을 추가합니다.</li>
+      </ul>
+
+      <h2>한계와 다음 검증</h2>
+      <ul>
+        <li>실제 베어링 데이터가 아니라 원리를 분리해 보기 위한 합성 신호입니다.</li>
+        <li>감쇠 충격과 소음 모델이 실제 차량·선로 전달 경로를 모두 표현하지 않습니다.</li>
+        <li>정규화 임계치를 다양한 정상 조건으로 보정했으므로 운영 전 정상 데이터 확보 비용이 생깁니다.</li>
+        <li>다음 실험은 공개 bearing dataset에서 조건별 baseline과 persistence rule이 오경보와 lead time을 얼마나 바꾸는지 검증해야 합니다.</li>
+      </ul>
+
+      <h2>코드와 원자료</h2>
+      <ul class="source-list">
+        <li><a href="/experiments/bearing_threshold_robustness.py">실행 코드: bearing_threshold_robustness.py</a></li>
+        <li><a href="/data/lab-results/bearing-threshold-summary.csv">조건별 요약 CSV</a></li>
+        <li><a href="/data/lab-results/bearing-threshold-samples.csv">1,200개 특징 원자료 CSV</a></li>
+      </ul>
+      <p><code>python3 experiments/bearing_threshold_robustness.py</code>를 실행하면 같은 표와 SVG가 생성됩니다. 이 글은 논문 요약이 아니라 MALT 저장소에서 직접 실행한 결과를 바탕으로 작성했으며, 결과의 적용 범위와 한계를 함께 공개합니다.</p>
+    </article>
+  </main>
+</body>
+</html>

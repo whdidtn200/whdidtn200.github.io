@@ -14,3 +14,6 @@
 2026-06-23-260614589v1-when-errors-become-narratives-a-longitudinal-taxonomy-of-silent-fai
 2026-06-26-260620493v1-contagion-networks-evaluator-bias-propagation-in-multi-agent
 2026-06-30-260630546v1-mas-lab-a-specification-driven-validation-framework-for-reli
+2026-06-19-lab-cvcmtrackcircuitspre-emptivefailurediagnosticsforpredictivemaintenanceus
+2026-06-19-lab-innovativedistributedmaintenanceconceptfromthedesigntocostoptimisation
+2026-03-09-phm-validation-report

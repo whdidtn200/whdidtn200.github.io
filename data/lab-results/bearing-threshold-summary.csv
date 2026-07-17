@@ -1,0 +1,11 @@
+condition,detector,threshold,false_alarm_rate,detection_rate,healthy_samples,fault_samples
+clean,fixed_diff_rms,0.15293146771981406,0.05,1.0,120,120
+clean,context_normalized,1.2478460499249124,0.0,1.0,120,120
+high_noise,fixed_diff_rms,0.15293146771981406,1.0,1.0,120,120
+high_noise,context_normalized,1.2478460499249124,0.0,1.0,120,120
+speed_drift,fixed_diff_rms,0.15293146771981406,0.13333333333333333,1.0,120,120
+speed_drift,context_normalized,1.2478460499249124,0.0,1.0,120,120
+load_change,fixed_diff_rms,0.15293146771981406,0.275,1.0,120,120
+load_change,context_normalized,1.2478460499249124,0.0,1.0,120,120
+combined,fixed_diff_rms,0.15293146771981406,1.0,1.0,120,120
+combined,context_normalized,1.2478460499249124,0.25,1.0,120,120

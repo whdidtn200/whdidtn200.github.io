@@ -213,6 +213,25 @@ def detect_entry_type(url: str, tags: list[str], title: str) -> str:
     return "Page"
 
 
+def detect_content_signals(text: str) -> dict[str, int | bool]:
+    lowered = text.lower()
+    source_links = len(re.findall(r"https?://", text))
+    has_methods = any(token in lowered for token in ["실험 설계", "방법", "method", "재현 조건"])
+    has_results = any(token in lowered for token in ["결과", "result", "오경보율", "탐지율"])
+    has_limitations = any(token in lowered for token in ["한계", "limitation", "일반화할 수 없"])
+    has_repro_assets = any(
+        token in lowered
+        for token in [".py", ".csv", "난수 시드", "random seed", "실행 명령"]
+    )
+    return {
+        "source_links": source_links,
+        "has_methods": has_methods,
+        "has_results": has_results,
+        "has_limitations": has_limitations,
+        "has_repro_assets": has_repro_assets,
+    }
+
+
 def compute_quality(entry: dict) -> tuple[int, str, list[str]]:
     score = 0
     reasons: list[str] = []
@@ -221,6 +240,7 @@ def compute_quality(entry: dict) -> tuple[int, str, list[str]]:
     summary = entry.get("summary", "")
     title = entry.get("title", "")
     tags = entry.get("tags", [])
+    signals = entry.get("content_signals", {})
 
     if words >= 1000:
         score += 5
@@ -259,6 +279,15 @@ def compute_quality(entry: dict) -> tuple[int, str, list[str]]:
     if len(tags) >= 4:
         score += 1
         reasons.append("주제 연결성")
+    if signals.get("source_links", 0) >= 2:
+        score += 1
+        reasons.append("복수 출처")
+    if signals.get("has_methods") and signals.get("has_results") and signals.get("has_limitations"):
+        score += 2
+        reasons.append("방법·결과·한계 공개")
+    if signals.get("has_repro_assets"):
+        score += 2
+        reasons.append("재현 자료 공개")
 
     merged = f"{title} {summary}"
     if any(token in merged for token in ["삭제됨", "중복 발행 정리", "보존 처리"]):
@@ -270,6 +299,9 @@ def compute_quality(entry: dict) -> tuple[int, str, list[str]]:
     elif kind in {"Post", "Page"} and words < 220:
         score -= 2
         reasons.append("얇은 해설")
+    if kind == "Lab" and not signals.get("has_repro_assets"):
+        score -= 4
+        reasons.append("실행 자료 없는 검토형 실험실")
 
     if score >= 8:
         band = "strong"
@@ -361,6 +393,7 @@ def collect_markdown_entries() -> list[dict]:
         summary = first_paragraph(body)
         entry = build_entry(f"/posts/{path.stem}.html", title, date, summary, tags)
         entry["word_count"] = len(re.findall(r"\S+", body))
+        entry["content_signals"] = detect_content_signals(body)
         score, band, reasons = compute_quality(entry)
         entry["quality_score"] = score
         entry["quality_band"] = band
@@ -380,6 +413,7 @@ def collect_markdown_entries() -> list[dict]:
         summary = first_paragraph(body)
         entry = build_entry(f"/{slug}.html", title, date, summary, tags)
         entry["word_count"] = len(re.findall(r"\S+", body))
+        entry["content_signals"] = detect_content_signals(body)
         score, band, reasons = compute_quality(entry)
         entry["quality_score"] = score
         entry["quality_band"] = band
@@ -404,6 +438,7 @@ def collect_html_only_entries(existing_urls: set[str]) -> list[dict]:
         date = parse_date(None, path.stem)
         entry = build_entry(url, title, date, summary, [])
         entry["word_count"] = len(re.findall(r"\S+", clean_text(text)))
+        entry["content_signals"] = detect_content_signals(text)
         score, band, reasons = compute_quality(entry)
         entry["quality_score"] = score
         entry["quality_band"] = band
@@ -698,6 +733,7 @@ def write_outputs(entries: list[dict], grouped: dict[str, list[dict]]) -> None:
             "quality_score": entry.get("quality_score", 0),
             "quality_band": entry.get("quality_band", ""),
             "quality_reasons": entry.get("quality_reasons", []),
+            "content_signals": entry.get("content_signals", {}),
         }
         for entry in sorted(entries, key=lambda item: (item.get("quality_score", 0), item.get("date", "")))
         if entry.get("quality_band") in {"thin", "weak"}
@@ -708,6 +744,19 @@ def write_outputs(entries: list[dict], grouped: dict[str, list[dict]]) -> None:
                 "generated_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
                 "entry_count": len(entries),
                 "thin_or_weak_count": len(weak_candidates),
+                "reproducible_count": len(
+                    [entry for entry in entries if entry.get("content_signals", {}).get("has_repro_assets")]
+                ),
+                "methods_results_limits_count": len(
+                    [
+                        entry
+                        for entry in entries
+                        if all(
+                            entry.get("content_signals", {}).get(key)
+                            for key in ("has_methods", "has_results", "has_limitations")
+                        )
+                    ]
+                ),
                 "candidates": weak_candidates[:20],
             },
             ensure_ascii=False,

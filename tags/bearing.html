@@ -50,8 +50,8 @@
       <section class="hero">
         <div class="kicker">TAG VIEW</div>
         <h1>Bearing로 묶인 글</h1>
-        <p>이 태그와 연결된 글 10개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
-        <div class="mini-row"><a class="mini-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis</a><a class="mini-chip" href="/tags/vibration-analysis.html">Vibration Analysis</a><a class="mini-chip" href="/tags/ae.html">AE</a><a class="mini-chip" href="/tags/deep-learning.html">Deep Learning</a><a class="mini-chip" href="/tags/predictive-maintenance.html">Predictive Maintenance</a><a class="mini-chip" href="/tags/phm.html">PHM</a></div>
+        <p>이 태그와 연결된 글 11개를 최신순으로 정리했습니다. 가이드, 일간 발행, 실험실 글을 한 흐름으로 이어 읽을 수 있습니다.</p>
+        <div class="mini-row"><a class="mini-chip" href="/tags/실험실.html">실험실</a><a class="mini-chip" href="/tags/fault-diagnosis.html">Fault Diagnosis</a><a class="mini-chip" href="/tags/condition-monitoring.html">Condition Monitoring</a><a class="mini-chip" href="/tags/reproduction.html">Reproduction</a><a class="mini-chip" href="/tags/data-quality.html">Data Quality</a><a class="mini-chip" href="/tags/lab.html">Lab</a></div>
       </section>
       <a class="featured" href="/bearing-fault-diagnosis-guide.html">
         <div class="eyebrow">START HERE</div>
@@ -60,15 +60,10 @@
         <div class="meta"><span>Guide</span><span>2026-06-17</span><span>대표 글</span></div>
       </a>
       <section class="entry-grid">
-        <a class="entry-card" href="/railway-predictive-maintenance-guide.html">
-          <div class="meta"><span>Guide</span><span>2026-06-17</span></div>
-          <strong>Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법</strong>
-          <p>철도 예지보전은 더 이상 &quot;AI 모델 하나 붙이면 되는 기술 실험&quot;이 아닙니다. 실제 운영에서는 어떤 자산을 먼저 볼지, 어떤 센서를 쓸지, 경보 이후 정비팀이 무엇을 할지, 오탐이 몇 번까지 허용되는지까지 같이 설계해야 비로소 가치가 생깁니다.</p>
-        </a>
-        <a class="entry-card" href="/railway-bearing-sensor-guide.html">
-          <div class="meta"><span>Guide</span><span>2026-06-17</span></div>
-          <strong>Railway Bearing Sensor Guide: 철도 베어링 모니터링 센서를 어떻게 고르고 배치할 것인가</strong>
-          <p>철도 베어링 모니터링은 모델을 잘 고르는 문제 이전에 `센서와 데이터 수집 구조를 어떻게 설계하느냐`의 문제입니다.</p>
+        <a class="entry-card" href="/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html">
+          <div class="meta"><span>Lab</span><span>2026-07-17</span></div>
+          <strong>[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가</strong>
+          <p>고정 절대 임계치는 깨끗한 기준 조건에서는 정상 신호의 5%만 오경보로 분류했지만, 고소음과 복합 조건에서는 정상 신호를 100% 이상으로 잘못 판단했다. RMS로 정규화한 충격성 점수는 같은 조건에서 오경보를 각각 0%, 25%로 낮췄다. 두 방식 모두 이 통제된 합성 실험에서는 결함 신호를 모두 잡았...</p>
         </a>
         <a class="entry-card" href="/posts/2026-06-19-260620323v1-leveraging-systems-non-linearity-to-tackle-the-scarcity-of-d.html">
           <div class="meta"><span>Daily arXiv</span><span>2026-06-19</span></div>
@@ -84,6 +79,11 @@
           <div class="meta"><span>Daily arXiv</span><span>2026-06-17</span></div>
           <strong>[arXiv Daily] Semi-Supervised Learning of Bearing Anomaly Detection via Deep Variational Autoencoders</strong>
           <p>이 논문은 베어링이나 회전체 신호에서 미세한 이상 징후를 더 안정적으로 분리해, 조기 고장 진단에 쓰려는 접근이다.</p>
+        </a>
+        <a class="entry-card" href="/railway-predictive-maintenance-guide.html">
+          <div class="meta"><span>Guide</span><span>2026-06-17</span></div>
+          <strong>Railway Predictive Maintenance Guide: 철도 예지보전을 실제 운영으로 옮기는 방법</strong>
+          <p>철도 예지보전은 더 이상 &quot;AI 모델 하나 붙이면 되는 기술 실험&quot;이 아닙니다. 실제 운영에서는 어떤 자산을 먼저 볼지, 어떤 센서를 쓸지, 경보 이후 정비팀이 무엇을 할지, 오탐이 몇 번까지 허용되는지까지 같이 설계해야 비로소 가치가 생깁니다.</p>
         </a>
         <a class="entry-card" href="/posts/2026-06-16-251206837v1-neural-factorization-based-bearing-fault-diagnosis.html">
           <div class="meta"><span>Daily arXiv</span><span>2026-06-16</span></div>
@@ -104,6 +104,11 @@
           <div class="meta"><span>Daily arXiv</span><span>2026-06-15</span></div>
           <strong>[arXiv Daily] Modulated differentiable STFT and balanced spectrum metric for freight train wheelset bearing cross-machine transfer monitoring under speed fluctuations</strong>
           <p>이 논문은 베어링이나 회전체 신호에서 미세한 이상 징후를 더 안정적으로 분리해, 조기 고장 진단에 쓰려는 접근이다.</p>
+        </a>
+        <a class="entry-card" href="/railway-bearing-sensor-guide.html">
+          <div class="meta"><span>Guide</span><span>2026-06-17</span></div>
+          <strong>Railway Bearing Sensor Guide: 철도 베어링 모니터링 센서를 어떻게 고르고 배치할 것인가</strong>
+          <p>철도 베어링 모니터링은 모델을 잘 고르는 문제 이전에 `센서와 데이터 수집 구조를 어떻게 설계하느냐`의 문제입니다.</p>
         </a>
       </section>
     </section>

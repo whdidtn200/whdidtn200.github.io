@@ -59,9 +59,10 @@ ensure_python_module yaml PyYAML
 "$PYTHON_BIN" scripts/generate_pillar_post_drafts.py
 "$PYTHON_BIN" scripts/arxiv_pipeline.py
 "$PYTHON_BIN" scripts/build_tag_index.py
+"$PYTHON_BIN" scripts/build_sitemap.py
 "$PYTHON_BIN" scripts/validate_post.py
 
-git add content/archive content/drafts posts posts.html index.html tags
+git add content/archive content/drafts posts posts.html index.html tags sitemap.xml
 if [[ -f automation-status.json ]]; then
   git add automation-status.json
 fi

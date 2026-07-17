@@ -1,6 +1,18 @@
 # MALT Tech Blog AdSense Readiness Checklist
 
-Last updated: 2026-07-01
+Last updated: 2026-07-17
+
+## Current review status
+
+- [x] AdSense returned a second `low value content` rejection on 2026-07-17
+- [x] Reclassified paper-only lab reviews as review notes and applied `noindex,follow`
+- [x] Disabled scheduled weekly review-note publication; workflow is manual-only
+- [x] Published the first code-and-data-backed MALT experiment with 1,200 simulations
+- [x] Added reproducibility signals to the content quality gate
+- [x] Rebuilt the sitemap from indexable pages so noindex posts are excluded automatically
+- [ ] Publish at least two more code/data-backed experiments or field-oriented original guides
+- [ ] Confirm the new experiment and refreshed hubs are crawled in Search Console
+- [ ] Do not request another AdSense review before 2026-07-31 unless crawling completes and the two original assets above are already live
 
 ## 1. Public trust pages
 
@@ -46,11 +58,11 @@ Last updated: 2026-07-01
 - [x] `sitemap.xml` points to curated canonical pages, not legacy `/MALT-tech-blog/` paths
 - [x] `robots.txt` blocks generated artifacts and internal ops/archive folders
 - [x] Confirm the deployed GitHub Pages version contains this cleanup
-- [ ] Wait for Search Console recrawl or at least 24 to 48 hours after deployment before requesting AdSense review
+- [ ] Wait for Search Console recrawl and a material original-content expansion before requesting AdSense review
 
 ## 6. Recommended next build steps
 
-1. Create 5 to 10 pillar posts targeting high-intent railway PHM / industrial AI keywords.
-2. Add lightweight analytics and Search Console review rhythm.
-3. Build internal links from daily arXiv posts to evergreen deep dives.
-4. Apply to AdSense only after thin pages are cleaned up.
+1. Add two more reproducible experiments with code, raw/summary data, charts, and explicit limitations.
+2. Check Search Console indexing for the lab post, LAB hub, and flagship guides.
+3. Keep paper-summary automation conservative and keep review-only lab generation manual.
+4. Request review only after the 2026-07-31 readiness gate passes.
