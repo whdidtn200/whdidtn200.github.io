@@ -1,0 +1,63 @@
+{
+  "date": "2026-07-14",
+  "slug": "260712564v1-power-law-and-log-periodic-degree-tails-for-a-family-of-prob",
+  "title": "Power-law and log-periodic degree tails for a family of probability generating function equations arising in evolving networks",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "math.PR"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "For a fixed integer $j\\ge1$ and $0<p<1$, we study the probability generating function (pgf) equation \\[ (1+2p)\\,g(x)=2p\\,x^{j}+g\\bigl(x-px+px^{2}\\bigr),\\qquad 0\\le x\\le1 , \\] which governs the limiting degree distribution $\\{p_k\\}$ of a family of evolving network models.",
+    "The cases $j=1$ and $j=2$ are the treelike fast-growth model of Feng and Hu and the homogeneous evolving network of Feng, Li and Hu.",
+    "We prove that for every $j$ the equation has a unique pgf solution, of mean $2j$, and we determine its coefficient tail exactly: \\[ p_k=k^{-1-ρ}\\,Ψ_j(\\log_λk)+o\\bigl(k^{-1-ρ}\\bigr), \\] where $λ=1+p$, $ρ=\\log(1+2p)/\\log(1+p)$ is independent of $j$, and $Ψ_j$ is continuous, strictly positive and $1$-periodic, with explicit Fourier coefficients."
+  ],
+  "key_points": [
+    "The cases $j=1$ and $j=2$ are the treelike fast-growth model of Feng and Hu and the homogeneous evolving network of Feng, Li and Hu.",
+    "We prove that for every $j$ the equation has a unique pgf solution, of mean $2j$, and we determine its coefficient tail exactly: \\[ p_k=k^{-1-ρ}\\,Ψ_j(\\log_λk)+o\\bigl(k^{-1-ρ}\\bigr), \\] where $λ=1+p$, $ρ=\\log(1+2p)/\\log(1+p)$ is independent of $j$, and $Ψ_j$ is continuous, strictly positive and $1$-periodic, with explicit Fourier coefficients."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.12564v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.12564v1"
+    }
+  ],
+  "authors": [
+    "Qunqiang Feng",
+    "Xiao-Ming Fu",
+    "Tianyang Sun"
+  ],
+  "abstract": "For a fixed integer $j\\ge1$ and $0<p<1$, we study the probability generating function (pgf) equation \\[\n  (1+2p)\\,g(x)=2p\\,x^{j}+g\\bigl(x-px+px^{2}\\bigr),\\qquad 0\\le x\\le1 , \\] which governs the limiting degree distribution $\\{p_k\\}$ of a family of evolving network models. The cases $j=1$ and $j=2$ are the treelike fast-growth model of Feng and Hu and the homogeneous evolving network of Feng, Li and Hu. We prove that for every $j$ the equation has a unique pgf solution, of mean $2j$, and we determine its coefficient tail exactly: \\[\n  p_k=k^{-1-ρ}\\,Ψ_j(\\log_λk)+o\\bigl(k^{-1-ρ}\\bigr), \\] where $λ=1+p$, $ρ=\\log(1+2p)/\\log(1+p)$ is independent of $j$, and $Ψ_j$ is continuous, strictly positive and $1$-periodic, with explicit Fourier coefficients. This resolves two conjectures of Feng and coauthors: (1) the power-law order $p_k=Θ(k^{-1-ρ})$ and (2) its refinement to the multiplicatively periodic form $p_k\\simΨ_j(\\log_λk)\\,k^{-1-ρ}$. The periodic factor is genuinely non-constant for $p$ near $1$, and, for the two network models, for all $p$ outside a discrete set. Consequently, $p_k$ is asymptotic to no constant multiple of $k^{-1-ρ}$. Our method is a self-contained local analysis of the supercritical Galton-Watson process with offspring law $1+\\mathrm{Bernoulli}(p)$, inspected at an independent geometric time. This time-changed process solves the equation observed by Feng and coauthors. The main results of this paper were obtained by the multi-agent system Eureka and have subsequently been verified by the authors.",
+  "entry_id": "http://arxiv.org/abs/2607.12564v1",
+  "arxiv_id": "2607.12564v1",
+  "published_at": "2026-07-14T09:37:15Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "이 논문은 성능 숫자보다 배치 위치를 봐야 한다. 어떤 센서를 받아 어떤 경보나 유지보수 판단으로 이어지는지 설명할 수 있을 때 비로소 블로그 글로서 의미가 생긴다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}
