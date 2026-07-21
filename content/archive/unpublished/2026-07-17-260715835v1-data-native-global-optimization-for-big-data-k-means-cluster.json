@@ -1,0 +1,64 @@
+{
+  "date": "2026-07-17",
+  "slug": "260715835v1-data-native-global-optimization-for-big-data-k-means-cluster",
+  "title": "Data-Native Global Optimization for Big Data K-means Clustering",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Big data clustering remains challenging: the Minimum Sum-of-Squares Clustering (MSSC) problem underlying K-means is NP-hard, and existing methods either reach poor local minima or require prohibitive metaheuristic hybrids.",
+    "We target arbitrarily tall data: a fixed feature space may contain arbitrarily many, possibly infinitely many, observations, while the algorithm accesses only finite random samples.",
+    "We propose Big-means++, an algorithm achieving scalability and global-search quality by curating inputs to MSSC optimization on big data."
+  ],
+  "key_points": [
+    "We target arbitrarily tall data: a fixed feature space may contain arbitrarily many, possibly infinitely many, observations, while the algorithm accesses only finite random samples.",
+    "We propose Big-means++, an algorithm achieving scalability and global-search quality by curating inputs to MSSC optimization on big data."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.15835v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.15835v1"
+    }
+  ],
+  "authors": [
+    "Ravil Mussabayev",
+    "Rustam Mussabayev",
+    "Zukhra Yerdaliyeva",
+    "Kuldeyev Nursultan"
+  ],
+  "abstract": "Big data clustering remains challenging: the Minimum Sum-of-Squares Clustering (MSSC) problem underlying K-means is NP-hard, and existing methods either reach poor local minima or require prohibitive metaheuristic hybrids. We target arbitrarily tall data: a fixed feature space may contain arbitrarily many, possibly infinitely many, observations, while the algorithm accesses only finite random samples. We propose Big-means++, an algorithm achieving scalability and global-search quality by curating inputs to MSSC optimization on big data. It orchestrates local K-means refinements into a data-native global search for big data clustering. Rather than optimizing the full-data MSSC objective, Big-means++ traverses sample-induced surrogate landscapes. Each sample defines a distinct empirical MSSC approximation with a perturbed local-optimum structure, turning sample-to-sample variation into a global-search mechanism. Unlike Big-means, a flowing-incumbent strategy propagates centroid state across empirical landscapes through K-means refinements on fresh samples without rollback to a best-so-far solution. This increases mobility and favors stable, high-quality configurations across approximations of the full-data structure. A new shaking mechanism varies sample size geometrically, broadening the surrogate landscapes explored across resolution scales, accounting for cluster imbalance, and improving solution quality. A competitive multi-agent system asynchronously explores independent sampled landscapes, transforming diverse stochastic trajectories into collective search intelligence. Automatic convergence detection stops each agent after attaining a high-quality solution but before further search risks degrading it, while providing a universal speed-quality control. Experiments on 22 datasets against 11 competing algorithms demonstrate the effectiveness, efficiency, and robustness of Big-means++.",
+  "entry_id": "http://arxiv.org/abs/2607.15835v1",
+  "arxiv_id": "2607.15835v1",
+  "published_at": "2026-07-17T10:46:58Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

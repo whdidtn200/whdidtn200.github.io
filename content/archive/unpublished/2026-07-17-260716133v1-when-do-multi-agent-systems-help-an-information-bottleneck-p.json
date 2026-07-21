@@ -1,0 +1,69 @@
+{
+  "date": "2026-07-17",
+  "slug": "260716133v1-when-do-multi-agent-systems-help-an-information-bottleneck-p",
+  "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks.",
+    "However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings.",
+    "Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS."
+  ],
+  "key_points": [
+    "However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings.",
+    "Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2607.16133v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2607.16133v1"
+    }
+  ],
+  "authors": [
+    "Wendi Yu",
+    "Lianhao Zhou",
+    "Xiangjue Dong",
+    "Sai Sudarshan Barath",
+    "Declan Staunton",
+    "Byung-Jun Yoon",
+    "Xiaoning Qian",
+    "James Caverlee",
+    "Shuiwang Ji"
+  ],
+  "abstract": "LLM powered multi-agent systems (MAS) have emerged as a promising paradigm for complex tasks. However, their advantages over single-agent systems (SAS) remain unclear, with performance varying inconsistently across settings. Here, we provide an information bottleneck perspective on elucidating the differences between MAS and SAS. Specifically, our key observation is that a SAS accumulates its full reasoning trace in one shared context, while a MAS uses isolated local contexts connected by bounded relay messages. We show that, under infinite relay bandwidth, any SAS can be simulated by a MAS that transmits the full upstream context. Thus, the nontrivial advantage of MAS arises under bounded relays, where compression introduces a fundamental trade-off: reducing redundant context can improve efficiency, but may also incur loss of task-relevant information. We formalize this trade-off as an information bottleneck controlled by an effective parameter $β$, which captures how the balance shifts with model capability, and shows that MAS gains arise when context reduction outweighs relay information loss. We conduct 18 controlled experiments across five benchmarks and three model scales to validate our theoretical studies. We observe that MAS consistently helps when relays are near-sufficient, especially for weaker models. In contrast, MAS gains shrink or reverse when relays incur information loss, especially for stronger models that can already extract useful information from redundant context and thus gain little from compression. Our study shows that multi-agent design is fundamentally an information-bottleneck optimization problem. This perspective explains when bounded inter-agent communication helps or hurts.",
+  "entry_id": "http://arxiv.org/abs/2607.16133v1",
+  "arxiv_id": "2607.16133v1",
+  "published_at": "2026-07-17T17:13:44Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-07-17T03:41:17.948326+00:00",
-  "queued_count": 42,
+  "generated_at": "2026-07-21T03:49:40.075184+00:00",
+  "queued_count": 45,
   "queued_titles": [
+    {
+      "title": "Reinforcement Learning: From Algorithms To Foundation Models",
+      "topic": "agent-ops",
+      "date": "2026-07-20",
+      "slug": "260717560v1-reinforcement-learning-from-algorithms-to-foundation-models",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
+      "topic": "agent-ops",
+      "date": "2026-07-17",
+      "slug": "260716133v1-when-do-multi-agent-systems-help-an-information-bottleneck-p",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Data-Native Global Optimization for Big Data K-means Clustering",
+      "topic": "agent-ops",
+      "date": "2026-07-17",
+      "slug": "260715835v1-data-native-global-optimization-for-big-data-k-means-cluster",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
       "topic": "agent-ops",
