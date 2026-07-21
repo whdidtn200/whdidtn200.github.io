@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 700" role="img" aria-labelledby="title desc">
+<title id="title">False alarm rate of evidence-bundle policies</title>
+<desc id="desc">Healthy combined-condition events from the public bearing feature set show how requiring multiple signals changes event false alarms.</desc>
+<rect width="1140" height="700" rx="28" fill="#f4f8fa"/>
+<text x="70" y="72" font-family="Avenir Next, sans-serif" font-size="32" font-weight="700" fill="#10253a">False alarm rate of evidence-bundle policies</text>
+<text x="70" y="108" font-family="Avenir Next, sans-serif" font-size="17" fill="#526a7f">1,000 healthy combined-condition events, bootstrap seed 2026072101</text>
+<line x1="110" y1="540.0" x2="1010" y2="540.0" stroke="#d5e1e8"/>
+<text x="92" y="546.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">0%</text>
+<line x1="110" y1="462.0" x2="1010" y2="462.0" stroke="#d5e1e8"/>
+<text x="92" y="468.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">20%</text>
+<line x1="110" y1="384.0" x2="1010" y2="384.0" stroke="#d5e1e8"/>
+<text x="92" y="390.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">40%</text>
+<line x1="110" y1="306.0" x2="1010" y2="306.0" stroke="#d5e1e8"/>
+<text x="92" y="312.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">60%</text>
+<line x1="110" y1="228.0" x2="1010" y2="228.0" stroke="#d5e1e8"/>
+<text x="92" y="234.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">80%</text>
+<line x1="110" y1="150.0" x2="1010" y2="150.0" stroke="#d5e1e8"/>
+<text x="92" y="156.0" text-anchor="end" font-family="Avenir Next, sans-serif" font-size="14" fill="#60768a">100%</text>
+<rect x="190" y="161.7" width="170" height="378.3" rx="10" fill="#d3543f"/>
+<text x="275.0" y="151.7" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="16" font-weight="700" fill="#20384c">97.0%</text>
+<text x="275.0" y="578.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="15" fill="#42586d">Score only</text>
+<rect x="455" y="540.0" width="170" height="0.0" rx="10" fill="#d8a62e"/>
+<text x="540.0" y="530.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="16" font-weight="700" fill="#20384c">0.0%</text>
+<text x="540.0" y="578.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="15" fill="#42586d">Score + diff_rms</text>
+<rect x="720" y="540.0" width="170" height="0.0" rx="10" fill="#087f8c"/>
+<text x="805.0" y="530.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="16" font-weight="700" fill="#20384c">0.0%</text>
+<text x="805.0" y="578.0" text-anchor="middle" font-family="Avenir Next, sans-serif" font-size="15" fill="#42586d">Score + diff_rms + kurtosis</text>
+<text x="70" y="612" font-family="Avenir Next, sans-serif" font-size="16" fill="#42586d">Combined condition only. Lower is better for event-level nuisance burden.</text>
+</svg>

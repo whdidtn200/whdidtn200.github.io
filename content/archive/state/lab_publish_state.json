@@ -21,6 +21,15 @@
       "topic": "railway-phm",
       "focus": "재현 관점 검토",
       "scoreboard_asset": "/assets/lab-generated/2026-06-19-lab-cvcmtrackcircuitspre-emptivefailurediagnosticsforpredictivemaintenanceus-scoreboard.svg"
+    },
+    {
+      "title": "[실험실] 점수 하나로 울릴까, 증거 두 개를 더 묶을까? 다중 신호 경보 번들 실험",
+      "html_filename": "2026-07-21-multi-signal-alarm-bundle-lab.html",
+      "summary": "공개 베어링 특징 1,200개를 bootstrap한 10,000개 이벤트에서 score_only와 evidence bundle 정책의 nuisance burden 차이를 코드와 CSV로 비교했다.",
+      "source_title": "MALT original evidence-bundle alarm benchmark",
+      "topic": "railway-phm",
+      "focus": "evidence bundle alarm design",
+      "scoreboard_asset": "/assets/lab-generated/2026-07-21-multi-signal-alarm-false-alarm.svg"
     }
   ]
 }

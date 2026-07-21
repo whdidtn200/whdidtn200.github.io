@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-07-17T20:36:30+09:00",
-  "entry_count": 33,
+  "generated_at": "2026-07-21T10:08:10+09:00",
+  "entry_count": 35,
   "tag_count": 34,
   "tags": [
     {
       "tag": "PHM",
       "slug": "phm",
-      "count": 20,
+      "count": 22,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Condition Monitoring",
       "slug": "condition-monitoring",
-      "count": 17,
+      "count": 19,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Fault Diagnosis",
       "slug": "fault-diagnosis",
-      "count": 13,
+      "count": 14,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
@@ -34,15 +34,15 @@
       "latest_title": "2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4"
     },
     {
-      "tag": "Railway",
-      "slug": "railway",
-      "count": 9,
+      "tag": "Maintenance",
+      "slug": "maintenance",
+      "count": 10,
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
-      "tag": "Maintenance",
-      "slug": "maintenance",
-      "count": 8,
+      "tag": "Railway",
+      "slug": "railway",
+      "count": 9,
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
@@ -58,22 +58,28 @@
       "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
+      "tag": "Guide",
+      "slug": "guide",
+      "count": 7,
+      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
+    },
+    {
       "tag": "MALT",
       "slug": "malt",
       "count": 7,
       "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
-      "tag": "Guide",
-      "slug": "guide",
-      "count": 6,
-      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
-    },
-    {
       "tag": "Observability",
       "slug": "observability",
       "count": 5,
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
+    },
+    {
+      "tag": "Data Quality",
+      "slug": "data-quality",
+      "count": 4,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Predictive Maintenance",
@@ -88,8 +94,32 @@
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
-      "tag": "Data Quality",
-      "slug": "data-quality",
+      "tag": "Alarm Design",
+      "slug": "alarm-design",
+      "count": 3,
+      "latest_title": "[실험실] 점수 하나로 울릴까, 증거 두 개를 더 묶을까? 다중 신호 경보 번들 실험"
+    },
+    {
+      "tag": "Lab",
+      "slug": "lab",
+      "count": 3,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
+      "tag": "Operations",
+      "slug": "operations",
+      "count": 3,
+      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
+    },
+    {
+      "tag": "Reproduction",
+      "slug": "reproduction",
+      "count": 3,
+      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
+      "tag": "실험실",
+      "slug": "실험실",
       "count": 3,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
@@ -104,36 +134,6 @@
       "slug": "agentic-ai",
       "count": 2,
       "latest_title": "[arXiv Daily] LLM-based Framework for Bearing Fault Diagnosis"
-    },
-    {
-      "tag": "Alarm Design",
-      "slug": "alarm-design",
-      "count": 2,
-      "latest_title": "[실험실] 한 번 넘으면 경보? 2-of-3와 3-of-5 지속 규칙을 10,000개 이벤트로 비교"
-    },
-    {
-      "tag": "Lab",
-      "slug": "lab",
-      "count": 2,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
-    },
-    {
-      "tag": "Operations",
-      "slug": "operations",
-      "count": 2,
-      "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
-    },
-    {
-      "tag": "Reproduction",
-      "slug": "reproduction",
-      "count": 2,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
-    },
-    {
-      "tag": "실험실",
-      "slug": "실험실",
-      "count": 2,
-      "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Acoustic",

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PHM Inspection Evidence Pack Guide | MALT Tech Blog</title>
+  <meta name="description" content="PHM 경보가 inspection ticket으로 이어질 때 파형, context, 모델 버전, 사진, 작업 결과, 종결 label을 어떤 묶음으로 남겨야 하는지 정리한 가이드입니다." />
+  <meta name="author" content="MALT Editorial" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://whdidtn200.github.io/phm-inspection-evidence-pack-guide.html" />
+  <meta property="og:title" content="PHM Inspection Evidence Pack Guide" />
+  <meta property="og:description" content="점검 티켓이 열렸을 때 무엇을 한 묶음으로 남겨야 하는가" />
+  <meta property="og:url" content="https://whdidtn200.github.io/phm-inspection-evidence-pack-guide.html" />
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="2026-07-21T11:00:00+09:00" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"PHM Inspection Evidence Pack Guide: 점검 티켓이 열렸을 때 무엇을 한 묶음으로 남겨야 하는가","datePublished":"2026-07-21","dateModified":"2026-07-21","author":{"@type":"Organization","name":"MALT Editorial"},"publisher":{"@type":"Organization","name":"MALT Tech Blog"},"url":"https://whdidtn200.github.io/phm-inspection-evidence-pack-guide.html"}</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797854424426960" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/assets/hud.css" />
+  <style>
+    .guide-hero{margin-top:14px;padding:clamp(22px,4vw,40px);background:radial-gradient(560px 280px at 100% 0,rgba(13,106,114,.16),transparent 70%),linear-gradient(145deg,#f8fbfa,#f8f3eb)}
+    .guide-hero h1{margin:10px 0 14px;font-size:clamp(32px,5vw,50px);line-height:1.08;color:#102b39;max-width:920px}.guide-hero p{max-width:790px;color:#465f72;font-size:18px;line-height:1.75}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.chip{padding:7px 11px;border:1px solid #c9dce2;border-radius:999px;background:rgba(255,255,255,.75);color:#35556a;font-size:12px}
+    .article{margin-top:14px;padding:clamp(20px,4vw,40px)}.article h2{margin:36px 0 12px;font-size:26px;color:#102b39}.article p,.article li{line-height:1.85;color:#344f63}
+    .lead{font-size:18px;padding:18px;border-left:5px solid #087f8c;background:#eff9f9;border-radius:0 14px 14px 0}.figure{margin:24px 0;padding:14px;border:1px solid #d4e2e9;border-radius:18px;background:#f8fbfc}.figure img{width:100%;height:auto;display:block}.figure figcaption{margin-top:10px;color:#597084;font-size:14px}
+    .state-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}.state{padding:16px;border:1px solid #d4e2e9;border-radius:15px;background:#f8fbfc}.state strong{display:block;color:#087f8c;margin-bottom:6px}
+    .table-wrap{overflow-x:auto}.matrix{width:100%;border-collapse:collapse;min-width:650px;margin:18px 0}.matrix th,.matrix td{padding:12px;border-bottom:1px solid #d7e3e9;text-align:left}.matrix th{background:#eef5f7;color:#27485a}
+    @media(max-width:760px){.state-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="topbar"><div class="brand">GUIDE · FIELD RECORDS</div><div style="display:flex;gap:8px;flex-wrap:wrap"><a class="badge" href="/">HOME</a><a class="badge" href="/GUIDES.html">GUIDES</a><a class="badge" href="/LAB.html">LAB</a></div></div>
+    <header class="card guide-hero"><div class="h">FIELD-ORIENTED EVERGREEN GUIDE</div><h1>PHM Inspection Evidence Pack Guide</h1><p>점검 티켓이 열렸는데도 학습 가능한 운영 기록이 남지 않으면, false positive를 줄여도 같은 논쟁이 반복됩니다. 이 가이드는 경보부터 종결까지 무엇을 한 묶음으로 남겨야 하는지 정리합니다.</p><div class="chips"><span class="chip">Updated 2026-07-21</span><span class="chip">Field Records</span><span class="chip">Inspection Ticket</span><span class="chip">Closure Label</span></div></header>
+    <article class="card article">
+      <p class="lead"><strong>핵심:</strong> 좋은 evidence pack은 왜 열렸는가, 무엇을 봤는가, 무엇을 했는가, 무엇으로 닫았는가를 같은 사건 안에 묶습니다. 그래야 threshold 조정, sensor health 개선, 모델 재학습이 모두 같은 기록을 참조할 수 있습니다.</p>
+      <figure class="figure"><img src="/assets/phm-inspection-evidence-pack.svg" alt="트리거, 컨텍스트, 신호 발췌, 현장 증거, 작업 기록, 종결 라벨로 구성된 PHM inspection evidence pack" /><figcaption>MALT original operational diagram. 점검 티켓은 단순한 work order가 아니라 경보 설계와 현장 확인을 다시 연결하는 evidence pack이어야 합니다.</figcaption></figure>
+
+      <h2>evidence pack의 여섯 조각</h2>
+      <div class="state-grid"><div class="state"><strong>1. Trigger snapshot</strong>score, threshold, severity, persistence 결과</div><div class="state"><strong>2. Context snapshot</strong>속도, 하중, mode, 정비 상태, sensor health</div><div class="state"><strong>3. Signal excerpt</strong>파형, 스펙트럼, 추세, baseline 비교</div><div class="state"><strong>4. Field proof</strong>사진, 메모, 냄새, 소리, 마모 흔적</div><div class="state"><strong>5. Action record</strong>작업 지시, 교체 부품, 재가동 조건</div><div class="state"><strong>6. Closure label</strong>true positive, false positive, inconclusive, sensor issue</div></div>
+
+      <h2>티켓 상단에 반드시 보여야 할 것</h2>
+      <ul><li><code>alert_id</code>, 자산·부품·센서, 발생 시각</li><li>모델 버전, feature 버전, threshold 버전</li><li>점수 단독인지 evidence bundle인지, 어떤 persistence rule이 적용됐는지</li><li>최근 24시간 반복 경보 여부와 최근 정비 이력</li><li>센서 health, 최근 캘리브레이션, 통신 이상 여부</li></ul>
+      <p>첫 화면만 보고도 현장 담당자가 이번 경보가 이전과 무엇이 다른지 알 수 있어야 합니다.</p>
+
+      <h2>파형과 특징은 어떻게 붙일까</h2>
+      <p>신호를 전부 덤프하는 것은 evidence pack이 아닙니다. 대표 파형, 지난 7일 baseline 대비 추세, 동일 조건 healthy 구간과의 비교, sensor health 상태 네 장이면 대부분의 초기 판단이 가능합니다.</p>
+      <p>그래프는 많을수록 좋은 것이 아니라, 경보가 열린 이유와 현장 점검 방향을 좁혀 주는 순서로 있어야 합니다.</p>
+
+      <h2>사진과 현장 메모가 중요한 이유</h2>
+      <p>같은 vibration anomaly라도 실제 원인은 윤활 부족, 체결 느슨함, 센서 고정 불량, 외부 충격, 운전 조건 변화일 수 있습니다. 숫자만으로 닫히지 않는 차이를 현장 사진과 짧은 메모가 메워 줍니다.</p>
+      <ul><li>설치 상태와 배선 상태를 보여주는 넓은 사진</li><li>의심 부위를 가까이서 보여주는 근접 사진</li><li>조치 후 재조립 상태를 보여주는 완료 사진</li></ul>
+
+      <h2>evidence bundle 실험이 주는 시사점</h2>
+      <p>MALT의 공개 실험에서는 score 하나보다 <code>score + diff_rms</code>, <code>score + diff_rms + kurtosis</code>처럼 서로 다른 증거를 묶은 정책이 복합 조건의 nuisance burden을 줄일 가능성을 보였습니다. 점검 티켓도 마찬가지로, 어떤 증거 묶음으로 열렸는지 자체를 기록해야 합니다.</p>
+      <p>파형 하나만 남기지 말고 context와 field proof를 같이 저장해야 나중에 모델이 아니라 운영 규칙을 먼저 고쳐야 하는지 판단할 수 있습니다.</p>
+
+      <h2>종결 label은 반드시 강제하라</h2>
+      <div class="table-wrap"><table class="matrix"><thead><tr><th>Label</th><th>의미</th><th>다음 액션</th></tr></thead><tbody><tr><td>true_positive</td><td>실제 이상 또는 열화 징후 확인</td><td>정책 유지 또는 조기화 검토</td></tr><tr><td>false_positive</td><td>이상 없음, 불필요 경보</td><td>threshold/persistence/bundle 재검토</td></tr><tr><td>inconclusive</td><td>충분한 근거 없이 종료</td><td>추가 계측 또는 재관찰</td></tr><tr><td>sensor_issue</td><td>센서/배선/수집 문제</td><td>sensor health와 설치 품질 개선</td></tr></tbody></table></div>
+      <p>자유 메모는 label 뒤에 붙여야 합니다. label이 먼저 있어야 주간 리뷰와 재학습 전 필터링이 가능합니다.</p>
+
+      <h2>보존 기간과 링크 구조도 설계해야 한다</h2>
+      <p>evidence pack은 작성하는 순간만 중요한 것이 아닙니다. 최소한 경보 원문, 대표 그래프, 현장 사진, 작업 결과, 종결 label이 같은 <code>alert_id</code>로 다시 찾아져야 합니다. 파일 서버, CMMS, 메신저, 이메일에 증거가 흩어져 있으면 다음 threshold 리뷰 때 다시 수작업으로 모아야 합니다.</p>
+      <p>가장 단순한 원칙은 <strong>한 경보, 한 사건, 한 링크</strong>입니다. 경보 페이지 하나에서 관련 그래프, 사진, 작업 지시, 종결 메모로 모두 이동할 수 있어야 하고, 반대로 작업 지시에서도 원래 경보와 baseline 비교 그래프로 돌아올 수 있어야 합니다. 이 연결성 자체가 운영 자산입니다.</p>
+
+      <h2>주간 리뷰에서 evidence pack을 쓰는 법</h2>
+      <p>주간 리뷰에서는 모델 정확도보다 evidence pack이 비어 있는 티켓을 먼저 봅니다. 파형이 없는 경보, 종결 label이 없는 티켓, 사진이 없는 true positive는 다음 주 개선 우선순위입니다.</p>
+      <ul><li>어떤 evidence bundle이 실제 점검 전환율을 높였는가</li><li>어떤 sensor issue가 경보 품질을 가장 많이 해쳤는가</li><li>어떤 라벨이 과도하게 <code>inconclusive</code>에 몰렸는가</li><li>다음 주에 비워둘 수 없는 evidence field가 무엇인가</li></ul>
+
+      <h2>30일 도입 순서</h2>
+      <p>첫 2주에는 label 강제와 대표 그래프 2장, 사진 2장만 의무화합니다. 3주차에는 model/threshold/persistence 버전을 티켓 상단에 노출합니다. 4주차에는 CMMS와 연동해 작업 결과와 closure label이 자동으로 다시 경보 기록으로 돌아오게 만듭니다.</p>
+      <p>처음부터 모든 사진과 모든 파형을 강제하면 현장만 피로해집니다. 핵심은 다시 판단할 수 있는 최소 증거 묶음을 먼저 표준화하는 것입니다.</p>
+
+      <h2>한계와 적용 범위</h2>
+      <p>이 가이드는 특정 CMMS 제품이나 철도 운영사의 승인 체계를 대체하지 않습니다. 다만 어떤 시스템을 쓰든 evidence pack 구조는 별도로 설계해야 하며, 그렇지 않으면 경보와 정비가 다시 분리됩니다.</p>
+
+      <h2>출처와 연결 자료</h2>
+      <ul><li><a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10">NIST AI RMF 1.0</a></li><li><a href="/phm-alert-governance-guide.html">PHM Alert Governance Guide</a></li><li><a href="/posts/2026-07-21-multi-signal-alarm-bundle-lab.html">다중 신호 경보 번들 실험</a></li><li><a href="/posts/2026-07-17-alarm-persistence-rule-lab.html">경보 지속 규칙 실험</a></li></ul>
+      <p>Codex 기반 AI 자동화가 초안 구성을 보조했으며, MALT의 공개 실험과 공개 표준 설명을 현장 점검 증거 패키지 관점으로 재구성했습니다.</p>
+    </article>
+  </main>
+</body>
+</html>

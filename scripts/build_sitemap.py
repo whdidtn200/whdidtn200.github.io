@@ -23,6 +23,7 @@ PUBLIC_PAGES = [
     ("/predictive-maintenance-kpi-roi-guide.html", "monthly", "0.8"),
     ("/railway-bearing-sensor-guide.html", "monthly", "0.8"),
     ("/phm-alert-governance-guide.html", "monthly", "0.9"),
+    ("/phm-inspection-evidence-pack-guide.html", "monthly", "0.9"),
     ("/ABOUT.html", "monthly", "0.6"),
     ("/CONTACT.html", "monthly", "0.6"),
     ("/PRIVACY.html", "monthly", "0.6"),

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-17T20:36+09:00",
-  "entry_count": 61,
+  "generated_at": "2026-07-21T10:08+09:00",
+  "entry_count": 63,
   "thin_or_weak_count": 0,
   "queued_count": 42,
-  "lab_post_count": 2,
+  "lab_post_count": 3,
   "guides": [
     {
       "path": "/railway-predictive-maintenance-guide.html",
@@ -40,9 +40,22 @@
       "name": "phm-alert-governance-guide",
       "word_count": 740,
       "status": "strong"
+    },
+    {
+      "path": "/phm-inspection-evidence-pack-guide.html",
+      "name": "phm-inspection-evidence-pack-guide",
+      "word_count": 772,
+      "status": "strong"
     }
   ],
   "top_pages": [
+    {
+      "title": "PHM Inspection Evidence Pack Guide: 점검 티켓이 열렸을 때 무엇을 한 묶음으로 남겨야 하는가",
+      "url": "/phm-inspection-evidence-pack-guide.html",
+      "type": "Guide",
+      "quality_band": "strong",
+      "word_count": 844
+    },
     {
       "title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계",
       "url": "/phm-alert-governance-guide.html",
@@ -65,6 +78,13 @@
       "word_count": 1335
     },
     {
+      "title": "[실험실] 점수 하나로 울릴까, 증거 두 개를 더 묶을까? 다중 신호 경보 번들 실험",
+      "url": "/posts/2026-07-21-multi-signal-alarm-bundle-lab.html",
+      "type": "Lab",
+      "quality_band": "strong",
+      "word_count": 462
+    },
+    {
       "title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가",
       "url": "/posts/2026-07-17-bearing-alarm-threshold-robustness-lab.html",
       "type": "Lab",
@@ -84,20 +104,6 @@
       "type": "Post",
       "quality_band": "strong",
       "word_count": 852
-    },
-    {
-      "title": "VAE 기반 베어링 이상 탐지: Average Precision 평가 지표 도입과 실무 적용",
-      "url": "/posts/2026-03-06-vae-bearing-anomaly-detection-ap-metrics.html",
-      "type": "Post",
-      "quality_band": "strong",
-      "word_count": 858
-    },
-    {
-      "title": "2026년 3월, 에이전틱 AI 생태계를 이끄는 핵심 오픈소스 TOP 4",
-      "url": "/posts/2026-03-03-trending-ai-repos.html",
-      "type": "Post",
-      "quality_band": "strong",
-      "word_count": 1322
     }
   ],
   "priorities": [
