@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">차축 센서 퓨전과 지속학습 파이프라인</title>
+  <desc id="desc">가속도와 FBG 변형률 신호가 각각 VAE 표현과 차축 의미정보로 변환되고, 융합 판정과 검증을 거쳐 리플레이 버퍼에 반영되는 흐름</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f1e8"/>
+      <stop offset="1" stop-color="#e7efe9"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#18332d" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e6257"/>
+    </marker>
+    <style>
+      .box{fill:#fff;stroke:#c6d6ce;stroke-width:2;rx:18;filter:url(#shadow)}
+      .label{font:700 24px sans-serif;fill:#153c34}
+      .sub{font:400 17px sans-serif;fill:#4d625c}
+      .tag{font:700 15px sans-serif;fill:#fff}
+      .line{stroke:#2e6257;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="520" rx="30" fill="url(#bg)"/>
+  <text x="60" y="62" class="label" style="font-size:29px">Wayside wheel-health decision flow</text>
+  <text x="60" y="94" class="sub">신호 수집과 모델 갱신을 한 단계로 섞지 않고 검증 게이트로 분리</text>
+
+  <rect class="box" x="60" y="145" width="230" height="105"/>
+  <rect x="78" y="164" width="76" height="26" rx="13" fill="#bf5b3e"/>
+  <text x="95" y="183" class="tag">SIGNAL</text>
+  <text x="80" y="220" class="label">가속도 신호</text>
+  <text x="80" y="242" class="sub">휠-레일 충격 파형</text>
+
+  <rect class="box" x="60" y="300" width="230" height="105"/>
+  <rect x="78" y="319" width="76" height="26" rx="13" fill="#c4972f"/>
+  <text x="94" y="338" class="tag">CONTEXT</text>
+  <text x="80" y="375" class="label">FBG 변형률</text>
+  <text x="80" y="397" class="sub">차축·속도·하중 맥락</text>
+
+  <path class="line" d="M290 198 H360"/>
+  <path class="line" d="M290 353 H360"/>
+
+  <rect class="box" x="370" y="145" width="235" height="105"/>
+  <text x="392" y="195" class="label">VAE 표현</text>
+  <text x="392" y="223" class="sub">정상 구조와 이상 편차</text>
+  <rect class="box" x="370" y="300" width="235" height="105"/>
+  <text x="392" y="350" class="label">의미정보 추출</text>
+  <text x="392" y="378" class="sub">피크·차축 순서·변형량</text>
+
+  <path class="line" d="M605 198 C670 198 650 250 715 250"/>
+  <path class="line" d="M605 353 C670 353 650 300 715 300"/>
+
+  <rect class="box" x="725" y="210" width="210" height="130"/>
+  <rect x="746" y="230" width="66" height="26" rx="13" fill="#2e6257"/>
+  <text x="760" y="249" class="tag">FUSION</text>
+  <text x="747" y="290" class="label">이상 판정</text>
+  <text x="747" y="318" class="sub">XGBoost + 임계치</text>
+
+  <path class="line" d="M935 275 H993"/>
+  <rect class="box" x="1002" y="210" width="145" height="130"/>
+  <text x="1024" y="268" class="label">검증</text>
+  <text x="1024" y="298" class="sub">현장 확인</text>
+  <text x="1024" y="322" class="sub">롤백 승인</text>
+
+  <path d="M1075 340 V455 H490 V420" stroke="#bf5b3e" stroke-width="4" fill="none" stroke-dasharray="9 8" marker-end="url(#arrow)"/>
+  <rect x="590" y="430" width="270" height="52" rx="26" fill="#153c34"/>
+  <text x="632" y="463" class="tag" style="font-size:18px">검증된 사례만 리플레이</text>
+</svg>

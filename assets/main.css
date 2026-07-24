@@ -151,6 +151,20 @@ table td { border: 1px solid #e8e8e8; }
 
 @media screen and (max-width: 800px) { .post-content h4 { font-size: 18px; } }
 
+.research-figure { margin: 28px 0; padding: 14px; border: 1px solid #d7e1dc; border-radius: 16px; background: #f8faf8; }
+
+.research-figure img { width: 100%; border-radius: 10px; }
+
+.research-figure figcaption { margin-top: 10px; color: #5b6b66; line-height: 1.55; }
+
+.post-content table { display: block; width: 100%; margin: 22px 0; border-collapse: collapse; overflow-x: auto; font-size: 15px; }
+
+.post-content th, .post-content td { min-width: 150px; padding: 11px 13px; border: 1px solid #d7e1dc; text-align: left; vertical-align: top; }
+
+.post-content th { background: #edf3ef; color: #153c34; font-weight: 700; }
+
+.post-content blockquote { margin: 22px 0; padding: 18px 20px; border-left: 5px solid #bf5b3e; border-radius: 0 12px 12px 0; background: #faf5ed; color: #34443f; font-size: 17px; letter-spacing: 0; font-style: normal; }
+
 /** Syntax highlighting styles */
 .highlight { background: #fff; }
 

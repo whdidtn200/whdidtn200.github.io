@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-21T10:08+09:00",
+  "generated_at": "2026-07-24T13:11+09:00",
   "entry_count": 63,
   "thin_or_weak_count": 0,
-  "queued_count": 42,
+  "queued_count": 49,
   "lab_post_count": 3,
   "guides": [
     {
@@ -109,13 +109,13 @@
   "priorities": [
     {
       "label": "대기 논문 선별 유지",
-      "reason": "발행 대기 논문이 42건 있어도 메인 발행은 주 1~2회만 유지하는 것이 품질과 승인 관점에서 안전합니다.",
+      "reason": "발행 대기 논문이 49건 있어도 메인 발행은 주 1~2회만 유지하는 것이 품질과 승인 관점에서 안전합니다.",
       "target": "/AUTOMATION.html"
     },
     {
       "label": "심층 포스트 추가 보강",
-      "reason": "[심층 분석] 차축 센서 퓨전 + 온라인 지속학습으로 휠 결함을 조기 탐지하는 방법는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
-      "target": "/posts/2026-02-21-axle-sensor-fusion-online-continual-learning.html"
+      "reason": "[PHM 심층 분석] 단일 AE 센서 기반의 베어링 결함 위치 추정: Matching Pursuit의 실전적 적용는 이미 해설형이지만 아직 더 두꺼워질 여지가 있습니다.",
+      "target": "/posts/2026-02-19-ae-localization-deepdive.html"
     }
   ]
 }
