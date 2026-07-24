@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-07-24T00:20:40.026986+00:00",
-  "queued_count": 48,
+  "generated_at": "2026-07-24T03:47:14.781613+00:00",
+  "queued_count": 49,
   "queued_titles": [
+    {
+      "title": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
+      "topic": "agent-ops",
+      "date": "2026-07-23",
+      "slug": "260721268v1-pai-econ-claude-a-gated-human-in-the-loop-multi-agent-archit",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "CHMAS: A Coupled Hierarchical Framework for Multi-Agent Reinforcement Learning",
       "topic": "agent-ops",
