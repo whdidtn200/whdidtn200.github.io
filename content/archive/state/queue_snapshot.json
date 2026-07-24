@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-07-22T23:56:24.088066+00:00",
-  "queued_count": 46,
+  "generated_at": "2026-07-24T00:20:40.026986+00:00",
+  "queued_count": 48,
   "queued_titles": [
+    {
+      "title": "CHMAS: A Coupled Hierarchical Framework for Multi-Agent Reinforcement Learning",
+      "topic": "agent-ops",
+      "date": "2026-07-21",
+      "slug": "260719555v1-chmas-a-coupled-hierarchical-framework-for-multi-agent-reinf",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Human-in-the-Loop Distributed Control of Grid-Interactive Buildings for Demand Response Participation",
+      "topic": "agent-ops",
+      "date": "2026-07-21",
+      "slug": "260719552v1-human-in-the-loop-distributed-control-of-grid-interactive-bu",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Teleportation Game: Quantum Teleportation in Multi-Agent Systems for Interactive Music",
       "topic": "agent-ops",
