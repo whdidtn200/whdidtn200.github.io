@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-07-24T03:47:14.781613+00:00",
-  "queued_count": 49,
+  "generated_at": "2026-07-28T03:40:33.541909+00:00",
+  "queued_count": 50,
   "queued_titles": [
+    {
+      "title": "A Comparative Study of MCP and A2A for Inter-Agent Coordination in LLM-Based Systems",
+      "topic": "agent-ops",
+      "date": "2026-07-26",
+      "slug": "260723884v1-a-comparative-study-of-mcp-and-a2a-for-inter-agent-coordinat",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
       "topic": "agent-ops",
