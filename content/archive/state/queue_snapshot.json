@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-07-31T03:53:40.287270+00:00",
-  "queued_count": 56,
+  "generated_at": "2026-08-04T03:41:23.189763+00:00",
+  "queued_count": 59,
   "queued_titles": [
+    {
+      "title": "ParEvalLayer: When Partial LLM-Agent Evaluations Support a Decision",
+      "topic": "agent-ops",
+      "date": "2026-08-03",
+      "slug": "260802444v1-parevallayer-when-partial-llm-agent-evaluations-support-a-de",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MDGAM-Based Cooperative Task Scheduling for Communication-Constrained Distributed Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-01",
+      "slug": "260800648v1-mdgam-based-cooperative-task-scheduling-for-communication-co",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ParticleGen: A Multi-Agent System for Particle Effects Generation",
+      "topic": "agent-ops",
+      "date": "2026-08-01",
+      "slug": "260800629v1-particlegen-a-multi-agent-system-for-particle-effects-genera",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Tycho: Active Abstraction with Programmatic World Models for ARC-AGI-3",
       "topic": "agent-ops",
@@ -330,27 +351,6 @@
       "date": "2026-06-16",
       "slug": "260618112v1-qwen-robotnav-technical-report-a-scalable-navigation-model-d",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Agentic AI-based Framework for Mitigating Premature Diagnostic Handoff and Silent Hallucination in Healthcare Applications",
-      "topic": "agent-ops",
-      "date": "2026-06-16",
-      "slug": "260618068v1-agentic-ai-based-framework-for-mitigating-premature-diagnost",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "GeoDisaster: Benchmarking Orchestrated Agents for Operational Disaster Geo-Intelligence",
-      "topic": "agent-ops",
-      "date": "2026-06-15",
-      "slug": "260617246v1-geodisaster-benchmarking-orchestrated-agents-for-operational",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-12",
-      "slug": "260614923v1-trust-between-ai-agents-measuring-formation-breakage-and-rec",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
 }
