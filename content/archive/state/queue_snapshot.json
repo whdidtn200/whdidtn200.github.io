@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-08-04T03:41:23.189763+00:00",
-  "queued_count": 59,
+  "generated_at": "2026-08-11T02:29:58.090715+00:00",
+  "queued_count": 65,
   "queued_titles": [
+    {
+      "title": "NeuroRefiner: Morphology-Aware Multi-Agent Refinement for 3D Fluorescence Microscopy Neuron Segmentation",
+      "topic": "agent-ops",
+      "date": "2026-08-10",
+      "slug": "260809636v1-neurorefiner-morphology-aware-multi-agent-refinement-for-3d",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Software Engineering for and with GUI Agent",
+      "topic": "agent-ops",
+      "date": "2026-08-10",
+      "slug": "260809278v1-software-engineering-for-and-with-gui-agent",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Compositional Threat Analysis of Latent Compromise in LLM Agent Systems: The Order 66 Scenario",
+      "topic": "agent-ops",
+      "date": "2026-08-08",
+      "slug": "260808131v1-compositional-threat-analysis-of-latent-compromise-in-llm-ag",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "SCOUT: Self-Checking and Recovery-Aware Tool-Thought Agents for Ultra-Long Egocentric Video Reasoning",
+      "topic": "agent-ops",
+      "date": "2026-08-08",
+      "slug": "260807959v1-scout-self-checking-and-recovery-aware-tool-thought-agents-f",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Online Security Learning in Cooperative Multi-Agent Systems under Hidden Byzantine Attacks",
+      "topic": "agent-ops",
+      "date": "2026-08-06",
+      "slug": "260806520v1-online-security-learning-in-cooperative-multi-agent-systems",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
+      "topic": "agent-ops",
+      "date": "2026-08-06",
+      "slug": "260806346v1-trajdebug-tracing-error-lifecycle-to-identify-critical-failu",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "ParEvalLayer: When Partial LLM-Agent Evaluations Support a Decision",
       "topic": "agent-ops",
@@ -309,48 +351,6 @@
       "date": "2026-06-24",
       "slug": "260626298v1-governing-actions-not-agents-institutional-attestation-as-a",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic System as Compressor: Quantifying System Intelligence in Bits",
-      "topic": "agent-ops",
-      "date": "2026-06-24",
-      "slug": "260625960v1-agentic-system-as-compressor-quantifying-system-intelligence",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Constraint Tax in Open-Weight LLMs: An Empirical Study of Tool Calling Suppression Under Structured Output Constraints",
-      "topic": "agent-ops",
-      "date": "2026-06-24",
-      "slug": "260625605v1-constraint-tax-in-open-weight-llms-an-empirical-study-of-too",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Optimal Order of Multi-Agent and General Many-Body Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-18",
-      "slug": "260620485v1-optimal-order-of-multi-agent-and-general-many-body-systems",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "N-Version Programming with Coding Agents",
-      "topic": "agent-ops",
-      "date": "2026-06-18",
-      "slug": "260620158v1-n-version-programming-with-coding-agents",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
-      "topic": "agent-ops",
-      "date": "2026-06-16",
-      "slug": "260618112v2-qwen-robotnav-technical-report-a-scalable-navigation-model-d",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System",
-      "topic": "agent-ops",
-      "date": "2026-06-16",
-      "slug": "260618112v1-qwen-robotnav-technical-report-a-scalable-navigation-model-d",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     }
   ]
 }
