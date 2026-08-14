@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-08-11T02:29:58.090715+00:00",
-  "queued_count": 65,
+  "generated_at": "2026-08-14T02:48:28.565059+00:00",
+  "queued_count": 71,
   "queued_titles": [
+    {
+      "title": "Agentic Configuration Management (ACM): A Reference Configuration Model for Governed Agentic Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-11",
+      "slug": "260811166v1-agentic-configuration-management-acm-a-reference-configurati",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Scaling Laws for Majority-based Opinion Dynamics in the Presence of Stubborn Agents",
+      "topic": "agent-ops",
+      "date": "2026-08-11",
+      "slug": "260811071v1-scaling-laws-for-majority-based-opinion-dynamics-in-the-pres",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "REDAgentBench: Executable Red Teaming and Faithful Measurement of LLM Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-11",
+      "slug": "260810669v1-redagentbench-executable-red-teaming-and-faithful-measuremen",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Similarity Gates Approve Reversals: A Validity Audit of Embedding-Cosine Thresholds in Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-10",
+      "slug": "260810216v1-similarity-gates-approve-reversals-a-validity-audit-of-embed",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Complexity of Local Observation Consistency in Discrete-Event Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-10",
+      "slug": "260810111v1-complexity-of-local-observation-consistency-in-discrete-even",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Towards Expert-level Medical AI for Real-time Video Consultations",
+      "topic": "agent-ops",
+      "date": "2026-08-10",
+      "slug": "260809861v1-towards-expert-level-medical-ai-for-real-time-video-consulta",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "NeuroRefiner: Morphology-Aware Multi-Agent Refinement for 3D Fluorescence Microscopy Neuron Segmentation",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-06-29",
       "slug": "260630602v1-mesa-prioritizing-vulnerable-communication-channels-for-secu",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "The Illusion of Agentic Complexity in README.md Generation: Evaluating Single-Agent vs. Multi-Agent RAG Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-29",
-      "slug": "260630524v2-the-illusion-of-agentic-complexity-in-readmemd-generation-ev",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "The Illusion of Agentic Complexity in README.md Generation: Evaluating Single-Agent vs. Multi-Agent RAG Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-29",
-      "slug": "260630524v1-the-illusion-of-agentic-complexity-in-readmemd-generation-ev",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Rehearsed Multi-Agent Live Product Demonstrations with Real-Time Voice Question Answering",
-      "topic": "agent-ops",
-      "date": "2026-06-29",
-      "slug": "260630294v1-rehearsed-multi-agent-live-product-demonstrations-with-real",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Is Lying an Emergent Behaviour in LLMs? Evidence from Gaslighting AI agents in a Sustainability Game",
-      "topic": "agent-ops",
-      "date": "2026-06-26",
-      "slug": "260628456v1-is-lying-an-emergent-behaviour-in-llms-evidence-from-gasligh",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "VIGIL: Runtime Enforcement of Behavioral Specifications in AI Agent Skills",
-      "topic": "agent-ops",
-      "date": "2026-06-25",
-      "slug": "260626524v1-vigil-runtime-enforcement-of-behavioral-specifications-in-ai",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-24",
-      "slug": "260626298v1-governing-actions-not-agents-institutional-attestation-as-a",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]

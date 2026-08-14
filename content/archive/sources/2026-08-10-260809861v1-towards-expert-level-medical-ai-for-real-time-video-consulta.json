@@ -1,0 +1,100 @@
+{
+  "date": "2026-08-10",
+  "slug": "260809861v1-towards-expert-level-medical-ai-for-real-time-video-consulta",
+  "title": "Towards Expert-level Medical AI for Real-time Video Consultations",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Audio-visual interaction is the standard for patient-physician consultations, enabling natural communication and effective assessment of illness through non-verbal cues.",
+    "While text-based AI has shown promise, it discards essential perceptual dimensions and limits patients who cannot articulate symptoms in writing.",
+    "Early efforts to extend medical AI to audio-visual interaction have demonstrated feasibility but not reached clinician-level performance."
+  ],
+  "key_points": [
+    "While text-based AI has shown promise, it discards essential perceptual dimensions and limits patients who cannot articulate symptoms in writing.",
+    "Early efforts to extend medical AI to audio-visual interaction have demonstrated feasibility but not reached clinician-level performance."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2608.09861v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2608.09861v1"
+    }
+  ],
+  "authors": [
+    "Mahvish Nagda",
+    "Jihyeon Lee",
+    "Matthew Thompson",
+    "Chunjong Park",
+    "Tim Strother",
+    "Valentin Liévin",
+    "Roma Ruparel",
+    "Akshay Goel",
+    "Teya Bergamaschi",
+    "Suhana Bedi",
+    "Meet Shah",
+    "Pavel Dubov",
+    "Liviu Panait",
+    "Toshiyuki Fukuzawa",
+    "Sam Schmidgall",
+    "Craig Schiff",
+    "Joseph Xu",
+    "Aliya Rysbek",
+    "Yana Lunts",
+    "Jan Freyberg",
+    "Rebecca Hemengway",
+    "Sunny Virmani",
+    "David Racz",
+    "Carey Radebaugh",
+    "Joëlle Barral",
+    "Kavi Goel",
+    "Dale R. Webster",
+    "Katherine Chou",
+    "Avinatan Hassidim",
+    "Yossi Matias",
+    "James Manyika",
+    "Gregory Wayne",
+    "Tao Tu",
+    "Yun Liu",
+    "Ethan Goh",
+    "Christina Chen",
+    "Ryutaro Tanno",
+    "Po-Hsuan Cameron Chen",
+    "Mike Schaekermann",
+    "Anil Palepu"
+  ],
+  "abstract": "Audio-visual interaction is the standard for patient-physician consultations, enabling natural communication and effective assessment of illness through non-verbal cues. While text-based AI has shown promise, it discards essential perceptual dimensions and limits patients who cannot articulate symptoms in writing. Early efforts to extend medical AI to audio-visual interaction have demonstrated feasibility but not reached clinician-level performance. Here, we provide the first demonstration of expert-level AI in real-time clinical video consultations using AMIE (Articulate Medical Intelligence Explorer) in a video configuration. AMIE (Video) is a Gemini-based multi-agent system integrating low-latency dialogue, clinical reasoning, and real-time audio-visual perception. To guide development, we established a taxonomy and automated evaluations for clinical audio-visual cues in telehealth settings. In a randomized Objective Structured Clinical Examination (OSCE) study with 30 primary care physicians (PCPs), 15 patient actors and 100 clinical scenarios, we compared AMIE (Video), its text-only counterpart AMIE (Text), and PCPs consulting via video. Clinical evaluators rated AMIE (Video) on par or better than PCPs in history-taking, diagnosis, management, and physical observation and examination. Patient actors preferred AMIE's approach to assessing and explaining conditions, while PCPs were preferred for rapport and partnership building. In modality ablation, patient actors preferred AMIE (Video)'s interface over text chat for communicative effectiveness, convenience, and feeling understood. Limitations remain in fine anatomical precision, subtle affective nuances, and high-frequency movements. While further research is needed before real-world translation, these results mark an important milestone toward AI systems capable of augmenting care across the sensory complexity of clinical practice.",
+  "entry_id": "http://arxiv.org/abs/2608.09861v1",
+  "arxiv_id": "2608.09861v1",
+  "published_at": "2026-08-10T17:19:31Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "이런 류의 논문은 정리와 분류의 가치가 크지만, 그대로 발행하면 요약문처럼 보이기 쉽다. 그래서 반드시 내가 왜 이 분류가 중요한지 해석을 덧붙여야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}
