@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-14T02:48:28.565059+00:00",
-  "queued_count": 71,
+  "generated_at": "2026-08-17T02:20:19.170148+00:00",
+  "queued_count": 73,
   "queued_titles": [
+    {
+      "title": "ATLAS: Discovering Agent Strategies through LLM-Guided Abstraction and Automata Learning",
+      "topic": "agent-ops",
+      "date": "2026-08-14",
+      "slug": "260814352v1-atlas-discovering-agent-strategies-through-llm-guided-abstra",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Engineering Reliable Coding Agents: Evaluating and Operating the System Around the Model",
+      "topic": "agent-ops",
+      "date": "2026-08-14",
+      "slug": "260813867v1-engineering-reliable-coding-agents-evaluating-and-operating",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Agentic Configuration Management (ACM): A Reference Configuration Model for Governed Agentic Systems",
       "topic": "agent-ops",
@@ -336,20 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-01",
       "slug": "260701421v1-risk-architecture-for-ai-native-engineering-teams-an-organiz",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Governance Gaps in Agent Interoperability Protocols: What MCP, A2A, and ACP Cannot Express",
-      "topic": "agent-ops",
-      "date": "2026-06-30",
-      "slug": "260631498v1-governance-gaps-in-agent-interoperability-protocols-what-mcp",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-06-29",
-      "slug": "260630602v1-mesa-prioritizing-vulnerable-communication-channels-for-secu",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
