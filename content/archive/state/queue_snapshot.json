@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-08-17T02:20:19.170148+00:00",
-  "queued_count": 73,
+  "generated_at": "2026-08-18T02:19:11.728446+00:00",
+  "queued_count": 76,
   "queued_titles": [
+    {
+      "title": "Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents",
+      "topic": "agent-ops",
+      "date": "2026-08-17",
+      "slug": "260816578v1-physics-of-agents-statistical-mechanics-predicts-collective",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agent Gym: A Framework for Continuous Evaluation and Evolution of LLM Agents Through Human-in-the-Loop Feedback",
+      "topic": "agent-ops",
+      "date": "2026-08-16",
+      "slug": "260815591v1-agent-gym-a-framework-for-continuous-evaluation-and-evolutio",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving",
+      "topic": "agent-ops",
+      "date": "2026-08-15",
+      "slug": "260815171v1-p-pas-prefill-pressure-adaptive-scheduling-for-long-context",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "ATLAS: Discovering Agent Strategies through LLM-Guided Abstraction and Automata Learning",
       "topic": "agent-ops",
@@ -330,27 +351,6 @@
       "date": "2026-07-02",
       "slug": "260701822v1-congestion-based-slot-pricing-in-a-railway-auction-game",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
-      "topic": "agent-ops",
-      "date": "2026-07-02",
-      "slug": "260701793v2-safety-testing-llm-agents-at-scale-from-risk-discovery-to-ev",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Safety Testing LLM Agents at Scale: From Risk Discovery to Evidence-Grounded Verification",
-      "topic": "agent-ops",
-      "date": "2026-07-02",
-      "slug": "260701793v1-safety-testing-llm-agents-at-scale-from-risk-discovery-to-ev",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Risk Architecture for AI-Native Engineering Teams: An Organizational Framework for Agentic System Governance",
-      "topic": "agent-ops",
-      "date": "2026-07-01",
-      "slug": "260701421v1-risk-architecture-for-ai-native-engineering-teams-an-organiz",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
 }
