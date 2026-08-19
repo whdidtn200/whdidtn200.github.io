@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-18T02:19:11.728446+00:00",
-  "queued_count": 76,
+  "generated_at": "2026-08-19T02:18:05.352121+00:00",
+  "queued_count": 77,
   "queued_titles": [
+    {
+      "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
+      "topic": "agent-ops",
+      "date": "2026-08-18",
+      "slug": "260817528v1-agent-lightning-v10-towards-harnessed-agentic-rl",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents",
       "topic": "agent-ops",
@@ -344,13 +351,6 @@
       "date": "2026-07-02",
       "slug": "260701831v1-lynx-progressive-speculative-quantization-for-accelerating-k",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Congestion-Based Slot Pricing in a Railway Auction Game",
-      "topic": "agent-ops",
-      "date": "2026-07-02",
-      "slug": "260701822v1-congestion-based-slot-pricing-in-a-railway-auction-game",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     }
   ]
 }
