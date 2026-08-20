@@ -1,7 +1,21 @@
 {
-  "generated_at": "2026-08-19T02:18:05.352121+00:00",
-  "queued_count": 77,
+  "generated_at": "2026-08-20T02:18:37.914938+00:00",
+  "queued_count": 79,
   "queued_titles": [
+    {
+      "title": "DocClaw: A Unified Agentic System for Intelligent Document Processing",
+      "topic": "agent-ops",
+      "date": "2026-08-19",
+      "slug": "260818685v1-docclaw-a-unified-agentic-system-for-intelligent-document-pr",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Artifact-centered Claim-aware Observability for Autonomous Scientific Agents",
+      "topic": "agent-ops",
+      "date": "2026-08-18",
+      "slug": "260818312v1-artifact-centered-claim-aware-observability-for-autonomous-s",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
       "topic": "agent-ops",
@@ -336,20 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-05",
       "slug": "260704219v1-agentic-iot-architectures-applications-and-challenges-toward",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic-SecPBFT: Agentic AI-Driven Proactive Security Framework for Wireless PBFT Consensus in Mobile Ad-Hoc Networks",
-      "topic": "agent-ops",
-      "date": "2026-07-03",
-      "slug": "260703269v1-agentic-secpbft-agentic-ai-driven-proactive-security-framewo",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Lynx: Progressive Speculative Quantization for accelerating KV Transfer in Long-Context Inference",
-      "topic": "agent-ops",
-      "date": "2026-07-02",
-      "slug": "260701831v1-lynx-progressive-speculative-quantization-for-accelerating-k",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
