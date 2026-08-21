@@ -1,12 +1,19 @@
 {
-  "generated_at": "2026-08-20T02:18:37.914938+00:00",
-  "queued_count": 79,
+  "generated_at": "2026-08-21T02:19:14.744333+00:00",
+  "queued_count": 80,
   "queued_titles": [
     {
       "title": "DocClaw: A Unified Agentic System for Intelligent Document Processing",
       "topic": "agent-ops",
       "date": "2026-08-19",
       "slug": "260818685v1-docclaw-a-unified-agentic-system-for-intelligent-document-pr",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "The Evaluation Context Protocol (ECP): A Portable Contract for AI Agent Evaluation",
+      "topic": "agent-ops",
+      "date": "2026-08-18",
+      "slug": "260819263v1-the-evaluation-context-protocol-ecp-a-portable-contract-for",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
@@ -343,13 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-07",
       "slug": "260705844v1-statefuse-deterministic-conflict-preserving-memory-for-multi",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic IoT: Architectures, Applications, and Challenges Toward the Internet of Agents",
-      "topic": "agent-ops",
-      "date": "2026-07-05",
-      "slug": "260704219v1-agentic-iot-architectures-applications-and-challenges-toward",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
