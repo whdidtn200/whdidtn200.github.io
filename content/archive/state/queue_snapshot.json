@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-21T02:19:14.744333+00:00",
-  "queued_count": 80,
+  "generated_at": "2026-08-24T02:19:34.365490+00:00",
+  "queued_count": 81,
   "queued_titles": [
+    {
+      "title": "Why2Speak: Faithful Reasoning for Abstaining Action Policies",
+      "topic": "agent-ops",
+      "date": "2026-08-21",
+      "slug": "260820670v1-why2speak-faithful-reasoning-for-abstaining-action-policies",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "DocClaw: A Unified Agentic System for Intelligent Document Processing",
       "topic": "agent-ops",
@@ -343,13 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-07",
       "slug": "260706157v1-llm-agents-for-deliberative-collaboration-a-study-on-joint-d",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "StateFuse: Deterministic Conflict-Preserving Memory for Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-07-07",
-      "slug": "260705844v1-statefuse-deterministic-conflict-preserving-memory-for-multi",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
