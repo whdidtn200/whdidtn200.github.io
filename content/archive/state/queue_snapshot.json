@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-08-24T02:19:34.365490+00:00",
-  "queued_count": 81,
+  "generated_at": "2026-08-25T02:20:27.185179+00:00",
+  "queued_count": 85,
   "queued_titles": [
+    {
+      "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
+      "topic": "agent-ops",
+      "date": "2026-08-24",
+      "slug": "260823525v1-earthverse-benchmarking-scientific-agents-across-dynamic-ear",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MediSkill-Evo: Process-Constrained Self-Evolution for Evidence-Grounded Clinical Interaction",
+      "topic": "agent-ops",
+      "date": "2026-08-24",
+      "slug": "260823397v1-mediskill-evo-process-constrained-self-evolution-for-evidenc",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Poetic Heritage for Culturally Grounded Emotional Support: An Interaction Design Framework and Its Multimodal Agentic Instantiation",
+      "topic": "agent-ops",
+      "date": "2026-08-23",
+      "slug": "260822639v1-poetic-heritage-for-culturally-grounded-emotional-support-an",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Role-Specialized Mixture-of-Agents with Open-Weight LLMs for Clinical Prediction",
+      "topic": "agent-ops",
+      "date": "2026-08-23",
+      "slug": "260822176v1-role-specialized-mixture-of-agents-with-open-weight-llms-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Why2Speak: Faithful Reasoning for Abstaining Action Policies",
       "topic": "agent-ops",
@@ -322,34 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-13",
       "slug": "260711250v1-multi-agent-llms-fail-to-explore-each-other",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "CoDiMAD: Diffusion-Based Privileged Distillation for Communication-Free Multi-Robot Coordination",
-      "topic": "agent-ops",
-      "date": "2026-07-10",
-      "slug": "260709587v1-codimad-diffusion-based-privileged-distillation-for-communic",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "SiFAR: Synchronization-Free All-Reduce for Low-Latency LLM Inference",
-      "topic": "agent-ops",
-      "date": "2026-07-09",
-      "slug": "260708973v1-sifar-synchronization-free-all-reduce-for-low-latency-llm-in",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "The Harness Effect: How Orchestration Design Sets the Token Economics of Enterprise Agentic AI",
-      "topic": "agent-ops",
-      "date": "2026-07-08",
-      "slug": "260706906v1-the-harness-effect-how-orchestration-design-sets-the-token-e",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "LLM Agents for Deliberative Collaboration: A Study on Joint Decision Making Under Partial Observability",
-      "topic": "agent-ops",
-      "date": "2026-07-07",
-      "slug": "260706157v1-llm-agents-for-deliberative-collaboration-a-study-on-joint-d",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
