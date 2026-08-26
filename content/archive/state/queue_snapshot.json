@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-08-25T02:20:27.185179+00:00",
-  "queued_count": 85,
+  "generated_at": "2026-08-26T02:19:26.759742+00:00",
+  "queued_count": 90,
   "queued_titles": [
+    {
+      "title": "Test-Time Collaborative Classification over Multi-Agent Networks",
+      "topic": "agent-ops",
+      "date": "2026-08-25",
+      "slug": "260824787v1-test-time-collaborative-classification-over-multi-agent-netw",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "StrokeGuard: A Multi-Agent Guided System for Prehospital Stroke Assessment",
+      "topic": "agent-ops",
+      "date": "2026-08-25",
+      "slug": "260824555v1-strokeguard-a-multi-agent-guided-system-for-prehospital-stro",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Adaptive Influence Graphs for Failure Attribution in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-25",
+      "slug": "260824361v1-adaptive-influence-graphs-for-failure-attribution-in-multi-a",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Observability and Fault Injection for LLM-Based Multi-Agent Systems in Software Engineering",
+      "topic": "agent-ops",
+      "date": "2026-08-25",
+      "slug": "260824271v1-observability-and-fault-injection-for-llm-based-multi-agent",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ViSculpt: Visual-Centric Agentic Geometry Editing",
+      "topic": "agent-ops",
+      "date": "2026-08-25",
+      "slug": "260824169v1-visculpt-visual-centric-agentic-geometry-editing",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
       "topic": "agent-ops",
@@ -315,41 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-14",
       "slug": "260712844v1-swarming-and-opinion-dynamics",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Power-law and log-periodic degree tails for a family of probability generating function equations arising in evolving networks",
-      "topic": "agent-ops",
-      "date": "2026-07-14",
-      "slug": "260712564v1-power-law-and-log-periodic-degree-tails-for-a-family-of-prob",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-07-13",
-      "slug": "260711751v1-when-local-monitors-miss-compositional-harm-diagnosing-distr",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic Skill Optimization over Lie Algebroids",
-      "topic": "agent-ops",
-      "date": "2026-07-13",
-      "slug": "260711493v1-agentic-skill-optimization-over-lie-algebroids",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Omni-Decision: A Progressive Evidence-State Agent System for Omni-Modal QA",
-      "topic": "agent-ops",
-      "date": "2026-07-13",
-      "slug": "260711433v1-omni-decision-a-progressive-evidence-state-agent-system-for",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Multi-Agent LLMs Fail to Explore Each Other",
-      "topic": "agent-ops",
-      "date": "2026-07-13",
-      "slug": "260711250v1-multi-agent-llms-fail-to-explore-each-other",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
