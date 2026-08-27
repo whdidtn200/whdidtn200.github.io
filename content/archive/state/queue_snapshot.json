@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-26T02:19:26.759742+00:00",
-  "queued_count": 90,
+  "generated_at": "2026-08-27T02:18:34.790564+00:00",
+  "queued_count": 91,
   "queued_titles": [
+    {
+      "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
+      "topic": "agent-ops",
+      "date": "2026-08-26",
+      "slug": "260826081v1-swarmworld-stigmergic-technological-evolution-in-societies-o",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Test-Time Collaborative Classification over Multi-Agent Networks",
       "topic": "agent-ops",
@@ -343,13 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-14",
       "slug": "260713027v1-palmclaw-a-native-on-device-agent-framework-for-mobile-phone",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Swarming and Opinion Dynamics",
-      "topic": "agent-ops",
-      "date": "2026-07-14",
-      "slug": "260712844v1-swarming-and-opinion-dynamics",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
