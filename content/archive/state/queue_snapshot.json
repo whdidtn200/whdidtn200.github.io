@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-08-27T02:18:34.790564+00:00",
-  "queued_count": 91,
+  "generated_at": "2026-08-28T02:19:47.146746+00:00",
+  "queued_count": 92,
   "queued_titles": [
+    {
+      "title": "Finding the Right Evidence: Factor-Guided Coarse-to-Fine Reasoning for Long Videos",
+      "topic": "agent-ops",
+      "date": "2026-08-26",
+      "slug": "260826355v1-finding-the-right-evidence-factor-guided-coarse-to-fine-reas",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
       "topic": "agent-ops",
@@ -343,13 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-17",
       "slug": "260715835v1-data-native-global-optimization-for-big-data-k-means-cluster",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "PalmClaw: A Native On-Device Agent Framework for Mobile Phones",
-      "topic": "agent-ops",
-      "date": "2026-07-14",
-      "slug": "260713027v1-palmclaw-a-native-on-device-agent-framework-for-mobile-phone",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
