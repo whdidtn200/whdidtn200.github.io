@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-08-28T11:29:21.537418+00:00",
-  "queued_count": 92,
+  "generated_at": "2026-09-01T05:16:16.038695+00:00",
+  "queued_count": 98,
   "queued_titles": [
+    {
+      "title": "FaVOR: LLM-Based Agentic Framework for Factor Mining via Empirical Validation",
+      "topic": "agent-ops",
+      "date": "2026-08-31",
+      "slug": "260830192v1-favor-llm-based-agentic-framework-for-factor-mining-via-empi",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "EDGE: Engine for Deterministic Graph Evaluation through Conversation Simulation from Graph Structured DSL Configuration",
+      "topic": "agent-ops",
+      "date": "2026-08-30",
+      "slug": "260829971v1-edge-engine-for-deterministic-graph-evaluation-through-conve",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Diachronic Hypergraphs for Orchestrated Multi-Agent Multimodal Memory Curation",
+      "topic": "agent-ops",
+      "date": "2026-08-30",
+      "slug": "260829678v1-diachronic-hypergraphs-for-orchestrated-multi-agent-multimod",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Detect Before You Attribute: Cascade Failure Attribution for Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-08-30",
+      "slug": "260829646v1-detect-before-you-attribute-cascade-failure-attribution-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agent2UCB: Agentic System for Generative Engine Optimization",
+      "topic": "agent-ops",
+      "date": "2026-08-29",
+      "slug": "260829063v1-agent2ucb-agentic-system-for-generative-engine-optimization",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Logos: An Agent Harness on a Cross-Process Bus",
+      "topic": "agent-ops",
+      "date": "2026-08-28",
+      "slug": "260828553v2-logos-an-agent-harness-on-a-cross-process-bus",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Finding the Right Evidence: Factor-Guided Coarse-to-Fine Reasoning for Long Videos",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-23",
       "slug": "260721268v1-pai-econ-claude-a-gated-human-in-the-loop-multi-agent-archit",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "CHMAS: A Coupled Hierarchical Framework for Multi-Agent Reinforcement Learning",
-      "topic": "agent-ops",
-      "date": "2026-07-21",
-      "slug": "260719555v1-chmas-a-coupled-hierarchical-framework-for-multi-agent-reinf",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Human-in-the-Loop Distributed Control of Grid-Interactive Buildings for Demand Response Participation",
-      "topic": "agent-ops",
-      "date": "2026-07-21",
-      "slug": "260719552v1-human-in-the-loop-distributed-control-of-grid-interactive-bu",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Teleportation Game: Quantum Teleportation in Multi-Agent Systems for Interactive Music",
-      "topic": "agent-ops",
-      "date": "2026-07-21",
-      "slug": "260719212v1-teleportation-game-quantum-teleportation-in-multi-agent-syst",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Reinforcement Learning: From Algorithms To Foundation Models",
-      "topic": "agent-ops",
-      "date": "2026-07-20",
-      "slug": "260717560v1-reinforcement-learning-from-algorithms-to-foundation-models",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "When Do Multi-Agent Systems Help? An Information Bottleneck Perspective",
-      "topic": "agent-ops",
-      "date": "2026-07-17",
-      "slug": "260716133v1-when-do-multi-agent-systems-help-an-information-bottleneck-p",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Data-Native Global Optimization for Big Data K-means Clustering",
-      "topic": "agent-ops",
-      "date": "2026-07-17",
-      "slug": "260715835v1-data-native-global-optimization-for-big-data-k-means-cluster",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
