@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-01",
+  "slug": "260901335v2-bandits-in-prod-hyperparameter-optimization-at-inference-tim",
+  "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.LG"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Many production systems can assess a configuration only by using it on live requests and observing noisy feedback.",
+    "Modern agentic systems are a prominent example, with inference-time choices such as model selection, retrieval depth, prompting strategy, and decoding temperature, yet often with no representative validation data.",
+    "We formalize this setting as Online Hyperparameter Optimization (OHPO) and cast it as an infinitely many-armed bandit over mixed and conditional search spaces."
+  ],
+  "key_points": [
+    "Modern agentic systems are a prominent example, with inference-time choices such as model selection, retrieval depth, prompting strategy, and decoding temperature, yet often with no representative validation data.",
+    "We formalize this setting as Online Hyperparameter Optimization (OHPO) and cast it as an infinitely many-armed bandit over mixed and conditional search spaces."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2609.01335v2"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2609.01335v2"
+    }
+  ],
+  "authors": [
+    "Louis Abraham",
+    "Tuan-Anh Nguyen",
+    "Nicolas Devatine"
+  ],
+  "abstract": "Many production systems can assess a configuration only by using it on live requests and observing noisy feedback. Modern agentic systems are a prominent example, with inference-time choices such as model selection, retrieval depth, prompting strategy, and decoding temperature, yet often with no representative validation data. We formalize this setting as Online Hyperparameter Optimization (OHPO) and cast it as an infinitely many-armed bandit over mixed and conditional search spaces. We introduce IMABO, a general framework that combines any bandit policy for choosing among already sampled configurations with any oracle for proposing new ones. We instantiate it with IMOSS, a restart-free anytime policy whose active set grows as $t^β$, and prove an expected cumulative quantile-regret bound of $O(p_ρ^{-1/β} + T^{(1+β)/2})$, where $β\\in(0,1)$ controls active-set growth and $p_ρ$ lower-bounds the probability that a proposed configuration falls in the top-$ρ$ fraction of the search space. We combine IMOSS with three practical oracles: a Tree-structured Parzen Estimator, an incumbent-mutation oracle driven by a per-coordinate bandit, and a pretrained tabular foundation model, all three improving over the uniform random oracle baseline. IMABO outperforms all baselines in terms of regret across diverse OHPO settings, from tuning classical machine-learning models to configuring LLM-based agents. Our implementation is available at https://github.com/Tiime-Software/IMABO.",
+  "entry_id": "http://arxiv.org/abs/2609.01335v2",
+  "arxiv_id": "2609.01335v2",
+  "published_at": "2026-09-01T14:48:08Z",
+  "review": {
+    "why_selected": "주제는 블로그 범위 안에 있지만, 제목만으로 현장 가치가 즉시 드러나는 논문은 아니다. 그래서 발행 여부는 내가 실무 연결고리를 얼마나 분명하게 설명할 수 있는지에 달려 있다고 봤다.",
+    "interpretation": "내가 이 논문에서 중요하게 보는 건 알고리즘 이름보다도 `운영 중 변하는 데이터에 버틸 수 있는가`다. 철도처럼 계절, 속도, 하중, 노선 상태가 흔들리는 환경에서는 오프라인 정확도보다 온라인 적응력이 더 실질적인 경쟁력이다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

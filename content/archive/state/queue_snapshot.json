@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-09-01T05:16:16.038695+00:00",
-  "queued_count": 98,
+  "generated_at": "2026-09-04T04:39:55.585055+00:00",
+  "queued_count": 103,
   "queued_titles": [
+    {
+      "title": "Speculative Macro Commit for Faster Tool-Using Agents",
+      "topic": "agent-ops",
+      "date": "2026-09-03",
+      "slug": "260903236v1-speculative-macro-commit-for-faster-tool-using-agents",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "VIPS: Vehicle-Infrastructure Cooperative Planning Benchmark via Pseudo-Simulation",
+      "topic": "agent-ops",
+      "date": "2026-09-02",
+      "slug": "260902462v1-vips-vehicle-infrastructure-cooperative-planning-benchmark-v",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time",
+      "topic": "agent-ops",
+      "date": "2026-09-01",
+      "slug": "260901335v2-bandits-in-prod-hyperparameter-optimization-at-inference-tim",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "RestoreBench: Can AI Agents Restore Power Flow Convergence?",
+      "topic": "agent-ops",
+      "date": "2026-08-31",
+      "slug": "260900384v1-restorebench-can-ai-agents-restore-power-flow-convergence",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Deploying and Evaluating a Smart-Agriculture Agentic Engine for Full-Season Soybean Farm Operations",
+      "topic": "agent-ops",
+      "date": "2026-08-31",
+      "slug": "260900106v1-deploying-and-evaluating-a-smart-agriculture-agentic-engine",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "FaVOR: LLM-Based Agentic Framework for Factor Mining via Empirical Validation",
       "topic": "agent-ops",
@@ -315,41 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-07-30",
       "slug": "260727822v1-clvisc-agent-for-autonomous-relativistic-hydrodynamics-studi",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Skill Use or Skill Theater? Evaluating the Reasoning Backroom in Skill-Augmented Language Agents",
-      "topic": "agent-ops",
-      "date": "2026-07-29",
-      "slug": "260727484v1-skill-use-or-skill-theater-evaluating-the-reasoning-backroom",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Auditing Emergent LLM-Agent Collaboration through Cooperation-Obligation Coupling",
-      "topic": "agent-ops",
-      "date": "2026-07-29",
-      "slug": "260727429v1-auditing-emergent-llm-agent-collaboration-through-cooperatio",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "AgentS4D: Benchmarking Runtime Risks across the Execution Lifecycle of LLM-Based Workspace Agents",
-      "topic": "agent-ops",
-      "date": "2026-07-29",
-      "slug": "260727294v1-agents4d-benchmarking-runtime-risks-across-the-execution-lif",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "A Comparative Study of MCP and A2A for Inter-Agent Coordination in LLM-Based Systems",
-      "topic": "agent-ops",
-      "date": "2026-07-26",
-      "slug": "260723884v1-a-comparative-study-of-mcp-and-a2a-for-inter-agent-coordinat",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "pAI-Econ-claude: A Gated Human-in-the-Loop Multi-Agent Architecture for AI-Assisted Economic Theory Development",
-      "topic": "agent-ops",
-      "date": "2026-07-23",
-      "slug": "260721268v1-pai-econ-claude-a-gated-human-in-the-loop-multi-agent-archit",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
