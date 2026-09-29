@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-09-11T04:47:04.491243+00:00",
-  "queued_count": 109,
+  "generated_at": "2026-09-29T05:49:06.226570+00:00",
+  "queued_count": 115,
   "queued_titles": [
+    {
+      "title": "Memory in the Sky: Low-Altitude Question Answering with Multi-Agent Memory Aggregation",
+      "topic": "agent-ops",
+      "date": "2026-09-28",
+      "slug": "260935431v1-memory-in-the-sky-low-altitude-question-answering-with-multi",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
+      "topic": "agent-ops",
+      "date": "2026-09-28",
+      "slug": "260935032v1-jrdb-avr-an-active-visual-reasoning-benchmark-for-embodied-a",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ResonAct: Streaming Metrics for Runtime Diagnosis and Self-Healing in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-09-28",
+      "slug": "260934701v1-resonact-streaming-metrics-for-runtime-diagnosis-and-self-he",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ICMAPE: In-Context Multiagent Pure Exploration",
+      "topic": "agent-ops",
+      "date": "2026-09-27",
+      "slug": "260933986v1-icmape-in-context-multiagent-pure-exploration",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "LLMs Trust Their Own: Identity-Dependent Conformity in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-09-27",
+      "slug": "260933495v1-llms-trust-their-own-identity-dependent-conformity-in-multi",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Theory of Scene: Breaking the Symmetry Trap in Multi-Agent LLM Coordination",
+      "topic": "agent-ops",
+      "date": "2026-09-26",
+      "slug": "260932939v1-theory-of-scene-breaking-the-symmetry-trap-in-multi-agent-ll",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-10",
       "slug": "260809861v1-towards-expert-level-medical-ai-for-real-time-video-consulta",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "NeuroRefiner: Morphology-Aware Multi-Agent Refinement for 3D Fluorescence Microscopy Neuron Segmentation",
-      "topic": "agent-ops",
-      "date": "2026-08-10",
-      "slug": "260809636v1-neurorefiner-morphology-aware-multi-agent-refinement-for-3d",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Software Engineering for and with GUI Agent",
-      "topic": "agent-ops",
-      "date": "2026-08-10",
-      "slug": "260809278v1-software-engineering-for-and-with-gui-agent",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Compositional Threat Analysis of Latent Compromise in LLM Agent Systems: The Order 66 Scenario",
-      "topic": "agent-ops",
-      "date": "2026-08-08",
-      "slug": "260808131v1-compositional-threat-analysis-of-latent-compromise-in-llm-ag",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "SCOUT: Self-Checking and Recovery-Aware Tool-Thought Agents for Ultra-Long Egocentric Video Reasoning",
-      "topic": "agent-ops",
-      "date": "2026-08-08",
-      "slug": "260807959v1-scout-self-checking-and-recovery-aware-tool-thought-agents-f",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Online Security Learning in Cooperative Multi-Agent Systems under Hidden Byzantine Attacks",
-      "topic": "agent-ops",
-      "date": "2026-08-06",
-      "slug": "260806520v1-online-security-learning-in-cooperative-multi-agent-systems",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "TRAJDEBUG: Tracing Error Lifecycle to Identify Critical Failures in Long-Horizon Agent Trajectories",
-      "topic": "agent-ops",
-      "date": "2026-08-06",
-      "slug": "260806346v1-trajdebug-tracing-error-lifecycle-to-identify-critical-failu",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
