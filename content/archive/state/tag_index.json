@@ -1,31 +1,37 @@
 {
-  "generated_at": "2026-09-29T05:49:06+00:00",
-  "entry_count": 35,
+  "generated_at": "2026-10-02T05:46:48+00:00",
+  "entry_count": 36,
   "tag_count": 34,
   "tags": [
     {
       "tag": "PHM",
       "slug": "phm",
-      "count": 22,
+      "count": 23,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Condition Monitoring",
       "slug": "condition-monitoring",
-      "count": 19,
+      "count": 20,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Fault Diagnosis",
       "slug": "fault-diagnosis",
-      "count": 14,
+      "count": 15,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
     },
     {
       "tag": "Bearing",
       "slug": "bearing",
-      "count": 11,
+      "count": 12,
       "latest_title": "[실험실] 베어링 이상 경보 임계치는 소음과 운전 조건 변화에 얼마나 흔들리는가"
+    },
+    {
+      "tag": "Sensors",
+      "slug": "sensors",
+      "count": 11,
+      "latest_title": "2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4"
     },
     {
       "tag": "Maintenance",
@@ -34,27 +40,27 @@
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
-      "tag": "Sensors",
-      "slug": "sensors",
-      "count": 10,
-      "latest_title": "2026-03-01-shaftformer-rail-vibration-forecasting-maintenance4"
-    },
-    {
       "tag": "Railway",
       "slug": "railway",
-      "count": 9,
+      "count": 10,
       "latest_title": "2026-03-01-wayside-condition-monitoring-review"
     },
     {
       "tag": "arXiv",
       "slug": "arxiv",
-      "count": 7,
+      "count": 8,
       "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
       "tag": "Daily arXiv",
       "slug": "daily-arxiv",
-      "count": 7,
+      "count": 8,
+      "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
+    },
+    {
+      "tag": "MALT",
+      "slug": "malt",
+      "count": 8,
       "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
@@ -62,12 +68,6 @@
       "slug": "guide",
       "count": 7,
       "latest_title": "PHM Alert Governance Guide: 모델 점수를 정비 행동으로 바꾸는 경보 운영 설계"
-    },
-    {
-      "tag": "MALT",
-      "slug": "malt",
-      "count": 7,
-      "latest_title": "[arXiv Daily] Axle Sensor Fusion for Online Continual Wheel Fault Detection in Wayside Railway Monitoring"
     },
     {
       "tag": "Observability",

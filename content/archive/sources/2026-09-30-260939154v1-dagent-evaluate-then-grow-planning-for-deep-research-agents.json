@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-30",
+  "slug": "260939154v1-dagent-evaluate-then-grow-planning-for-deep-research-agents",
+  "title": "DAGent: Evaluate-then-Grow Planning for Deep Research Agents",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.CL"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "Deep research tasks require agents to navigate large knowledge spaces, synthesize evidence across many sources, and adapt their plans as findings emerge.",
+    "Directed acyclic graph (DAG)-based multi-agent systems suit this setting because they support parallel execution and isolate each sub-task within a focused dependency context.",
+    "Yet existing DAG-based agents instantiate a task-level plan before execution and repair the graph only after failures or missing evidence are observed."
+  ],
+  "key_points": [
+    "Directed acyclic graph (DAG)-based multi-agent systems suit this setting because they support parallel execution and isolate each sub-task within a focused dependency context.",
+    "Yet existing DAG-based agents instantiate a task-level plan before execution and repair the graph only after failures or missing evidence are observed."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2609.39154v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2609.39154v1"
+    }
+  ],
+  "authors": [
+    "Hanwen Liu",
+    "Yuanfu Sun",
+    "Qiaoyu Tan"
+  ],
+  "abstract": "Deep research tasks require agents to navigate large knowledge spaces, synthesize evidence across many sources, and adapt their plans as findings emerge. Directed acyclic graph (DAG)-based multi-agent systems suit this setting because they support parallel execution and isolate each sub-task within a focused dependency context. Yet existing DAG-based agents instantiate a task-level plan before execution and repair the graph only after failures or missing evidence are observed. This Plan-then-Patch strategy is brittle for deep research: the system commits most strongly when its evidence is weakest, and later revisions waste computation on branches that should not have been planned. We propose DAGent, a DAG-based multi-agent framework with Evaluate-then-Grow incremental planning: an Orchestrator grows the task graph one batch at a time, conditioning each expansion on confidence and uncertainty signals from completed nodes. A hierarchical context layer propagates compact QueryDocs by default while preserving full execution traces for on-demand recall. The recorded DAG topology admits structural RL signals that outcome-only recipes cannot define; DAGRPO, a GRPO adaptation, injects topology-conditioned credit on Executor rollouts and a structural compliance regularization on Orchestrator plans. Across BrowseComp-Plus, GAIA, and xbench-DeepSearch, DAGent surpasses the strongest open-source baseline by 5.3 / 5.8 / 2.0 points at the Qwen3-235B-A22B scale, and the lead replicates across four open-source backbones and extends to GPT-5 at 327K context. At the Qwen3-8B scale, DAGRPO improves over a same-budget outcome-only GRPO baseline by 3.0 average Pass@1 points. A same-architecture comparison shows that evidence-conditioned planning reaches higher accuracy at lower per-task token, tool-call, and step footprints than its Plan-then-Patch counterpart. Code: https://github.com/hanwenliu6825/DAGent",
+  "entry_id": "http://arxiv.org/abs/2609.39154v1",
+  "arxiv_id": "2609.39154v1",
+  "published_at": "2026-09-30T07:19:01Z",
+  "review": {
+    "why_selected": "이 논문은 운영 자동화와 관찰가능성 관점에서는 흥미롭다. 다만 철도 PHM과의 직접 연결은 약해서, 발행하더라도 내가 연결 해석을 붙여야 가치가 생기는 타입으로 판단했다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+  }
+}

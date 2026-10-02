@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-09-29T05:49:06.226570+00:00",
-  "queued_count": 115,
+  "generated_at": "2026-10-02T05:46:48.824905+00:00",
+  "queued_count": 121,
   "queued_titles": [
+    {
+      "title": "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction",
+      "topic": "agent-ops",
+      "date": "2026-10-01",
+      "slug": "261001863v1-litereality-agent-an-agentic-system-for-interactable-3d-indo",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "On the Multi-Index, Multi-Rate, and Multi-Phase Dynamics of Decoder-Only Language Models: A Unified Hybrid Framework for Generative and Agentic Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-01",
+      "slug": "261001478v1-on-the-multi-index-multi-rate-and-multi-phase-dynamics-of-de",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Communication-aware Synthesis of Safe Controllers for Discrete-Time Linear Multi-Agent Systems with Distributed k-Hop Observation",
+      "topic": "agent-ops",
+      "date": "2026-10-01",
+      "slug": "261000925v1-communication-aware-synthesis-of-safe-controllers-for-discre",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
+      "topic": "agent-ops",
+      "date": "2026-09-30",
+      "slug": "260940111v2-agent-error-dataset-scaling-50000-error-diagnosis-pairs-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "DAGent: Evaluate-then-Grow Planning for Deep Research Agents",
+      "topic": "agent-ops",
+      "date": "2026-09-30",
+      "slug": "260939154v1-dagent-evaluate-then-grow-planning-for-deep-research-agents",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Multi-agent discussion gains less when dissent is withheld",
+      "topic": "agent-ops",
+      "date": "2026-09-29",
+      "slug": "260938324v1-multi-agent-discussion-gains-less-when-dissent-is-withheld",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Memory in the Sky: Low-Altitude Question Answering with Multi-Agent Memory Aggregation",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-14",
       "slug": "260813867v1-engineering-reliable-coding-agents-evaluating-and-operating",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic Configuration Management (ACM): A Reference Configuration Model for Governed Agentic Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-11",
-      "slug": "260811166v1-agentic-configuration-management-acm-a-reference-configurati",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Scaling Laws for Majority-based Opinion Dynamics in the Presence of Stubborn Agents",
-      "topic": "agent-ops",
-      "date": "2026-08-11",
-      "slug": "260811071v1-scaling-laws-for-majority-based-opinion-dynamics-in-the-pres",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "REDAgentBench: Executable Red Teaming and Faithful Measurement of LLM Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-11",
-      "slug": "260810669v1-redagentbench-executable-red-teaming-and-faithful-measuremen",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Similarity Gates Approve Reversals: A Validity Audit of Embedding-Cosine Thresholds in Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-10",
-      "slug": "260810216v1-similarity-gates-approve-reversals-a-validity-audit-of-embed",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Complexity of Local Observation Consistency in Discrete-Event Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-10",
-      "slug": "260810111v1-complexity-of-local-observation-consistency-in-discrete-even",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Towards Expert-level Medical AI for Real-time Video Consultations",
-      "topic": "agent-ops",
-      "date": "2026-08-10",
-      "slug": "260809861v1-towards-expert-level-medical-ai-for-real-time-video-consulta",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
