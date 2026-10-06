@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-10-02T05:46:48.824905+00:00",
-  "queued_count": 121,
+  "generated_at": "2026-10-06T06:28:10.254104+00:00",
+  "queued_count": 127,
   "queued_titles": [
+    {
+      "title": "Copies or Sources? Measuring How LLM Aggregators Count Restated Evidence in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-05",
+      "slug": "261006192v1-copies-or-sources-measuring-how-llm-aggregators-count-restat",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Separation Principle for Event-Triggered Prescribed-Time Consensus Tracking of Nonlinear Multi-Agent Systems under DoS Attacks",
+      "topic": "agent-ops",
+      "date": "2026-10-05",
+      "slug": "261005785v1-separation-principle-for-event-triggered-prescribed-time-con",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Characterizing Security Effects of OSS Vulnerabilities in Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-04",
+      "slug": "261005036v1-characterizing-security-effects-of-oss-vulnerabilities-in-ag",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents",
+      "topic": "agent-ops",
+      "date": "2026-10-04",
+      "slug": "261004889v1-forkpilot-self-evolving-policy-for-retrospective-search-in-l",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MASBench: Benchmarking LLM-based Multi-Agent Collaboration under Partial Observability",
+      "topic": "agent-ops",
+      "date": "2026-10-03",
+      "slug": "261004672v1-masbench-benchmarking-llm-based-multi-agent-collaboration-un",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos",
+      "topic": "agent-ops",
+      "date": "2026-10-03",
+      "slug": "261004432v1-video2world-benchmarking-coding-agents-for-interactive-world",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-18",
       "slug": "260818312v1-artifact-centered-claim-aware-observability-for-autonomous-s",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agent Lightning v1.0: Towards Harnessed Agentic RL",
-      "topic": "agent-ops",
-      "date": "2026-08-18",
-      "slug": "260817528v1-agent-lightning-v10-towards-harnessed-agentic-rl",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Physics of Agents: Statistical Mechanics Predicts Collective Behavior of AI Agents",
-      "topic": "agent-ops",
-      "date": "2026-08-17",
-      "slug": "260816578v1-physics-of-agents-statistical-mechanics-predicts-collective",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agent Gym: A Framework for Continuous Evaluation and Evolution of LLM Agents Through Human-in-the-Loop Feedback",
-      "topic": "agent-ops",
-      "date": "2026-08-16",
-      "slug": "260815591v1-agent-gym-a-framework-for-continuous-evaluation-and-evolutio",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "P-PAS: Prefill-Pressure Adaptive Scheduling for Long-Context LLM Serving",
-      "topic": "agent-ops",
-      "date": "2026-08-15",
-      "slug": "260815171v1-p-pas-prefill-pressure-adaptive-scheduling-for-long-context",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ATLAS: Discovering Agent Strategies through LLM-Guided Abstraction and Automata Learning",
-      "topic": "agent-ops",
-      "date": "2026-08-14",
-      "slug": "260814352v1-atlas-discovering-agent-strategies-through-llm-guided-abstra",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Engineering Reliable Coding Agents: Evaluating and Operating the System Around the Model",
-      "topic": "agent-ops",
-      "date": "2026-08-14",
-      "slug": "260813867v1-engineering-reliable-coding-agents-evaluating-and-operating",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
