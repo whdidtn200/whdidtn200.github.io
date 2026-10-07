@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-06",
+  "slug": "261007835v1-dhcg-dynamic-construction-of-hierarchical-collaboration-grap",
+  "title": "DHCG: Dynamic Construction of Hierarchical Collaboration Graphs for LLM-Based Multi-Agent Reasoning",
+  "source_type": "arxiv-api",
+  "topic": "agent-ops",
+  "categories": [
+    "ai",
+    "cs.AI"
+  ],
+  "tags": [
+    "arXiv",
+    "MALT",
+    "agent-ops"
+  ],
+  "summary": [
+    "LLM-based multi-agent systems (MAS) have demonstrated strong capabilities in solving complex problems across diverse domains.",
+    "Recently, the dynamic orchestration of agent systems has become an important research direction.",
+    "However, existing methods suffer from limited composition, misaligned dependencies, and inflexible scale, restricting their ability to adapt to reasoning requirements during execution."
+  ],
+  "key_points": [
+    "Recently, the dynamic orchestration of agent systems has become an important research direction.",
+    "However, existing methods suffer from limited composition, misaligned dependencies, and inflexible scale, restricting their ability to adapt to reasoning requirements during execution."
+  ],
+  "operator_view": [
+    "MALT는 논문 초록을 그대로 복제하지 않고, 철도 PHM과 운영 자동화 관점에서 다시 읽는다.",
+    "예약 발행 체계에서는 최신성보다 실제 적용 가능성이 높은 논문을 우선한다."
+  ],
+  "application_notes": [
+    "현장 적용 시 어떤 센서, 운영 루프, 검증 절차와 연결할 수 있는지를 먼저 본다.",
+    "기존 블로그의 PHM, Observability, Agentic AI 글과 연결될 수 있는 논문만 발행 후보로 삼는다."
+  ],
+  "limitations": [
+    "초록 기반 초안이라 세부 실험 설정과 한계는 발행 전 보강이 필요하다.",
+    "실제 배포 전에는 본문 원문과 도표를 다시 확인하는 절차가 권장된다."
+  ],
+  "sources": [
+    {
+      "label": "arXiv abs",
+      "url": "http://arxiv.org/abs/2610.07835v1"
+    },
+    {
+      "label": "arXiv pdf",
+      "url": "https://arxiv.org/pdf/2610.07835v1"
+    }
+  ],
+  "authors": [
+    "Jie Ren",
+    "Jiakang Yuan",
+    "Chenyu Huang",
+    "Hezeer Ma",
+    "Jiayuan Fan",
+    "Tao Chen"
+  ],
+  "abstract": "LLM-based multi-agent systems (MAS) have demonstrated strong capabilities in solving complex problems across diverse domains. Recently, the dynamic orchestration of agent systems has become an important research direction. However, existing methods suffer from limited composition, misaligned dependencies, and inflexible scale, restricting their ability to adapt to reasoning requirements during execution. To address these limitations, we reframe MAS design as a partially observable Markov decision process, in which both the composition and scale of the MAS are dynamically determined. We propose DHCG, a novel framework that coordinates three modules (Planner, Worker, and Generator) to progressively construct a dynamic hierarchical collaboration graph from scratch based on the query and evolving execution feedback. At each step, guided by feedback, the Planner generates a set of distinct and complementary roles tailored to the current reasoning needs and selectively routes relevant information to each role. It can also finalize the hierarchical collaboration graph early or progressively expand it when additional reasoning is required. We further introduce action-aware preference optimization to train the Planner to make more effective decisions when constructing hierarchical collaboration graphs. We systematically evaluate DHCG across code generation, mathematical reasoning, and domain-specific reasoning benchmarks. DHCG achieves state-of-the-art average performance among the compared methods, improving over the single-agent baseline by 13.06 points and outperforming both static and dynamic MAS baselines by 2.77-8.02 points. Additional experiments further demonstrate its generalization across different Planner backbones and unseen Worker models.",
+  "entry_id": "http://arxiv.org/abs/2610.07835v1",
+  "arxiv_id": "2610.07835v1",
+  "published_at": "2026-10-06T06:33:40Z",
+  "review": {
+    "why_selected": "이 논문은 철도 설비, 센서, 고장 진단 같은 블로그 핵심 축과 직접 연결된다. 그래서 단순히 최신 논문이라서가 아니라, 지금 블로그 독자에게 바로 설명할 이유가 있는 후보로 봤다.",
+    "interpretation": "이 논문은 개별 기술의 새로움보다도 시스템 안에 어떻게 연결되는지가 더 중요해 보인다. 그래서 발행할 때는 결과 요약보다 운영 맥락 해석을 앞에 두는 편이 맞다.",
+    "applicability": "당장 현장에 꽂히는 타입은 아니고, 기존 글과 묶어서 해석형 포스트로 재구성할 때 더 힘을 받을 논문으로 본다.",
+    "caution": "초록만으로는 데이터셋 조건, 운영 제약, 오탐 비용 같은 실전 요소가 충분히 드러나지 않는다. 그래서 발행할 때는 어디까지 믿고 적용할 수 있는지 한계를 같이 말해야 한다.",
+    "verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+  }
+}

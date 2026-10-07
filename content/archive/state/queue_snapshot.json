@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-10-06T06:28:10.254104+00:00",
-  "queued_count": 127,
+  "generated_at": "2026-10-07T05:21:02.226011+00:00",
+  "queued_count": 130,
   "queued_titles": [
+    {
+      "title": "SquidAgent: Parallelize Wisely, Coordinate Efficiently",
+      "topic": "agent-ops",
+      "date": "2026-10-06",
+      "slug": "261008647v1-squidagent-parallelize-wisely-coordinate-efficiently",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "DHCG: Dynamic Construction of Hierarchical Collaboration Graphs for LLM-Based Multi-Agent Reasoning",
+      "topic": "agent-ops",
+      "date": "2026-10-06",
+      "slug": "261007835v1-dhcg-dynamic-construction-of-hierarchical-collaboration-grap",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference",
+      "topic": "agent-ops",
+      "date": "2026-10-06",
+      "slug": "261007587v1-large-language-model-orchestration-under-heterogeneous-prefe",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Copies or Sources? Measuring How LLM Aggregators Count Restated Evidence in Multi-Agent Systems",
       "topic": "agent-ops",
@@ -329,27 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-21",
       "slug": "260820670v1-why2speak-faithful-reasoning-for-abstaining-action-policies",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "DocClaw: A Unified Agentic System for Intelligent Document Processing",
-      "topic": "agent-ops",
-      "date": "2026-08-19",
-      "slug": "260818685v1-docclaw-a-unified-agentic-system-for-intelligent-document-pr",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "The Evaluation Context Protocol (ECP): A Portable Contract for AI Agent Evaluation",
-      "topic": "agent-ops",
-      "date": "2026-08-18",
-      "slug": "260819263v1-the-evaluation-context-protocol-ecp-a-portable-contract-for",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Artifact-centered Claim-aware Observability for Autonomous Scientific Agents",
-      "topic": "agent-ops",
-      "date": "2026-08-18",
-      "slug": "260818312v1-artifact-centered-claim-aware-observability-for-autonomous-s",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
