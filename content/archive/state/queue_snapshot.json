@@ -1,7 +1,56 @@
 {
-  "generated_at": "2026-10-07T05:21:02.226011+00:00",
-  "queued_count": 130,
+  "generated_at": "2026-10-09T05:18:22.609156+00:00",
+  "queued_count": 138,
   "queued_titles": [
+    {
+      "title": "Mental-Models for Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-08",
+      "slug": "261012453v1-mental-models-for-multi-agent-systems",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Error-Propagation Modeling for Failure Attribution in LLM-Based Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-08",
+      "slug": "261011600v1-error-propagation-modeling-for-failure-attribution-in-llm-ba",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
+      "topic": "agent-ops",
+      "date": "2026-10-08",
+      "slug": "261011373v1-from-a-prompt-to-repertoires-evolving-functional-repertoires",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ReCast: Attribution-Oriented Step Representation Learning for LLM-Based Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-08",
+      "slug": "261011334v1-recast-attribution-oriented-step-representation-learning-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Back in Style: A Sociolinguistic Approach to Authoring and Measuring Persona Fidelity in User Simulation",
+      "topic": "agent-ops",
+      "date": "2026-10-07",
+      "slug": "261010988v1-back-in-style-a-sociolinguistic-approach-to-authoring-and-me",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
+      "topic": "agent-ops",
+      "date": "2026-10-07",
+      "slug": "261010513v1-sciexam-for-enso-can-ai-agents-build-climate-models",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "DUDA-Bench: Benchmarking LLM Agents on Multimodal Data-Driven Urban Diagnosis",
+      "topic": "agent-ops",
+      "date": "2026-10-07",
+      "slug": "261009374v1-duda-bench-benchmarking-llm-agents-on-multimodal-data-driven",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "SquidAgent: Parallelize Wisely, Coordinate Efficiently",
       "topic": "agent-ops",
@@ -15,6 +64,13 @@
       "date": "2026-10-06",
       "slug": "261007835v1-dhcg-dynamic-construction-of-hierarchical-collaboration-grap",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference",
+      "topic": "agent-ops",
+      "date": "2026-10-06",
+      "slug": "261007587v2-large-language-model-orchestration-under-heterogeneous-prefe",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
       "title": "Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference",
@@ -294,62 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-25",
       "slug": "260824555v1-strokeguard-a-multi-agent-guided-system-for-prehospital-stro",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Adaptive Influence Graphs for Failure Attribution in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-25",
-      "slug": "260824361v1-adaptive-influence-graphs-for-failure-attribution-in-multi-a",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Observability and Fault Injection for LLM-Based Multi-Agent Systems in Software Engineering",
-      "topic": "agent-ops",
-      "date": "2026-08-25",
-      "slug": "260824271v1-observability-and-fault-injection-for-llm-based-multi-agent",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ViSculpt: Visual-Centric Agentic Geometry Editing",
-      "topic": "agent-ops",
-      "date": "2026-08-25",
-      "slug": "260824169v1-visculpt-visual-centric-agentic-geometry-editing",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "EarthVerse: Benchmarking Scientific Agents Across Dynamic Earth Systems and Natural Hazards",
-      "topic": "agent-ops",
-      "date": "2026-08-24",
-      "slug": "260823525v1-earthverse-benchmarking-scientific-agents-across-dynamic-ear",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "MediSkill-Evo: Process-Constrained Self-Evolution for Evidence-Grounded Clinical Interaction",
-      "topic": "agent-ops",
-      "date": "2026-08-24",
-      "slug": "260823397v1-mediskill-evo-process-constrained-self-evolution-for-evidenc",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Poetic Heritage for Culturally Grounded Emotional Support: An Interaction Design Framework and Its Multimodal Agentic Instantiation",
-      "topic": "agent-ops",
-      "date": "2026-08-23",
-      "slug": "260822639v1-poetic-heritage-for-culturally-grounded-emotional-support-an",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Role-Specialized Mixture-of-Agents with Open-Weight LLMs for Clinical Prediction",
-      "topic": "agent-ops",
-      "date": "2026-08-23",
-      "slug": "260822176v1-role-specialized-mixture-of-agents-with-open-weight-llms-for",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Why2Speak: Faithful Reasoning for Abstaining Action Policies",
-      "topic": "agent-ops",
-      "date": "2026-08-21",
-      "slug": "260820670v1-why2speak-faithful-reasoning-for-abstaining-action-policies",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
