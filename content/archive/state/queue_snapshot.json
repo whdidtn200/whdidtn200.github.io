@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-10-09T06:16:19.739235+00:00",
-  "queued_count": 138,
+  "generated_at": "2026-10-13T06:51:07.903450+00:00",
+  "queued_count": 142,
   "queued_titles": [
+    {
+      "title": "Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-09",
+      "slug": "261013870v1-ask-your-advisor-learning-when-to-consult-stronger-models-in",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "VETR: Execution-Grounded Self-Improving Agent for Symbolic Graphics Reasoning",
+      "topic": "agent-ops",
+      "date": "2026-10-09",
+      "slug": "261013098v1-vetr-execution-grounded-self-improving-agent-for-symbolic-gr",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-09",
+      "slug": "261012822v1-reward-hacking-as-a-transmissible-strategy-in-multi-agent-co",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
+      "topic": "agent-ops",
+      "date": "2026-10-08",
+      "slug": "261012593v1-know-what-you-dont-know-agentic-data-synthesis-by-evolving-g",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Mental-Models for Multi-Agent Systems",
       "topic": "agent-ops",
@@ -322,34 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-28",
       "slug": "260828553v2-logos-an-agent-harness-on-a-cross-process-bus",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Finding the Right Evidence: Factor-Guided Coarse-to-Fine Reasoning for Long Videos",
-      "topic": "agent-ops",
-      "date": "2026-08-26",
-      "slug": "260826355v1-finding-the-right-evidence-factor-guided-coarse-to-fine-reas",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "SwarmWorld: Stigmergic technological evolution in societies of language-model agents",
-      "topic": "agent-ops",
-      "date": "2026-08-26",
-      "slug": "260826081v1-swarmworld-stigmergic-technological-evolution-in-societies-o",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Test-Time Collaborative Classification over Multi-Agent Networks",
-      "topic": "agent-ops",
-      "date": "2026-08-25",
-      "slug": "260824787v1-test-time-collaborative-classification-over-multi-agent-netw",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "StrokeGuard: A Multi-Agent Guided System for Prehospital Stroke Assessment",
-      "topic": "agent-ops",
-      "date": "2026-08-25",
-      "slug": "260824555v1-strokeguard-a-multi-agent-guided-system-for-prehospital-stro",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
