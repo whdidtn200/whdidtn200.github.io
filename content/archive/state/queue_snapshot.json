@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-10-13T06:51:07.903450+00:00",
-  "queued_count": 142,
+  "generated_at": "2026-10-16T04:38:25.869393+00:00",
+  "queued_count": 148,
   "queued_titles": [
+    {
+      "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261022316v1-learning-to-steer-llm-agents-and-multi-agent-systems",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261022124v1-probe-learning-to-audit-policy-compliance-in-tool-using-llm",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agentic-Priors: Using Large Language Models to Address the Cold Start Problem in Preference Elicitation",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261021938v1-agentic-priors-using-large-language-models-to-address-the-co",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261021538v1-agent-status-protocol-asp-a-lightweight-specification-for-st",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "SSR: Structural Signal Retriever for Scalable Agent Discovery in LLM-Orchestrated Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261021113v1-ssr-structural-signal-retriever-for-scalable-agent-discovery",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
+    {
+      "title": "SCARCE: Emergent Institutions in Long-Horizon Multi-Agent Coding Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261021029v1-scarce-emergent-institutions-in-long-horizon-multi-agent-cod",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-08-31",
       "slug": "260900106v1-deploying-and-evaluating-a-smart-agriculture-agentic-engine",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "FaVOR: LLM-Based Agentic Framework for Factor Mining via Empirical Validation",
-      "topic": "agent-ops",
-      "date": "2026-08-31",
-      "slug": "260830192v1-favor-llm-based-agentic-framework-for-factor-mining-via-empi",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "EDGE: Engine for Deterministic Graph Evaluation through Conversation Simulation from Graph Structured DSL Configuration",
-      "topic": "agent-ops",
-      "date": "2026-08-30",
-      "slug": "260829971v1-edge-engine-for-deterministic-graph-evaluation-through-conve",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Diachronic Hypergraphs for Orchestrated Multi-Agent Multimodal Memory Curation",
-      "topic": "agent-ops",
-      "date": "2026-08-30",
-      "slug": "260829678v1-diachronic-hypergraphs-for-orchestrated-multi-agent-multimod",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Detect Before You Attribute: Cascade Failure Attribution for Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-08-30",
-      "slug": "260829646v1-detect-before-you-attribute-cascade-failure-attribution-for",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agent2UCB: Agentic System for Generative Engine Optimization",
-      "topic": "agent-ops",
-      "date": "2026-08-29",
-      "slug": "260829063v1-agent2ucb-agentic-system-for-generative-engine-optimization",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Logos: An Agent Harness on a Cross-Process Bus",
-      "topic": "agent-ops",
-      "date": "2026-08-28",
-      "slug": "260828553v2-logos-an-agent-harness-on-a-cross-process-bus",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
