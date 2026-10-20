@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-10-16T04:38:25.869393+00:00",
-  "queued_count": 148,
+  "generated_at": "2026-10-20T04:57:47.597993+00:00",
+  "queued_count": 152,
   "queued_titles": [
+    {
+      "title": "Topological Sheaves of Irreducibility: A Theoretical Framework for Multi-Agent Task Obstructions",
+      "topic": "agent-ops",
+      "date": "2026-10-19",
+      "slug": "261026777v1-topological-sheaves-of-irreducibility-a-theoretical-framewor",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MASIF: Implicit Failures for Process Observability in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-19",
+      "slug": "261025852v1-masif-implicit-failures-for-process-observability-in-multi-a",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "AgentSoV: Virtual Sensing for LLM Multi-Agent Systems via Stream of Variation",
+      "topic": "agent-ops",
+      "date": "2026-10-17",
+      "slug": "261024845v1-agentsov-virtual-sensing-for-llm-multi-agent-systems-via-str",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "EgoP$^{2}$C: Internalizing Plan-Perceive-Compose for Spatial Reasoning in Egocentric Video",
+      "topic": "agent-ops",
+      "date": "2026-10-15",
+      "slug": "261022681v1-egop2c-internalizing-plan-perceive-compose-for-spatial-reaso",
+      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
+    },
     {
       "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
       "topic": "agent-ops",
@@ -322,34 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-09-03",
       "slug": "260903236v1-speculative-macro-commit-for-faster-tool-using-agents",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "VIPS: Vehicle-Infrastructure Cooperative Planning Benchmark via Pseudo-Simulation",
-      "topic": "agent-ops",
-      "date": "2026-09-02",
-      "slug": "260902462v1-vips-vehicle-infrastructure-cooperative-planning-benchmark-v",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Bandits in Prod: Hyperparameter Optimization at Inference Time",
-      "topic": "agent-ops",
-      "date": "2026-09-01",
-      "slug": "260901335v2-bandits-in-prod-hyperparameter-optimization-at-inference-tim",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "RestoreBench: Can AI Agents Restore Power Flow Convergence?",
-      "topic": "agent-ops",
-      "date": "2026-08-31",
-      "slug": "260900384v1-restorebench-can-ai-agents-restore-power-flow-convergence",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Deploying and Evaluating a Smart-Agriculture Agentic Engine for Full-Season Soybean Farm Operations",
-      "topic": "agent-ops",
-      "date": "2026-08-31",
-      "slug": "260900106v1-deploying-and-evaluating-a-smart-agriculture-agentic-engine",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
