@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-10-20T04:57:47.597993+00:00",
-  "queued_count": 152,
+  "generated_at": "2026-10-27T05:12:45.878968+00:00",
+  "queued_count": 158,
   "queued_titles": [
+    {
+      "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
+      "topic": "agent-ops",
+      "date": "2026-10-26",
+      "slug": "261035453v1-beyond-federated-learning-decentralized-agentic-systems-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Silent and Costly: Characterizing and Detecting Prompt-Caching Mis-Integration in LLM Agents",
+      "topic": "agent-ops",
+      "date": "2026-10-26",
+      "slug": "261034817v1-silent-and-costly-characterizing-and-detecting-prompt-cachin",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "CaliMem: Search-Efficient Data Agent via Calibrated Memory",
+      "topic": "agent-ops",
+      "date": "2026-10-25",
+      "slug": "261034500v1-calimem-search-efficient-data-agent-via-calibrated-memory",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ReGE: Stronger Agents through Experience Synthesis",
+      "topic": "agent-ops",
+      "date": "2026-10-24",
+      "slug": "261033861v1-rege-stronger-agents-through-experience-synthesis",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Responsibility Boundaries for Agentic Systems: A Comparative Evaluation of Probabilistic Agentic Programming",
+      "topic": "agent-ops",
+      "date": "2026-10-23",
+      "slug": "261033312v1-responsibility-boundaries-for-agentic-systems-a-comparative",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "UAV-SwarmAgent: Scalable Multi-UAV Reconnaissance and Task Allocation via Code Generation and Vision-Language Reasoning",
+      "topic": "agent-ops",
+      "date": "2026-10-23",
+      "slug": "261032559v1-uav-swarmagent-scalable-multi-uav-reconnaissance-and-task-al",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Topological Sheaves of Irreducibility: A Theoretical Framework for Multi-Agent Task Obstructions",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-09-10",
       "slug": "260911911v1-artificial-id-drive-and-persistent-alignment-in-agentic-ai",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ChurnBench: A Drift-Aware Benchmark Demonstrating That Refresh Scheduling, Not Cache Age, Governs Staleness in Agentic AI",
-      "topic": "agent-ops",
-      "date": "2026-09-10",
-      "slug": "260911515v1-churnbench-a-drift-aware-benchmark-demonstrating-that-refres",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation",
-      "topic": "agent-ops",
-      "date": "2026-09-10",
-      "slug": "260911308v1-2am-grounding-agent-side-memory-as-guidance-for-steerable-ac",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Engineering Reliable Commit Gates for Agentic AI: Cost-Aware Verification Portfolios under Common-Mode Data Failures",
-      "topic": "agent-ops",
-      "date": "2026-09-10",
-      "slug": "260910969v1-engineering-reliable-commit-gates-for-agentic-ai-cost-aware",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Black-Box Red Teaming of Agentic AI: A Taxonomy-Driven Framework for Automated Risk Discovery",
-      "topic": "agent-ops",
-      "date": "2026-09-09",
-      "slug": "260909647v1-black-box-red-teaming-of-agentic-ai-a-taxonomy-driven-framew",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Beyond Agent Harnesses: Cross-Substrate Authority for Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-09-08",
-      "slug": "260908472v1-beyond-agent-harnesses-cross-substrate-authority-for-multi-a",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Speculative Macro Commit for Faster Tool-Using Agents",
-      "topic": "agent-ops",
-      "date": "2026-09-03",
-      "slug": "260903236v1-speculative-macro-commit-for-faster-tool-using-agents",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
