@@ -1,12 +1,40 @@
 {
-  "generated_at": "2026-10-27T05:12:45.878968+00:00",
-  "queued_count": 158,
+  "generated_at": "2026-10-30T05:56:04.391700+00:00",
+  "queued_count": 162,
   "queued_titles": [
+    {
+      "title": "RFW-A: Agentic Procedural Generation of 400K Articulated Assets over 500 Categories",
+      "topic": "agent-ops",
+      "date": "2026-10-29",
+      "slug": "261040333v1-rfw-a-agentic-procedural-generation-of-400k-articulated-asse",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MAServeBench: Benchmarking Multi-Agent LLM Serving Systems with Hierarchical Collaboration Workloads",
+      "topic": "agent-ops",
+      "date": "2026-10-29",
+      "slug": "261040293v1-maservebench-benchmarking-multi-agent-llm-serving-systems-wi",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MAS-Loop: Beyond One-Shot Orchestration towards Self-Evolving Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-10-28",
+      "slug": "261038946v1-mas-loop-beyond-one-shot-orchestration-towards-self-evolving",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Beyond Federated Learning: Decentralized Agentic Systems for Self-Evolving Clinical Intelligence",
       "topic": "agent-ops",
       "date": "2026-10-26",
       "slug": "261035453v1-beyond-federated-learning-decentralized-agentic-systems-for",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Silent and Costly: Characterizing and Detecting Prompt-Caching Mis-Integration in LLM Agents",
+      "topic": "agent-ops",
+      "date": "2026-10-26",
+      "slug": "261034817v2-silent-and-costly-characterizing-and-detecting-prompt-cachin",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
@@ -322,34 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-09-28",
       "slug": "260934701v1-resonact-streaming-metrics-for-runtime-diagnosis-and-self-he",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ICMAPE: In-Context Multiagent Pure Exploration",
-      "topic": "agent-ops",
-      "date": "2026-09-27",
-      "slug": "260933986v1-icmape-in-context-multiagent-pure-exploration",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "LLMs Trust Their Own: Identity-Dependent Conformity in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-09-27",
-      "slug": "260933495v1-llms-trust-their-own-identity-dependent-conformity-in-multi",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Theory of Scene: Breaking the Symmetry Trap in Multi-Agent LLM Coordination",
-      "topic": "agent-ops",
-      "date": "2026-09-26",
-      "slug": "260932939v1-theory-of-scene-breaking-the-symmetry-trap-in-multi-agent-ll",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Artificial Id: Drive and Persistent Alignment in Agentic AI",
-      "topic": "agent-ops",
-      "date": "2026-09-10",
-      "slug": "260911911v1-artificial-id-drive-and-persistent-alignment-in-agentic-ai",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
