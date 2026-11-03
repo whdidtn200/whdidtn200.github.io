@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-10-30T05:56:04.391700+00:00",
-  "queued_count": 162,
+  "generated_at": "2026-11-03T06:54:58.657292+00:00",
+  "queued_count": 168,
   "queued_titles": [
+    {
+      "title": "Reimagining computational quantum research with AI scientists",
+      "topic": "agent-ops",
+      "date": "2026-11-02",
+      "slug": "261102833v1-reimagining-computational-quantum-research-with-ai-scientist",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Closing the Dynamics Gap through Self-Directed Robotic Interaction",
+      "topic": "agent-ops",
+      "date": "2026-11-02",
+      "slug": "261102691v1-closing-the-dynamics-gap-through-self-directed-robotic-inter",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "TAC-CoT: Tool-Empowered Implicit Chain-of-Thought via Interleaving Explicit Tokens",
+      "topic": "agent-ops",
+      "date": "2026-11-01",
+      "slug": "261101926v1-tac-cot-tool-empowered-implicit-chain-of-thought-via-interle",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MemHarmBench: Evaluating Cross-Session Prompt Injection in Memory-Persistent AI Agents",
+      "topic": "agent-ops",
+      "date": "2026-11-01",
+      "slug": "261101700v1-memharmbench-evaluating-cross-session-prompt-injection-in-me",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Renormalized Cellular Intelligence: When Does Model Reduction Preserve Collective Capability?",
+      "topic": "agent-ops",
+      "date": "2026-11-01",
+      "slug": "261101441v1-renormalized-cellular-intelligence-when-does-model-reduction",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "GURU: A Hierarchical Neuro-Symbolic Multi-Agent System for Verification-Aware Automation of Mission-Critical Digital Engineering and Operations",
+      "topic": "agent-ops",
+      "date": "2026-10-31",
+      "slug": "261101001v1-guru-a-hierarchical-neuro-symbolic-multi-agent-system-for-ve",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "RFW-A: Agentic Procedural Generation of 400K Articulated Assets over 500 Categories",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-01",
       "slug": "261000925v1-communication-aware-synthesis-of-safe-controllers-for-discre",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agent Error Dataset: Scaling 50,000 Error--Diagnosis Pairs for Failure Analysis and Error-Aware Post-Training",
-      "topic": "agent-ops",
-      "date": "2026-09-30",
-      "slug": "260940111v2-agent-error-dataset-scaling-50000-error-diagnosis-pairs-for",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "DAGent: Evaluate-then-Grow Planning for Deep Research Agents",
-      "topic": "agent-ops",
-      "date": "2026-09-30",
-      "slug": "260939154v1-dagent-evaluate-then-grow-planning-for-deep-research-agents",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Multi-agent discussion gains less when dissent is withheld",
-      "topic": "agent-ops",
-      "date": "2026-09-29",
-      "slug": "260938324v1-multi-agent-discussion-gains-less-when-dissent-is-withheld",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Memory in the Sky: Low-Altitude Question Answering with Multi-Agent Memory Aggregation",
-      "topic": "agent-ops",
-      "date": "2026-09-28",
-      "slug": "260935431v1-memory-in-the-sky-low-altitude-question-answering-with-multi",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "JRDB-AVR: An Active Visual Reasoning Benchmark for Embodied Agents in Real-World Environments",
-      "topic": "agent-ops",
-      "date": "2026-09-28",
-      "slug": "260935032v1-jrdb-avr-an-active-visual-reasoning-benchmark-for-embodied-a",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ResonAct: Streaming Metrics for Runtime Diagnosis and Self-Healing in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-09-28",
-      "slug": "260934701v1-resonact-streaming-metrics-for-runtime-diagnosis-and-self-he",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
