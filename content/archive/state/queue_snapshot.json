@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-11-03T06:54:58.657292+00:00",
-  "queued_count": 168,
+  "generated_at": "2026-11-06T06:55:54.889323+00:00",
+  "queued_count": 171,
   "queued_titles": [
+    {
+      "title": "Can LLM Agents Learn to Test? Maintaining Scoped Experience as Testing Evidence for Mobile GUI Testing",
+      "topic": "agent-ops",
+      "date": "2026-11-04",
+      "slug": "261105873v1-can-llm-agents-learn-to-test-maintaining-scoped-experience-a",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Inter-Agent Influence: Evaluating Persuasion, Deception, and Coercion in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-11-03",
+      "slug": "261104556v1-inter-agent-influence-evaluating-persuasion-deception-and-co",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Finite-Sample Convergence in Networked Average Reward MARL: Decentralization Pitfalls and Entropy Remedies",
+      "topic": "agent-ops",
+      "date": "2026-11-02",
+      "slug": "261104072v1-finite-sample-convergence-in-networked-average-reward-marl-d",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Reimagining computational quantum research with AI scientists",
       "topic": "agent-ops",
@@ -329,27 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-03",
       "slug": "261004432v1-video2world-benchmarking-coding-agents-for-interactive-world",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "LiteReality-Agent: An Agentic System for Interactable 3D Indoor Scene Reconstruction",
-      "topic": "agent-ops",
-      "date": "2026-10-01",
-      "slug": "261001863v1-litereality-agent-an-agentic-system-for-interactable-3d-indo",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "On the Multi-Index, Multi-Rate, and Multi-Phase Dynamics of Decoder-Only Language Models: A Unified Hybrid Framework for Generative and Agentic Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-01",
-      "slug": "261001478v1-on-the-multi-index-multi-rate-and-multi-phase-dynamics-of-de",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Communication-aware Synthesis of Safe Controllers for Discrete-Time Linear Multi-Agent Systems with Distributed k-Hop Observation",
-      "topic": "agent-ops",
-      "date": "2026-10-01",
-      "slug": "261000925v1-communication-aware-synthesis-of-safe-controllers-for-discre",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
