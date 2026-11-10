@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-11-06T06:55:54.889323+00:00",
-  "queued_count": 171,
+  "generated_at": "2026-11-10T07:26:34.234049+00:00",
+  "queued_count": 177,
   "queued_titles": [
+    {
+      "title": "SciMARS: Multi-Agent Recursive Self-Improvement for Closed-Loop Scientific Discovery",
+      "topic": "agent-ops",
+      "date": "2026-11-09",
+      "slug": "261112552v1-scimars-multi-agent-recursive-self-improvement-for-closed-lo",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Benchmarking language models and agents for scientific reasoning in evolving materials laboratories",
+      "topic": "agent-ops",
+      "date": "2026-11-09",
+      "slug": "261112014v1-benchmarking-language-models-and-agents-for-scientific-reaso",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Real-Time Threat Classification in Multi-Agent Systems via Topology-Coupled Hidden Markov Models",
+      "topic": "agent-ops",
+      "date": "2026-11-07",
+      "slug": "261110779v1-real-time-threat-classification-in-multi-agent-systems-via-t",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Coordinated Mixed-Precision KV Cache Quantization for Efficient LLM-based Multi-agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-11-06",
+      "slug": "261110096v1-coordinated-mixed-precision-kv-cache-quantization-for-effici",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Enabling Privacy-Preserving Natural Language Access to Industrial Smart Meter Data",
+      "topic": "agent-ops",
+      "date": "2026-11-06",
+      "slug": "261109372v1-enabling-privacy-preserving-natural-language-access-to-indus",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "ABHBench: Evaluating Moral Decision-Making of Foundation Models from an Agentic Perspective",
+      "topic": "agent-ops",
+      "date": "2026-11-06",
+      "slug": "261109326v1-abhbench-evaluating-moral-decision-making-of-foundation-mode",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Can LLM Agents Learn to Test? Maintaining Scoped Experience as Testing Evidence for Mobile GUI Testing",
       "topic": "agent-ops",
@@ -308,48 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-06",
       "slug": "261007587v1-large-language-model-orchestration-under-heterogeneous-prefe",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Copies or Sources? Measuring How LLM Aggregators Count Restated Evidence in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-05",
-      "slug": "261006192v1-copies-or-sources-measuring-how-llm-aggregators-count-restat",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Separation Principle for Event-Triggered Prescribed-Time Consensus Tracking of Nonlinear Multi-Agent Systems under DoS Attacks",
-      "topic": "agent-ops",
-      "date": "2026-10-05",
-      "slug": "261005785v1-separation-principle-for-event-triggered-prescribed-time-con",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Characterizing Security Effects of OSS Vulnerabilities in Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-04",
-      "slug": "261005036v1-characterizing-security-effects-of-oss-vulnerabilities-in-ag",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ForkPilot: Self-Evolving Policy for Retrospective Search in Long-Horizon Agents",
-      "topic": "agent-ops",
-      "date": "2026-10-04",
-      "slug": "261004889v1-forkpilot-self-evolving-policy-for-retrospective-search-in-l",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "MASBench: Benchmarking LLM-based Multi-Agent Collaboration under Partial Observability",
-      "topic": "agent-ops",
-      "date": "2026-10-03",
-      "slug": "261004672v1-masbench-benchmarking-llm-based-multi-agent-collaboration-un",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Video2World: Benchmarking Coding Agents for Interactive World Modeling from Embodied Videos",
-      "topic": "agent-ops",
-      "date": "2026-10-03",
-      "slug": "261004432v1-video2world-benchmarking-coding-agents-for-interactive-world",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
