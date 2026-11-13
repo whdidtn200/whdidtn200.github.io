@@ -1,7 +1,35 @@
 {
-  "generated_at": "2026-11-10T07:26:34.234049+00:00",
-  "queued_count": 177,
+  "generated_at": "2026-11-13T06:52:47.098541+00:00",
+  "queued_count": 181,
   "queued_titles": [
+    {
+      "title": "DecArena: Evaluating Large-Scale Decentralized Multi-Agent Collaboration",
+      "topic": "agent-ops",
+      "date": "2026-11-11",
+      "slug": "261115521v1-decarena-evaluating-large-scale-decentralized-multi-agent-co",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "CoLFA: Collaboration-Guided Lightweight Failure Attribution for LLM-Based Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-11-11",
+      "slug": "261114980v1-colfa-collaboration-guided-lightweight-failure-attribution-f",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Open Challenges and Opportunities in Human-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-11-10",
+      "slug": "261114846v1-open-challenges-and-opportunities-in-human-agent-systems",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Dependable Long-Horizon LLM Agents: A Trajectory-Centered Empirical Study of Where Errors Enter and Which Controls Reach Them",
+      "topic": "agent-ops",
+      "date": "2026-11-09",
+      "slug": "261113254v1-dependable-long-horizon-llm-agents-a-trajectory-centered-emp",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "SciMARS: Multi-Agent Recursive Self-Improvement for Closed-Loop Scientific Discovery",
       "topic": "agent-ops",
@@ -322,34 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-07",
       "slug": "261009374v1-duda-bench-benchmarking-llm-agents-on-multimodal-data-driven",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "SquidAgent: Parallelize Wisely, Coordinate Efficiently",
-      "topic": "agent-ops",
-      "date": "2026-10-06",
-      "slug": "261008647v1-squidagent-parallelize-wisely-coordinate-efficiently",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "DHCG: Dynamic Construction of Hierarchical Collaboration Graphs for LLM-Based Multi-Agent Reasoning",
-      "topic": "agent-ops",
-      "date": "2026-10-06",
-      "slug": "261007835v1-dhcg-dynamic-construction-of-hierarchical-collaboration-grap",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference",
-      "topic": "agent-ops",
-      "date": "2026-10-06",
-      "slug": "261007587v2-large-language-model-orchestration-under-heterogeneous-prefe",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Large Language Model Orchestration under Heterogeneous Preferences via Explicit Persona Inference",
-      "topic": "agent-ops",
-      "date": "2026-10-06",
-      "slug": "261007587v1-large-language-model-orchestration-under-heterogeneous-prefe",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
