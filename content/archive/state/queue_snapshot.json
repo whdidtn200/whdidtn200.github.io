@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-11-13T06:52:47.098541+00:00",
-  "queued_count": 181,
+  "generated_at": "2026-11-17T08:01:25.439786+00:00",
+  "queued_count": 186,
   "queued_titles": [
+    {
+      "title": "Efficient Modeling of Multi-Agent Systems via Structure-Aware Physics-Informed Learning",
+      "topic": "agent-ops",
+      "date": "2026-11-16",
+      "slug": "261121404v1-efficient-modeling-of-multi-agent-systems-via-structure-awar",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "When Does Interaction Help? Toward a Reynolds Number for Collective Intelligence",
+      "topic": "agent-ops",
+      "date": "2026-11-16",
+      "slug": "261120773v1-when-does-interaction-help-toward-a-reynolds-number-for-coll",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Autonomous Multi-modal Agents for ITOps Observability",
+      "topic": "agent-ops",
+      "date": "2026-11-15",
+      "slug": "261119982v1-autonomous-multi-modal-agents-for-itops-observability",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Assume/Guarantee Contracts for the Compositional Multi-Agent Reinforcement Learning of Heterogeneous Teams",
+      "topic": "agent-ops",
+      "date": "2026-11-14",
+      "slug": "261119078v1-assumeguarantee-contracts-for-the-compositional-multi-agent",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Do Verifier Judgments Survive Abstraction? Measuring Verification Transport for LLM Agent Evaluation",
+      "topic": "agent-ops",
+      "date": "2026-11-13",
+      "slug": "261118471v1-do-verifier-judgments-survive-abstraction-measuring-verifica",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "DecArena: Evaluating Large-Scale Decentralized Multi-Agent Collaboration",
       "topic": "agent-ops",
@@ -315,41 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-08",
       "slug": "261011600v1-error-propagation-modeling-for-failure-attribution-in-llm-ba",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "From a Prompt to Repertoires: Evolving Functional REpertoires Enable LLM Continual Learning",
-      "topic": "agent-ops",
-      "date": "2026-10-08",
-      "slug": "261011373v1-from-a-prompt-to-repertoires-evolving-functional-repertoires",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "ReCast: Attribution-Oriented Step Representation Learning for LLM-Based Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-08",
-      "slug": "261011334v1-recast-attribution-oriented-step-representation-learning-for",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Back in Style: A Sociolinguistic Approach to Authoring and Measuring Persona Fidelity in User Simulation",
-      "topic": "agent-ops",
-      "date": "2026-10-07",
-      "slug": "261010988v1-back-in-style-a-sociolinguistic-approach-to-authoring-and-me",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "SciExam for ENSO: Can AI Agents Build Climate Models?",
-      "topic": "agent-ops",
-      "date": "2026-10-07",
-      "slug": "261010513v1-sciexam-for-enso-can-ai-agents-build-climate-models",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "DUDA-Bench: Benchmarking LLM Agents on Multimodal Data-Driven Urban Diagnosis",
-      "topic": "agent-ops",
-      "date": "2026-10-07",
-      "slug": "261009374v1-duda-bench-benchmarking-llm-agents-on-multimodal-data-driven",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
