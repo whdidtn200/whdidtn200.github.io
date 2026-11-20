@@ -1,7 +1,42 @@
 {
-  "generated_at": "2026-11-17T08:01:25.439786+00:00",
-  "queued_count": 186,
+  "generated_at": "2026-11-20T07:25:09.885269+00:00",
+  "queued_count": 191,
   "queued_titles": [
+    {
+      "title": "ACaM: Automated Capability Modeling for Agentic AI Security",
+      "topic": "agent-ops",
+      "date": "2026-11-17",
+      "slug": "261123507v1-acam-automated-capability-modeling-for-agentic-ai-security",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "TRACE-MAS: Diagnosing and Repairing Collaboration Failures in Multi-Agent Systems",
+      "topic": "agent-ops",
+      "date": "2026-11-17",
+      "slug": "261123362v1-trace-mas-diagnosing-and-repairing-collaboration-failures-in",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Exploiting Aggregate Feedback for Decentralized Equilibrium Learning in Markov Games: A Smart Grid Application",
+      "topic": "agent-ops",
+      "date": "2026-11-17",
+      "slug": "261122762v1-exploiting-aggregate-feedback-for-decentralized-equilibrium",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Agent Trajectories as Evidence for Software Quality Assurance",
+      "topic": "agent-ops",
+      "date": "2026-11-17",
+      "slug": "261122323v1-agent-trajectories-as-evidence-for-software-quality-assuranc",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "RAG in a Trenchcoat: When Minimal Memory Is Enough for Agentic Systems, and When It Isn't",
+      "topic": "agent-ops",
+      "date": "2026-11-17",
+      "slug": "261122179v1-rag-in-a-trenchcoat-when-minimal-memory-is-enough-for-agenti",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Efficient Modeling of Multi-Agent Systems via Structure-Aware Physics-Informed Learning",
       "topic": "agent-ops",
@@ -315,41 +350,6 @@
       "topic": "agent-ops",
       "date": "2026-10-09",
       "slug": "261013870v1-ask-your-advisor-learning-when-to-consult-stronger-models-in",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "VETR: Execution-Grounded Self-Improving Agent for Symbolic Graphics Reasoning",
-      "topic": "agent-ops",
-      "date": "2026-10-09",
-      "slug": "261013098v1-vetr-execution-grounded-self-improving-agent-for-symbolic-gr",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-09",
-      "slug": "261012822v1-reward-hacking-as-a-transmissible-strategy-in-multi-agent-co",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Know What You Don't Know: Agentic Data Synthesis by Evolving Generation Space for Closed-Loop Learning",
-      "topic": "agent-ops",
-      "date": "2026-10-08",
-      "slug": "261012593v1-know-what-you-dont-know-agentic-data-synthesis-by-evolving-g",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Mental-Models for Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-08",
-      "slug": "261012453v1-mental-models-for-multi-agent-systems",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Error-Propagation Modeling for Failure Attribution in LLM-Based Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-08",
-      "slug": "261011600v1-error-propagation-modeling-for-failure-attribution-in-llm-ba",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
