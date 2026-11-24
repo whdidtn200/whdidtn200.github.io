@@ -1,7 +1,49 @@
 {
-  "generated_at": "2026-11-20T07:25:09.885269+00:00",
-  "queued_count": 191,
+  "generated_at": "2026-11-24T10:00:15.291428+00:00",
+  "queued_count": 197,
   "queued_titles": [
+    {
+      "title": "Cost-Sensitive Reversibility of Non-Deterministic Actions",
+      "topic": "agent-ops",
+      "date": "2026-11-23",
+      "slug": "261130399v1-cost-sensitive-reversibility-of-non-deterministic-actions",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Factory-simulator: A process-oriented environment for evaluating manufacturing decisions against optimisation-based references",
+      "topic": "agent-ops",
+      "date": "2026-11-21",
+      "slug": "261129079v1-factory-simulator-a-process-oriented-environment-for-evaluat",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Learning a Rule Bank to Revise 3D CT Reports with Independent Evidence",
+      "topic": "agent-ops",
+      "date": "2026-11-20",
+      "slug": "261128281v1-learning-a-rule-bank-to-revise-3d-ct-reports-with-independen",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "MoHA: Model-Conditioned Harness Adaptation for Long-Video Agents",
+      "topic": "agent-ops",
+      "date": "2026-11-20",
+      "slug": "261127646v1-moha-model-conditioned-harness-adaptation-for-long-video-age",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "$γ$-Scape: An Agent-Centric World for Mobile Embodied Intelligence",
+      "topic": "agent-ops",
+      "date": "2026-11-20",
+      "slug": "261127306v1-scape-an-agent-centric-world-for-mobile-embodied-intelligenc",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "RemoteEvolver: Expanding Earth Observation Capabilities through Agent Harness Evolution",
+      "topic": "agent-ops",
+      "date": "2026-11-20",
+      "slug": "261127110v1-remoteevolver-expanding-earth-observation-capabilities-throu",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "ACaM: Automated Capability Modeling for Agentic AI Security",
       "topic": "agent-ops",
@@ -309,48 +351,6 @@
       "date": "2026-10-15",
       "slug": "261022316v1-learning-to-steer-llm-agents-and-multi-agent-systems",
       "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261022124v1-probe-learning-to-audit-policy-compliance-in-tool-using-llm",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agentic-Priors: Using Large Language Models to Address the Cold Start Problem in Preference Elicitation",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261021938v1-agentic-priors-using-large-language-models-to-address-the-co",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Agent Status Protocol (ASP): A Lightweight Specification for State Reporting in Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261021538v1-agent-status-protocol-asp-a-lightweight-specification-for-st",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "SSR: Structural Signal Retriever for Scalable Agent Discovery in LLM-Orchestrated Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261021113v1-ssr-structural-signal-retriever-for-scalable-agent-discovery",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "SCARCE: Emergent Institutions in Long-Horizon Multi-Agent Coding Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261021029v1-scarce-emergent-institutions-in-long-horizon-multi-agent-cod",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "Ask Your Advisor: Learning When to Consult Stronger Models in Agentic Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-09",
-      "slug": "261013870v1-ask-your-advisor-learning-when-to-consult-stronger-models-in",
-      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     }
   ]
 }
