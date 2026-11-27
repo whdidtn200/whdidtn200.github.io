@@ -1,12 +1,26 @@
 {
-  "generated_at": "2026-11-24T10:00:15.291428+00:00",
-  "queued_count": 197,
+  "generated_at": "2026-11-27T08:43:52.346562+00:00",
+  "queued_count": 199,
   "queued_titles": [
+    {
+      "title": "EviCraft: Can Minecraft Agents Find What They Cannot See?",
+      "topic": "agent-ops",
+      "date": "2026-11-24",
+      "slug": "261132765v1-evicraft-can-minecraft-agents-find-what-they-cannot-see",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
     {
       "title": "Cost-Sensitive Reversibility of Non-Deterministic Actions",
       "topic": "agent-ops",
       "date": "2026-11-23",
       "slug": "261130399v1-cost-sensitive-reversibility-of-non-deterministic-actions",
+      "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
+    },
+    {
+      "title": "Evolutionary AI Control: Population-Level Safety Under Reproduction, Heredity, and Selection",
+      "topic": "agent-ops",
+      "date": "2026-11-22",
+      "slug": "261131312v1-evolutionary-ai-control-population-level-safety-under-reprod",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
     },
     {
@@ -337,20 +351,6 @@
       "date": "2026-10-17",
       "slug": "261024845v1-agentsov-virtual-sensing-for-llm-multi-agent-systems-via-str",
       "review_verdict": "내 판단으로는 일단 archive에는 남겨둘 가치가 있지만, 지금 바로 발행하기보다는 연결 해석이 더 생길 때 쓰는 편이 낫다."
-    },
-    {
-      "title": "EgoP$^{2}$C: Internalizing Plan-Perceive-Compose for Spatial Reasoning in Egocentric Video",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261022681v1-egop2c-internalizing-plan-perceive-compose-for-spatial-reaso",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
-    },
-    {
-      "title": "Learning to Steer LLM Agents and Multi-Agent Systems",
-      "topic": "agent-ops",
-      "date": "2026-10-15",
-      "slug": "261022316v1-learning-to-steer-llm-agents-and-multi-agent-systems",
-      "review_verdict": "내 판단으로는 이 논문은 보관만 할 후보가 아니라, 해석을 붙여 발행할 만한 가치가 있다."
     }
   ]
 }
